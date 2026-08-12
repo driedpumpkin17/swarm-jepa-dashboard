@@ -319,7 +319,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-12T13:13:59.467659+00:00",
+  "generated_at": "2026-08-12T13:23:11.026503+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -571,14 +571,14 @@
     "day": 1,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.009239,
-    "remaining_hours": 166.45,
+    "elapsed_fraction": 0.010151,
+    "remaining_hours": 166.29,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-12T22:11:38+09:00",
-    "command": "python3 -m unittest discover -s tests -v",
+    "checked_at": "2026-08-12T22:23:10+09:00",
+    "command": "python3 scripts/record_test_status.py",
     "note": "통합 전체 테스트 스위트: 116/116 통과",
     "passed": 116,
     "status": "passed",
