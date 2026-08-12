@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Swarm JEPA 사회적 창발 7일 연구 스프린트의 실측 기반 공개 진행 대시보드">
+    <meta name="theme-color" content="#07110f">
+    <title>Swarm Research Observatory</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Swarm Research Observatory 홈">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>SWARM <small>RESEARCH OBSERVATORY</small></span>
+      </a>
+      <nav aria-label="주요 섹션">
+        <a href="#progress">진행</a>
+        <a href="#evidence">실측</a>
+        <a href="#experiments">실험</a>
+        <a href="#analysis">분석</a>
+      </nav>
+      <a class="data-link" href="data/dashboard.json">JSON ↗</a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="eyebrow"><span class="live-dot" aria-hidden="true"></span><span id="project-status">데이터 로딩 중</span></div>
+        <h1 id="hero-title">예측하는 에이전트는<br><em>서로를 살리게 될까?</em></h1>
+        <p class="hero-copy" id="headline">저장소의 완료 아티팩트에서 공개 데이터를 생성하고 있습니다.</p>
+        <div class="clock-grid" aria-live="polite">
+          <div><strong id="sprint-day">—</strong><span>SPRINT DAY</span></div>
+          <div><strong id="countdown">—</strong><span>TIME REMAINING</span></div>
+          <div><strong id="queue-ratio">—</strong><span>JOBS COMPLETE</span></div>
+          <div><strong id="test-ratio">—</strong><span>TESTS PASSING</span></div>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="7일 스프린트 시간 진행률" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span id="sprint-progress"></span>
+        </div>
+        <p class="updated">마지막 데이터 생성 <time id="updated-at">—</time></p>
+      </section>
+
+      <section class="claim-strip" aria-label="현재 주장 경계">
+        <div><span class="kicker">CURRENT CLAIM</span><strong>실험 스택 작동 · 물리 아티팩트 교정</strong></div>
+        <div class="claim-no"><span class="kicker">NOT YET</span><strong>JEPA 결과 · 사회적 창발 · 인과적 구조</strong></div>
+      </section>
+
+      <section class="section" id="progress" aria-labelledby="progress-title">
+        <div class="section-head">
+          <div><span class="kicker">01 / OPERATIONS</span><h2 id="progress-title">연구 진행 현황</h2></div>
+          <p>큐와 마일스톤의 현재 상태를 저장소에서 직접 투영합니다. 완료 표시는 COMPLETE 아티팩트와 레지스트리를 전제로 합니다.</p>
+        </div>
+        <div class="metric-grid" id="progress-metrics"></div>
+        <div class="split-grid">
+          <article class="panel">
+            <div class="panel-head"><h3>실행 큐</h3><span id="queue-summary" class="mono">—</span></div>
+            <div id="job-list" class="job-list"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head"><h3>7일 마일스톤</h3><span class="mono">GATED</span></div>
+            <ol id="milestone-list" class="milestones"></ol>
+          </article>
+        </div>
+      </section>
+
+      <section class="section evidence-section" id="evidence" aria-labelledby="evidence-title">
+        <div class="section-head">
+          <div><span class="kicker">02 / MEASURED EVIDENCE</span><h2 id="evidence-title">실측값으로 보는 현재까지의 결과</h2></div>
+          <p>차트는 완료된 summary.json의 조건·seed 값을 사용합니다. 서로 다른 분모를 숨기지 않습니다.</p>
+        </div>
+        <div class="finding-grid">
+          <article class="finding finding-good">
+            <span class="finding-index">A</span>
+            <div><span class="kicker">ENVIRONMENT AUDIT</span><h3>정지율 <strong id="immobility-change">—</strong></h3><p>충돌 물리 v1 → v2, resource seeker 3 seeds</p></div>
+          </article>
+          <article class="finding finding-warn">
+            <span class="finding-index">B</span>
+            <div><span class="kicker">POSITIVE CONTROL ONLY</span><h3>v3 관찰 공유율 <strong id="v3-rate">—</strong></h3><p>직접 공유 보상 조건의 pooled events / opportunities</p></div>
+          </article>
+          <article class="finding finding-neutral">
+            <span class="finding-index">C</span>
+            <div><span class="kicker">PRIMARY JEPA RESULT</span><h3><strong>0건</strong></h3><p>prediction × mortality 실험은 아직 pending</p></div>
+          </article>
+        </div>
+        <div class="chart-grid">
+          <article class="panel chart-panel">
+            <div class="panel-head"><div><span class="kicker">PHYSICS AUDIT</span><h3>교정 전후 행동 지표</h3></div><span class="badge neutral">3 seeds</span></div>
+            <div id="physics-chart" class="chart" role="img" aria-label="물리 v1과 v2의 정지율 및 이동 엔트로피 비교"></div>
+            <p id="physics-note" class="chart-note"></p>
+          </article>
+          <article class="panel chart-panel">
+            <div class="panel-head"><div><span class="kicker">HELD-OUT OBSERVATION</span><h3>Need 기회당 공유 사건률</h3></div><span class="badge warning">직접 보상</span></div>
+            <div id="share-chart" class="chart" role="img" aria-label="seed별 양성대조군과 무보상 대조군의 공유 사건률"></div>
+            <p id="share-note" class="chart-note"></p>
+          </article>
+        </div>
+        <article class="panel audit-panel">
+          <div><span class="kicker">FAILED POSITIVE CONTROL / V1 CHECKPOINT</span><h3>실패도 공개한다</h3></div>
+          <p id="v1-audit-copy">—</p>
+          <div id="v1-audit-values" class="audit-values"></div>
+        </article>
+      </section>
+
+      <section class="section" id="experiments" aria-labelledby="experiments-title">
+        <div class="section-head">
+          <div><span class="kicker">03 / EXPERIMENT LEDGER</span><h2 id="experiments-title">완료 실험 레지스트리</h2></div>
+          <p>양성대조군·환경 감사·본 실험을 한 표에 두되 decision과 objective를 분리해 과장을 막습니다.</p>
+        </div>
+        <div class="table-wrap panel">
+          <table>
+            <caption class="sr-only">완료 실험 목록</caption>
+            <thead><tr><th>완료 시각</th><th>실험</th><th>Track / Stage</th><th>Objective</th><th>Seeds</th><th>Decision</th></tr></thead>
+            <tbody id="experiment-rows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="analysis" aria-labelledby="analysis-title">
+        <div class="section-head">
+          <div><span class="kicker">04 / INTERPRETATION</span><h2 id="analysis-title">분석과 주장 경계</h2></div>
+          <p>흥미로운 궤적보다 대안 설명을 먼저 둡니다. 아래 경계는 새 실험 블록마다 다시 생성됩니다.</p>
+        </div>
+        <div class="split-grid analysis-grid">
+          <article class="panel prose-panel"><span class="kicker">SUPPORTED</span><h3>현재 근거가 지지하는 것</h3><ul id="supported-list" class="check-list"></ul></article>
+          <article class="panel prose-panel danger-panel"><span class="kicker">NOT SUPPORTED</span><h3>아직 주장할 수 없는 것</h3><ul id="unsupported-list" class="cross-list"></ul></article>
+        </div>
+        <div class="split-grid">
+          <article class="panel prose-panel"><span class="kicker">CURATED ANALYSIS</span><h3>최신 연구자 해석</h3><div id="curated-analysis"></div></article>
+          <article class="panel prose-panel"><span class="kicker">LIMITATIONS & PROVENANCE</span><h3>한계와 재현성 경고</h3><ul id="limitations-list" class="plain-list"></ul><p id="provenance-warning" class="provenance-warning"></p></article>
+        </div>
+      </section>
+
+      <section class="section methodology" aria-labelledby="method-title">
+        <div class="section-head"><div><span class="kicker">05 / METHOD</span><h2 id="method-title">어떻게 집계하는가</h2></div><p>공개 JSON은 운영 원본의 복사본이 아니라 명시적 allowlist로 만든 읽기 전용 투영입니다.</p></div>
+        <div id="method-list" class="method-grid"></div>
+        <div class="test-banner" id="test-banner"><span>TEST STATUS</span><strong>—</strong><small>—</small></div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>SWARM RESEARCH OBSERVATORY</strong><p>7일 자율 JEPA 사회적 창발 연구 스프린트</p></div>
+      <div><a href="data/dashboard.json">원시 공개 JSON</a><span>·</span><span id="footer-updated">—</span></div>
+    </footer>
+    <noscript><div class="noscript">이 대시보드는 공개 JSON을 렌더링하기 위해 JavaScript가 필요합니다. <a href="data/dashboard.json">JSON 직접 보기</a></div></noscript>
+  </body>
+</html>

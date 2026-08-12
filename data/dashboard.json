@@ -1,0 +1,587 @@
+{
+  "analysis": {
+    "claim_boundary": {
+      "not_supported": [
+        "JEPA가 사회적 행동을 만들었다.",
+        "협력·이타성·구조(rescue)가 창발했다.",
+        "관찰된 공유가 상대 생존에 인과적으로 이로웠다.",
+        "현재 결과가 커밋된 소스만으로 완전히 재현 가능하다."
+      ],
+      "supported": [
+        "재시작 가능한 실험 스택과 에너지 회계 검사가 작동한다.",
+        "충돌 물리 v1의 정지 아티팩트를 진단하고 v2에서 교정했다.",
+        "직접 공유 보상 양성대조군 v3은 3개 학습 seed의 관찰 평가에서 공유 채널 사용을 변화시켰다."
+      ]
+    },
+    "curated_report_sections": {
+      "Best result": "The v3 material need-share rate advantage replicated in seeds 404, 505, and 606. Across 64 fixed held-out worlds per seed, median POSITIVE-SHARE minus CTRL-NONE gain was `+0.9971` deterministic and `+0.7798` sampled. Median beneficial energy units per eligible need timestep gained `+2.0445` and `+2.1946`, respectively. Maximum energy-accounting error across v3 learned runs remained below `1.81e-05`.",
+      "Executive summary": "Day 1 produced a tested, restartable two-agent research stack and eight immutable experiment blocks. A direct-reward v3 control learned material energy transfer on 64 held-out worlds in each of three independent training seeds. This is engineered behavior, not emergence. The same policies manufactured 5--8 times more need opportunities, exchanged energy in both directions, and shortened sampled episode length in every seed. The strict `FALSIFY-v1.1` capability gate remains closed because causal positivity/benefit is unavailable and v3 ran from an uncommitted worktree whose code is not reproduced by its recorded git revision. No JEPA outcome has been opened.",
+      "Human-readable conclusion": "We can reliably train agents to make substantial transfers when directly rewarded. We cannot yet say those transfers preserve the partner: sampled behavior usually ends episodes sooner and much of the energy moves back and forth. The infrastructure has repeatedly found exactly the kinds of artifacts this sprint is meant to expose. There is still no JEPA or social-emergence result.",
+      "Strongest alternative explanation": "The rewarded controller learns to approach, remain close, and cycle energy to harvest gross-transfer reward. The material-rate signal is real but need not be partner preservation. For future JEPA cells, the strongest alternative remains predictability management by immobilization, simplification, synchronization, or death.",
+      "Suspicious results": "The deterministic mean action can delay first death in one seed while the sampled policy shortens life in every seed. Because every episode ends at the first death, mean alive fraction hides this difference. Fixed-horizon counterfactual survival, net receiver gain, opportunity creation, collision/contact, and role-conditioned mortality must be reported together."
+    },
+    "limitations": [
+      "v3은 행동을 직접 지정하는 공유 보상을 쓴 양성대조군이다.",
+      "고정 world 평가는 조건 간 독립 실행의 관찰 비교이며 개입적 인과 추정량이 없다.",
+      "공유 정책은 대조군보다 훨씬 많은 need opportunity를 만들고 거리를 바꿨다.",
+      "v3 실행 메타데이터의 git revision은 당시 dirty/untracked 실행 코드를 온전히 식별하지 못한다.",
+      "기본 2×2 JEPA × mortality 실험은 아직 pending이며 JEPA 결과는 0건이다."
+    ]
+  },
+  "evidence": {
+    "environment_audit": {
+      "available": true,
+      "change": {
+        "immobility_rate": -0.846354,
+        "movement_entropy_agent_0": 0.606144
+      },
+      "interpretation": "v1의 겹침 시 양쪽 위치 복귀가 휴리스틱을 정지시킨 환경 아티팩트였다. v2 경계 투영 뒤 정지율은 0으로 감소했지만 접촉률은 인과적 차단 측정이 아니다.",
+      "metric_scope": "resource_seeker, 3 seeds, exploratory screen",
+      "source_experiment_ids": [
+        "20260812_1220_day1-baselines_s1",
+        "20260812_1222_day1-baselines-physics-v2_s1"
+      ],
+      "title": "충돌 물리 v1 감사 → v2 교정",
+      "v1": {
+        "collision_contact_rate": 0.846354,
+        "immobility_rate": 0.846354,
+        "max_energy_accounting_error": 1.8386e-05,
+        "movement_entropy_agent_0": 0.34021
+      },
+      "v2": {
+        "collision_contact_rate": 0.445089,
+        "immobility_rate": 0.0,
+        "max_energy_accounting_error": 2.2607e-05,
+        "movement_entropy_agent_0": 0.946354
+      }
+    },
+    "positive_control": {
+      "available": true,
+      "causal_estimands_available": false,
+      "evaluation_kind": "independent fixed-world observational, sampled policy",
+      "v1_checkpoint_audit": {
+        "interpretation": "초기 체크포인트에서 직접 공유 보상 조건은 기회 정규화 사건률로 대조군을 넘지 못했다. 환경·최적화 진단을 촉발한 실패 결과다.",
+        "need_share_rate_gain": -0.009861,
+        "rows": [
+          {
+            "beneficial_transfer_events": 198,
+            "condition": "POSITIVE-SHARE",
+            "mean_alive_steps_agent_0": 179.422,
+            "mean_alive_steps_agent_1": 179.422,
+            "mean_death_agent_0": 0.78125,
+            "mean_death_agent_1": 0.609375,
+            "mean_pair_distance": 1.199454,
+            "need_opportunities": 5199,
+            "need_share_rate": 0.038084,
+            "seed": 101
+          },
+          {
+            "beneficial_transfer_events": 14,
+            "condition": "CTRL-NONE",
+            "mean_alive_steps_agent_0": 209.406,
+            "mean_alive_steps_agent_1": 209.406,
+            "mean_death_agent_0": 0.359375,
+            "mean_death_agent_1": 0.421875,
+            "mean_pair_distance": 4.819959,
+            "need_opportunities": 292,
+            "need_share_rate": 0.047945,
+            "seed": 101
+          }
+        ],
+        "source_experiment_id": "20260812_1245_day1-positive-control-v1-checkpoint-audit_s0"
+      },
+      "v3_positive_control": {
+        "control_none": {
+          "condition": "CTRL-NONE",
+          "events": 0,
+          "opportunities": 1608,
+          "pooled_observational_rate": 0.0,
+          "seeds": [
+            404,
+            505,
+            606
+          ]
+        },
+        "interpretation": "v3에서는 3개 학습 seed 모두 고정 외부 world의 관찰적 공유 사건률이 대조군보다 높았다. 그러나 직접 공유 보상을 사용한 양성대조군이며, 기회 수와 거리도 조건에 따라 달라져 사회적 창발이나 인과적 이득의 증거가 아니다.",
+        "positive_share": {
+          "condition": "POSITIVE-SHARE",
+          "events": 6282,
+          "opportunities": 8606,
+          "pooled_observational_rate": 0.729956,
+          "seeds": [
+            404,
+            505,
+            606
+          ]
+        },
+        "rows": [
+          {
+            "beneficial_transfer_events": 1665,
+            "condition": "POSITIVE-SHARE",
+            "mean_alive_steps_agent_0": 72.219,
+            "mean_alive_steps_agent_1": 72.219,
+            "mean_death_agent_0": 0.46875,
+            "mean_death_agent_1": 0.53125,
+            "mean_pair_distance": 1.165704,
+            "need_opportunities": 2974,
+            "need_share_rate": 0.559852,
+            "seed": 404
+          },
+          {
+            "beneficial_transfer_events": 0,
+            "condition": "CTRL-NONE",
+            "mean_alive_steps_agent_0": 88.672,
+            "mean_alive_steps_agent_1": 88.672,
+            "mean_death_agent_0": 0.625,
+            "mean_death_agent_1": 0.375,
+            "mean_pair_distance": 3.069591,
+            "need_opportunities": 616,
+            "need_share_rate": 0.0,
+            "seed": 404
+          },
+          {
+            "beneficial_transfer_events": 2351,
+            "condition": "POSITIVE-SHARE",
+            "mean_alive_steps_agent_0": 66.797,
+            "mean_alive_steps_agent_1": 66.797,
+            "mean_death_agent_0": 0.625,
+            "mean_death_agent_1": 0.53125,
+            "mean_pair_distance": 1.134185,
+            "need_opportunities": 2726,
+            "need_share_rate": 0.862436,
+            "seed": 505
+          },
+          {
+            "beneficial_transfer_events": 2266,
+            "condition": "POSITIVE-SHARE",
+            "mean_alive_steps_agent_0": 73.422,
+            "mean_alive_steps_agent_1": 73.422,
+            "mean_death_agent_0": 0.71875,
+            "mean_death_agent_1": 0.390625,
+            "mean_pair_distance": 1.062032,
+            "need_opportunities": 2906,
+            "need_share_rate": 0.779766,
+            "seed": 606
+          },
+          {
+            "beneficial_transfer_events": 0,
+            "condition": "CTRL-NONE",
+            "mean_alive_steps_agent_0": 88.781,
+            "mean_alive_steps_agent_1": 88.781,
+            "mean_death_agent_0": 0.625,
+            "mean_death_agent_1": 0.375,
+            "mean_pair_distance": 3.339847,
+            "need_opportunities": 506,
+            "need_share_rate": 0.0,
+            "seed": 505
+          },
+          {
+            "beneficial_transfer_events": 0,
+            "condition": "CTRL-NONE",
+            "mean_alive_steps_agent_0": 88.797,
+            "mean_alive_steps_agent_1": 88.797,
+            "mean_death_agent_0": 0.625,
+            "mean_death_agent_1": 0.375,
+            "mean_pair_distance": 3.516433,
+            "need_opportunities": 486,
+            "need_share_rate": 0.0,
+            "seed": 606
+          }
+        ],
+        "source_experiment_ids": [
+          "20260812_1243_day1-positive-control-v3_s1",
+          "20260812_1250_day1-positive-control-v3-replication_s2"
+        ]
+      }
+    }
+  },
+  "experiments": {
+    "completed_count": 8,
+    "rows": [
+      {
+        "completed_at": "2026-08-12T12:20:06.851322+00:00",
+        "condition": "random",
+        "decision": "SCREEN_ONLY",
+        "experiment_id": "20260812_1220_day1-env-smoke_s0",
+        "notes": "Fast-screen diagnostics only; no confirmatory emergence claim.",
+        "objective_id": "CTRL-RANDOM",
+        "seeds": [
+          "101"
+        ],
+        "stage": 0,
+        "status": "completed",
+        "track": "A"
+      },
+      {
+        "completed_at": "2026-08-12T12:20:31.867931+00:00",
+        "condition": "random;resource_seeker;social_rescue",
+        "decision": "SCREEN_ONLY",
+        "experiment_id": "20260812_1220_day1-baselines_s1",
+        "notes": "Fast-screen diagnostics only; no confirmatory emergence claim.",
+        "objective_id": "CTRL-RANDOM",
+        "seeds": [
+          "101",
+          "202",
+          "303"
+        ],
+        "stage": 1,
+        "status": "completed",
+        "track": "A"
+      },
+      {
+        "completed_at": "2026-08-12T12:22:35.566684+00:00",
+        "condition": "random;resource_seeker;social_rescue",
+        "decision": "SCREEN_ONLY",
+        "experiment_id": "20260812_1222_day1-baselines-physics-v2_s1",
+        "notes": "Fast-screen diagnostics only; no confirmatory emergence claim.",
+        "objective_id": "CTRL-RANDOM",
+        "seeds": [
+          "101",
+          "202",
+          "303"
+        ],
+        "stage": 1,
+        "status": "completed",
+        "track": "A"
+      },
+      {
+        "completed_at": "2026-08-12T12:23:49.828751+00:00",
+        "condition": "CTRL-NONE;POSITIVE-SHARE",
+        "decision": "POSITIVE_CONTROL_DIAGNOSTIC",
+        "experiment_id": "20260812_1223_day1-positive-control_s0",
+        "notes": "Direct transfer reward is an environment capability control, not evidence of spontaneous emergence.",
+        "objective_id": "POSITIVE-SHARE",
+        "seeds": [
+          "101"
+        ],
+        "stage": 0,
+        "status": "completed",
+        "track": "A"
+      },
+      {
+        "completed_at": "2026-08-12T12:42:16.945870+00:00",
+        "condition": "random;social_rescue",
+        "decision": "SCREEN_ONLY",
+        "experiment_id": "20260812_1242_day1-capability-v3-smoke_s2",
+        "notes": "Fast-screen diagnostics only; no confirmatory emergence claim.",
+        "objective_id": "POSITIVE_CONTROL_AFFORDANCE_V3",
+        "seeds": [
+          "404",
+          "505",
+          "606"
+        ],
+        "stage": 2,
+        "status": "completed",
+        "track": "B"
+      },
+      {
+        "completed_at": "2026-08-12T12:44:26.802471+00:00",
+        "condition": "CTRL-NONE;POSITIVE-SHARE",
+        "decision": "POSITIVE_CONTROL_DIAGNOSTIC",
+        "experiment_id": "20260812_1243_day1-positive-control-v3_s1",
+        "notes": "Direct transfer reward is an environment capability control, not evidence of spontaneous emergence.",
+        "objective_id": "POSITIVE-SHARE",
+        "seeds": [
+          "404"
+        ],
+        "stage": 1,
+        "status": "completed",
+        "track": "B"
+      },
+      {
+        "completed_at": "2026-08-12T12:46:43.289489+00:00",
+        "condition": "CTRL-NONE;POSITIVE-SHARE",
+        "decision": "CHECKPOINT_EVAL_DIAGNOSTIC",
+        "experiment_id": "20260812_1245_day1-positive-control-v1-checkpoint-audit_s0",
+        "notes": "Frozen-checkpoint held-out observational diagnostic only; no confirmatory or causal emergence claim.",
+        "objective_id": "POSITIVE-SHARE-AUDIT",
+        "seeds": [
+          "101"
+        ],
+        "stage": 0,
+        "status": "completed",
+        "track": "B"
+      },
+      {
+        "completed_at": "2026-08-12T12:51:24.054446+00:00",
+        "condition": "CTRL-NONE;POSITIVE-SHARE",
+        "decision": "POSITIVE_CONTROL_DIAGNOSTIC",
+        "experiment_id": "20260812_1250_day1-positive-control-v3-replication_s2",
+        "notes": "Direct transfer reward is an environment capability control, not evidence of spontaneous emergence.",
+        "objective_id": "POSITIVE-SHARE",
+        "seeds": [
+          "505",
+          "606"
+        ],
+        "stage": 2,
+        "status": "completed",
+        "track": "B"
+      }
+    ]
+  },
+  "generated_at": "2026-08-12T13:11:54.148216+00:00",
+  "methodology": {
+    "data_sources": [
+      "automation/queue.json",
+      "automation/milestones.json",
+      "research/experiment_registry.csv",
+      "results/*/summary.json (COMPLETE runs only)",
+      "research/reports/latest.md",
+      "dashboard/status.json"
+    ],
+    "principles": [
+      "완료 디렉터리와 실험 레지스트리만 결과로 집계",
+      "조건·seed별 값과 기회 분모를 함께 공개",
+      "직접 사회 보상은 양성대조군으로만 분류",
+      "예측 가능성 관리·정지·죽음·동기화 대안설을 상시 측정",
+      "결측·비유한 값·회계 위반 시 fail closed"
+    ],
+    "promotion_stages": [
+      "Stage 0: smoke",
+      "Stage 1: 1 seed",
+      "Stage 2: 3 seeds",
+      "Stage 3: 5 seeds",
+      "Stage 4: 10+ seeds"
+    ]
+  },
+  "milestones": {
+    "items": [
+      {
+        "day": 1,
+        "fallback": "repair_environment_or_optimizer_before_primary_inference",
+        "gate": "tests_pass_and_baselines_complete_and_positive_control_directional",
+        "name": "auditable_loop",
+        "state": "blocked_on_causal_validity_and_clean_provenance"
+      },
+      {
+        "day": 2,
+        "fallback": "declare_internal_null_for_level0_then_schedule_level1",
+        "gate": "paired_2x2_completed_with_validity_metrics",
+        "name": "prediction_by_mortality_screen",
+        "state": "pending"
+      },
+      {
+        "day": 3,
+        "fallback": "advance_intervention_ladder_with_one_minimal_change",
+        "gate": "best_two_or_three_mechanisms_have_at_least_five_valid_seeds",
+        "name": "tier1_candidate_selection",
+        "state": "pending"
+      },
+      {
+        "day": 4,
+        "fallback": "reclassify_as_predictability_management_or_artifact",
+        "gate": "candidate_survives_mortality_prediction_ghost_and_domination_controls",
+        "name": "independent_falsification",
+        "state": "pending"
+      },
+      {
+        "day": 5,
+        "fallback": "report_generic_predictive_mechanism_not_jepa_specific",
+        "gate": "capacity_matched_predictor_comparison_and_unseen_partner_test_complete",
+        "name": "jepa_necessity_and_transfer",
+        "state": "pending"
+      },
+      {
+        "day": 6,
+        "fallback": "spend_budget_on_tier1_replication_and_mechanistic_analysis",
+        "gate": "only_run_if_tier1_is_replicated_then_require_causal_message_effect",
+        "name": "conditional_communication",
+        "state": "pending"
+      },
+      {
+        "day": 7,
+        "fallback": "reduce_claim_strength_and_report_power_or_compute_limit",
+        "gate": "ten_plus_central_seeds_final_ablations_figures_and_reports",
+        "name": "frozen_replication_and_synthesis",
+        "state": "pending"
+      }
+    ],
+    "state_counts": {
+      "blocked_on_causal_validity_and_clean_provenance": 1,
+      "pending": 6
+    },
+    "total": 7
+  },
+  "project": {
+    "headline": "연구 인프라는 작동한다. JEPA 또는 사회적 창발 결과는 아직 없다.",
+    "phase": "Day 1 — 감사 가능한 실험 루프 및 양성대조군 검증",
+    "status": "ACTIVE",
+    "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
+  },
+  "provenance": {
+    "policy": "allowlist-only public projection; operational identifiers removed",
+    "public_json": "data/dashboard.json",
+    "warning": "v3 실행은 dirty/untracked 코드 상태에서 이뤄졌고 기록된 revision만으로 정확한 실행 소스를 복원할 수 없다. 후속 commit-pinned 복제가 필요하다."
+  },
+  "queue": {
+    "completed": 8,
+    "completion_fraction": 0.888889,
+    "jobs": [
+      {
+        "depends_on": [],
+        "experiment_id": "20260812_1220_day1-env-smoke_s0",
+        "id": "day1_env_smoke",
+        "kind": "baseline",
+        "objective_id": "CTRL-RANDOM",
+        "seeds": [
+          101
+        ],
+        "stage": 0,
+        "status": "completed",
+        "track": "A"
+      },
+      {
+        "depends_on": [
+          "day1_env_smoke"
+        ],
+        "experiment_id": "20260812_1220_day1-baselines_s1",
+        "id": "day1_baselines",
+        "kind": "baseline_suite",
+        "objective_id": "CTRL-RANDOM",
+        "seeds": [
+          101,
+          202,
+          303
+        ],
+        "stage": 1,
+        "status": "completed",
+        "track": "A"
+      },
+      {
+        "depends_on": [
+          "day1_env_smoke"
+        ],
+        "experiment_id": "20260812_1222_day1-baselines-physics-v2_s1",
+        "id": "day1_baselines_physics_v2",
+        "kind": "baseline_suite",
+        "objective_id": "CTRL-RANDOM",
+        "seeds": [
+          101,
+          202,
+          303
+        ],
+        "stage": 1,
+        "status": "completed",
+        "track": "A"
+      },
+      {
+        "depends_on": [
+          "day1_baselines_physics_v2"
+        ],
+        "experiment_id": "20260812_1223_day1-positive-control_s0",
+        "id": "day1_positive_control",
+        "kind": "train",
+        "objective_id": "POSITIVE-SHARE",
+        "seeds": [
+          101
+        ],
+        "stage": 0,
+        "status": "completed",
+        "track": "A"
+      },
+      {
+        "depends_on": [
+          "day1_positive_control"
+        ],
+        "experiment_id": "20260812_1245_day1-positive-control-v1-checkpoint-audit_s0",
+        "id": "day1_positive_control_v1_checkpoint_audit",
+        "kind": "checkpoint_eval",
+        "objective_id": "POSITIVE-SHARE-AUDIT",
+        "seeds": [
+          101
+        ],
+        "stage": 0,
+        "status": "completed",
+        "track": "B"
+      },
+      {
+        "depends_on": [
+          "day1_baselines_physics_v2"
+        ],
+        "experiment_id": "20260812_1242_day1-capability-v3-smoke_s2",
+        "id": "day1_capability_v3_smoke",
+        "kind": "baseline_suite",
+        "objective_id": "POSITIVE_CONTROL_AFFORDANCE_V3",
+        "seeds": [
+          404,
+          505,
+          606
+        ],
+        "stage": 2,
+        "status": "completed",
+        "track": "B"
+      },
+      {
+        "depends_on": [
+          "day1_capability_v3_smoke"
+        ],
+        "experiment_id": "20260812_1243_day1-positive-control-v3_s1",
+        "id": "day1_positive_control_v3",
+        "kind": "train",
+        "objective_id": "POSITIVE-SHARE",
+        "seeds": [
+          404
+        ],
+        "stage": 1,
+        "status": "completed",
+        "track": "B"
+      },
+      {
+        "depends_on": [
+          "day1_positive_control_v3"
+        ],
+        "experiment_id": "20260812_1250_day1-positive-control-v3-replication_s2",
+        "id": "day1_positive_control_v3_replication",
+        "kind": "train",
+        "objective_id": "POSITIVE-SHARE",
+        "seeds": [
+          505,
+          606
+        ],
+        "stage": 2,
+        "status": "completed",
+        "track": "B"
+      },
+      {
+        "depends_on": [
+          "day1_baselines_physics_v2",
+          "day1_positive_control_v3_replication"
+        ],
+        "experiment_id": null,
+        "id": "day2_prediction_mortality_2x2",
+        "kind": "matrix",
+        "objective_id": "JEPA-L0",
+        "seeds": [
+          101
+        ],
+        "stage": 0,
+        "status": "pending",
+        "track": "A"
+      }
+    ],
+    "status_counts": {
+      "completed": 8,
+      "pending": 1
+    },
+    "total": 9,
+    "updated_at": "2026-08-12T12:51:24.054551+00:00"
+  },
+  "schema_version": 1,
+  "sprint": {
+    "day": 1,
+    "deadline": "2026-08-19T20:40:52+09:00",
+    "deadline_passed": false,
+    "elapsed_fraction": 0.009031,
+    "remaining_hours": 166.48,
+    "start": "2026-08-12T20:40:52+09:00",
+    "total_days": 7
+  },
+  "tests": {
+    "checked_at": "2026-08-12T22:11:38+09:00",
+    "command": "python3 -m unittest discover -s tests -v",
+    "note": "통합 전체 테스트 스위트: 116/116 통과",
+    "passed": 116,
+    "status": "passed",
+    "total": 116
+  }
+}
