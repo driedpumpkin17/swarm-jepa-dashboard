@@ -5,18 +5,20 @@
         "JEPA가 사회적 행동을 만들었다.",
         "협력·이타성·구조(rescue)가 창발했다.",
         "관찰된 공유가 상대 생존에 인과적으로 이로웠다.",
-        "현재 결과가 커밋된 소스만으로 완전히 재현 가능하다."
+        "현재 결과가 커밋된 소스만으로 완전히 재현 가능하다.",
+        "canonical schedule record가 window를 선택·실행했거나 causal gate를 열었다."
       ],
       "supported": [
         "재시작 가능한 실험 스택과 에너지 회계 검사가 작동한다.",
         "충돌 물리 v1의 정지 아티팩트를 진단하고 v2에서 교정했다.",
-        "직접 공유 보상 양성대조군 v3은 3개 학습 seed의 관찰 평가에서 공유 채널 사용을 변화시켰다."
+        "직접 공유 보상 양성대조군 v3은 3개 학습 seed의 관찰 평가에서 공유 채널 사용을 변화시켰다.",
+        "부분 resume·공개 evidence·test status가 exact provenance와 content digest에 결속된다."
       ]
     },
     "curated_report_sections": {
       "Best result": "The v3 material need-share rate advantage replicated in seeds 404, 505, and 606. Across 64 fixed held-out worlds per seed, median POSITIVE-SHARE minus CTRL-NONE gain was `+0.9971` deterministic and `+0.7798` sampled. Median beneficial energy units per eligible need timestep gained `+2.0445` and `+2.1946`, respectively. Maximum energy-accounting error across v3 learned runs remained below `1.81e-05`.",
-      "Executive summary": "Day 1 produced a tested, restartable two-agent research stack and eight immutable experiment blocks. A direct-reward v3 control learned material energy transfer on 64 held-out worlds in each of three independent training seeds. This is engineered behavior, not emergence. The same policies manufactured 5--8 times more need opportunities, exchanged energy in both directions, and shortened sampled episode length in every seed. The strict `FALSIFY-v1.1` capability gate remains closed because causal positivity/benefit is unavailable and v3 ran from an uncommitted worktree whose code is not reproduced by its recorded git revision. No JEPA outcome has been opened.",
-      "Human-readable conclusion": "We can reliably train agents to make substantial transfers when directly rewarded. We cannot yet say those transfers preserve the partner: sampled behavior usually ends episodes sooner and much of the energy moves back and forth. The infrastructure has repeatedly found exactly the kinds of artifacts this sprint is meant to expose. There is still no JEPA or social-emergence result.",
+      "Executive summary": "Day 1 has produced eight immutable exploratory experiment blocks and a tested, restartable two-agent stack. A direct-reward v3 control learned material energy transfer on 64 held-out worlds in each of three training seeds, but this remains engineered behavior rather than emergence: the policies manufactured 5--8 times more need opportunities, cycled energy bidirectionally, and shortened sampled episodes in every seed. No JEPA condition has run and every emergence score remains unscored. The source-bound suite now passes `180/180` with warnings treated as errors. Partial resume is provenance-locked, interrupts and unsupported jobs fail closed, and semantic progress publication is nonblocking and retryable. The new causal artifact is deliberately only a tamper-resistant schedule record; it cannot select windows, execute CRN tapes, estimate effects, or open `FALSIFY-v1.1`. The next scientific run is deferred until causal-evaluator tasks CEF-01..09 pass, after which CEF-10 is a fresh POS/CTRL causal calibration. The JEPA matrix remains pending and unclaimed.",
+      "Human-readable conclusion": "We can reliably train agents to transfer energy when directly rewarded, but we still cannot say that the transfers preserve a partner: sampled episodes end sooner and much of the flow cancels in the opposite direction. The research system now prevents several ways this ambiguity could be hidden—mixed-source resume, unsupported-job claiming, fuzzy public evidence, invented zeroes, and a manifest that overstates readiness. There is still no JEPA or social-emergence result. The scientifically useful next move is to finish the causal evaluator before spending compute on another behavioral run.",
       "Strongest alternative explanation": "The rewarded controller learns to approach, remain close, and cycle energy to harvest gross-transfer reward. The material-rate signal is real but need not be partner preservation. For future JEPA cells, the strongest alternative remains predictability management by immobilization, simplification, synchronization, or death.",
       "Suspicious results": "The deterministic mean action can delay first death in one seed while the sampled policy shortens life in every seed. Because every episode ends at the first death, mean alive fraction hides this difference. Fixed-horizon counterfactual survival, net receiver gain, opportunity creation, collision/contact, and role-conditioned mortality must be reported together."
     },
@@ -25,7 +27,9 @@
       "고정 world 평가는 조건 간 독립 실행의 관찰 비교이며 개입적 인과 추정량이 없다.",
       "공유 정책은 대조군보다 훨씬 많은 need opportunity를 만들고 거리를 바꿨다.",
       "v3 실행 메타데이터의 git revision은 당시 dirty/untracked 실행 코드를 온전히 식별하지 못한다.",
-      "기본 2×2 JEPA × mortality 실험은 아직 pending이며 JEPA 결과는 0건이다."
+      "기본 2×2 JEPA × mortality 실험은 아직 pending이며 JEPA 결과는 0건이다.",
+      "causal schedule record의 universe·selection·execution readiness는 모두 false이다.",
+      "heartbeat는 SIGKILL 이후 liveness를 단독으로 증명하지 못한다."
     ]
   },
   "evidence": {
@@ -206,7 +210,7 @@
         "notes": "Fast-screen diagnostics only; no confirmatory emergence claim.",
         "objective_id": "CTRL-RANDOM",
         "seeds": [
-          "101"
+          101
         ],
         "stage": 0,
         "status": "completed",
@@ -220,9 +224,9 @@
         "notes": "Fast-screen diagnostics only; no confirmatory emergence claim.",
         "objective_id": "CTRL-RANDOM",
         "seeds": [
-          "101",
-          "202",
-          "303"
+          101,
+          202,
+          303
         ],
         "stage": 1,
         "status": "completed",
@@ -236,9 +240,9 @@
         "notes": "Fast-screen diagnostics only; no confirmatory emergence claim.",
         "objective_id": "CTRL-RANDOM",
         "seeds": [
-          "101",
-          "202",
-          "303"
+          101,
+          202,
+          303
         ],
         "stage": 1,
         "status": "completed",
@@ -252,7 +256,7 @@
         "notes": "Direct transfer reward is an environment capability control, not evidence of spontaneous emergence.",
         "objective_id": "POSITIVE-SHARE",
         "seeds": [
-          "101"
+          101
         ],
         "stage": 0,
         "status": "completed",
@@ -266,9 +270,9 @@
         "notes": "Fast-screen diagnostics only; no confirmatory emergence claim.",
         "objective_id": "POSITIVE_CONTROL_AFFORDANCE_V3",
         "seeds": [
-          "404",
-          "505",
-          "606"
+          404,
+          505,
+          606
         ],
         "stage": 2,
         "status": "completed",
@@ -282,7 +286,7 @@
         "notes": "Direct transfer reward is an environment capability control, not evidence of spontaneous emergence.",
         "objective_id": "POSITIVE-SHARE",
         "seeds": [
-          "404"
+          404
         ],
         "stage": 1,
         "status": "completed",
@@ -296,7 +300,7 @@
         "notes": "Frozen-checkpoint held-out observational diagnostic only; no confirmatory or causal emergence claim.",
         "objective_id": "POSITIVE-SHARE-AUDIT",
         "seeds": [
-          "101"
+          101
         ],
         "stage": 0,
         "status": "completed",
@@ -310,8 +314,8 @@
         "notes": "Direct transfer reward is an environment capability control, not evidence of spontaneous emergence.",
         "objective_id": "POSITIVE-SHARE",
         "seeds": [
-          "505",
-          "606"
+          505,
+          606
         ],
         "stage": 2,
         "status": "completed",
@@ -319,22 +323,25 @@
       }
     ]
   },
-  "generated_at": "2026-08-12T13:26:26.461546+00:00",
+  "generated_at": "2026-08-12T14:58:31.988815+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
       "automation/milestones.json",
+      "automation/workstreams.json",
       "research/experiment_registry.csv",
       "results/*/summary.json (COMPLETE runs only)",
       "research/reports/latest.md",
       "dashboard/status.json"
     ],
     "principles": [
-      "완료 디렉터리와 실험 레지스트리만 결과로 집계",
+      "큐의 exact job ID와 SHA 검증된 레지스트리 결과만 집계",
       "조건·seed별 값과 기회 분모를 함께 공개",
       "직접 사회 보상은 양성대조군으로만 분류",
       "예측 가능성 관리·정지·죽음·동기화 대안설을 상시 측정",
-      "결측·비유한 값·회계 위반 시 fail closed"
+      "결측·비유한 값·회계 위반 시 fail closed",
+      "부분 진행률은 immutable provenance가 분모와 row identity를 증명할 때만 수치화",
+      "workstream 수치는 curator flag의 기계 집계이며 시간·연산량 진행률이 아님"
     ],
     "promotion_stages": [
       "Stage 0: smoke",
@@ -351,7 +358,7 @@
         "fallback": "repair_environment_or_optimizer_before_primary_inference",
         "gate": "tests_pass_and_baselines_complete_and_positive_control_directional",
         "name": "auditable_loop",
-        "state": "blocked_on_causal_validity"
+        "state": "blocked_on_causal_evaluator_implementation"
       },
       {
         "day": 2,
@@ -397,7 +404,7 @@
       }
     ],
     "state_counts": {
-      "blocked_on_causal_validity": 1,
+      "blocked_on_causal_evaluator_implementation": 1,
       "pending": 6
     },
     "total": 7
@@ -414,10 +421,16 @@
     "warning": "v3 실행은 dirty/untracked 코드 상태에서 이뤄졌고 기록된 revision만으로 정확한 실행 소스를 복원할 수 없다. 후속 commit-pinned 복제가 필요하다."
   },
   "queue": {
+    "active_jobs": [],
+    "availability_counts": {
+      "blocked_unsupported": 1,
+      "completed": 8
+    },
     "completed": 8,
     "completion_fraction": 0.888889,
     "jobs": [
       {
+        "availability": "completed",
         "depends_on": [],
         "experiment_id": "20260812_1220_day1-env-smoke_s0",
         "id": "day1_env_smoke",
@@ -431,6 +444,7 @@
         "track": "A"
       },
       {
+        "availability": "completed",
         "depends_on": [
           "day1_env_smoke"
         ],
@@ -448,6 +462,7 @@
         "track": "A"
       },
       {
+        "availability": "completed",
         "depends_on": [
           "day1_env_smoke"
         ],
@@ -465,6 +480,7 @@
         "track": "A"
       },
       {
+        "availability": "completed",
         "depends_on": [
           "day1_baselines_physics_v2"
         ],
@@ -480,6 +496,7 @@
         "track": "A"
       },
       {
+        "availability": "completed",
         "depends_on": [
           "day1_positive_control"
         ],
@@ -495,6 +512,7 @@
         "track": "B"
       },
       {
+        "availability": "completed",
         "depends_on": [
           "day1_baselines_physics_v2"
         ],
@@ -512,6 +530,7 @@
         "track": "B"
       },
       {
+        "availability": "completed",
         "depends_on": [
           "day1_capability_v3_smoke"
         ],
@@ -527,6 +546,7 @@
         "track": "B"
       },
       {
+        "availability": "completed",
         "depends_on": [
           "day1_positive_control_v3"
         ],
@@ -543,6 +563,7 @@
         "track": "B"
       },
       {
+        "availability": "blocked_unsupported",
         "depends_on": [
           "day1_baselines_physics_v2",
           "day1_positive_control_v3_replication"
@@ -571,17 +592,328 @@
     "day": 1,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.010474,
-    "remaining_hours": 166.24,
+    "elapsed_fraction": 0.01961,
+    "remaining_hours": 164.71,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-12T22:23:10+09:00",
+    "checked_at": "2026-08-12T23:58:31+09:00",
     "command": "python3 scripts/record_test_status.py",
-    "note": "통합 전체 테스트 스위트: 116/116 통과",
-    "passed": 116,
+    "input_digest": {
+      "algorithm": "sha256-length-framed-path-and-content-v1",
+      "file_count": 53,
+      "sha256": "0cfdc786d848f670d566dfb1c027a7ea3190900fadaf019e36be444b43b8b600"
+    },
+    "note": "통합 전체 테스트 스위트: 180/180 통과",
+    "passed": 180,
     "status": "passed",
-    "total": 116
+    "total": 180
+  },
+  "workstreams": {
+    "completed_criteria": 23,
+    "items": [
+      {
+        "blockers": [
+          "새 workstream 화면의 공개 배포와 live 검증이 남아 있다."
+        ],
+        "checklist": [
+          {
+            "complete": true,
+            "criterion": "공개 HTTPS 대시보드가 접근 가능하고 최신 완료 실험을 표시한다.",
+            "id": "live_dashboard"
+          },
+          {
+            "complete": true,
+            "criterion": "완료 표시는 무결성 검사와 개인정보 차단 검사를 통과해야 한다.",
+            "id": "integrity_privacy"
+          },
+          {
+            "complete": true,
+            "criterion": "큐 상태와 안전하게 계산 가능한 부분 실행 진행률을 구분해 표시한다.",
+            "id": "queue_progress"
+          },
+          {
+            "complete": true,
+            "criterion": "비실험 연구 작업을 검증 가능한 체크리스트 ledger와 UI로 투영한다.",
+            "id": "workstream_ledger"
+          },
+          {
+            "complete": false,
+            "criterion": "workstream 화면을 공개 배포한 뒤 HTTPS에서 다시 검증한다.",
+            "id": "live_workstream_view"
+          }
+        ],
+        "completed_count": 4,
+        "id": "public_observability",
+        "last_verified_at": "2026-08-12T23:44:48+09:00",
+        "next_criterion": "workstream 화면을 공개 배포한 뒤 HTTPS에서 다시 검증한다.",
+        "objective": "실험과 비실험 연구 작업의 실제 상태를 민감정보 없이 공개한다.",
+        "progress_fraction": 0.8,
+        "state": "active",
+        "title": "공개 연구 관측성",
+        "total_count": 5
+      },
+      {
+        "blockers": [
+          "현재 prototype은 gate-ready가 아니며 동결된 계층화·반복 개입 설계가 없다."
+        ],
+        "checklist": [
+          {
+            "complete": true,
+            "criterion": "동일 상태에서 transfer와 no-transfer 분기를 재생하는 paired prototype이 작동한다.",
+            "id": "paired_prototype"
+          },
+          {
+            "complete": true,
+            "criterion": "prototype의 비확증적 한계와 gate 사용 금지를 명시한다.",
+            "id": "limitations_audited"
+          },
+          {
+            "complete": false,
+            "criterion": "계층화된 기회 선택과 기회당 16회 반복 설계를 동결한다.",
+            "id": "freeze_design"
+          },
+          {
+            "complete": false,
+            "criterion": "고정 horizon 생존·순수 receiver gain·actor cost 인과 추정량을 구현하고 검증한다.",
+            "id": "implement_estimands"
+          },
+          {
+            "complete": false,
+            "criterion": "엄격 capability gate가 동결된 인과 추정량만 소비하도록 통합한다.",
+            "id": "strict_gate_integration"
+          }
+        ],
+        "completed_count": 2,
+        "id": "strict_causal_evaluator",
+        "last_verified_at": "2026-08-12T23:44:48+09:00",
+        "next_criterion": "계층화된 기회 선택과 기회당 16회 반복 설계를 동결한다.",
+        "objective": "공유가 상대의 결과에 미치는 개입 효과를 사전 동결된 반복 설계로 추정한다.",
+        "progress_fraction": 0.4,
+        "state": "blocked",
+        "title": "엄격 인과 평가기",
+        "total_count": 5
+      },
+      {
+        "blockers": [
+          "인과 평가기 CEF-01..09 acceptance를 통과하기 전에는 clean calibration 실행을 시작할 수 없다."
+        ],
+        "checklist": [
+          {
+            "complete": true,
+            "criterion": "기존 v3 결과의 source provenance 불일치를 결과 해석에 기록한다.",
+            "id": "historical_warning"
+          },
+          {
+            "complete": true,
+            "criterion": "테스트된 코드와 과거 결과를 포함하는 첫 clean source boundary를 확정한다.",
+            "id": "clean_boundary"
+          },
+          {
+            "complete": true,
+            "criterion": "최소 v3 clean rerun의 go 또는 no-go 결정을 근거와 함께 기록한다.",
+            "id": "rerun_decision"
+          },
+          {
+            "complete": false,
+            "criterion": "선택한 clean rerun을 완료하거나 재실행 보류 결정을 결과 ledger에 확정한다.",
+            "id": "decision_executed"
+          }
+        ],
+        "completed_count": 3,
+        "id": "provenance_clean_rerun_decision",
+        "last_verified_at": "2026-08-12T23:44:48+09:00",
+        "next_criterion": "선택한 clean rerun을 완료하거나 재실행 보류 결정을 결과 ledger에 확정한다.",
+        "objective": "과거 실행 소스의 불일치를 보존하고 새 결과를 clean source boundary에 연결한다.",
+        "progress_fraction": 0.75,
+        "state": "active",
+        "title": "Provenance 및 clean rerun 결정",
+        "total_count": 4
+      },
+      {
+        "blockers": [
+          "SIGKILL 또는 telemetry 쓰기 실패 뒤 stale heartbeat를 권위 상태로 오인하지 않는 liveness 판정이 남아 있다.",
+          "메인 연구 저장소에 원격 백업과 재현 환경 lockfile이 없다."
+        ],
+        "checklist": [
+          {
+            "complete": true,
+            "criterion": "세션 진입 시 읽을 상태와 안전한 resume 절차가 정의되어 있다.",
+            "id": "entry_protocol"
+          },
+          {
+            "complete": true,
+            "criterion": "휘발성 실행 상태를 기계·사람용 handoff로 재생성할 수 있다.",
+            "id": "runtime_handoff"
+          },
+          {
+            "complete": true,
+            "criterion": "최신 과학 판단·claim boundary·다음 결정을 curated handoff가 보존한다.",
+            "id": "curated_handoff"
+          },
+          {
+            "complete": true,
+            "criterion": "checkpoint 상태와 RNG replay가 회귀 테스트를 통과한다. 부분 산출물 provenance 안전성은 별도 기준으로 검증한다.",
+            "id": "checkpoint_rng_replay"
+          },
+          {
+            "complete": true,
+            "criterion": "세션 시작과 claim 시점의 공개 snapshot 생성 경로가 연결되어 있다.",
+            "id": "publish_route_foundation"
+          },
+          {
+            "complete": true,
+            "criterion": "부분 resume가 기존 산출물을 덮어쓰거나 서로 다른 provenance를 혼합하지 못하도록 차단하고 회귀 테스트한다.",
+            "id": "immutable_partial_provenance_guard"
+          },
+          {
+            "complete": true,
+            "criterion": "실패한 parent가 회복되면 dependency_failure child가 자동으로 재평가되어 실행 가능 상태로 돌아온다.",
+            "id": "dependency_recovery"
+          },
+          {
+            "complete": true,
+            "criterion": "wrapper --dry-run이 파일·git·원격 상태를 전혀 변경하지 않음을 회귀 테스트한다.",
+            "id": "dry_run_nonmutating"
+          },
+          {
+            "complete": true,
+            "criterion": "claim 이후에도 검증 가능한 진행 변화가 공개 snapshot에 반영된다.",
+            "id": "progress_change_publication"
+          },
+          {
+            "complete": true,
+            "criterion": "publisher/session lock으로 동시 갱신을 직렬화하고 공개 publish 실패나 지연이 연구 시작을 막지 않는다.",
+            "id": "publisher_serialization_nonblocking"
+          },
+          {
+            "complete": true,
+            "criterion": "KeyboardInterrupt와 SystemExit가 일반 실패로 삼켜지지 않고 다음 작업 claim 없이 전파된다.",
+            "id": "interrupt_propagation"
+          },
+          {
+            "complete": true,
+            "criterion": "runner가 지원하지 않는 작업은 experiment ID나 blocked 상태를 만들지 않고 pending으로 보존된다.",
+            "id": "unsupported_preflight"
+          },
+          {
+            "complete": false,
+            "criterion": "heartbeat·owner token·host·age·실제 lock을 결합한 stale/live/inconsistent 판정과 SIGKILL 복구를 구현한다.",
+            "id": "heartbeat_liveness"
+          },
+          {
+            "complete": false,
+            "criterion": "workspace 손실에도 복구 가능한 private remote 또는 artifact backup과 dependency lock을 마련한다.",
+            "id": "external_recovery"
+          }
+        ],
+        "completed_count": 12,
+        "id": "session_continuity",
+        "last_verified_at": "2026-08-12T23:44:48+09:00",
+        "next_criterion": "heartbeat·owner token·host·age·실제 lock을 결합한 stale/live/inconsistent 판정과 SIGKILL 복구를 구현한다.",
+        "objective": "세션이 끊겨도 새 연구자가 안전하게 상태를 복구하고 다음 작업을 선택할 수 있게 한다.",
+        "progress_fraction": 0.857143,
+        "state": "active",
+        "title": "세션 연속성",
+        "total_count": 14
+      },
+      {
+        "blockers": [
+          "엄격 capability/design gate가 닫혀 있고 현재 matrix 실행 경로가 지원되지 않는다."
+        ],
+        "checklist": [
+          {
+            "complete": true,
+            "criterion": "네 factorial cell과 초기 seed 계획이 명시되어 있다.",
+            "id": "factorial_config"
+          },
+          {
+            "complete": false,
+            "criterion": "capability 및 evaluator design boundary가 정직하게 열려 있다.",
+            "id": "design_gate"
+          },
+          {
+            "complete": false,
+            "criterion": "동일 seed의 네 cell 실행이 무결성 검사를 통과해 완료된다.",
+            "id": "execute_cells"
+          },
+          {
+            "complete": false,
+            "criterion": "사회 지표와 predictability-collapse harm 지표를 함께 분석한다.",
+            "id": "validity_analysis"
+          },
+          {
+            "complete": false,
+            "criterion": "JEPA-L0의 reject·modify·replicate 결정을 기록한다.",
+            "id": "decision_recorded"
+          }
+        ],
+        "completed_count": 1,
+        "id": "jepa_prediction_mortality_2x2",
+        "last_verified_at": "2026-08-12T23:44:48+09:00",
+        "next_criterion": "capability 및 evaluator design boundary가 정직하게 열려 있다.",
+        "objective": "순수 prediction과 mortality의 교호작용이 사회 지표를 바꾸는지 탐색적으로 검정한다.",
+        "progress_fraction": 0.2,
+        "state": "blocked",
+        "title": "JEPA prediction × mortality 2×2",
+        "total_count": 5
+      },
+      {
+        "blockers": [
+          "평가할 primary JEPA candidate가 아직 없고 representation protocol도 동결되지 않았다."
+        ],
+        "checklist": [
+          {
+            "complete": true,
+            "criterion": "관련 문헌과 novelty threat가 검증된 출처로 정리되어 있다.",
+            "id": "novelty_map"
+          },
+          {
+            "complete": false,
+            "criterion": "capacity-matched predictor 비교군과 compute budget을 동결한다.",
+            "id": "predictor_controls"
+          },
+          {
+            "complete": false,
+            "criterion": "사회 상태 probe와 identity nuisance 통제를 사전 등록한다.",
+            "id": "representation_probes"
+          },
+          {
+            "complete": false,
+            "criterion": "unseen-partner split과 appearance·identity 무작위화 프로토콜을 동결한다.",
+            "id": "unseen_partner_split"
+          },
+          {
+            "complete": false,
+            "criterion": "선정된 mechanism의 representation 및 transfer 실험을 완료한다.",
+            "id": "execute_transfer"
+          },
+          {
+            "complete": false,
+            "criterion": "JEPA-specific advantage 또는 generic predictor 결론을 기록한다.",
+            "id": "specificity_conclusion"
+          }
+        ],
+        "completed_count": 1,
+        "id": "representation_transfer",
+        "last_verified_at": "2026-08-12T23:44:48+09:00",
+        "next_criterion": "capacity-matched predictor 비교군과 compute budget을 동결한다.",
+        "objective": "JEPA 표현이 단순 predictor보다 사회 구조를 더 잘 보존하고 새 파트너에 전이되는지 검정한다.",
+        "progress_fraction": 0.166667,
+        "state": "pending",
+        "title": "표현 특이성 및 unseen-partner transfer",
+        "total_count": 6
+      }
+    ],
+    "progress_fraction": 0.589744,
+    "state_counts": {
+      "active": 3,
+      "blocked": 2,
+      "pending": 1
+    },
+    "total": 6,
+    "total_criteria": 39,
+    "updated_at": "2026-08-12T23:44:48+09:00"
   }
 }

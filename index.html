@@ -30,9 +30,9 @@
         <div class="eyebrow"><span class="live-dot" aria-hidden="true"></span><span id="project-status">데이터 로딩 중</span></div>
         <h1 id="hero-title">예측하는 에이전트는<br><em>서로를 살리게 될까?</em></h1>
         <p class="hero-copy" id="headline">저장소의 완료 아티팩트에서 공개 데이터를 생성하고 있습니다.</p>
-        <div class="clock-grid" aria-live="polite">
+        <div class="clock-grid">
           <div><strong id="sprint-day">—</strong><span>SPRINT DAY</span></div>
-          <div><strong id="countdown">—</strong><span>TIME REMAINING</span></div>
+          <div><strong id="countdown" aria-live="polite" aria-atomic="true">—</strong><span>TIME REMAINING</span></div>
           <div><strong id="queue-ratio">—</strong><span>JOBS COMPLETE</span></div>
           <div><strong id="test-ratio">—</strong><span>TESTS PASSING</span></div>
         </div>
@@ -53,9 +53,25 @@
           <p>큐와 마일스톤의 현재 상태를 저장소에서 직접 투영합니다. 완료 표시는 COMPLETE 아티팩트와 레지스트리를 전제로 합니다.</p>
         </div>
         <div class="metric-grid" id="progress-metrics"></div>
+        <article class="panel workstreams-panel">
+          <div class="panel-head workstreams-head">
+            <div><span class="kicker">CURATED CHECKLIST</span><h3>연구·엔지니어링 작업 ledger</h3></div>
+            <div class="workstream-total">
+              <strong id="workstream-total">—</strong>
+              <span>COUNTED CRITERIA</span>
+            </div>
+          </div>
+          <div class="workstream-overall" role="progressbar" aria-label="전체 workstream 선별 체크리스트 집계" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0">
+            <span id="workstream-overall-fill"></span>
+          </div>
+          <p class="workstream-method">완료 flag는 근거를 검토한 curator 판단이며, 표시 수치는 완료 criterion 수 ÷ 전체 criterion 수의 기계적 집계입니다. 시간·연산량 진행률이 아닙니다.</p>
+          <div id="workstream-grid" class="workstream-grid"></div>
+        </article>
         <div class="split-grid">
           <article class="panel">
             <div class="panel-head"><h3>실행 큐</h3><span id="queue-summary" class="mono">—</span></div>
+            <div id="active-work" class="active-work" aria-live="polite"></div>
+            <div class="queue-divider"><span>ALL QUEUED JOBS</span></div>
             <div id="job-list" class="job-list"></div>
           </article>
           <article class="panel">

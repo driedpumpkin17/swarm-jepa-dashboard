@@ -43,12 +43,175 @@ function renderClock(data) {
   window.setInterval(update, 60_000);
 }
 
+const availabilityCopy = {
+  completed: ["아티팩트 완료", ""],
+  active: ["실행 중", ""],
+  ready: ["실행 가능", "ready"],
+  waiting_dependencies: ["선행 작업 대기", "waiting"],
+  blocked_dependency: ["선행 실패로 차단", "blocked"],
+  blocked_unsupported: ["큐 pending · 현재 runner 미지원", "blocked"],
+  blocked: ["큐에서 차단", "blocked"],
+  failed: ["실패 · 재개 판단 필요", "failed"],
+  cancelled: ["취소됨", "blocked"],
+  unsupported: ["미지원", "blocked"],
+  unknown: ["상태 불명", "blocked"],
+};
+
+function renderActiveWork(queue) {
+  const root = $("#active-work");
+  const activeJobs = queue.active_jobs || [];
+  if (!activeJobs.length) {
+    const idle = node("div", "idle-card");
+    const pending = queue.jobs.filter(job => job.status === "pending");
+    const ready = pending.filter(job => job.availability === "ready").length;
+    const blocked = pending.filter(job => job.availability.startsWith("blocked")).length;
+    idle.append(
+      node("span", "kicker", "NO ACTIVE WRITER"),
+      node("h4", "", "현재 실행 중인 큐 작업 없음"),
+      node("p", "", "pending " + pending.length + "개 · 즉시 실행 가능 " + ready + "개 · 실행 차단 " + blocked + "개")
+    );
+    root.append(idle);
+    return;
+  }
+  activeJobs.forEach(job => {
+    const card = node("article", "active-card");
+    const head = node("div", "active-card-head");
+    const title = node("div");
+    title.append(node("span", "kicker", "ACTIVE JOB"), node("h4", "", job.id));
+    head.append(title, node("span", "status running", "RUNNING"));
+    card.append(head);
+    card.append(node("p", "active-card-meta", (job.track || "—") + " · Stage " + (job.stage ?? "—") + " · claimed " + dateLabel(job.claimed_at)));
+    const progress = job.partial_progress || { available: false };
+    if (progress.available && progress.planned_runs != null) {
+      const planLabel = progress.plan_basis === "condition_x_seed"
+        ? progress.condition_count + " conditions × " + progress.seed_count + " seeds"
+        : progress.planned_runs + " manifest runs";
+      const label = node("div", "active-progress-label");
+      label.append(
+        node("span", "", "완료 run_key · " + planLabel),
+        node("strong", "", progress.completed_runs + " / " + progress.planned_runs)
+      );
+      const bar = node("div", "run-progress");
+      bar.setAttribute("role", "progressbar");
+      bar.setAttribute("aria-label", job.id + " 완료 run 진행률");
+      bar.setAttribute("aria-valuemin", "0");
+      bar.setAttribute("aria-valuemax", String(progress.planned_runs));
+      bar.setAttribute("aria-valuenow", String(progress.completed_runs));
+      const fill = node("span");
+      fill.style.width = (progress.completion_fraction * 100) + "%";
+      bar.append(fill);
+      card.append(label, bar);
+    } else {
+      card.append(node("p", "active-card-meta", "부분 진행 분모를 안전하게 산출할 수 있어야 수치를 공개합니다."));
+    }
+    root.append(card);
+  });
+}
+
+const workstreamStateCopy = {
+  active: "ACTIVE",
+  blocked: "BLOCKED",
+  pending: "PENDING",
+  completed: "COMPLETE",
+};
+
+function renderWorkstreams(workstreams) {
+  setText(
+    "#workstream-total",
+    workstreams.completed_criteria + " / " + workstreams.total_criteria
+  );
+  const overall = $(".workstream-overall");
+  overall.setAttribute("aria-valuemax", String(workstreams.total_criteria));
+  overall.setAttribute("aria-valuenow", String(workstreams.completed_criteria));
+  $("#workstream-overall-fill").style.width =
+    (workstreams.progress_fraction * 100) + "%";
+  workstreams.items.forEach(stream => {
+    const card = node("article", "workstream-card " + stream.state);
+    const head = node("div", "workstream-card-head");
+    const title = node("div");
+    title.append(
+      node("span", "kicker", stream.id.replaceAll("_", " ")),
+      node("h4", "", stream.title)
+    );
+    head.append(
+      title,
+      node(
+        "span",
+        "workstream-state " + stream.state,
+        workstreamStateCopy[stream.state] || stream.state.toUpperCase()
+      )
+    );
+    card.append(head, node("p", "workstream-objective", stream.objective));
+
+    const progressLabel = node("div", "workstream-progress-label");
+    progressLabel.append(
+      node("span", "", "선별 체크리스트"),
+      node(
+        "strong",
+        "",
+        stream.completed_count + " / " + stream.total_count
+      )
+    );
+    const progress = node("div", "workstream-progress");
+    progress.setAttribute("role", "progressbar");
+    progress.setAttribute(
+      "aria-label",
+      stream.title + " curated criterion 집계"
+    );
+    progress.setAttribute("aria-valuemin", "0");
+    progress.setAttribute("aria-valuemax", String(stream.total_count));
+    progress.setAttribute("aria-valuenow", String(stream.completed_count));
+    const fill = node("span");
+    fill.style.width = (stream.progress_fraction * 100) + "%";
+    progress.append(fill);
+    card.append(progressLabel, progress);
+
+    if (stream.next_criterion) {
+      const next = node("p", "workstream-next");
+      next.append(
+        node("strong", "", "NEXT CRITERION"),
+        document.createTextNode(stream.next_criterion)
+      );
+      card.append(next);
+    }
+    stream.blockers.forEach(blocker => {
+      const block = node("p", "workstream-blocker");
+      block.append(
+        node("strong", "", "BLOCKER"),
+        document.createTextNode(blocker)
+      );
+      card.append(block);
+    });
+
+    const details = node("details", "workstream-checklist");
+    details.append(
+      node(
+        "summary",
+        "",
+        "전체 checklist · " + stream.completed_count + "/" + stream.total_count
+      )
+    );
+    const list = node("ol");
+    stream.checklist.forEach(check => {
+      list.append(
+        node("li", check.complete ? "done" : "", check.criterion)
+      );
+    });
+    details.append(list);
+    card.append(details);
+    $("#workstream-grid").append(card);
+  });
+}
+
 function renderProgress(data) {
+  const executionBlocked = Object.entries(data.queue.availability_counts || {})
+    .filter(([state]) => state.startsWith("blocked") || state === "failed")
+    .reduce((total, [, count]) => total + count, 0);
   const cards = [
-    ["COMPLETED RUNS", data.experiments.completed_count, "레지스트리의 완료 블록"],
-    ["QUEUE PROGRESS", pct(data.queue.completion_fraction), `${data.queue.total}개 자동화 작업`],
-    ["ACTIVE MILESTONE", `DAY ${data.sprint.day}`, "감사 루프 및 capability gate"],
-    ["REPLICATION RESERVE", "15%", "최종 검증을 위해 보존"],
+    ["COMPLETED BLOCKS", data.experiments.completed_count, "무결성 확인된 실험 블록"],
+    ["QUEUE PROGRESS", pct(data.queue.completion_fraction), data.queue.total + "개 자동화 작업"],
+    ["ACTIVE JOBS", data.queue.active_jobs.length, data.queue.active_jobs.length ? "현재 실행 중" : "writer idle"],
+    ["EXECUTION BLOCKED", executionBlocked, "pending 상태의 runner 미지원 포함"],
   ];
   const root = $("#progress-metrics");
   cards.forEach(([label, value, description]) => {
@@ -57,12 +220,22 @@ function renderProgress(data) {
     root.append(card);
   });
   setText("#queue-summary", `${data.queue.completed}/${data.queue.total} COMPLETE`);
+  renderWorkstreams(data.workstreams);
+  renderActiveWork(data.queue);
   data.queue.jobs.forEach((job, index) => {
     const row = node("div", "job");
     row.append(node("span", "job-index", String(index + 1).padStart(2, "0")));
     const center = node("div");
-    center.append(node("strong", "", job.id), node("small", "", `${job.track || "—"} · S${job.stage ?? "—"} · ${job.objective_id || job.kind || "—"}`));
-    row.append(center, node("span", `status ${job.status}`, job.status.toUpperCase()));
+    center.append(node("strong", "", job.id));
+    const availability = availabilityCopy[job.availability] || availabilityCopy.unknown;
+    center.append(
+      node(
+        "small",
+        "execution-note " + availability[1],
+        (job.track || "—") + " · S" + (job.stage ?? "—") + " · " + (job.objective_id || job.kind || "—") + " · " + availability[0]
+      )
+    );
+    row.append(center, node("span", "status " + job.status, job.status.toUpperCase()));
     $("#job-list").append(row);
   });
   data.milestones.items.forEach((item) => {
@@ -80,7 +253,13 @@ function svgBarChart(series, options = {}) {
   const margin = { top: 28, right: 18, bottom: 58, left: 48 };
   const plotWidth = width - margin.left - margin.right;
   const plotHeight = height - margin.top - margin.bottom;
-  const max = options.max || Math.max(...series.flatMap(group => group.values.map(v => v.value)), 1);
+  const rawValues = series.flatMap(group =>
+    group.values.map(entry => Number(entry.value))
+  );
+  if (!rawValues.length || rawValues.some(value => !Number.isFinite(value))) {
+    throw new Error("차트 evidence 값이 유한하지 않습니다.");
+  }
+  const max = options.max ?? Math.max(...rawValues, 1);
   const colors = options.colors || ["#7df0bd", "#f0ba66"];
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
@@ -102,7 +281,11 @@ function svgBarChart(series, options = {}) {
     const available = groupWidth * .7;
     const barWidth = Math.min(48, available / group.values.length - 6);
     group.values.forEach((entry, valueIndex) => {
-      const value = Math.max(0, Number(entry.value || 0));
+      const rawValue = Number(entry.value);
+      if (!Number.isFinite(rawValue)) {
+        throw new Error("차트 evidence 값이 누락되었습니다.");
+      }
+      const value = Math.max(0, rawValue);
       const barHeight = (value / max) * plotHeight;
       const groupCenter = margin.left + groupWidth * (groupIndex + .5);
       const x = groupCenter - (barWidth * group.values.length + 6 * (group.values.length - 1)) / 2 + valueIndex * (barWidth + 6);
@@ -139,30 +322,108 @@ function svgBarChart(series, options = {}) {
 function renderEvidence(data) {
   const audit = data.evidence.environment_audit;
   const positive = data.evidence.positive_control;
-  setText("#immobility-change", `${pct(audit.v1.immobility_rate)} → ${pct(audit.v2.immobility_rate)}`);
+
+  if (audit.available) {
+    setText(
+      "#immobility-change",
+      pct(audit.v1.immobility_rate) + " → " + pct(audit.v2.immobility_rate)
+    );
+    $("#physics-chart").append(svgBarChart([
+      {
+        label: "정지율",
+        values: [
+          { value: audit.v1.immobility_rate },
+          { value: audit.v2.immobility_rate },
+        ],
+      },
+      {
+        label: "이동 엔트로피",
+        values: [
+          { value: audit.v1.movement_entropy_agent_0 },
+          { value: audit.v2.movement_entropy_agent_0 },
+        ],
+      },
+    ], { max: 1, legend: ["v1", "v2"], valueDigits: 3 }));
+    setText(
+      "#physics-note",
+      audit.interpretation
+        + " 최대 에너지 회계 오차 v2: "
+        + audit.v2.max_energy_accounting_error
+        + "."
+    );
+  } else {
+    setText("#immobility-change", "—");
+    setText(
+      "#physics-note",
+      "필수 exact 완료 아티팩트가 없어 물리 evidence를 공개하지 않습니다."
+    );
+  }
+
+  if (!positive.available) {
+    setText("#v3-rate", "—");
+    setText(
+      "#share-note",
+      "필수 exact 완료 아티팩트가 없어 양성대조 evidence를 공개하지 않습니다."
+    );
+    setText("#v1-audit-copy", "검증 가능한 evidence 없음");
+    return;
+  }
+
   const v3 = positive.v3_positive_control;
   setText("#v3-rate", pct(v3.positive_share.pooled_observational_rate));
-  $("#physics-chart").append(svgBarChart([
-    { label: "정지율", values: [{ value: audit.v1.immobility_rate }, { value: audit.v2.immobility_rate }] },
-    { label: "이동 엔트로피", values: [{ value: audit.v1.movement_entropy_agent_0 }, { value: audit.v2.movement_entropy_agent_0 }] },
-  ], { max: 1, legend: ["v1", "v2"], valueDigits: 3 }));
-  setText("#physics-note", `${audit.interpretation} 최대 에너지 회계 오차 v2: ${audit.v2.max_energy_accounting_error}.`);
   const bySeed = new Map();
   v3.rows.forEach(row => {
     if (!bySeed.has(row.seed)) bySeed.set(row.seed, {});
     bySeed.get(row.seed)[row.condition] = row.need_share_rate;
   });
-  const groups = [...bySeed.entries()].sort((a,b) => Number(a[0]) - Number(b[0])).map(([seed, values]) => ({
-    label: `seed ${seed}`,
-    values: [{ value: values["POSITIVE-SHARE"] || 0 }, { value: values["CTRL-NONE"] || 0 }],
+  const groups = [...bySeed.entries()]
+    .sort((a, b) => Number(a[0]) - Number(b[0]))
+    .map(([seed, values]) => {
+      const positiveRate = values["POSITIVE-SHARE"];
+      const controlRate = values["CTRL-NONE"];
+      if (
+        !Number.isFinite(positiveRate)
+        || !Number.isFinite(controlRate)
+      ) {
+        throw new Error("seed별 양성대조 evidence가 불완전합니다.");
+      }
+      return {
+        label: "seed " + seed,
+        values: [
+          { value: positiveRate },
+          { value: controlRate },
+        ],
+      };
+    });
+  $("#share-chart").append(svgBarChart(groups, {
+    max: 1,
+    legend: ["직접 공유 보상", "CTRL-NONE"],
+    valueDigits: 3,
   }));
-  $("#share-chart").append(svgBarChart(groups, { max: 1, legend: ["직접 공유 보상", "CTRL-NONE"], valueDigits: 3 }));
-  setText("#share-note", `직접 보상: ${v3.positive_share.events.toLocaleString()} events / ${v3.positive_share.opportunities.toLocaleString()} opportunities. 대조군: ${v3.control_none.events.toLocaleString()} / ${v3.control_none.opportunities.toLocaleString()}. 인과 추정량 없음.`);
+  setText(
+    "#share-note",
+    "직접 보상: "
+      + v3.positive_share.events.toLocaleString()
+      + " events / "
+      + v3.positive_share.opportunities.toLocaleString()
+      + " opportunities. 대조군: "
+      + v3.control_none.events.toLocaleString()
+      + " / "
+      + v3.control_none.opportunities.toLocaleString()
+      + ". 인과 추정량 없음."
+  );
   const v1 = positive.v1_checkpoint_audit;
   setText("#v1-audit-copy", v1.interpretation);
   v1.rows.forEach(row => {
     const item = node("div");
-    item.append(node("strong", "", pct(row.need_share_rate)), node("span", "", `${row.condition} · n=${row.need_opportunities}`));
+    item.append(
+      node("strong", "", pct(row.need_share_rate)),
+      node(
+        "span",
+        "",
+        row.condition + " · n=" + row.need_opportunities
+      )
+    );
     $("#v1-audit-values").append(item);
   });
 }
