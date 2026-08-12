@@ -323,7 +323,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-12T14:58:31.988815+00:00",
+  "generated_at": "2026-08-12T15:08:14.033678+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -592,18 +592,18 @@
     "day": 1,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.01961,
-    "remaining_hours": 164.71,
+    "elapsed_fraction": 0.020572,
+    "remaining_hours": 164.54,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-12T23:58:31+09:00",
+    "checked_at": "2026-08-13T00:07:36+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
       "file_count": 53,
-      "sha256": "0cfdc786d848f670d566dfb1c027a7ea3190900fadaf019e36be444b43b8b600"
+      "sha256": "3905b2a6a2141a4c8dbc145cacc58db006af01e1d3a6348715ec6994c59c9a5a"
     },
     "note": "통합 전체 테스트 스위트: 180/180 통과",
     "passed": 180,
@@ -611,12 +611,10 @@
     "total": 180
   },
   "workstreams": {
-    "completed_criteria": 23,
+    "completed_criteria": 24,
     "items": [
       {
-        "blockers": [
-          "새 workstream 화면의 공개 배포와 live 검증이 남아 있다."
-        ],
+        "blockers": [],
         "checklist": [
           {
             "complete": true,
@@ -639,18 +637,18 @@
             "id": "workstream_ledger"
           },
           {
-            "complete": false,
+            "complete": true,
             "criterion": "workstream 화면을 공개 배포한 뒤 HTTPS에서 다시 검증한다.",
             "id": "live_workstream_view"
           }
         ],
-        "completed_count": 4,
+        "completed_count": 5,
         "id": "public_observability",
-        "last_verified_at": "2026-08-12T23:44:48+09:00",
-        "next_criterion": "workstream 화면을 공개 배포한 뒤 HTTPS에서 다시 검증한다.",
+        "last_verified_at": "2026-08-13T00:01:34+09:00",
+        "next_criterion": null,
         "objective": "실험과 비실험 연구 작업의 실제 상태를 민감정보 없이 공개한다.",
-        "progress_fraction": 0.8,
-        "state": "active",
+        "progress_fraction": 1.0,
+        "state": "completed",
         "title": "공개 연구 관측성",
         "total_count": 5
       },
@@ -906,14 +904,15 @@
         "total_count": 6
       }
     ],
-    "progress_fraction": 0.589744,
+    "progress_fraction": 0.615385,
     "state_counts": {
-      "active": 3,
+      "active": 2,
       "blocked": 2,
+      "completed": 1,
       "pending": 1
     },
     "total": 6,
     "total_criteria": 39,
-    "updated_at": "2026-08-12T23:44:48+09:00"
+    "updated_at": "2026-08-13T00:01:34+09:00"
   }
 }
