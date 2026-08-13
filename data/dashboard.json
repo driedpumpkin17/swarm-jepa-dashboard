@@ -323,7 +323,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-13T13:02:25.138764+00:00",
+  "generated_at": "2026-08-13T13:18:43.767334+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -363,17 +363,17 @@
       "jepa_matrix_allowed": false,
       "next_allowed_scientific_run": "CEF-10_fresh_pos_ctrl_causal_calibration",
       "prerequisites": {
-        "completed": 6,
+        "completed": 7,
         "next_task": {
-          "action": "implement_repeat_window_world_seed_estimands",
+          "action": "implement_do_minus_actor_harm_bundle",
           "depends_on": [
             "CEF-06"
           ],
           "done": false,
-          "id": "CEF-07",
+          "id": "CEF-08",
           "state": "ready"
         },
-        "progress_fraction": 0.666667,
+        "progress_fraction": 0.777778,
         "tasks": [
           {
             "action": "freeze_protocol_gate_and_public_anchor_contract_hashes",
@@ -439,9 +439,10 @@
             "depends_on": [
               "CEF-06"
             ],
-            "done": false,
+            "done": true,
+            "evidence_sha256": "8df5035bd80d4bfd9c58fa1f6e0bd4ba457b3b4d84426f87b8ed4821b0361544",
             "id": "CEF-07",
-            "state": "ready"
+            "state": "completed"
           },
           {
             "action": "implement_do_minus_actor_harm_bundle",
@@ -465,7 +466,7 @@
         ],
         "total": 9
       },
-      "report": "research/reports/20260813_cef06_release.md",
+      "report": "research/reports/20260813_cef07_release.md",
       "schedule_record_gate_ready": false,
       "scientific_run": {
         "action": "run_fresh_clean_pos_ctrl_causal_calibration",
@@ -720,26 +721,26 @@
     "day": 2,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.150948,
-    "remaining_hours": 142.64,
+    "elapsed_fraction": 0.152566,
+    "remaining_hours": 142.37,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-13T22:01:56+09:00",
+    "checked_at": "2026-08-13T22:17:10+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 92,
-      "sha256": "03432f4cb870aceb308b95243ce29837d55e257041b282bc7cbe67ea22d1e6a3"
+      "file_count": 94,
+      "sha256": "e3500dd4e8f5f499f3840b82161c4e615131015246e1e4b94684ff4031e783c4"
     },
-    "note": "통합 전체 테스트 스위트: 289/289 통과",
-    "passed": 289,
+    "note": "통합 전체 테스트 스위트: 294/294 통과",
+    "passed": 294,
     "status": "passed",
-    "total": 289
+    "total": 294
   },
   "workstreams": {
-    "completed_criteria": 24,
+    "completed_criteria": 26,
     "items": [
       {
         "blockers": [],
@@ -782,7 +783,7 @@
       },
       {
         "blockers": [
-          "CEF-01..06은 동결됐다. CEF-07 repeat→window→world→seed 산술 코어와 손계산 oracle 7/7은 통과했지만 Git-bound freeze·전체 검증·공개 7/9 release가 남았다. CEF-08..09 harm·execution freeze도 아직 없고 실제 schedule anchor나 tape는 기록·소비되지 않았다."
+          "CEF-01..07은 부모 SHA와 clean Git blob에 결박된 비실행 구현 동결이다. CEF-08 do-minus-actor harm bundle과 CEF-09 outcome firewall·acceptance freeze가 남아 실제 schedule anchor, tape 소비, policy execution, outcome read는 계속 금지된다."
         ],
         "checklist": [
           {
@@ -796,12 +797,12 @@
             "id": "limitations_audited"
           },
           {
-            "complete": false,
+            "complete": true,
             "criterion": "계층화된 기회 선택과 기회당 16회 반복 설계를 동결한다.",
             "id": "freeze_design"
           },
           {
-            "complete": false,
+            "complete": true,
             "criterion": "고정 horizon 생존·순수 receiver gain·actor cost 인과 추정량을 구현하고 검증한다.",
             "id": "implement_estimands"
           },
@@ -811,12 +812,12 @@
             "id": "strict_gate_integration"
           }
         ],
-        "completed_count": 2,
+        "completed_count": 4,
         "id": "strict_causal_evaluator",
-        "last_verified_at": "2026-08-13T21:59:29+09:00",
-        "next_criterion": "계층화된 기회 선택과 기회당 16회 반복 설계를 동결한다.",
+        "last_verified_at": "2026-08-13T22:09:51+09:00",
+        "next_criterion": "엄격 capability gate가 동결된 인과 추정량만 소비하도록 통합한다.",
         "objective": "공유가 상대의 결과에 미치는 개입 효과를 사전 동결된 반복 설계로 추정한다.",
-        "progress_fraction": 0.4,
+        "progress_fraction": 0.8,
         "state": "blocked",
         "title": "엄격 인과 평가기",
         "total_count": 5
@@ -1032,7 +1033,7 @@
         "total_count": 6
       }
     ],
-    "progress_fraction": 0.615385,
+    "progress_fraction": 0.666667,
     "state_counts": {
       "active": 2,
       "blocked": 2,
