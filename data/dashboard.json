@@ -339,7 +339,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-13T16:22:33.602493+00:00",
+  "generated_at": "2026-08-13T16:51:12.379752+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -370,9 +370,9 @@
   "milestones": {
     "automation_roadmap": {
       "analysis": {
-        "claim_boundary": "screening, selection, public anchor는 위험·실행 준비·chronology evidence일 뿐 causal benefit, CEF-10 결과, JEPA 효과 또는 emergence evidence가 아니다.",
-        "next_decision": "initially unopened seeds/worlds에서 고정하고 공개 receipt한 485개 window에 대해서만 paired estimation 및 do-minus-i tape를 실행하고 CEF-09 firewall로 outcome을 개봉한다.",
-        "status_interpretation": "CEF-01..09는 9/9 완료다. CEF-10은 checkpoint training, pre-outcome manifest, 196,608-row factual enumeration, 54,452-row screening, 485-window selection과 여섯 schedule의 exact-HTTPS anchor까지 완료했다."
+        "claim_boundary": "paired execution과 CRN 검증은 실행 무결성 evidence일 뿐 causal benefit, CEF-10 결과, JEPA 효과 또는 emergence evidence가 아니다. outcome parse와 estimand는 아직 0건이다.",
+        "next_decision": "initially unopened seeds/worlds에 대한 full-world do-minus-i harm parent를 완성한 뒤 CEF-09 parent DAG를 검증하고, 그 후에만 여섯 endpoint blob을 각 1회 개봉한다.",
+        "status_interpretation": "CEF-01..09는 9/9 완료다. CEF-10은 485개 anchored window의 7,760 paired CRN과 201,760 branch-transition까지 실행·검증했으며 여섯 endpoint blob은 아직 firewall 뒤에서 opaque 상태다."
       },
       "count_basis": "completed CEF-01..09 dependency-checklist items / 9; not elapsed time or compute",
       "id": "causal_evaluator_freeze_v1",
@@ -476,7 +476,7 @@
         ],
         "total": 9
       },
-      "report": "research/reports/20260814_cef10_schedule_anchor_receipt.md",
+      "report": "research/reports/20260814_cef10_paired_execution_receipt.md",
       "schedule_record_gate_ready": true,
       "scientific_run": {
         "action": "continue_fresh_pos_ctrl_calibration_after_checkpoint_training",
@@ -749,23 +749,23 @@
     "day": 2,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.170803,
-    "remaining_hours": 139.31,
+    "elapsed_fraction": 0.173645,
+    "remaining_hours": 138.83,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-14T01:22:11+09:00",
+    "checked_at": "2026-08-14T01:50:38+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 119,
-      "sha256": "5366c68e40a8fc8cab3e4db89345bd74d197c39443b6c9a3f7701a00c76a7c4b"
+      "file_count": 124,
+      "sha256": "fba0caa0c286fd6446836e3467d47bf8a506906bdf9df0332b1c340a98c0def7"
     },
-    "note": "통합 전체 테스트 스위트: 334/334 통과",
-    "passed": 334,
+    "note": "통합 전체 테스트 스위트: 337/337 통과",
+    "passed": 337,
     "status": "passed",
-    "total": 334
+    "total": 337
   },
   "workstreams": {
     "completed_criteria": 27,
