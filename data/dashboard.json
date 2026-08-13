@@ -323,7 +323,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-13T13:40:54.216663+00:00",
+  "generated_at": "2026-08-13T13:59:22.233840+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -354,27 +354,18 @@
   "milestones": {
     "automation_roadmap": {
       "analysis": {
-        "claim_boundary": "CEF-10은 잠겨 있고 scientific execution은 시작되지 않았으며, 인과 효과나 emergence evidence는 없다.",
-        "next_decision": "다음 결정은 dependency-ready prerequisite의 완료 근거를 검토해 다음 항목으로 진행할지 여부다.",
-        "status_interpretation": "일부 선행 항목이 dependency 및 SHA 조건을 충족한 normative/implementation progress 상태이며 acceptance 검증이 진행 중이다."
+        "claim_boundary": "CEF-10 ready는 evaluator 준비 상태일 뿐 CEF-10 결과, JEPA 효과 또는 emergence evidence는 아직 없다.",
+        "next_decision": "다음 결정은 unopened seeds/worlds로 fresh CEF-10 POS/CTRL calibration을 실행할지 여부다.",
+        "status_interpretation": "CEF-01..09가 9/9 완료되어 별도 CEF-10 양성대조 인과 calibration만 ready 상태다."
       },
       "count_basis": "completed CEF-01..09 dependency-checklist items / 9; not elapsed time or compute",
       "id": "causal_evaluator_freeze_v1",
       "jepa_matrix_allowed": false,
       "next_allowed_scientific_run": "CEF-10_fresh_pos_ctrl_causal_calibration",
       "prerequisites": {
-        "completed": 8,
-        "next_task": {
-          "action": "pass_acceptance_tests_and_clean_freeze",
-          "depends_on": [
-            "CEF-07",
-            "CEF-08"
-          ],
-          "done": false,
-          "id": "CEF-09",
-          "state": "ready"
-        },
-        "progress_fraction": 0.888889,
+        "completed": 9,
+        "next_task": null,
+        "progress_fraction": 1.0,
         "tasks": [
           {
             "action": "freeze_protocol_gate_and_public_anchor_contract_hashes",
@@ -461,15 +452,16 @@
               "CEF-07",
               "CEF-08"
             ],
-            "done": false,
+            "done": true,
+            "evidence_sha256": "f6decde9fcb9ea3086703bc159a51f5bde848b22e079f6f220a3e96910fc5b81",
             "id": "CEF-09",
-            "state": "ready"
+            "state": "completed"
           }
         ],
         "total": 9
       },
-      "report": "research/reports/20260813_cef08_release.md",
-      "schedule_record_gate_ready": false,
+      "report": "research/reports/20260813_cef09_release.md",
+      "schedule_record_gate_ready": true,
       "scientific_run": {
         "action": "run_fresh_clean_pos_ctrl_causal_calibration",
         "depends_on": [
@@ -478,10 +470,10 @@
         "done": false,
         "execution_class": "scientific_positive_control_calibration",
         "id": "CEF-10",
-        "locked": true,
-        "state": "locked"
+        "locked": false,
+        "state": "ready"
       },
-      "state": "implementation_in_progress"
+      "state": "prerequisites_complete_calibration_ready"
     },
     "items": [
       {
@@ -723,26 +715,26 @@
     "day": 2,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.154766,
-    "remaining_hours": 142.0,
+    "elapsed_fraction": 0.156598,
+    "remaining_hours": 141.69,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-13T22:40:30+09:00",
+    "checked_at": "2026-08-13T22:58:55+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 98,
-      "sha256": "500a95e0872260a8c7d74df37efbec27e589455e8ac2d85d4e26827c16af8cde"
+      "file_count": 102,
+      "sha256": "b2da31e5a2ed5b0b8d1d533db762f374a9a3ffd7583c6e0fa3c69aa048bbc1c7"
     },
-    "note": "통합 전체 테스트 스위트: 305/305 통과",
-    "passed": 305,
+    "note": "통합 전체 테스트 스위트: 310/310 통과",
+    "passed": 310,
     "status": "passed",
-    "total": 305
+    "total": 310
   },
   "workstreams": {
-    "completed_criteria": 26,
+    "completed_criteria": 27,
     "items": [
       {
         "blockers": [],
@@ -784,9 +776,7 @@
         "total_count": 5
       },
       {
-        "blockers": [
-          "CEF-01..08은 부모 SHA와 clean Git blob에 결박된 비실행 구현 동결이다. CEF-09 parent-first outcome firewall·adapter·acceptance execution freeze가 남아 실제 schedule anchor, tape 소비, policy execution, outcome read는 계속 금지된다."
-        ],
+        "blockers": [],
         "checklist": [
           {
             "complete": true,
@@ -809,18 +799,18 @@
             "id": "implement_estimands"
           },
           {
-            "complete": false,
+            "complete": true,
             "criterion": "엄격 capability gate가 동결된 인과 추정량만 소비하도록 통합한다.",
             "id": "strict_gate_integration"
           }
         ],
-        "completed_count": 4,
+        "completed_count": 5,
         "id": "strict_causal_evaluator",
-        "last_verified_at": "2026-08-13T22:34:00+09:00",
-        "next_criterion": "엄격 capability gate가 동결된 인과 추정량만 소비하도록 통합한다.",
+        "last_verified_at": "2026-08-13T22:46:00+09:00",
+        "next_criterion": null,
         "objective": "공유가 상대의 결과에 미치는 개입 효과를 사전 동결된 반복 설계로 추정한다.",
-        "progress_fraction": 0.8,
-        "state": "blocked",
+        "progress_fraction": 1.0,
+        "state": "completed",
         "title": "엄격 인과 평가기",
         "total_count": 5
       },
@@ -1035,11 +1025,11 @@
         "total_count": 6
       }
     ],
-    "progress_fraction": 0.666667,
+    "progress_fraction": 0.692308,
     "state_counts": {
       "active": 2,
-      "blocked": 2,
-      "completed": 1,
+      "blocked": 1,
+      "completed": 2,
       "pending": 1
     },
     "total": 6,
