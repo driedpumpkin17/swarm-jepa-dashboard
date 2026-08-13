@@ -17,7 +17,7 @@
     },
     "curated_report_sections": {
       "Best result": "The v3 material need-share rate advantage replicated in seeds 404, 505, and 606. Across 64 fixed held-out worlds per seed, median POSITIVE-SHARE minus CTRL-NONE gain was `+0.9971` deterministic and `+0.7798` sampled. Median beneficial energy units per eligible need timestep gained `+2.0445` and `+2.1946`, respectively. Maximum energy-accounting error across v3 learned runs remained below `1.81e-05`.",
-      "Executive summary": "Day 1 has produced eight immutable exploratory experiment blocks and a tested, restartable two-agent stack. A direct-reward v3 control learned material energy transfer on 64 held-out worlds in each of three training seeds, but this remains engineered behavior rather than emergence: the policies manufactured 5--8 times more need opportunities, cycled energy bidirectionally, and shortened sampled episodes in every seed. No JEPA condition has run and every emergence score remains unscored. The source-bound suite now passes `316/316` with warnings treated as errors. Partial resume is provenance-locked, interrupts and unsupported jobs fail closed, and semantic progress publication is nonblocking and retryable. The old schedule record remains nonexecuting and cannot open `FALSIFY-v1.1`; execution authority instead flows through the separately validated CEF parent DAG and typed adapter. CEF-01..09 are complete (`9/9`) at replacement CEF-09 freeze `49424c7b31a01f04e0ecf89dbee5d9849bd4845305d629556bb6d4ecd910170b`. The accepted firewall reconstructs internal parent edges and exact content contracts, then derives three typed views only after one committed opaque read. No screening, selection, anchor, tape, outcome, or policy execution ran. CEF-10 is the only next permitted scientific calibration; the JEPA matrix remains locked. This is evaluator engineering progress, not causal or emergence evidence. The JEPA matrix remains pending and unclaimed.",
+      "Executive summary": "Day 1 has produced eight immutable exploratory experiment blocks, one fresh CEF-10 checkpoint-training block, and a tested, restartable two-agent stack. A direct-reward v3 control learned material energy transfer on 64 held-out worlds in each of three training seeds, but this remains engineered behavior rather than emergence: the policies manufactured 5--8 times more need opportunities, cycled energy bidirectionally, and shortened sampled episodes in every seed. No JEPA condition has run and every emergence score remains unscored. The source-bound suite now passes `325/325` with warnings treated as errors. Partial resume is provenance-locked, interrupts and unsupported jobs fail closed, and semantic progress publication is nonblocking and retryable. The old schedule record remains nonexecuting and cannot open `FALSIFY-v1.1`; execution authority instead flows through the separately validated CEF parent DAG and typed adapter. CEF-01..09 are complete (`9/9`) at replacement CEF-09 freeze `49424c7b31a01f04e0ecf89dbee5d9849bd4845305d629556bb6d4ecd910170b`. The accepted firewall reconstructs internal parent edges and exact content contracts, then derives three typed views only after one committed opaque read. CEF-10 phase-1 training executed six fresh policies, but no evaluation-world screening, selection, schedule anchor, causal tape, or outcome read has occurred. Pre-outcome manifests are now accepted. Candidate enumeration and screen-domain-only neutral screening are the only next permitted CEF-10 phases; the JEPA matrix remains locked. This is evaluator engineering progress, not causal or emergence evidence. The JEPA matrix remains pending and unclaimed.",
       "Human-readable conclusion": "We can reliably train agents to transfer energy when directly rewarded, but we still cannot say that the transfers preserve a partner: sampled episodes end sooner and much of the flow cancels in the opposite direction. The research system now prevents several ways this ambiguity could be hidden—mixed-source resume, unsupported-job claiming, fuzzy public evidence, invented zeroes, and a manifest that overstates readiness. There is still no JEPA or social-emergence result. The scientifically useful next move is the fresh CEF-10 calibration under the now-frozen evaluator.",
       "Strongest alternative explanation": "The rewarded controller learns to approach, remain close, and cycle energy to harvest gross-transfer reward. The material-rate signal is real but need not be partner preservation. For future JEPA cells, the strongest alternative remains predictability management by immobilization, simplification, synchronization, or death.",
       "Suspicious results": "The deterministic mean action can delay first death in one seed while the sampled policy shortens life in every seed. Because every episode ends at the first death, mean alive fraction hides this difference. Fixed-horizon counterfactual survival, net receiver gain, opportunity creation, collision/contact, and role-conditioned mortality must be reported together."
@@ -200,7 +200,7 @@
     }
   },
   "experiments": {
-    "completed_count": 8,
+    "completed_count": 9,
     "rows": [
       {
         "completed_at": "2026-08-12T12:20:06.851322+00:00",
@@ -320,10 +320,26 @@
         "stage": 2,
         "status": "completed",
         "track": "B"
+      },
+      {
+        "completed_at": "2026-08-13T14:56:04.561098+00:00",
+        "condition": "CTRL-NONE;POSITIVE-SHARE",
+        "decision": "POSITIVE_CONTROL_CAUSAL_CALIBRATION_TRAINING",
+        "experiment_id": "20260813_1454_cef10-fresh-pos-ctrl-checkpoint-training_s2",
+        "notes": "Fresh CEF-10 checkpoint training only; held-out worlds and causal outcomes remain unopened. Direct reward is not emergence evidence.",
+        "objective_id": "POSITIVE-SHARE",
+        "seeds": [
+          15001,
+          15002,
+          15003
+        ],
+        "stage": 2,
+        "status": "completed",
+        "track": "B"
       }
     ]
   },
-  "generated_at": "2026-08-13T14:36:47.120924+00:00",
+  "generated_at": "2026-08-13T15:31:34.209748+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -354,9 +370,9 @@
   "milestones": {
     "automation_roadmap": {
       "analysis": {
-        "claim_boundary": "CEF-10 ready는 evaluator 준비 상태일 뿐 CEF-10 결과, JEPA 효과 또는 emergence evidence는 아직 없다.",
-        "next_decision": "다음 결정은 unopened seeds/worlds로 fresh CEF-10 POS/CTRL calibration을 실행할지 여부다.",
-        "status_interpretation": "CEF-01..09가 9/9 완료되어 별도 CEF-10 양성대조 인과 calibration만 ready 상태다."
+        "claim_boundary": "CEF-10 phase-2 manifest는 실행 준비 evidence일 뿐 CEF-10 결과, JEPA 효과 또는 emergence evidence가 아니다.",
+        "next_decision": "unopened seeds/worlds 경계를 유지하며 checkpoint, world, seed 및 tape manifest에 결속된 screening, selection, 별도 anchor를 순서대로 검증한다.",
+        "status_interpretation": "CEF-01..09는 9/9 완료다. CEF-10은 phase-1 checkpoint training과 phase-2 pre-outcome manifest까지 완료했지만 전체 인과 calibration은 미완료다."
       },
       "count_basis": "completed CEF-01..09 dependency-checklist items / 9; not elapsed time or compute",
       "id": "causal_evaluator_freeze_v1",
@@ -460,10 +476,10 @@
         ],
         "total": 9
       },
-      "report": "research/reports/20260813_cef09_final_release.md",
+      "report": "research/reports/20260814_cef10_checkpoint_training_receipt.md",
       "schedule_record_gate_ready": true,
       "scientific_run": {
-        "action": "run_fresh_clean_pos_ctrl_causal_calibration",
+        "action": "continue_fresh_pos_ctrl_calibration_after_checkpoint_training",
         "depends_on": [
           "CEF-09"
         ],
@@ -547,10 +563,10 @@
     "active_jobs": [],
     "availability_counts": {
       "blocked_unsupported": 1,
-      "completed": 8
+      "completed": 9
     },
-    "completed": 8,
-    "completion_fraction": 0.888889,
+    "completed": 9,
+    "completion_fraction": 0.9,
     "jobs": [
       {
         "availability": "completed",
@@ -701,37 +717,55 @@
         "stage": 0,
         "status": "pending",
         "track": "A"
+      },
+      {
+        "availability": "completed",
+        "depends_on": [
+          "day1_positive_control_v3_replication"
+        ],
+        "experiment_id": "20260813_1454_cef10-fresh-pos-ctrl-checkpoint-training_s2",
+        "id": "cef10_fresh_pos_ctrl_checkpoint_training",
+        "kind": "causal_calibration_train",
+        "objective_id": "POSITIVE-SHARE",
+        "seeds": [
+          15001,
+          15002,
+          15003
+        ],
+        "stage": 2,
+        "status": "completed",
+        "track": "B"
       }
     ],
     "status_counts": {
-      "completed": 8,
+      "completed": 9,
       "pending": 1
     },
-    "total": 9,
-    "updated_at": "2026-08-12T12:51:24.054551+00:00"
+    "total": 10,
+    "updated_at": "2026-08-13T14:56:04.561172+00:00"
   },
   "schema_version": 1,
   "sprint": {
     "day": 2,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.160309,
-    "remaining_hours": 141.07,
+    "elapsed_fraction": 0.165744,
+    "remaining_hours": 140.15,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-13T23:36:04+09:00",
+    "checked_at": "2026-08-14T00:31:13+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 103,
-      "sha256": "4f19c6ed351d27cfe2d666608e7d38907ac5b0c9b9cd19365eb9300a46ef6284"
+      "file_count": 106,
+      "sha256": "7221cb6dde9d973f0fa3a0c2b9759c4f7e112c9c5b35cef1d78d0e76be2cc642"
     },
-    "note": "통합 전체 테스트 스위트: 316/316 통과",
-    "passed": 316,
+    "note": "통합 전체 테스트 스위트: 326/326 통과",
+    "passed": 326,
     "status": "passed",
-    "total": 316
+    "total": 326
   },
   "workstreams": {
     "completed_criteria": 27,
