@@ -17,7 +17,7 @@
     },
     "curated_report_sections": {
       "Best result": "The v3 material need-share rate advantage replicated in seeds 404, 505, and 606. Across 64 fixed held-out worlds per seed, median POSITIVE-SHARE minus CTRL-NONE gain was `+0.9971` deterministic and `+0.7798` sampled. Median beneficial energy units per eligible need timestep gained `+2.0445` and `+2.1946`, respectively. Maximum energy-accounting error across v3 learned runs remained below `1.81e-05`.",
-      "Executive summary": "Day 1 has produced eight immutable exploratory experiment blocks and a tested, restartable two-agent stack. A direct-reward v3 control learned material energy transfer on 64 held-out worlds in each of three training seeds, but this remains engineered behavior rather than emergence: the policies manufactured 5--8 times more need opportunities, cycled energy bidirectionally, and shortened sampled episodes in every seed. No JEPA condition has run and every emergence score remains unscored. The source-bound suite now passes `248/248` with warnings treated as errors. Partial resume is provenance-locked, interrupts and unsupported jobs fail closed, and semantic progress publication is nonblocking and retryable. The new causal artifact is deliberately only a tamper-resistant schedule record; it cannot select windows, execute CRN tapes, estimate effects, or open `FALSIFY-v1.1`. The next scientific run is deferred until causal-evaluator tasks CEF-01..09 pass, after which CEF-10 is a fresh POS/CTRL causal calibration. CEF-01 is now content-addressed and anchored to an exact canonical-HTTPS `0/9` candidate; the public roadmap is `1/9` with CEF-02 next. CEF-02 now freezes the pure 32,768-row enumeration/reconciliation implementation; CEF-03 freezes strict 32-tape receipt reconciliation and exact consecutive collapse; CEF-04 freezes condition-blind 16-stratum selection with exact mode/world caps. The CEF-05 freeze now binds a two-invocation blinded schedule-anchor mechanism while its actual anchor-recorded flag remains false. CEF-06 now freezes event-indexed 16-pair CRN identities and validation with 4,096 unique pair IDs in the factorial audit. The next roadmap state is `6/9` with CEF-07 next. No screening, selection, anchor, tape, outcome, or policy execution ran. This is evaluator engineering progress, not causal or emergence evidence. The JEPA matrix remains pending and unclaimed.",
+      "Executive summary": "Day 1 has produced eight immutable exploratory experiment blocks and a tested, restartable two-agent stack. A direct-reward v3 control learned material energy transfer on 64 held-out worlds in each of three training seeds, but this remains engineered behavior rather than emergence: the policies manufactured 5--8 times more need opportunities, cycled energy bidirectionally, and shortened sampled episodes in every seed. No JEPA condition has run and every emergence score remains unscored. The source-bound suite now passes `248/248` with warnings treated as errors. Partial resume is provenance-locked, interrupts and unsupported jobs fail closed, and semantic progress publication is nonblocking and retryable. The new causal artifact is deliberately only a tamper-resistant schedule record; it cannot select windows, execute CRN tapes, estimate effects, or open `FALSIFY-v1.1`. The next scientific run is deferred until causal-evaluator tasks CEF-01..09 pass, after which CEF-10 is a fresh POS/CTRL causal calibration. CEF-01 is now content-addressed and anchored to an exact canonical-HTTPS `0/9` candidate; the public roadmap is `1/9` with CEF-02 next. CEF-02 now freezes the pure 32,768-row enumeration/reconciliation implementation; CEF-03 freezes strict 32-tape receipt reconciliation and exact consecutive collapse; CEF-04 freezes condition-blind 16-stratum selection with exact mode/world caps. The CEF-05 freeze now binds a two-invocation blinded schedule-anchor mechanism while its actual anchor-recorded flag remains false. CEF-06 now freezes event-indexed 16-pair CRN identities and validation with 4,096 unique pair IDs in the factorial audit. The next roadmap state is `6/9` with CEF-07 next. No screening, selection, anchor, tape, outcome, or policy execution ran. The public projection matched semantic SHA `b388046e...2f70` over canonical HTTPS. This is evaluator engineering progress, not causal or emergence evidence. The JEPA matrix remains pending and unclaimed.",
       "Human-readable conclusion": "We can reliably train agents to transfer energy when directly rewarded, but we still cannot say that the transfers preserve a partner: sampled episodes end sooner and much of the flow cancels in the opposite direction. The research system now prevents several ways this ambiguity could be hidden—mixed-source resume, unsupported-job claiming, fuzzy public evidence, invented zeroes, and a manifest that overstates readiness. There is still no JEPA or social-emergence result. The scientifically useful next move is to finish the causal evaluator before spending compute on another behavioral run.",
       "Strongest alternative explanation": "The rewarded controller learns to approach, remain close, and cycle energy to harvest gross-transfer reward. The material-rate signal is real but need not be partner preservation. For future JEPA cells, the strongest alternative remains predictability management by immobilization, simplification, synchronization, or death.",
       "Suspicious results": "The deterministic mean action can delay first death in one seed while the sampled policy shortens life in every seed. Because every episode ends at the first death, mean alive fraction hides this difference. Fixed-horizon counterfactual survival, net receiver gain, opportunity creation, collision/contact, and role-conditioned mortality must be reported together."
@@ -323,7 +323,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-13T12:55:10.782368+00:00",
+  "generated_at": "2026-08-13T13:02:25.138764+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -720,23 +720,23 @@
     "day": 2,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.150229,
-    "remaining_hours": 142.76,
+    "elapsed_fraction": 0.150948,
+    "remaining_hours": 142.64,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-13T21:54:09+09:00",
+    "checked_at": "2026-08-13T22:01:56+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 90,
-      "sha256": "9f9b034cb8bca8dd56289ec696837341776123922f8797bca7e328432bdb6fa7"
+      "file_count": 92,
+      "sha256": "03432f4cb870aceb308b95243ce29837d55e257041b282bc7cbe67ea22d1e6a3"
     },
-    "note": "통합 전체 테스트 스위트: 282/282 통과",
-    "passed": 282,
+    "note": "통합 전체 테스트 스위트: 289/289 통과",
+    "passed": 289,
     "status": "passed",
-    "total": 282
+    "total": 289
   },
   "workstreams": {
     "completed_criteria": 24,
@@ -782,7 +782,7 @@
       },
       {
         "blockers": [
-          "CEF-01..06의 규범·후보 우주·screening/collapse·selection·분리 anchor·event-indexed CRN 검증 구현은 동결됐지만 CEF-07..09의 estimand·harm·execution 구현과 최종 freeze가 아직 없다. 실제 schedule anchor나 tape는 아직 기록·소비되지 않았다."
+          "CEF-01..06은 동결됐다. CEF-07 repeat→window→world→seed 산술 코어와 손계산 oracle 7/7은 통과했지만 Git-bound freeze·전체 검증·공개 7/9 release가 남았다. CEF-08..09 harm·execution freeze도 아직 없고 실제 schedule anchor나 tape는 기록·소비되지 않았다."
         ],
         "checklist": [
           {
@@ -813,7 +813,7 @@
         ],
         "completed_count": 2,
         "id": "strict_causal_evaluator",
-        "last_verified_at": "2026-08-13T21:51:47+09:00",
+        "last_verified_at": "2026-08-13T21:59:29+09:00",
         "next_criterion": "계층화된 기회 선택과 기회당 16회 반복 설계를 동결한다.",
         "objective": "공유가 상대의 결과에 미치는 개입 효과를 사전 동결된 반복 설계로 추정한다.",
         "progress_fraction": 0.4,
