@@ -67,6 +67,61 @@
           <p class="workstream-method">완료 flag는 근거를 검토한 curator 판단이며, 표시 수치는 완료 criterion 수 ÷ 전체 criterion 수의 기계적 집계입니다. 시간·연산량 진행률이 아닙니다.</p>
           <div id="workstream-grid" class="workstream-grid"></div>
         </article>
+        <article class="panel roadmap-panel" aria-labelledby="cef-roadmap-title">
+          <div class="panel-head roadmap-head">
+            <div>
+              <span class="kicker">CAUSAL EVALUATOR FREEZE</span>
+              <h3 id="cef-roadmap-title">CEF 의존성 로드맵</h3>
+            </div>
+            <div class="roadmap-total">
+              <strong id="cef-prerequisite-total">—</strong>
+              <span>PREREQUISITES COMPLETE</span>
+            </div>
+          </div>
+          <div class="roadmap-progress" role="progressbar" aria-label="CEF-01부터 CEF-09까지 의존성 체크리스트 완료 수" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0">
+            <span id="roadmap-progress-fill"></span>
+          </div>
+          <p class="roadmap-method">이 수치는 CEF-01..09 체크리스트/의존성 완료 개수입니다. 시간·연산량·과학적 확신의 진행률이 아닙니다.</p>
+          <div class="roadmap-summary">
+            <div class="roadmap-next">
+              <span class="kicker">NEXT ENGINEERING TASK</span>
+              <strong id="cef-next-task">—</strong>
+              <small id="cef-next-action">—</small>
+            </div>
+            <div class="roadmap-gates" aria-label="과학 실행 gate 상태">
+              <span id="cef-schedule-gate" class="gate-flag closed">SCHEDULE GATE FALSE</span>
+              <span id="cef-jepa-gate" class="gate-flag closed">JEPA MATRIX FALSE</span>
+            </div>
+          </div>
+          <div class="roadmap-analysis" aria-label="검증된 CEF 상태에서 파생한 진행 중 분석">
+            <div>
+              <span>STATUS INTERPRETATION</span>
+              <p id="cef-status-interpretation">—</p>
+            </div>
+            <div>
+              <span>CLAIM BOUNDARY</span>
+              <p id="cef-claim-boundary">—</p>
+            </div>
+            <div>
+              <span>NEXT DECISION</span>
+              <p id="cef-next-decision">—</p>
+            </div>
+          </div>
+          <div class="roadmap-grid">
+            <div>
+              <div class="roadmap-subhead"><strong>구현·검증 선행 작업</strong><span id="cef-roadmap-state" class="mono">—</span></div>
+              <ol id="cef-prerequisite-list" class="cef-task-list"></ol>
+            </div>
+            <aside class="scientific-run-card">
+              <span class="kicker">SEPARATE SCIENTIFIC RUN</span>
+              <div class="scientific-run-head"><strong id="cef-run-id">CEF-10</strong><span id="cef-run-state" class="status blocked">LOCKED</span></div>
+              <p id="cef-run-action">—</p>
+              <small id="cef-run-dependency">—</small>
+              <p class="scientific-boundary">CEF-01..09가 모두 완료되기 전에는 잠겨 있습니다. 실행되더라도 직접 보상 양성대조 calibration이며 emergence evidence가 아닙니다.</p>
+              <p class="roadmap-report">설계 보고서 <code id="cef-roadmap-report">—</code></p>
+            </aside>
+          </div>
+        </article>
         <div class="split-grid">
           <article class="panel">
             <div class="panel-head"><h3>실행 큐</h3><span id="queue-summary" class="mono">—</span></div>

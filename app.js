@@ -203,6 +203,85 @@ function renderWorkstreams(workstreams) {
   });
 }
 
+function renderAutomationRoadmap(milestones) {
+  const roadmap = milestones.automation_roadmap;
+  if (!roadmap || !roadmap.prerequisites || !roadmap.scientific_run) {
+    throw new Error("CEF 공개 로드맵이 누락되었습니다.");
+  }
+  const prerequisites = roadmap.prerequisites;
+  setText(
+    "#cef-prerequisite-total",
+    prerequisites.completed + " / " + prerequisites.total
+  );
+  setText("#cef-roadmap-state", roadmap.state.replaceAll("_", " "));
+  setText("#cef-roadmap-report", roadmap.report);
+  const progress = $(".roadmap-progress");
+  progress.setAttribute("aria-valuemax", String(prerequisites.total));
+  progress.setAttribute("aria-valuenow", String(prerequisites.completed));
+  $("#roadmap-progress-fill").style.width =
+    (prerequisites.progress_fraction * 100) + "%";
+
+  const nextTask = prerequisites.next_task;
+  setText("#cef-next-task", nextTask ? nextTask.id : "PREREQUISITES COMPLETE");
+  setText(
+    "#cef-next-action",
+    nextTask ? nextTask.action.replaceAll("_", " ") : "CEF-10 unlock 조건 충족"
+  );
+  const scheduleGate = $("#cef-schedule-gate");
+  scheduleGate.textContent = roadmap.schedule_record_gate_ready
+    ? "SCHEDULE GATE TRUE"
+    : "SCHEDULE GATE FALSE";
+  scheduleGate.className = "gate-flag " + (roadmap.schedule_record_gate_ready ? "open" : "closed");
+  const jepaGate = $("#cef-jepa-gate");
+  jepaGate.textContent = roadmap.jepa_matrix_allowed
+    ? "JEPA MATRIX TRUE"
+    : "JEPA MATRIX FALSE";
+  jepaGate.className = "gate-flag " + (roadmap.jepa_matrix_allowed ? "open" : "closed");
+
+  const analysis = roadmap.analysis;
+  const analysisFields = [
+    "status_interpretation",
+    "claim_boundary",
+    "next_decision",
+  ];
+  if (!analysis || analysisFields.some(field => typeof analysis[field] !== "string")) {
+    throw new Error("CEF 파생 분석이 누락되었거나 잘못되었습니다.");
+  }
+  setText("#cef-status-interpretation", analysis.status_interpretation);
+  setText("#cef-claim-boundary", analysis.claim_boundary);
+  setText("#cef-next-decision", analysis.next_decision);
+
+  prerequisites.tasks.forEach(task => {
+    const li = node("li", "cef-task " + task.state);
+    li.append(node("span", "cef-task-id", task.id));
+    const body = node("div");
+    body.append(node("strong", "", task.action.replaceAll("_", " ")));
+    const dependency = task.depends_on.length
+      ? "depends on " + task.depends_on.join(", ")
+      : "root prerequisite";
+    body.append(node("small", "", dependency));
+    if (task.evidence_sha256) {
+      body.append(node("code", "cef-evidence-sha", "sha256 " + task.evidence_sha256));
+    }
+    li.append(
+      body,
+      node("span", "status " + task.state, task.state.replaceAll("_", " ").toUpperCase())
+    );
+    $("#cef-prerequisite-list").append(li);
+  });
+
+  const scientificRun = roadmap.scientific_run;
+  setText("#cef-run-id", scientificRun.id);
+  setText("#cef-run-action", scientificRun.action.replaceAll("_", " "));
+  setText(
+    "#cef-run-dependency",
+    "depends on " + scientificRun.depends_on.join(", ")
+  );
+  const runState = $("#cef-run-state");
+  runState.textContent = scientificRun.state.toUpperCase();
+  runState.className = "status " + scientificRun.state;
+}
+
 function renderProgress(data) {
   const executionBlocked = Object.entries(data.queue.availability_counts || {})
     .filter(([state]) => state.startsWith("blocked") || state === "failed")
@@ -221,6 +300,7 @@ function renderProgress(data) {
   });
   setText("#queue-summary", `${data.queue.completed}/${data.queue.total} COMPLETE`);
   renderWorkstreams(data.workstreams);
+  renderAutomationRoadmap(data.milestones);
   renderActiveWork(data.queue);
   data.queue.jobs.forEach((job, index) => {
     const row = node("div", "job");
