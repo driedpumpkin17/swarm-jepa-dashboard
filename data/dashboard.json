@@ -13,7 +13,8 @@
         "충돌 물리 v1의 정지 아티팩트를 진단하고 v2에서 교정했다.",
         "직접 공유 보상 양성대조군 v3은 3개 학습 seed의 관찰 평가에서 공유 채널 사용을 변화시켰다.",
         "부분 resume·공개 evidence·test status가 exact provenance와 content digest에 결속된다.",
-        "Phase 11 JEPA-L1의 anti-collapse representation gate는 사전 고정 진단 월드에서 통과했고 786개 blinded intervention windows가 최소 support를 만족한다."
+        "Phase 11 JEPA-L1의 anti-collapse representation gate는 사전 고정 진단 월드에서 통과했고 786개 blinded intervention windows가 최소 support를 만족한다.",
+        "Phase 11 최종 Stage-1 gate는 실질 효과와 정규화 증분 실패 및 core-harm veto로 REJECT됐다."
       ]
     },
     "curated_report_sections": {
@@ -28,8 +29,8 @@
       "고정 world 평가는 조건 간 독립 실행의 관찰 비교이며 개입적 인과 추정량이 없다.",
       "공유 정책은 대조군보다 훨씬 많은 need opportunity를 만들고 거리를 바꿨다.",
       "v3 실행 메타데이터의 git revision은 당시 dirty/untracked 실행 코드를 온전히 식별하지 못한다.",
-      "Phase 11은 단일 학습 seed의 exploratory Stage 1이며 counterfactual effect와 harm 결과는 아직 열리지 않았다.",
-      "786개 schedule은 선택됐지만 paired branch transitions는 아직 0이다.",
+      "Phase 11은 단일 학습 seed의 exploratory Stage 1이므로 유리한 하위 진단도 일반화할 수 없다.",
+      "anti-collapse의 표현 rank 개선은 사회적 행동이나 상대 보존의 증거가 아니다.",
       "heartbeat는 SIGKILL 이후 liveness를 단독으로 증명하지 못한다."
     ]
   },
@@ -61,12 +62,90 @@
       }
     },
     "phase11": {
-      "claim_boundary": "representation capability and schedule readiness only; no causal effect, harm, Stage-2, or emergence claim",
+      "claim_boundary": "Stage-1 exploratory REJECT; no Stage-2, scientific, cooperation, altruism, or emergence claim",
       "factual_execution": {
         "actor_transitions": 262144,
         "environment_transitions": 131072,
         "full_episodes": 1024,
         "policy_forward_calls": 131072
+      },
+      "final_stage1": {
+        "core_harm_contrasts": [
+          {
+            "contrast": "R1_P1_M0_minus_R1_P0_M0",
+            "harms": {
+              "actor_caused_immobile_fraction": -0.0004787445068359375,
+              "conditional_movement_entropy_drop": -0.06016867808388038,
+              "fixed_observation_policy_entropy_drop": 0.14471577717267792,
+              "forced_synchronization_index": 0.0,
+              "partner_excess_death_risk": 0.0
+            },
+            "strict_violations": [
+              "fixed_observation_policy_entropy_drop"
+            ]
+          },
+          {
+            "contrast": "R1_increment_minus_R0_increment_M0",
+            "harms": {
+              "actor_caused_immobile_fraction": -0.0005209393327317334,
+              "conditional_movement_entropy_drop": -0.04766123624978719,
+              "fixed_observation_policy_entropy_drop": 0.0373824434927883,
+              "forced_synchronization_index": 0.0,
+              "partner_excess_death_risk": 0.0
+            },
+            "strict_violations": []
+          },
+          {
+            "contrast": "R1_P1_M1_minus_R1_P0_M1",
+            "harms": {
+              "actor_caused_immobile_fraction": -0.00019616410161971078,
+              "conditional_movement_entropy_drop": -0.044160089587387985,
+              "fixed_observation_policy_entropy_drop": 0.05728162613650056,
+              "forced_synchronization_index": 0.0,
+              "partner_excess_death_risk": -0.001953125
+            },
+            "strict_violations": []
+          },
+          {
+            "contrast": "R1_increment_minus_R0_increment_M1",
+            "harms": {
+              "actor_caused_immobile_fraction": -0.7933978080755995,
+              "conditional_movement_entropy_drop": -0.2847482813389043,
+              "fixed_observation_policy_entropy_drop": -3.5005590065502474,
+              "forced_synchronization_index": 0.0,
+              "partner_excess_death_risk": -0.002685546875
+            },
+            "strict_violations": []
+          }
+        ],
+        "decision": {
+          "counterfactual_feasibility_pass": true,
+          "five_core_harm_veto": true,
+          "minimum_window_support_pass": true,
+          "mortality_interaction_within_R1_pass": true,
+          "new_public_stage_2_anchor_required_if_pass": false,
+          "primary_simple_contrast_pass": false,
+          "regularization_incremental_contrast_pass": false,
+          "stage_1_gate_pass": false,
+          "stage_2_authorized": false,
+          "verdict": "REJECT"
+        },
+        "execution_counts": {
+          "branch_payload_deserializations": 1,
+          "capability_branch_transitions": 326976,
+          "harm_branch_transitions": 8388608,
+          "harm_branches": 65536,
+          "harm_pairs": 32768
+        },
+        "factorial_capability": {
+          "R0_P1_M1_minus_R0_P0_M1": 0.00019240618703774125,
+          "R1_P1_M0_minus_R1_P0_M0": 0.0,
+          "R1_P1_M1_minus_R1_P0_M1": 0.00013720489274339978,
+          "mortality_interaction_within_R1": 0.00013720489274339978,
+          "regularization_incremental_contrast": -5.5201294294341476e-05
+        },
+        "independent_contract_audit_sha256": "8ee9896e59a0923c227f10b974d39b76b6820713ca127189c3af3c748bc07c8c",
+        "result_sha256": "d9cf783423c1fc90a054b1428264a02436b732f5c038efcd78380d9c96142c58"
       },
       "protocol_id": "FALSIFY-v1.6",
       "representation_gate": {
@@ -124,7 +203,7 @@
           "R1_P1_M0": 149,
           "R1_P1_M1": 582
         },
-        "counterfactual_transitions_completed": 0,
+        "counterfactual_transitions_completed": 326976,
         "minimum_support_all_cells": true,
         "selected_window_count_by_cell": {
           "R0_P0_M0": 85,
@@ -419,7 +498,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-14T17:39:41.712287+00:00",
+  "generated_at": "2026-08-14T18:26:12.627920+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -630,8 +709,8 @@
     "total": 7
   },
   "project": {
-    "headline": "JEPA-L1 8-cell training과 preheldout representation gate가 PASS했고, 1,024 factual episodes에서 선택한 786개 blinded windows의 branch 실행이 다음 gate다.",
-    "phase": "Phase 11 — FALSIFY-v1.6 counterfactual schedule frozen",
+    "headline": "JEPA-L1 anti-collapse는 representation gate를 통과했지만 실질 효과·증분·harm 결합 gate에서 REJECT됐다. Stage 2는 잠겨 있다.",
+    "phase": "Phase 11 — FALSIFY-v1.6 Stage 1 complete",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -830,23 +909,23 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.321312,
-    "remaining_hours": 114.02,
+    "elapsed_fraction": 0.325927,
+    "remaining_hours": 113.24,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-15T02:39:00+09:00",
+    "checked_at": "2026-08-15T03:24:52+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 311,
-      "sha256": "56c3d196a2e01ea3f7a7e6e15b0fc366ff893f08442281e215f08a0846d5d178"
+      "file_count": 325,
+      "sha256": "18ae073c2c2860395dc0e885f19ca2f9a6153c0da991c2beca96c951de28dc71"
     },
-    "note": "통합 전체 테스트 스위트: 493/493 통과",
-    "passed": 493,
+    "note": "통합 전체 테스트 스위트: 500/500 통과",
+    "passed": 500,
     "status": "passed",
-    "total": 493
+    "total": 500
   },
   "workstreams": {
     "completed_criteria": 28,
