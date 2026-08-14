@@ -339,7 +339,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-14T01:06:31.855125+00:00",
+  "generated_at": "2026-08-14T01:38:28.334236+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -370,9 +370,9 @@
   "milestones": {
     "automation_roadmap": {
       "analysis": {
-        "claim_boundary": "새 v1.2 harm branch 환경 step과 outcome deserialization은 아직 0건이다. 따라서 estimand, harm 판정, CEF-10 결과, JEPA 효과 또는 emergence evidence는 없다. 구 v1.1 endpoint blob도 계속 opaque·ineligible이다.",
-        "next_decision": "부모 전용 envelope와 별도 opaque outcome payload를 강제하는 source-bound execution transport/firewall을 동결한 뒤에만 49,152개 branch의 paired do(-i) 실행을 시작한다.",
-        "status_interpretation": "CEF-01..09는 9/9이다. 구 v1.1 실행은 P0 audit에서 거부·봉인했다. FALSIFY-v1.2/CEF-10A에서는 fresh POS/CTRL checkpoint 6개 학습, 64개 deterministic world manifest, checkpoint당 4,096쌍의 128-step CRN tape root 검증까지 완료했다. 총 실측 범위는 24,576쌍, 49,152 branches, 6,291,456 transitions, 18,874,368 policy keys다."
+        "claim_boundary": "다섯 core-harm 평가는 veto다. 그러나 fresh positive-preservation effect가 FALSIFY-v1.2에서 실행되지 않아 CEF-10 calibration 전체는 완료가 아니며 JEPA matrix와 emergence claim은 계속 잠겨 있다. 구 v1.1 endpoint는 계속 ineligible이다.",
+        "next_decision": "이미 열린 v1.2 harm worlds에 사후 estimand를 붙이지 않는다. 별도 fresh seed/world와 공개 anchor로 positive-preservation calibration을 수행하거나, 공개 사전규칙을 거쳐 harm veto를 terminal rejection으로 확정해야 한다.",
+        "status_interpretation": "CEF-01..09는 9/9이다. FALSIFY-v1.2/CEF-10A의 6개 fresh checkpoint에 대해 24,576쌍, 49,152 branches, 6,291,456 transitions를 완료하고 firewall 뒤에서 payload 6개를 각 1회 열었다. POS−CTRL actor-caused immobility는 seed별 +0.3615, +0.5487, +0.6330으로 0.05 veto를 모두 넘었고 movement-entropy drop도 2/3 seed에서 0.10을 넘었다."
       },
       "count_basis": "completed CEF-01..09 dependency-checklist items / 9; not elapsed time or compute",
       "id": "causal_evaluator_freeze_v1",
@@ -749,23 +749,23 @@
     "day": 2,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.222784,
-    "remaining_hours": 130.57,
+    "elapsed_fraction": 0.225953,
+    "remaining_hours": 130.04,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-14T10:05:46+09:00",
+    "checked_at": "2026-08-14T10:36:45+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 147,
-      "sha256": "d429f75ea835ddfbfb78b309988e825293794b2e8bf1a63f47aaadb71114679e"
+      "file_count": 158,
+      "sha256": "2dec75f6dcc1824564b5f30d8fa44da10c4b94997f36a3cb1b4cf1f44e701ad5"
     },
-    "note": "통합 전체 테스트 스위트: 360/360 통과",
-    "passed": 360,
+    "note": "통합 전체 테스트 스위트: 366/366 통과",
+    "passed": 366,
     "status": "passed",
-    "total": 360
+    "total": 366
   },
   "workstreams": {
     "completed_criteria": 27,
