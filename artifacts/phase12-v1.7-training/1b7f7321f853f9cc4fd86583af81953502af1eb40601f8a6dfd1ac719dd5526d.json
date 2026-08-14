@@ -1,0 +1,161 @@
+{
+  "artifact_kind": "phase12_v17_stage1_training_manifest",
+  "checkpoint_rows": [
+    {
+      "actor_objective": "OFF",
+      "cell_id": "OFF_M0",
+      "checkpoint_byte_length": 28337651,
+      "checkpoint_raw_sha256": "a09586b6c4f23ef7c5ed3af40bb57c3caa06294393b3c07fc6d169a3cb3990a0",
+      "completed_updates": 240,
+      "max_energy_accounting_error": 1.7836689949035645e-05,
+      "mortality": false,
+      "non_finite_updates": 0,
+      "objective_id": "ACTOR-OFF-L1",
+      "planned_unit_id": "92c04aecdd649129c69108662f63e74b7a17d7842731327e2764865b6618e353",
+      "trained_seed": 30001,
+      "training_diagnostic": {
+        "diagnostic_is_nonselecting": true,
+        "finite_predictor_loss_updates": 240,
+        "first_finite_predictor_loss": 12.694096937775612,
+        "last_finite_predictor_loss": 0.848834668751806,
+        "minimum_finite_predictor_loss": 0.8362886817194521,
+        "update_rows": 240
+      }
+    },
+    {
+      "actor_objective": "OFF",
+      "cell_id": "OFF_M1",
+      "checkpoint_byte_length": 19951283,
+      "checkpoint_raw_sha256": "223c3a7d1e36f4cdd8bd089f542649f0f9ade12a52b4e79387536efeb69a1577",
+      "completed_updates": 240,
+      "max_energy_accounting_error": 1.7948448657989502e-05,
+      "mortality": true,
+      "non_finite_updates": 0,
+      "objective_id": "ACTOR-OFF-L1",
+      "planned_unit_id": "cd8298a29dfb071f701aaf8380b51ac029125618bec67c62a8bb48002918e441",
+      "trained_seed": 30001,
+      "training_diagnostic": {
+        "diagnostic_is_nonselecting": true,
+        "finite_predictor_loss_updates": 240,
+        "first_finite_predictor_loss": 16.453834888154425,
+        "last_finite_predictor_loss": 5.09858433296904,
+        "minimum_finite_predictor_loss": 1.7778736602692378,
+        "update_rows": 240
+      }
+    },
+    {
+      "actor_objective": "RAW",
+      "cell_id": "RAW_M0",
+      "checkpoint_byte_length": 28323251,
+      "checkpoint_raw_sha256": "821e963974857d095994524f626ab36f38c3518b91e4083f9a709241a61bd2c1",
+      "completed_updates": 240,
+      "max_energy_accounting_error": 1.8365681171417236e-05,
+      "mortality": false,
+      "non_finite_updates": 0,
+      "objective_id": "JEPA-L1",
+      "planned_unit_id": "ee1628da46a6afd707136d4da91b398ba1bc33ece31f34b66e094bf06e5643ed",
+      "trained_seed": 30001,
+      "training_diagnostic": {
+        "diagnostic_is_nonselecting": true,
+        "finite_predictor_loss_updates": 240,
+        "first_finite_predictor_loss": 12.694096937775612,
+        "last_finite_predictor_loss": 0.9438671637326479,
+        "minimum_finite_predictor_loss": 0.9325212957337499,
+        "update_rows": 240
+      }
+    },
+    {
+      "actor_objective": "RAW",
+      "cell_id": "RAW_M1",
+      "checkpoint_byte_length": 15073459,
+      "checkpoint_raw_sha256": "de9cfe597852465fdb506b900667bc45e83726cbf523c8bbf6f7f43a59032886",
+      "completed_updates": 240,
+      "max_energy_accounting_error": 1.8358230590820312e-05,
+      "mortality": true,
+      "non_finite_updates": 0,
+      "objective_id": "JEPA-L1",
+      "planned_unit_id": "5746415a354b0ea1c178895735bc3e9de7d42b9658b6698d74da75d1c1f00c54",
+      "trained_seed": 30001,
+      "training_diagnostic": {
+        "diagnostic_is_nonselecting": true,
+        "finite_predictor_loss_updates": 240,
+        "first_finite_predictor_loss": 16.453834888154425,
+        "last_finite_predictor_loss": 9.136751917542004,
+        "minimum_finite_predictor_loss": 2.9899667147362585,
+        "update_rows": 240
+      }
+    },
+    {
+      "actor_objective": "LP",
+      "cell_id": "LP_M0",
+      "checkpoint_byte_length": 28467642,
+      "checkpoint_raw_sha256": "17eb0ae275421af2c88329a297c66ede006580f34d85d60b01b6a13915178c57",
+      "completed_updates": 240,
+      "max_energy_accounting_error": 1.7996877431869507e-05,
+      "mortality": false,
+      "non_finite_updates": 0,
+      "objective_id": "JEPA-L2-LP",
+      "planned_unit_id": "6f3c84f64cba6c2cdd59a18e1b5f08b9b948892fc522d19fe1847c0249041fce",
+      "trained_seed": 30001,
+      "training_diagnostic": {
+        "diagnostic_is_nonselecting": true,
+        "finite_predictor_loss_updates": 240,
+        "first_finite_predictor_loss": 12.694096937775612,
+        "last_finite_predictor_loss": 0.9321056134067476,
+        "minimum_finite_predictor_loss": 0.8808492515236139,
+        "update_rows": 240
+      }
+    },
+    {
+      "actor_objective": "LP",
+      "cell_id": "LP_M1",
+      "checkpoint_byte_length": 20437498,
+      "checkpoint_raw_sha256": "625869c8d847fbf7a70335cc39f02b6c794637163254a757df7fc06da015d5b1",
+      "completed_updates": 240,
+      "max_energy_accounting_error": 1.7315149307250977e-05,
+      "mortality": true,
+      "non_finite_updates": 0,
+      "objective_id": "JEPA-L2-LP",
+      "planned_unit_id": "19818343db967f56198861dd894ee7e59982e0520f5f2878cd73096f0737aa69",
+      "trained_seed": 30001,
+      "training_diagnostic": {
+        "diagnostic_is_nonselecting": true,
+        "finite_predictor_loss_updates": 240,
+        "first_finite_predictor_loss": 16.453834888154425,
+        "last_finite_predictor_loss": 2.4257772327400744,
+        "minimum_finite_predictor_loss": 1.4854154828935862,
+        "update_rows": 240
+      }
+    }
+  ],
+  "parent_hashes": {
+    "anchor_receipt_sha256": "86f6454b636c4b54466f26d8bae6165457d89419c067fdd88ebaeb1e6bbc6278",
+    "diagnostic_manifest_sha256": "4bd1d68d75c4d4addea7a98b6974a05c5c698a6a04c6e55956f8f632fbe283aa",
+    "implementation_freeze_sha256": "816413e24684d2f2c27b95d339f650e780cdf382ecd1d56bb596c56554f3aa7c",
+    "learning_progress_unit_diagnostic_sha256": "bac9d4640de8b623a700884e356fbeb791aba953d82407c3988b13138509ef75",
+    "preregistration_sha256": "723554521ca5c7282e9ae87039c4a6cc9306987b46f9c4a218b505d2d20b77ef",
+    "training_plan_sha256": "14da4d3ee31108486f34e0018cf4fb7589a1d7c4d3c6abe8330d50eea5ef24bd"
+  },
+  "permissions": {
+    "evaluation_authorized": false,
+    "evaluation_world_construction_authorized": false,
+    "next_gate": "preheldout_representation_gate",
+    "outcome_read_authorized": false,
+    "representation_gate_authorized": true,
+    "scientific_claim_authorized": false,
+    "stage_2_authorized": false,
+    "training_complete": true
+  },
+  "protocol_id": "FALSIFY-v1.7",
+  "schema_version": 1,
+  "source_git_revision": "ede269de3dd8e1e9d00b59ce4d984bac30099cad",
+  "summary": {
+    "all_completed_240_updates": true,
+    "checkpoint_count": 6,
+    "maximum_energy_accounting_error": 1.8365681171417236e-05,
+    "outcome_based_training_selection_performed": false,
+    "total_non_finite_updates": 0,
+    "total_training_transitions": 11796480
+  },
+  "training_manifest_sha256": "1b7f7321f853f9cc4fd86583af81953502af1eb40601f8a6dfd1ac719dd5526d"
+}

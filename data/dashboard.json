@@ -16,7 +16,8 @@
         "부분 resume·공개 evidence·test status가 exact provenance와 content digest에 결속된다.",
         "Phase 11 JEPA-L1의 anti-collapse representation gate는 사전 고정 진단 월드에서 통과했고 786개 blinded intervention windows가 최소 support를 만족한다.",
         "Phase 11 최종 Stage-1 gate는 실질 효과와 정규화 증분 실패 및 core-harm veto로 REJECT됐다.",
-        "Phase 12 JEPA-L2 learning-progress 3×2 설계, LP 단위 gate, 384개 진단 상태와 소스 결합 구현은 고정됐고 Stage-1 학습만 허용됐다."
+        "Phase 12 JEPA-L2 learning-progress 3×2 설계, LP 단위 gate, 384개 진단 상태와 소스 결합 구현은 고정됐고 Stage-1 학습만 허용됐다.",
+        "Phase 12 Stage-1은 6개 checkpoint와 11,796,480 transitions를 완료했고 LP_M0/LP_M1 preheldout representation gate가 모두 통과했다."
       ]
     },
     "curated_report_sections": {
@@ -34,7 +35,8 @@
       "Phase 11은 단일 학습 seed의 exploratory Stage 1이므로 유리한 하위 진단도 일반화할 수 없다.",
       "anti-collapse의 표현 rank 개선은 사회적 행동이나 상대 보존의 증거가 아니다.",
       "Phase 12 LP 단위 gate의 stationary-noise signed mean은 0.000167이지만 절대 보상 평균은 0.07726으로 높아 noise-seeking 위험을 실제 학습에서 추적해야 한다.",
-      "Phase 12의 11,796,480 예정 전이 수는 완료 진행률이 아니며 현재 평가 world와 outcome은 생성되지 않았다.",
+      "Phase 12의 11,796,480 training transitions는 완료됐지만 평가 world와 outcome은 아직 생성되지 않았다.",
+      "Phase 12 representation PASS는 비붕괴 표현의 증거일 뿐 상대 보존·사회 행동·안전성의 증거가 아니다.",
       "heartbeat는 SIGKILL 이후 liveness를 단독으로 증명하지 못한다."
     ]
   },
@@ -235,18 +237,15 @@
         "stage_1_training_implementation_freeze_authorized": true,
         "stage_2_authorized": false
       },
-      "claim_boundary": "source-bound Stage-1 training only; no evaluation-world construction, outcome access, Stage-2, scientific, or emergence claim",
+      "claim_boundary": "representation PASS authorizes only fresh evaluation-world manifest construction; no evaluation, outcome access, Stage-2, scientific, or emergence claim",
       "current_permissions": {
-        "diagnostic_world_states_bound": true,
         "evaluation_authorized": false,
-        "evaluation_world_construction_authorized": false,
-        "learning_progress_unit_gate_passed": true,
-        "next_gate": "preheldout_representation_gate",
-        "outcome_read_authorized": false,
-        "representation_gate_authorized_after_training": true,
+        "evaluation_world_construction_authorized": true,
+        "next_gate": "source_bound_evaluation_world_manifest",
+        "representation_gate_pass": true,
         "scientific_claim_authorized": false,
-        "stage_1_training_authorized": true,
-        "stage_2_authorized": false
+        "stage_2_authorized": false,
+        "verdict": "PASS"
       },
       "diagnostic_world_manifest": {
         "diagnostic_manifest_sha256": "4bd1d68d75c4d4addea7a98b6974a05c5c698a6a04c6e55956f8f632fbe283aa",
@@ -365,7 +364,192 @@
           "verified_at": "2026-08-15T03:49:45+09:00"
         }
       },
-      "state": "source_bound_stage1_training_authorized",
+      "representation_gate": {
+        "LP_cell_gates": [
+          {
+            "active_dimension_fraction": 1.0,
+            "cell_gate_pass": true,
+            "cell_id": "LP_M0",
+            "clauses": {
+              "active_dimension_fraction_pass": true,
+              "effective_rank_pass": true,
+              "median_dimension_std_pass": true
+            },
+            "effective_rank": 13.734136577522879,
+            "median_dimension_std": 1.0010126598958673
+          },
+          {
+            "active_dimension_fraction": 1.0,
+            "cell_gate_pass": true,
+            "cell_id": "LP_M1",
+            "clauses": {
+              "active_dimension_fraction_pass": true,
+              "effective_rank_pass": true,
+              "median_dimension_std_pass": true
+            },
+            "effective_rank": 15.352478419653881,
+            "median_dimension_std": 0.89562037649715
+          }
+        ],
+        "decision": {
+          "evaluation_authorized": false,
+          "evaluation_world_construction_authorized": true,
+          "next_gate": "source_bound_evaluation_world_manifest",
+          "representation_gate_pass": true,
+          "scientific_claim_authorized": false,
+          "stage_2_authorized": false,
+          "verdict": "PASS"
+        },
+        "execution_counts": {
+          "checkpoint_reads": 6,
+          "diagnostic_bank_items": 768,
+          "environment_steps": 0,
+          "evaluation_world_states_created": 0,
+          "outcomes_opened": 0,
+          "policy_forward_calls": 0
+        },
+        "representation_result_sha256": "eb2065e2972547d59511157b300f2ac5e4bba03cca3111da1f4e75f3d96f5518"
+      },
+      "state": "training_complete_representation_pass_evaluation_world_manifest_authorized",
+      "training": {
+        "checkpoint_rows": [
+          {
+            "actor_objective": "OFF",
+            "cell_id": "OFF_M0",
+            "checkpoint_byte_length": 28337651,
+            "checkpoint_raw_sha256": "a09586b6c4f23ef7c5ed3af40bb57c3caa06294393b3c07fc6d169a3cb3990a0",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.7836689949035645e-05,
+            "mortality": false,
+            "non_finite_updates": 0,
+            "objective_id": "ACTOR-OFF-L1",
+            "planned_unit_id": "92c04aecdd649129c69108662f63e74b7a17d7842731327e2764865b6618e353",
+            "trained_seed": 30001,
+            "training_diagnostic": {
+              "diagnostic_is_nonselecting": true,
+              "finite_predictor_loss_updates": 240,
+              "first_finite_predictor_loss": 12.694096937775612,
+              "last_finite_predictor_loss": 0.848834668751806,
+              "minimum_finite_predictor_loss": 0.8362886817194521,
+              "update_rows": 240
+            }
+          },
+          {
+            "actor_objective": "OFF",
+            "cell_id": "OFF_M1",
+            "checkpoint_byte_length": 19951283,
+            "checkpoint_raw_sha256": "223c3a7d1e36f4cdd8bd089f542649f0f9ade12a52b4e79387536efeb69a1577",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.7948448657989502e-05,
+            "mortality": true,
+            "non_finite_updates": 0,
+            "objective_id": "ACTOR-OFF-L1",
+            "planned_unit_id": "cd8298a29dfb071f701aaf8380b51ac029125618bec67c62a8bb48002918e441",
+            "trained_seed": 30001,
+            "training_diagnostic": {
+              "diagnostic_is_nonselecting": true,
+              "finite_predictor_loss_updates": 240,
+              "first_finite_predictor_loss": 16.453834888154425,
+              "last_finite_predictor_loss": 5.09858433296904,
+              "minimum_finite_predictor_loss": 1.7778736602692378,
+              "update_rows": 240
+            }
+          },
+          {
+            "actor_objective": "RAW",
+            "cell_id": "RAW_M0",
+            "checkpoint_byte_length": 28323251,
+            "checkpoint_raw_sha256": "821e963974857d095994524f626ab36f38c3518b91e4083f9a709241a61bd2c1",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.8365681171417236e-05,
+            "mortality": false,
+            "non_finite_updates": 0,
+            "objective_id": "JEPA-L1",
+            "planned_unit_id": "ee1628da46a6afd707136d4da91b398ba1bc33ece31f34b66e094bf06e5643ed",
+            "trained_seed": 30001,
+            "training_diagnostic": {
+              "diagnostic_is_nonselecting": true,
+              "finite_predictor_loss_updates": 240,
+              "first_finite_predictor_loss": 12.694096937775612,
+              "last_finite_predictor_loss": 0.9438671637326479,
+              "minimum_finite_predictor_loss": 0.9325212957337499,
+              "update_rows": 240
+            }
+          },
+          {
+            "actor_objective": "RAW",
+            "cell_id": "RAW_M1",
+            "checkpoint_byte_length": 15073459,
+            "checkpoint_raw_sha256": "de9cfe597852465fdb506b900667bc45e83726cbf523c8bbf6f7f43a59032886",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.8358230590820312e-05,
+            "mortality": true,
+            "non_finite_updates": 0,
+            "objective_id": "JEPA-L1",
+            "planned_unit_id": "5746415a354b0ea1c178895735bc3e9de7d42b9658b6698d74da75d1c1f00c54",
+            "trained_seed": 30001,
+            "training_diagnostic": {
+              "diagnostic_is_nonselecting": true,
+              "finite_predictor_loss_updates": 240,
+              "first_finite_predictor_loss": 16.453834888154425,
+              "last_finite_predictor_loss": 9.136751917542004,
+              "minimum_finite_predictor_loss": 2.9899667147362585,
+              "update_rows": 240
+            }
+          },
+          {
+            "actor_objective": "LP",
+            "cell_id": "LP_M0",
+            "checkpoint_byte_length": 28467642,
+            "checkpoint_raw_sha256": "17eb0ae275421af2c88329a297c66ede006580f34d85d60b01b6a13915178c57",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.7996877431869507e-05,
+            "mortality": false,
+            "non_finite_updates": 0,
+            "objective_id": "JEPA-L2-LP",
+            "planned_unit_id": "6f3c84f64cba6c2cdd59a18e1b5f08b9b948892fc522d19fe1847c0249041fce",
+            "trained_seed": 30001,
+            "training_diagnostic": {
+              "diagnostic_is_nonselecting": true,
+              "finite_predictor_loss_updates": 240,
+              "first_finite_predictor_loss": 12.694096937775612,
+              "last_finite_predictor_loss": 0.9321056134067476,
+              "minimum_finite_predictor_loss": 0.8808492515236139,
+              "update_rows": 240
+            }
+          },
+          {
+            "actor_objective": "LP",
+            "cell_id": "LP_M1",
+            "checkpoint_byte_length": 20437498,
+            "checkpoint_raw_sha256": "625869c8d847fbf7a70335cc39f02b6c794637163254a757df7fc06da015d5b1",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.7315149307250977e-05,
+            "mortality": true,
+            "non_finite_updates": 0,
+            "objective_id": "JEPA-L2-LP",
+            "planned_unit_id": "19818343db967f56198861dd894ee7e59982e0520f5f2878cd73096f0737aa69",
+            "trained_seed": 30001,
+            "training_diagnostic": {
+              "diagnostic_is_nonselecting": true,
+              "finite_predictor_loss_updates": 240,
+              "first_finite_predictor_loss": 16.453834888154425,
+              "last_finite_predictor_loss": 2.4257772327400744,
+              "minimum_finite_predictor_loss": 1.4854154828935862,
+              "update_rows": 240
+            }
+          }
+        ],
+        "summary": {
+          "all_completed_240_updates": true,
+          "checkpoint_count": 6,
+          "maximum_energy_accounting_error": 1.8365681171417236e-05,
+          "outcome_based_training_selection_performed": false,
+          "total_non_finite_updates": 0,
+          "total_training_transitions": 11796480
+        },
+        "training_manifest_sha256": "1b7f7321f853f9cc4fd86583af81953502af1eb40601f8a6dfd1ac719dd5526d"
+      },
       "training_plan": {
         "chronology_assertions": {
           "checkpoints_created": 0,
@@ -663,7 +847,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-14T19:38:55.171680+00:00",
+  "generated_at": "2026-08-14T20:10:46.448869+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -874,8 +1058,8 @@
     "total": 7
   },
   "project": {
-    "headline": "Phase 11은 REJECT로 종료됐다. JEPA-L2 learning progress 3×2 설계, 단위 gate, 384개 진단 상태와 소스 결합 구현이 고정되어 Stage-1 학습만 허용됐다. 평가 world와 outcome은 여전히 닫혀 있다.",
-    "phase": "Phase 12 — FALSIFY-v1.7 Stage-1 training authorized",
+    "headline": "JEPA-L2 learning progress 6-cell Stage-1 학습 11,796,480 transitions가 완료됐고 preheldout representation gate가 PASS했다. 이제 fresh evaluation-world manifest 구성만 허용되며 평가와 outcome은 여전히 닫혀 있다.",
+    "phase": "Phase 12 — representation PASS, evaluation-world manifest authorized",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -1074,23 +1258,23 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.33314,
-    "remaining_hours": 112.03,
+    "elapsed_fraction": 0.3363,
+    "remaining_hours": 111.5,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-15T04:38:11+09:00",
+    "checked_at": "2026-08-15T05:10:02+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 341,
-      "sha256": "bd1130056ba6f9dae885e9ca12e9ada0ce9e6c3453e41d3b7bbe8c17dc71c48c"
+      "file_count": 345,
+      "sha256": "0d09dc013efbb244b746355bf4ea3d7a93bab94e4e6a76a8b876ed53e128894b"
     },
-    "note": "통합 전체 테스트 스위트: 519/519 통과",
-    "passed": 519,
+    "note": "통합 전체 테스트 스위트: 522/522 통과",
+    "passed": 522,
     "status": "passed",
-    "total": 519
+    "total": 522
   },
   "workstreams": {
     "completed_criteria": 28,
