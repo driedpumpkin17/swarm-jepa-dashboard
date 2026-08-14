@@ -16,7 +16,7 @@
         "부분 resume·공개 evidence·test status가 exact provenance와 content digest에 결속된다.",
         "Phase 11 JEPA-L1의 anti-collapse representation gate는 사전 고정 진단 월드에서 통과했고 786개 blinded intervention windows가 최소 support를 만족한다.",
         "Phase 11 최종 Stage-1 gate는 실질 효과와 정규화 증분 실패 및 core-harm veto로 REJECT됐다.",
-        "Phase 12 JEPA-L2 learning-progress 3×2 설계는 exact HTTPS로 고정됐고 구현 freeze 이전의 실제 학습 권한은 열리지 않았다."
+        "Phase 12 JEPA-L2 learning-progress 3×2 설계, LP 단위 gate, 384개 진단 상태와 소스 결합 구현은 고정됐고 Stage-1 학습만 허용됐다."
       ]
     },
     "curated_report_sections": {
@@ -33,7 +33,8 @@
       "v3 실행 메타데이터의 git revision은 당시 dirty/untracked 실행 코드를 온전히 식별하지 못한다.",
       "Phase 11은 단일 학습 seed의 exploratory Stage 1이므로 유리한 하위 진단도 일반화할 수 없다.",
       "anti-collapse의 표현 rank 개선은 사회적 행동이나 상대 보존의 증거가 아니다.",
-      "Phase 12는 공개 anchor를 마친 구현 전 계획 단계이며 예정 전이 수는 완료 진행률이 아니다.",
+      "Phase 12 LP 단위 gate의 stationary-noise signed mean은 0.000167이지만 절대 보상 평균은 0.07726으로 높아 noise-seeking 위험을 실제 학습에서 추적해야 한다.",
+      "Phase 12의 11,796,480 예정 전이 수는 완료 진행률이 아니며 현재 평가 world와 outcome은 생성되지 않았다.",
       "heartbeat는 SIGKILL 이후 liveness를 단독으로 증명하지 못한다."
     ]
   },
@@ -222,8 +223,7 @@
       }
     },
     "phase12": {
-      "claim_boundary": "outcome-free anchored plan only; no training, evaluation-world construction, outcome access, Stage-2, scientific, or emergence claim",
-      "current_permissions": {
+      "anchor_permissions": {
         "diagnostic_world_construction_authorized": true,
         "evaluation_authorized": false,
         "evaluation_world_construction_authorized": false,
@@ -234,6 +234,32 @@
         "stage_1_training_authorized": false,
         "stage_1_training_implementation_freeze_authorized": true,
         "stage_2_authorized": false
+      },
+      "claim_boundary": "source-bound Stage-1 training only; no evaluation-world construction, outcome access, Stage-2, scientific, or emergence claim",
+      "current_permissions": {
+        "diagnostic_world_states_bound": true,
+        "evaluation_authorized": false,
+        "evaluation_world_construction_authorized": false,
+        "learning_progress_unit_gate_passed": true,
+        "next_gate": "preheldout_representation_gate",
+        "outcome_read_authorized": false,
+        "representation_gate_authorized_after_training": true,
+        "scientific_claim_authorized": false,
+        "stage_1_training_authorized": true,
+        "stage_2_authorized": false
+      },
+      "diagnostic_world_manifest": {
+        "diagnostic_manifest_sha256": "4bd1d68d75c4d4addea7a98b6974a05c5c698a6a04c6e55956f8f632fbe283aa",
+        "execution_counts": {
+          "checkpoints_created": 0,
+          "deterministic_resets": 384,
+          "environment_steps": 0,
+          "evaluation_world_states_created": 0,
+          "outcomes_opened": 0,
+          "policy_forward_calls": 0,
+          "unique_world_ids": 64
+        },
+        "world_state_bundle_sha256": "ca9b31f4b6029b219239add62aea90ad68f0c45795f71ae3cd91a826e0989492"
       },
       "factorial": {
         "actor_objectives": [
@@ -248,11 +274,69 @@
         ],
         "planned_stage1_training_transitions": 11796480
       },
+      "implementation_freeze": {
+        "acceptance_contract": {
+          "checkpoint_units": 6,
+          "diagnostic_bank_items_per_cell": 128,
+          "diagnostic_cell_world_state_count": 384,
+          "diagnostic_world_count": 64,
+          "diagnostic_worlds_must_precede_training": true,
+          "evaluation_world_state_bytes_before_training": 0,
+          "factorial_cells": [
+            "OFF_M0",
+            "OFF_M1",
+            "RAW_M0",
+            "RAW_M1",
+            "LP_M0",
+            "LP_M1"
+          ],
+          "learning_progress_unit_diagnostic_sha256": "bac9d4640de8b623a700884e356fbeb791aba953d82407c3988b13138509ef75",
+          "learning_progress_unit_gate_pass_required": true,
+          "maximum_energy_accounting_error_exclusive": 0.0001,
+          "nonfinite_update_rejects": true,
+          "num_envs": 64,
+          "rollout_steps": 128,
+          "total_training_transitions": 11796480,
+          "training_seed": 30001,
+          "updates": 240
+        },
+        "freeze_sha256": "816413e24684d2f2c27b95d339f650e780cdf382ecd1d56bb596c56554f3aa7c",
+        "raw_input_bundle_sha256": "64a7a25b8f502659e2aec9bf7d9c9a02cbeb1aa28816ffd9d6b2d55d71563212",
+        "source": {
+          "git_revision": "ede269de3dd8e1e9d00b59ce4d984bac30099cad",
+          "tree_oid": "487ad1a98cca5464c7001f596780d9060eae0283",
+          "worktree_clean": true
+        }
+      },
       "learning_progress": {
         "clip_absolute": "0.10",
         "equation": "r_lp_t=clip(ema_slow_error_through_t-ema_fast_error_through_t,-0.10,0.10)",
         "fast_ema_decay": "0.90",
-        "slow_ema_decay": "0.99"
+        "noise_risk_note": "stationary-noise signed mean passes, but absolute reward mean is high and must be monitored during training",
+        "slow_ema_decay": "0.99",
+        "unit_diagnostic_sha256": "bac9d4640de8b623a700884e356fbeb791aba953d82407c3988b13138509ef75",
+        "unit_gate": {
+          "clauses": {
+            "constant_response_pass": true,
+            "decreasing_progress_pass": true,
+            "finite_and_clipped_pass": true,
+            "invalid_state_identity_pass": true,
+            "stationary_noise_mean_pass": true
+          },
+          "learning_progress_unit_gate_pass": true,
+          "verdict": "PASS"
+        },
+        "unit_metrics": {
+          "all_rewards_finite": true,
+          "all_rewards_within_clip": true,
+          "constant_maximum_absolute_reward": 0.0,
+          "decreasing_post_warmup_mean": 0.09836050773164702,
+          "decreasing_post_warmup_minimum": 0.0580582585163304,
+          "invalid_steps_leave_uninitialized_state_unchanged": true,
+          "noise_across_episode_mean": 0.00016736519700172615,
+          "noise_reward_absolute_mean": 0.07725871894499459,
+          "noise_reward_maximum_absolute": 0.1
+        }
       },
       "preregistration_sha256": "723554521ca5c7282e9ae87039c4a6cc9306987b46f9c4a218b505d2d20b77ef",
       "protocol_id": "FALSIFY-v1.7",
@@ -281,7 +365,23 @@
           "verified_at": "2026-08-15T03:49:45+09:00"
         }
       },
-      "state": "public_preregistration_anchored_implementation_freeze_authorized"
+      "state": "source_bound_stage1_training_authorized",
+      "training_plan": {
+        "chronology_assertions": {
+          "checkpoints_created": 0,
+          "diagnostic_world_states_created": 384,
+          "evaluation_world_state_bytes": 0,
+          "evaluation_world_states_created": 0,
+          "outcomes_opened": 0,
+          "prior_protocol_outcomes_eligible": false,
+          "training_transitions": 0
+        },
+        "planned_checkpoint_count": 6,
+        "reserved_evaluation_world_count": 64,
+        "superseded_future_timestamp_plan_sha256": "15ef6e52057c6d01bef410d64b0a43aadab0c97c27fd70e55811916c75886dd7",
+        "superseded_plan_execution_forbidden": true,
+        "training_plan_sha256": "14da4d3ee31108486f34e0018cf4fb7589a1d7c4d3c6abe8330d50eea5ef24bd"
+      }
     },
     "positive_control": {
       "available": true,
@@ -563,7 +663,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-14T18:55:54.754291+00:00",
+  "generated_at": "2026-08-14T19:38:55.171680+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -774,8 +874,8 @@
     "total": 7
   },
   "project": {
-    "headline": "Phase 11은 REJECT로 종료됐다. JEPA-L2 learning progress 3×2 outcome-free 설계는 exact HTTPS로 고정됐고, 현재는 진단 월드와 Stage-1 training implementation freeze만 허용된다.",
-    "phase": "Phase 12 — FALSIFY-v1.7 public preregistration",
+    "headline": "Phase 11은 REJECT로 종료됐다. JEPA-L2 learning progress 3×2 설계, 단위 gate, 384개 진단 상태와 소스 결합 구현이 고정되어 Stage-1 학습만 허용됐다. 평가 world와 outcome은 여전히 닫혀 있다.",
+    "phase": "Phase 12 — FALSIFY-v1.7 Stage-1 training authorized",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -974,23 +1074,23 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.328874,
-    "remaining_hours": 112.75,
+    "elapsed_fraction": 0.33314,
+    "remaining_hours": 112.03,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-15T03:55:14+09:00",
+    "checked_at": "2026-08-15T04:38:11+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 331,
-      "sha256": "753fc995be5aab1f19980388f7cc30c1620f66d0768e688bdf423711ff4757a7"
+      "file_count": 341,
+      "sha256": "bd1130056ba6f9dae885e9ca12e9ada0ce9e6c3453e41d3b7bbe8c17dc71c48c"
     },
-    "note": "통합 전체 테스트 스위트: 507/507 통과",
-    "passed": 507,
+    "note": "통합 전체 테스트 스위트: 519/519 통과",
+    "passed": 519,
     "status": "passed",
-    "total": 507
+    "total": 519
   },
   "workstreams": {
     "completed_criteria": 28,
