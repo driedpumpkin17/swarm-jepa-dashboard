@@ -237,15 +237,15 @@
         "stage_1_training_implementation_freeze_authorized": true,
         "stage_2_authorized": false
       },
-      "claim_boundary": "representation PASS authorizes only fresh evaluation-world manifest construction; no evaluation, outcome access, Stage-2, scientific, or emergence claim",
+      "claim_boundary": "fresh worlds are bound; only factual execution transport freeze is authorized, not evaluation, outcome access, Stage-2, scientific, or emergence claim",
       "current_permissions": {
+        "checkpoint_and_world_manifests_complete": true,
         "evaluation_authorized": false,
-        "evaluation_world_construction_authorized": true,
-        "next_gate": "source_bound_evaluation_world_manifest",
-        "representation_gate_pass": true,
+        "factual_execution_freeze_authorized": true,
+        "next_gate": "factual_execution_transport_freeze",
+        "outcome_read_authorized": false,
         "scientific_claim_authorized": false,
-        "stage_2_authorized": false,
-        "verdict": "PASS"
+        "stage_2_authorized": false
       },
       "diagnostic_world_manifest": {
         "diagnostic_manifest_sha256": "4bd1d68d75c4d4addea7a98b6974a05c5c698a6a04c6e55956f8f632fbe283aa",
@@ -337,6 +337,69 @@
           "noise_reward_maximum_absolute": 0.1
         }
       },
+      "preoutcome_manifest": {
+        "execution_counts": {
+          "environment_steps": 0,
+          "evaluation_episodes": 0,
+          "outcome_deserializations": 0,
+          "policy_forward_calls": 0,
+          "unique_world_ids": 64,
+          "world_resets": 384
+        },
+        "manifest_sha256": "fd890bc577b4650414c182aab07688838b9111bb570bca8dabf84eda3acd4b63",
+        "permissions": {
+          "checkpoint_and_world_manifests_complete": true,
+          "evaluation_authorized": false,
+          "factual_execution_freeze_authorized": true,
+          "next_gate": "factual_execution_transport_freeze",
+          "outcome_read_authorized": false,
+          "scientific_claim_authorized": false,
+          "stage_2_authorized": false
+        },
+        "structural_harm_applicability": {
+          "any_not_applicable_forbids_all_seven_harm_claim": true,
+          "applicability_by_field": {
+            "actor_caused_immobile_fraction": "required",
+            "conditional_movement_entropy_drop": "required",
+            "fixed_observation_policy_entropy_drop": "required",
+            "forced_synchronization_index": "required",
+            "harmful_blocking_fraction": "not_applicable",
+            "partner_excess_death_risk": "required",
+            "starvation_monopoly_excess": "not_applicable"
+          },
+          "classification_source": "hash_bound_environment_execution_manifest_validated_before_any_outcome_blob_is_opened",
+          "classification_time": "after_representation_gate_before_evaluation_execution",
+          "environment_evidence": {
+            "classification_before_evaluation_execution": true,
+            "classification_before_outcome_blob_open": true,
+            "num_resources": 0,
+            "target_or_egress_oracle_present": false
+          },
+          "environment_evidence_sha256": "ef90736be4b5daf6788f699f9045af48127be0874365c6b3b7e811b76c71e855",
+          "not_applicable_receipts": [
+            {
+              "harm_field": "harmful_blocking_fraction",
+              "manifest_evidence_sha256": "ef90736be4b5daf6788f699f9045af48127be0874365c6b3b7e811b76c71e855",
+              "preregistration_sha256": "723554521ca5c7282e9ae87039c4a6cc9306987b46f9c4a218b505d2d20b77ef",
+              "protocol_id": "FALSIFY-v1.7",
+              "rule_id": "conditional_target_oracle_reachability_v1",
+              "status": "not_applicable",
+              "structural_prerequisite": "frozen_target_or_egress_oracle_exists_and_actor_can_alter_reachability"
+            },
+            {
+              "harm_field": "starvation_monopoly_excess",
+              "manifest_evidence_sha256": "ef90736be4b5daf6788f699f9045af48127be0874365c6b3b7e811b76c71e855",
+              "preregistration_sha256": "723554521ca5c7282e9ae87039c4a6cc9306987b46f9c4a218b505d2d20b77ef",
+              "protocol_id": "FALSIFY-v1.7",
+              "rule_id": "conditional_resource_supply_accounting_v1",
+              "status": "not_applicable",
+              "structural_prerequisite": "nonzero_resource_supply_with_acquisition_ownership_consumption_or_destruction_accounting"
+            }
+          ],
+          "numeric_zero_substitution_forbidden": true
+        },
+        "world_state_bundle_sha256": "f6e3b303406e86b453103a8a688bd4967382ce8b143e9bd2b2539fb8414d1982"
+      },
       "preregistration_sha256": "723554521ca5c7282e9ae87039c4a6cc9306987b46f9c4a218b505d2d20b77ef",
       "protocol_id": "FALSIFY-v1.7",
       "protocol_permissions_before_anchor": {
@@ -410,7 +473,7 @@
         },
         "representation_result_sha256": "eb2065e2972547d59511157b300f2ac5e4bba03cca3111da1f4e75f3d96f5518"
       },
-      "state": "training_complete_representation_pass_evaluation_world_manifest_authorized",
+      "state": "fresh_evaluation_world_manifest_complete_factual_freeze_authorized",
       "training": {
         "checkpoint_rows": [
           {
@@ -847,7 +910,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-14T20:10:46.448869+00:00",
+  "generated_at": "2026-08-14T20:25:53.634356+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -1058,8 +1121,8 @@
     "total": 7
   },
   "project": {
-    "headline": "JEPA-L2 learning progress 6-cell Stage-1 학습 11,796,480 transitions가 완료됐고 preheldout representation gate가 PASS했다. 이제 fresh evaluation-world manifest 구성만 허용되며 평가와 outcome은 여전히 닫혀 있다.",
-    "phase": "Phase 12 — representation PASS, evaluation-world manifest authorized",
+    "headline": "JEPA-L2 learning progress training과 representation gate가 완료됐고 fresh worlds 990000–990063의 384개 상태가 고정됐다. factual execution transport freeze만 허용되며 evaluation과 outcome은 아직 닫혀 있다.",
+    "phase": "Phase 12 — fresh evaluation worlds bound, factual freeze authorized",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -1258,23 +1321,23 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.3363,
-    "remaining_hours": 111.5,
+    "elapsed_fraction": 0.3378,
+    "remaining_hours": 111.25,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-15T05:10:02+09:00",
+    "checked_at": "2026-08-15T05:25:11+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 345,
-      "sha256": "0d09dc013efbb244b746355bf4ea3d7a93bab94e4e6a76a8b876ed53e128894b"
+      "file_count": 349,
+      "sha256": "d2049b12f6beab636004b0f9b04bd6e2835adf78f01b1dbf125dcd32b75c17a4"
     },
-    "note": "통합 전체 테스트 스위트: 522/522 통과",
-    "passed": 522,
+    "note": "통합 전체 테스트 스위트: 524/524 통과",
+    "passed": 524,
     "status": "passed",
-    "total": 522
+    "total": 524
   },
   "workstreams": {
     "completed_criteria": 28,
