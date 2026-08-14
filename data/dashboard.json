@@ -339,7 +339,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-14T15:01:19.540068+00:00",
+  "generated_at": "2026-08-14T16:35:26.336673+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -750,23 +750,23 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.305601,
-    "remaining_hours": 116.66,
+    "elapsed_fraction": 0.314938,
+    "remaining_hours": 115.09,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-15T00:00:45+09:00",
+    "checked_at": "2026-08-15T01:34:52+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 282,
-      "sha256": "9f351460396cda4d8743cc127fdf5ca548d9bf847aa22f52b2f4d701431dc9ba"
+      "file_count": 288,
+      "sha256": "7868672cb2674bd1f6fac94fd86328867e93cba15bf1bb6cbb5d3420a982aa0b"
     },
-    "note": "통합 전체 테스트 스위트: 476/476 통과",
-    "passed": 476,
+    "note": "통합 전체 테스트 스위트: 481/481 통과",
+    "passed": 481,
     "status": "passed",
-    "total": 476
+    "total": 481
   },
   "workstreams": {
     "completed_criteria": 28,
