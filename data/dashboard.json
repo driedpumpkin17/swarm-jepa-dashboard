@@ -339,7 +339,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-14T14:07:21.601691+00:00",
+  "generated_at": "2026-08-14T14:48:54.580515+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -370,9 +370,9 @@
   "milestones": {
     "automation_roadmap": {
       "analysis": {
-        "claim_boundary": "v1.4 PASS는 직접 transfer reward를 사용한 evaluator positive-control calibration의 capability만 입증한다. spontaneous cooperation, altruism, JEPA 효과 또는 emergence evidence가 아니며, v1.2 harm veto와 CEF-10B REJECT는 소급 변경되지 않는다. candidate promotion과 JEPA matrix는 계속 잠겨 있다.",
-        "next_decision": "Phase 10에서는 직접 사회보상을 제거한 최소 predictive/social-predictive objective를 새 프로토콜로 사전등록하되, 기존 harm veto를 우회하지 않고 fresh safety gate를 먼저 정의한다.",
-        "status_interpretation": "CEF-01..10은 10/10 완료이고 CEF-10B evaluator capability 판정은 REJECT다. 후속 Phase 9 FALSIFY-v1.4는 6개 checkpoint, 11,796,480 training transitions, 768 factual episodes, 1,539 blinded onset windows와 640,224 paired branch transitions를 완료했다. 사전등록된 positive-control capability 판정은 3/3 시드 PASS다."
+        "claim_boundary": "Phase 9 PASS는 positive-control calibration의 evaluator capability만 입증한다. Phase 10은 exploratory single-seed screen이며 P1_M1-P0_M1 net preservation은 0.0003974로 0.01 기준 미달이고 mortality-on에서 immobility, movement entropy, fixed-observation policy entropy 세 harm veto가 발생했다. JEPA 효과, 협력, 이타성 또는 emergence claim은 허가되지 않고 Stage 2도 잠겨 있다.",
+        "next_decision": "동결된 failure action에 따라 representation collapse를 outcome-bound diagnostic으로 측정한다. collapse가 확인될 때만 fresh public protocol 아래 JEPA-L1을 설계하며, 아니면 중단하거나 JEPA-L2/LP를 새로 사전등록한다.",
+        "status_interpretation": "CEF-01..10은 10/10 완료이고 evaluator capability calibration도 종결됐다. Phase 9 FALSIFY-v1.4 positive-control capability는 3/3 시드 PASS였다. 후속 Phase 10 FALSIFY-v1.5 Stage 1은 4개 checkpoint, 7,864,320 training transitions, 512 factual episodes, 512 selected windows, 212,992 capability branch transitions와 4,194,304 full-horizon harm transitions를 완료했고 최종 판정은 REJECT다."
       },
       "count_basis": "completed CEF-01..09 dependency-checklist items / 9; not elapsed time or compute",
       "id": "causal_evaluator_freeze_v1",
@@ -550,8 +550,8 @@
     "total": 7
   },
   "project": {
-    "headline": "연구 인프라는 작동한다. JEPA 또는 사회적 창발 결과는 아직 없다.",
-    "phase": "Day 1 — 감사 가능한 실험 루프 및 양성대조군 검증",
+    "headline": "JEPA-L0 Stage 1은 REJECT다. Stage 2는 잠겼고 representation-collapse 진단이 다음 gate다.",
+    "phase": "Phase 10 — FALSIFY-v1.5 Stage 1 complete",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -750,23 +750,23 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.300247,
-    "remaining_hours": 117.56,
+    "elapsed_fraction": 0.304369,
+    "remaining_hours": 116.87,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-14T23:06:48+09:00",
+    "checked_at": "2026-08-14T23:48:18+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 266,
-      "sha256": "6c1e07c7ab185d4668ba17890398b6ac1c33f95282b3aa5d11d4b1116bdc64f0"
+      "file_count": 278,
+      "sha256": "08c917a66ddbe7c2c24437aa017ad3aa8a9b2b00cd884229bb707e1c39b43703"
     },
-    "note": "통합 전체 테스트 스위트: 465/465 통과",
-    "passed": 465,
+    "note": "통합 전체 테스트 스위트: 473/473 통과",
+    "passed": 473,
     "status": "passed",
-    "total": 465
+    "total": 473
   },
   "workstreams": {
     "completed_criteria": 28,
