@@ -339,7 +339,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-14T05:14:57.310746+00:00",
+  "generated_at": "2026-08-14T09:10:33.039745+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -370,14 +370,14 @@
   "milestones": {
     "automation_roadmap": {
       "analysis": {
-        "claim_boundary": "다섯 core-harm 평가는 veto다. v1.3 factual transport와 blinded schedule anchor는 완료됐지만 counterfactual branch, target-rate/NPE derivation, capability decision은 아직 0이다. CEF-10 calibration은 미완료이고 JEPA matrix와 emergence claim은 잠겨 있다.",
-        "next_decision": "anchor된 854 windows에 대해 정확히 854x16x2x13=355,264 paired branch transitions를 parent-before-payload로 실행한 뒤 별도 동결 분석에서만 capability PASS/REJECT를 결정한다.",
-        "status_interpretation": "CEF-01..09는 9/9이다. FALSIFY-v1.2/CEF-10A harm veto 이후 FALSIFY-v1.3/CEF-10B는 6개 checkpoint, 3,932,160 training transitions, 768 factual episodes, 98,304 environment transitions를 완료했다. 사전 동결 selector가 payload를 1회 열어 854 windows(423/139/292)를 만들었고 schedule 306963fc...6204는 exact HTTPS에 anchor됐다."
+        "claim_boundary": "완료 결과는 negative positive-control calibration이다. 세 seed 중 target-rate는 하나만 통과했고 NPE는 모두 실패했다. v1.2 harm veto도 유지되므로 spontaneous cooperation, altruism, JEPA 효과 또는 emergence evidence가 아니다.",
+        "next_decision": "Phase 9에서 optimizer/environment capability 실패 원인을 진단하고, 구체적 수정 근거가 있을 때만 unopened seed/world의 FALSIFY-v1.4 positive control을 새로 동결한다. JEPA matrix는 계속 잠근다.",
+        "status_interpretation": "CEF-01..10은 10/10 완료다. CEF-10B evaluator capability 판정은 REJECT다. 355,264 branch transitions에서 target-rate gain은 0.100670/0.023329/0.080215였고 net preservation은 0.000581/0.000245/0.000052였다."
       },
       "count_basis": "completed CEF-01..09 dependency-checklist items / 9; not elapsed time or compute",
       "id": "causal_evaluator_freeze_v1",
       "jepa_matrix_allowed": false,
-      "next_allowed_scientific_run": "CEF-10_fresh_pos_ctrl_causal_calibration",
+      "next_allowed_scientific_run": "Phase-9_positive_control_optimizer_environment_diagnostic",
       "prerequisites": {
         "completed": 9,
         "next_task": null,
@@ -476,20 +476,21 @@
         ],
         "total": 9
       },
-      "report": "research/reports/20260814_cef10_harm_operationalization_blocker.md",
+      "report": "research/reports/20260814_cef10b_final_capability_decision.md",
       "schedule_record_gate_ready": true,
       "scientific_run": {
-        "action": "continue_fresh_pos_ctrl_calibration_after_checkpoint_training",
+        "action": "complete_fresh_pos_ctrl_causal_capability_calibration",
         "depends_on": [
           "CEF-09"
         ],
-        "done": false,
+        "done": true,
+        "evidence_sha256": "aae56832ccd6a1cd768ce5ed2281765545acaaf5a22a644749c29e55a2d78043",
         "execution_class": "scientific_positive_control_calibration",
         "id": "CEF-10",
         "locked": false,
-        "state": "ready"
+        "state": "completed"
       },
-      "state": "prerequisites_complete_calibration_ready"
+      "state": "calibration_complete"
     },
     "items": [
       {
@@ -497,7 +498,7 @@
         "fallback": "repair_environment_or_optimizer_before_primary_inference",
         "gate": "tests_pass_and_baselines_complete_and_positive_control_directional",
         "name": "auditable_loop",
-        "state": "causal_calibration_ready"
+        "state": "causal_calibration_rejected_diagnostic_required"
       },
       {
         "day": 2,
@@ -543,7 +544,7 @@
       }
     ],
     "state_counts": {
-      "causal_calibration_ready": 1,
+      "causal_calibration_rejected_diagnostic_required": 1,
       "pending": 6
     },
     "total": 7
@@ -749,26 +750,26 @@
     "day": 2,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.247429,
-    "remaining_hours": 126.43,
+    "elapsed_fraction": 0.270802,
+    "remaining_hours": 122.51,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-14T14:14:22+09:00",
+    "checked_at": "2026-08-14T18:10:01+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 187,
-      "sha256": "24583ca7ed273f47aa4a5501a2441cb5b4c5ad6831e3e9af17047be77ab8f816"
+      "file_count": 196,
+      "sha256": "588ab109d1630e3cf6306d11d5cce9aee6ba7903dc5dbe41d9cfc9d53224dd2c"
     },
-    "note": "통합 전체 테스트 스위트: 396/396 통과",
-    "passed": 396,
+    "note": "통합 전체 테스트 스위트: 405/405 통과",
+    "passed": 405,
     "status": "passed",
-    "total": 396
+    "total": 405
   },
   "workstreams": {
-    "completed_criteria": 27,
+    "completed_criteria": 28,
     "items": [
       {
         "blockers": [],
@@ -849,9 +850,7 @@
         "total_count": 5
       },
       {
-        "blockers": [
-          "CEF-09는 통과했다. 다음 필수 작업은 fresh CEF-10 POS/CTRL causal calibration을 immutable provenance 아래 실행하고 결과 ledger에 판정을 기록하는 것이다."
-        ],
+        "blockers": [],
         "checklist": [
           {
             "complete": true,
@@ -869,18 +868,18 @@
             "id": "rerun_decision"
           },
           {
-            "complete": false,
+            "complete": true,
             "criterion": "선택한 clean rerun을 완료하거나 재실행 보류 결정을 결과 ledger에 확정한다.",
             "id": "decision_executed"
           }
         ],
-        "completed_count": 3,
+        "completed_count": 4,
         "id": "provenance_clean_rerun_decision",
-        "last_verified_at": "2026-08-12T23:44:48+09:00",
-        "next_criterion": "선택한 clean rerun을 완료하거나 재실행 보류 결정을 결과 ledger에 확정한다.",
+        "last_verified_at": "2026-08-14T17:53:00+09:00",
+        "next_criterion": null,
         "objective": "과거 실행 소스의 불일치를 보존하고 새 결과를 clean source boundary에 연결한다.",
-        "progress_fraction": 0.75,
-        "state": "active",
+        "progress_fraction": 1.0,
+        "state": "completed",
         "title": "Provenance 및 clean rerun 결정",
         "total_count": 4
       },
@@ -973,7 +972,7 @@
       },
       {
         "blockers": [
-          "엄격 capability/design gate가 닫혀 있고 현재 matrix 실행 경로가 지원되지 않는다."
+          "CEF-10B capability calibration이 REJECT이고 FALSIFY-v1.2 harm veto도 유지된다. Phase 9 optimizer/environment capability 진단 전에는 matrix를 실행할 수 없다."
         ],
         "checklist": [
           {
@@ -1059,15 +1058,15 @@
         "total_count": 6
       }
     ],
-    "progress_fraction": 0.692308,
+    "progress_fraction": 0.717949,
     "state_counts": {
-      "active": 2,
+      "active": 1,
       "blocked": 1,
-      "completed": 2,
+      "completed": 3,
       "pending": 1
     },
     "total": 6,
     "total_criteria": 39,
-    "updated_at": "2026-08-13T23:29:05+09:00"
+    "updated_at": "2026-08-14T17:53:00+09:00"
   }
 }
