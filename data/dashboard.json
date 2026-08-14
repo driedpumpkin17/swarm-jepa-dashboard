@@ -6,7 +6,8 @@
         "협력·이타성·구조(rescue)가 창발했다.",
         "관찰된 공유가 상대 생존에 인과적으로 이로웠다.",
         "현재 결과가 커밋된 소스만으로 완전히 재현 가능하다.",
-        "canonical schedule record가 window를 선택·실행했거나 causal gate를 열었다."
+        "canonical schedule record가 window를 선택·실행했거나 causal gate를 열었다.",
+        "Phase 12 learning progress가 학습·행동·상대 보존에 효과가 있다."
       ],
       "supported": [
         "재시작 가능한 실험 스택과 에너지 회계 검사가 작동한다.",
@@ -14,7 +15,8 @@
         "직접 공유 보상 양성대조군 v3은 3개 학습 seed의 관찰 평가에서 공유 채널 사용을 변화시켰다.",
         "부분 resume·공개 evidence·test status가 exact provenance와 content digest에 결속된다.",
         "Phase 11 JEPA-L1의 anti-collapse representation gate는 사전 고정 진단 월드에서 통과했고 786개 blinded intervention windows가 최소 support를 만족한다.",
-        "Phase 11 최종 Stage-1 gate는 실질 효과와 정규화 증분 실패 및 core-harm veto로 REJECT됐다."
+        "Phase 11 최종 Stage-1 gate는 실질 효과와 정규화 증분 실패 및 core-harm veto로 REJECT됐다.",
+        "Phase 12 JEPA-L2 learning-progress 3×2 설계는 outcome-free 사전등록으로 동결됐고 실행 권한은 아직 열리지 않았다."
       ]
     },
     "curated_report_sections": {
@@ -31,6 +33,7 @@
       "v3 실행 메타데이터의 git revision은 당시 dirty/untracked 실행 코드를 온전히 식별하지 못한다.",
       "Phase 11은 단일 학습 seed의 exploratory Stage 1이므로 유리한 하위 진단도 일반화할 수 없다.",
       "anti-collapse의 표현 rank 개선은 사회적 행동이나 상대 보존의 증거가 아니다.",
+      "Phase 12는 공개 anchor 전 계획 단계이며 예정 전이 수는 완료 진행률이 아니다.",
       "heartbeat는 SIGKILL 이후 liveness를 단독으로 증명하지 못한다."
     ]
   },
@@ -217,6 +220,43 @@
         },
         "window_count": 786
       }
+    },
+    "phase12": {
+      "claim_boundary": "outcome-free plan only; no training, world construction, evaluation, Stage-2, scientific, or emergence claim",
+      "factorial": {
+        "actor_objectives": [
+          "OFF",
+          "RAW",
+          "LP"
+        ],
+        "cell_count": 6,
+        "mortality": [
+          "off",
+          "on"
+        ],
+        "planned_stage1_training_transitions": 11796480
+      },
+      "learning_progress": {
+        "clip_absolute": "0.10",
+        "equation": "r_lp_t=clip(ema_slow_error_through_t-ema_fast_error_through_t,-0.10,0.10)",
+        "fast_ema_decay": "0.90",
+        "slow_ema_decay": "0.99"
+      },
+      "permissions": {
+        "diagnostic_world_construction_authorized": false,
+        "evaluation_authorized": false,
+        "evaluation_world_construction_authorized": false,
+        "next_gate": "exact_public_https_anchor",
+        "outcome_read_authorized": false,
+        "preheldout_gate_authorized": false,
+        "public_anchor_construction_authorized": true,
+        "scientific_claim_authorized": false,
+        "stage_2_authorized": false,
+        "training_authorized": false
+      },
+      "preregistration_sha256": "723554521ca5c7282e9ae87039c4a6cc9306987b46f9c4a218b505d2d20b77ef",
+      "protocol_id": "FALSIFY-v1.7",
+      "state": "outcome_free_preregistration_frozen_public_anchor_pending"
     },
     "positive_control": {
       "available": true,
@@ -498,7 +538,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-14T18:26:12.627920+00:00",
+  "generated_at": "2026-08-14T18:46:12.414012+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -709,8 +749,8 @@
     "total": 7
   },
   "project": {
-    "headline": "JEPA-L1 anti-collapse는 representation gate를 통과했지만 실질 효과·증분·harm 결합 gate에서 REJECT됐다. Stage 2는 잠겨 있다.",
-    "phase": "Phase 11 — FALSIFY-v1.6 Stage 1 complete",
+    "headline": "Phase 11은 REJECT로 종료됐다. JEPA-L2 learning progress 3×2 설계는 outcome-free로 동결됐으며 exact HTTPS anchor 전까지 모든 실행 권한이 잠겨 있다.",
+    "phase": "Phase 12 — FALSIFY-v1.7 public preregistration",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -909,23 +949,23 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.325927,
-    "remaining_hours": 113.24,
+    "elapsed_fraction": 0.327911,
+    "remaining_hours": 112.91,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-15T03:24:52+09:00",
+    "checked_at": "2026-08-15T03:45:30+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 325,
-      "sha256": "18ae073c2c2860395dc0e885f19ca2f9a6153c0da991c2beca96c951de28dc71"
+      "file_count": 328,
+      "sha256": "7fa65111c8ebebf6a4164bc3719704035caa20fbca592c2af5aa7b07bf4a12a6"
     },
-    "note": "통합 전체 테스트 스위트: 500/500 통과",
-    "passed": 500,
+    "note": "통합 전체 테스트 스위트: 504/504 통과",
+    "passed": 504,
     "status": "passed",
-    "total": 500
+    "total": 504
   },
   "workstreams": {
     "completed_criteria": 28,
