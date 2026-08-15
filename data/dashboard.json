@@ -1948,8 +1948,8 @@
         "completed_full_units": 1,
         "completed_prefix_units": 6,
         "current_cell": "OFF_M1",
-        "current_completed_updates": 140,
-        "environment_transitions_completed": 3768320,
+        "current_completed_updates": 220,
+        "environment_transitions_completed": 4423680,
         "environment_transitions_total": 11796480,
         "evaluation_world_states_created": 0,
         "execution_attempt": 3,
@@ -1957,13 +1957,13 @@
         "implementation_freeze_sha256": "21e20b188e2f451b60633fa6e163db8071f59a977672ff42b7c2fcdd2fed70ac",
         "latest_training_metrics": {
           "pim_negative_bank_size_mean": 16.0,
-          "pim_positive_margin_fraction": 0.9073834196891192,
-          "pim_raw_margin_mean": 0.3968701207173435,
-          "pim_reward_absolute_mean": 0.09369176338191698,
-          "pim_reward_mean": 0.08070015219032632,
-          "pim_signed_to_absolute_ratio": 0.8613366776049163,
-          "pim_valid_count": 10808,
-          "predictor_loss": 5.173173984047025
+          "pim_positive_margin_fraction": 0.9334129316678913,
+          "pim_raw_margin_mean": 0.4580997500916249,
+          "pim_reward_absolute_mean": 0.09595246056832434,
+          "pim_reward_mean": 0.08617069432751429,
+          "pim_signed_to_absolute_ratio": 0.8980561188022396,
+          "pim_valid_count": 10888,
+          "predictor_loss": 4.012044584363457
         },
         "outcomes_opened": 0,
         "prefix_stop_update": 20,
@@ -2001,7 +2001,7 @@
         ],
         "total_units": 6,
         "training_plan_sha256": "3ea6c3047e348348f7c134dfc08aceaa66872b2243feb71980495954a0a5e6aa",
-        "updated_at": "2026-08-15T19:41:54+09:00"
+        "updated_at": "2026-08-15T19:43:30+09:00"
       },
       "unit_diagnostic": {
         "decision": {
@@ -2330,7 +2330,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-15T10:42:40.496742+00:00",
+  "generated_at": "2026-08-15T10:44:17.857241+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -2741,8 +2741,8 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.422798,
-    "remaining_hours": 96.97,
+    "elapsed_fraction": 0.422959,
+    "remaining_hours": 96.94,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
