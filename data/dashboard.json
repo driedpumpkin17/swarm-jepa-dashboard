@@ -1855,7 +1855,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-15T05:33:16.897089+00:00",
+  "generated_at": "2026-08-15T07:59:33.803540+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -2266,8 +2266,8 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.392105,
-    "remaining_hours": 102.13,
+    "elapsed_fraction": 0.406617,
+    "remaining_hours": 99.69,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
