@@ -1581,7 +1581,7 @@
     "phase14": {
       "claim_boundary": "update-20 reward-channel feasibility prefix only; no evaluation world, outcome, social effect, safety, cooperation, altruism, or emergence claim",
       "diagnostic_world_manifest": {
-        "diagnostic_manifest_sha256": "47599c19aadce4f7c09fea94b74ee53382a6a127105c8bc60d72b19319109fb2",
+        "diagnostic_manifest_sha256": "2c2d270c78500af32908afb967db75fef03ad9900d32cbf2f4fb41cec99de70d",
         "execution_counts": {
           "checkpoints_created": 0,
           "deterministic_resets": 384,
@@ -1706,11 +1706,11 @@
           "rollout_steps": 128,
           "training_seed": 32001
         },
-        "freeze_sha256": "a4500ee3c60a853e10758b0724eb2066a3701602dc984cc523d5c7099f9735ab",
-        "raw_input_bundle_sha256": "033ced515d785cb2bb2e9522605b7dd514039c4d21efa7db765fd42b3a7f75b7",
+        "freeze_sha256": "57c2d7b7ff68f0b59c6c2488c9660abfec630208f15e90dac2b8a75b61983906",
+        "raw_input_bundle_sha256": "a11c7e520c2287a0ab8db4dae837b9796eda18c5d9b8ac87e47466a4360d7ee7",
         "source": {
-          "git_revision": "c288a3d26933d4fa7abd351cb443dfbc9fb25d8a",
-          "tree_oid": "e3f53c5c9fbd4cdc4549fec9a1f7fb9e9526844f",
+          "git_revision": "a9579a80aed00b94a6675b1710ecad019909d2d1",
+          "tree_oid": "c6ed2251d439211e7e3c8d3ecb0a6ca3035c7264",
           "worktree_clean": true
         }
       },
@@ -1928,7 +1928,7 @@
           "transfer_onset_counterfactual_does_not_exhaust_blocking_harm": true
         }
       },
-      "state": "prefix_complete_gate_pass",
+      "state": "prefix_authorized_not_started",
       "training_plan": {
         "chronology_assertions": {
           "checkpoints_created": 0,
@@ -1942,32 +1942,41 @@
         },
         "maximum_authorized_update_inclusive": 20,
         "planned_checkpoint_count": 6,
-        "training_plan_sha256": "6ae6b1bd68a85f4a28e9b4e24e8258fc7e094ce05dd7205f5e7d08840c132e35"
+        "training_plan_sha256": "dd6e93345a3103c55cd0930e4c0f24eccbbc848855d482ba228201f798ed9e1c"
       },
       "training_progress": {
         "completed_full_units": 0,
-        "completed_prefix_units": 6,
+        "completed_prefix_units": 0,
         "current_cell": null,
         "current_completed_updates": 0,
-        "environment_transitions_completed": 983040,
+        "environment_transitions_completed": 0,
         "environment_transitions_total": 11796480,
         "evaluation_world_states_created": 0,
+        "execution_attempt": 2,
         "frozen_updates_per_cell": 240,
-        "implementation_freeze_sha256": "a4500ee3c60a853e10758b0724eb2066a3701602dc984cc523d5c7099f9735ab",
+        "implementation_freeze_sha256": "57c2d7b7ff68f0b59c6c2488c9660abfec630208f15e90dac2b8a75b61983906",
         "latest_training_metrics": null,
         "outcomes_opened": 0,
         "prefix_stop_update": 20,
         "protocol_id": "FALSIFY-v1.9",
-        "reward_channel_gate": {
-          "full_training_authorized": true,
-          "reward_channel_gate_sha256": "d51e1113caff11c1eb555bdf39aa0557e558a03a4695a7be44924990d2bdbc14",
-          "verdict": "PASS"
-        },
+        "reward_channel_gate": null,
         "schema_version": 1,
-        "state": "prefix_complete_gate_pass",
+        "state": "prefix_authorized_not_started",
+        "superseded_attempts": [
+          {
+            "attempt": 1,
+            "completed_prefix_units": 6,
+            "environment_transitions_completed": 983040,
+            "evaluation_world_states_created": 0,
+            "outcomes_opened": 0,
+            "reason": "gpu_checkpoint_cpu_rng_transport_type_mismatch",
+            "reward_channel_gate_sha256": "d51e1113caff11c1eb555bdf39aa0557e558a03a4695a7be44924990d2bdbc14",
+            "state": "superseded_before_update21"
+          }
+        ],
         "total_units": 6,
-        "training_plan_sha256": "6ae6b1bd68a85f4a28e9b4e24e8258fc7e094ce05dd7205f5e7d08840c132e35",
-        "updated_at": "2026-08-15T18:52:59+09:00"
+        "training_plan_sha256": "dd6e93345a3103c55cd0930e4c0f24eccbbc848855d482ba228201f798ed9e1c",
+        "updated_at": "2026-08-15T19:09:00+09:00"
       },
       "unit_diagnostic": {
         "decision": {
@@ -2296,7 +2305,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-15T09:53:44.548129+00:00",
+  "generated_at": "2026-08-15T10:04:51.206006+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -2707,23 +2716,23 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.417944,
-    "remaining_hours": 97.79,
+    "elapsed_fraction": 0.419046,
+    "remaining_hours": 97.6,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-15T18:45:49+09:00",
+    "checked_at": "2026-08-15T19:03:57+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 432,
-      "sha256": "0fac056cba9b253bcd8dc11b44ba48842f8d0579b107a9ab689d8cf9e5a2e8da"
+      "file_count": 433,
+      "sha256": "3a44d76327fefc89f87d1564453b96ced51b4a00a29a8653873fd16cba4b0418"
     },
-    "note": "통합 전체 테스트 스위트: 615/615 통과",
-    "passed": 615,
+    "note": "통합 전체 테스트 스위트: 617/617 통과",
+    "passed": 617,
     "status": "passed",
-    "total": 615
+    "total": 617
   },
   "workstreams": {
     "completed_criteria": 28,
