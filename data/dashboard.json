@@ -22,7 +22,9 @@
         "Phase 12 fresh factual 실행은 98,304 environment transitions를 완료했고, 공개 고정된 636개 blinded onset schedule이 모든 6개 cell의 최소 support를 통과했다.",
         "Phase 12 최종 gate는 primary 0.000171, LP-over-RAW -0.005098, fixed-observation entropy harm veto로 REJECT됐다.",
         "Phase 13 disjoint-probe model-gain preregistration은 exact HTTPS에 고정됐고 4,096-case analytic unit gate가 environment/outcome 0회로 통과했다.",
-        "Phase 13 구현 freeze, 384개 진단 상태, 6-cell training plan은 source commit 3953b9e에 결속됐고 evaluation-world bytes와 outcomes는 0이다."
+        "Phase 13 구현 freeze, 384개 진단 상태, 6-cell training plan은 source commit 3953b9e에 결속됐고 evaluation-world bytes와 outcomes는 0이다.",
+        "Phase 13은 6개 checkpoint와 11,796,480 학습 전이를 완료했고 MG_M0/MG_M1 representation gate가 모두 통과했다.",
+        "Phase 13 factual 평가는 768 episode와 98,304 전이를 완료했지만 MG_M1 material-onset candidate가 0개라 minimum-support gate에서 REJECT됐다."
       ]
     },
     "curated_report_sections": {
@@ -43,6 +45,7 @@
       "Phase 12는 단일 학습 seed의 exploratory REJECT이며 유리한 mortality interaction 하나를 일반화할 수 없다.",
       "Phase 12 representation PASS는 비붕괴 표현의 증거일 뿐 상대 보존·사회 행동·안전성의 증거가 아니다.",
       "Phase 13 unit PASS는 affine-head 수학과 noise-bank 경계만 검증하며 training 효과나 noisy-TV 면역을 검증하지 않는다.",
+      "Phase 13의 MG_M1 학습 중 최대 model-gain clipping 비율은 0.4954였고, held-out material-onset support는 0개였다. 인과 효과를 계산하지 않았으므로 원인 또는 효과 크기로 해석할 수 없다.",
       "heartbeat는 SIGKILL 이후 liveness를 단독으로 증명하지 못한다."
     ]
   },
@@ -951,17 +954,14 @@
       }
     },
     "phase13": {
-      "claim_boundary": "source-bound exploratory Stage-1 training only; evaluation, outcome access, Stage-2, social, safety, and emergence claims remain unauthorized",
+      "claim_boundary": "exploratory Stage-1 minimum-support REJECT; no counterfactual execution, Stage-2, social, safety, cooperation, altruism, or emergence claim",
       "current_permissions": {
-        "diagnostic_world_states_bound": true,
-        "evaluation_authorized": false,
-        "evaluation_world_construction_authorized": false,
-        "model_gain_unit_gate_passed": true,
-        "next_gate": "preheldout_representation_gate",
+        "counterfactual_execution_authorized": false,
+        "counterfactual_execution_freeze_authorized": false,
+        "next_gate": "minimum_support_failure",
         "outcome_read_authorized": false,
-        "representation_gate_authorized_after_training": true,
+        "schedule_public_anchor_authorized": false,
         "scientific_claim_authorized": false,
-        "stage_1_training_authorized": true,
         "stage_2_authorized": false
       },
       "diagnostic_world_manifest": {
@@ -1040,6 +1040,18 @@
         ],
         "mortality_interaction_within_MG": "(MG_M1-OFF_M1)-(MG_M0-OFF_M0)",
         "primary_simple_contrast": "MG_M1_minus_OFF_M1"
+      },
+      "factual_execution": {
+        "envelope_sha256": "9c88f73155459b0b8242bb6ebb752cba6b10f204f0400ac69951e102379de543",
+        "execution_counts": {
+          "actor_transitions": 196608,
+          "environment_transitions": 98304,
+          "full_episodes": 768,
+          "outcome_deserializations": 0,
+          "policy_forward_calls": 98304
+        },
+        "maximum_energy_accounting_error": 1.6655772924423218e-05,
+        "payload_sha256": "65febaa73c7458592cd9efdb9b43cd67bf3229d60e0618fa5834e450f36fb62f"
       },
       "fresh_stage1_seed": [
         31001
@@ -1161,6 +1173,60 @@
         "virtual_update_mutates_predictor": false
       },
       "planned_stage1_training_transitions": 11796480,
+      "preoutcome_manifest": {
+        "execution_counts": {
+          "environment_steps": 0,
+          "evaluation_episodes": 0,
+          "outcome_deserializations": 0,
+          "policy_forward_calls": 0,
+          "unique_world_ids": 64,
+          "world_resets": 384
+        },
+        "manifest_sha256": "49cc315a55fc628af8250ebbf1cff82b36fa477f23a68872b64facdfcc454b19",
+        "structural_harm_applicability": {
+          "any_not_applicable_forbids_all_seven_harm_claim": true,
+          "applicability_by_field": {
+            "actor_caused_immobile_fraction": "required",
+            "conditional_movement_entropy_drop": "required",
+            "fixed_observation_policy_entropy_drop": "required",
+            "forced_synchronization_index": "required",
+            "harmful_blocking_fraction": "not_applicable",
+            "partner_excess_death_risk": "required",
+            "starvation_monopoly_excess": "not_applicable"
+          },
+          "classification_source": "hash_bound_environment_execution_manifest_validated_before_any_outcome_blob_is_opened",
+          "classification_time": "after_representation_gate_before_evaluation_execution",
+          "environment_evidence": {
+            "classification_before_evaluation_execution": true,
+            "classification_before_outcome_blob_open": true,
+            "num_resources": 0,
+            "target_or_egress_oracle_present": false
+          },
+          "environment_evidence_sha256": "ef90736be4b5daf6788f699f9045af48127be0874365c6b3b7e811b76c71e855",
+          "not_applicable_receipts": [
+            {
+              "harm_field": "harmful_blocking_fraction",
+              "manifest_evidence_sha256": "ef90736be4b5daf6788f699f9045af48127be0874365c6b3b7e811b76c71e855",
+              "preregistration_sha256": "db986238931f6e2de94fcd44a15c3139084c75c3b3d4792229d0ca458b22af07",
+              "protocol_id": "FALSIFY-v1.8",
+              "rule_id": "conditional_target_oracle_reachability_v1",
+              "status": "not_applicable",
+              "structural_prerequisite": "frozen_target_or_egress_oracle_exists_and_actor_can_alter_reachability"
+            },
+            {
+              "harm_field": "starvation_monopoly_excess",
+              "manifest_evidence_sha256": "ef90736be4b5daf6788f699f9045af48127be0874365c6b3b7e811b76c71e855",
+              "preregistration_sha256": "db986238931f6e2de94fcd44a15c3139084c75c3b3d4792229d0ca458b22af07",
+              "protocol_id": "FALSIFY-v1.8",
+              "rule_id": "conditional_resource_supply_accounting_v1",
+              "status": "not_applicable",
+              "structural_prerequisite": "nonzero_resource_supply_with_acquisition_ownership_consumption_or_destruction_accounting"
+            }
+          ],
+          "numeric_zero_substitution_forbidden": true
+        },
+        "world_state_bundle_sha256": "0f953b5b52800ffd024b5541edb78fe503c9a24b252c80163605dfc325b35e36"
+      },
       "preregistration_sha256": "db986238931f6e2de94fcd44a15c3139084c75c3b3d4792229d0ca458b22af07",
       "protocol_id": "FALSIFY-v1.8",
       "public_anchor": {
@@ -1176,7 +1242,225 @@
           "verified_at": "2026-08-15T12:15:42+09:00"
         }
       },
-      "state": "training_complete_pending_repository_ingest",
+      "representation_gate": {
+        "MG_cell_gates": [
+          {
+            "active_dimension_fraction": 1.0,
+            "cell_gate_pass": true,
+            "cell_id": "MG_M0",
+            "clauses": {
+              "active_dimension_fraction_pass": true,
+              "effective_rank_pass": true,
+              "median_dimension_std_pass": true
+            },
+            "effective_rank": 16.63087777955391,
+            "median_dimension_std": 0.8947691778661357
+          },
+          {
+            "active_dimension_fraction": 1.0,
+            "cell_gate_pass": true,
+            "cell_id": "MG_M1",
+            "clauses": {
+              "active_dimension_fraction_pass": true,
+              "effective_rank_pass": true,
+              "median_dimension_std_pass": true
+            },
+            "effective_rank": 11.292888778148349,
+            "median_dimension_std": 0.9133731804201013
+          }
+        ],
+        "decision": {
+          "checkpoint_read_authorized": true,
+          "diagnostic_world_read_authorized": true,
+          "evaluation_authorized": false,
+          "evaluation_world_construction_authorized": true,
+          "model_gain_unit_gate_pass": true,
+          "next_gate": "source_bound_evaluation_world_manifest",
+          "outcome_read_authorized": false,
+          "preheldout_conjunction_pass": true,
+          "representation_gate_authorized": true,
+          "representation_gate_pass": true,
+          "scientific_claim_authorized": false,
+          "stage_2_authorized": false,
+          "verdict": "PASS"
+        },
+        "execution_counts": {
+          "checkpoint_reads": 6,
+          "diagnostic_bank_items": 768,
+          "environment_steps": 0,
+          "evaluation_world_states_created": 0,
+          "outcomes_opened": 0,
+          "policy_action_forward_calls": 0,
+          "representation_encoder_forward_batches": 6
+        },
+        "representation_result_sha256": "3c6295502439843eed8e34697aa6705377de99074253166e83adfa0f322ac6b3"
+      },
+      "state": "stage1_terminated_minimum_support_reject",
+      "training": {
+        "checkpoint_rows": [
+          {
+            "actor_objective": "OFF",
+            "cell_id": "OFF_M0",
+            "checkpoint_byte_length": 31042618,
+            "checkpoint_raw_sha256": "43596306ed839e333d84c124292180659e425fd9fbf285790e434841434e9394",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.8015503883361816e-05,
+            "mortality": false,
+            "non_finite_updates": 0,
+            "objective_id": "ACTOR-OFF-L1",
+            "planned_unit_id": "2d74f8022f5abded3ad27abceaeb4593a353467acf2c826909030e3dfbaa1aeb",
+            "trained_seed": 31001,
+            "training_diagnostic": {
+              "diagnostic_is_nonselecting": true,
+              "final_probe_size_mean": 32.0,
+              "finite_predictor_loss_updates": 240,
+              "first_finite_predictor_loss": 13.207778334617615,
+              "first_rollout_model_gain_exact_zero": true,
+              "last_finite_predictor_loss": 0.8143476690165699,
+              "maximum_model_gain_clipped_fraction": 0.1240234375,
+              "minimum_finite_predictor_loss": 0.791152979247272,
+              "post_first_model_gain_absolute_mean": 0.014318351420478923,
+              "update_rows": 240
+            }
+          },
+          {
+            "actor_objective": "OFF",
+            "cell_id": "OFF_M1",
+            "checkpoint_byte_length": 22734330,
+            "checkpoint_raw_sha256": "2b101a30109a98057db2ad813e65f87fd76adfbc3bf7fa743cbe9dd5a6e28b6e",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.8104910850524902e-05,
+            "mortality": true,
+            "non_finite_updates": 0,
+            "objective_id": "ACTOR-OFF-L1",
+            "planned_unit_id": "02ec4962aea2a8dd270f4f89e955feed4162bf7d3e8628f58d15d1e119c1d2d8",
+            "trained_seed": 31001,
+            "training_diagnostic": {
+              "diagnostic_is_nonselecting": true,
+              "final_probe_size_mean": 32.0,
+              "finite_predictor_loss_updates": 240,
+              "first_finite_predictor_loss": 18.13064331561327,
+              "first_rollout_model_gain_exact_zero": true,
+              "last_finite_predictor_loss": 3.880295085713146,
+              "maximum_model_gain_clipped_fraction": 0.23920416720211507,
+              "minimum_finite_predictor_loss": 1.6360014127296152,
+              "post_first_model_gain_absolute_mean": 0.017507366692753216,
+              "update_rows": 240
+            }
+          },
+          {
+            "actor_objective": "RAW",
+            "cell_id": "RAW_M0",
+            "checkpoint_byte_length": 30101306,
+            "checkpoint_raw_sha256": "f4c972c3ba856819105e46c6421ccf759aa948c44a93b3e359e3968a94be6858",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.8384307622909546e-05,
+            "mortality": false,
+            "non_finite_updates": 0,
+            "objective_id": "JEPA-L1",
+            "planned_unit_id": "abb0c39bcea3e7e9c9094e18d08cbbf0e2f7f1d8a87c7796f2b9774dfbd404c8",
+            "trained_seed": 31001,
+            "training_diagnostic": {
+              "diagnostic_is_nonselecting": true,
+              "final_probe_size_mean": 32.0,
+              "finite_predictor_loss_updates": 240,
+              "first_finite_predictor_loss": 13.207778334617615,
+              "first_rollout_model_gain_exact_zero": true,
+              "last_finite_predictor_loss": 0.9755162782967091,
+              "maximum_model_gain_clipped_fraction": 0.101806640625,
+              "minimum_finite_predictor_loss": 0.9532479657791555,
+              "post_first_model_gain_absolute_mean": 0.016764903931211144,
+              "update_rows": 240
+            }
+          },
+          {
+            "actor_objective": "RAW",
+            "cell_id": "RAW_M1",
+            "checkpoint_byte_length": 21695290,
+            "checkpoint_raw_sha256": "dd09406c40c06173ae44c9a5f4d1c3beb7568cee5e04c83ceedca6688cf86c1e",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.8149614334106445e-05,
+            "mortality": true,
+            "non_finite_updates": 0,
+            "objective_id": "JEPA-L1",
+            "planned_unit_id": "9da79d371acc40e41e6a364f66a4a95f7d10756cedcbb7028a9d9d93617331fd",
+            "trained_seed": 31001,
+            "training_diagnostic": {
+              "diagnostic_is_nonselecting": true,
+              "final_probe_size_mean": 31.953125,
+              "finite_predictor_loss_updates": 240,
+              "first_finite_predictor_loss": 18.13064331561327,
+              "first_rollout_model_gain_exact_zero": true,
+              "last_finite_predictor_loss": 3.2674414280881274,
+              "maximum_model_gain_clipped_fraction": 0.21804774718891298,
+              "minimum_finite_predictor_loss": 2.3555907919028094,
+              "post_first_model_gain_absolute_mean": 0.01932031534230062,
+              "update_rows": 240
+            }
+          },
+          {
+            "actor_objective": "MG",
+            "cell_id": "MG_M0",
+            "checkpoint_byte_length": 31147589,
+            "checkpoint_raw_sha256": "f1ea323271ade8c607f7c2df725771b12934d5983cce1af12049cada357bbcea",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.9341707229614258e-05,
+            "mortality": false,
+            "non_finite_updates": 0,
+            "objective_id": "JEPA-L2-MG",
+            "planned_unit_id": "f4fb3abb4962e818256813a2f57aea97ced884d3aaa89e5433548ec34b5d9cc8",
+            "trained_seed": 31001,
+            "training_diagnostic": {
+              "diagnostic_is_nonselecting": true,
+              "final_probe_size_mean": 32.0,
+              "finite_predictor_loss_updates": 240,
+              "first_finite_predictor_loss": 13.207778334617615,
+              "first_rollout_model_gain_exact_zero": true,
+              "last_finite_predictor_loss": 0.7866692249663174,
+              "maximum_model_gain_clipped_fraction": 0.1241455078125,
+              "minimum_finite_predictor_loss": 0.7743079354986548,
+              "post_first_model_gain_absolute_mean": 0.012596453502123284,
+              "update_rows": 240
+            }
+          },
+          {
+            "actor_objective": "MG",
+            "cell_id": "MG_M1",
+            "checkpoint_byte_length": 17741061,
+            "checkpoint_raw_sha256": "5e08ad75b780a3d9b2d4cdf7248fa475a2d98bddec24440978fdc50b565224ae",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.6137957572937012e-05,
+            "mortality": true,
+            "non_finite_updates": 0,
+            "objective_id": "JEPA-L2-MG",
+            "planned_unit_id": "518fe66ba97d6ad7eabac2cf76a276db10627c1f89eb3298a2e936d080f07573",
+            "trained_seed": 31001,
+            "training_diagnostic": {
+              "diagnostic_is_nonselecting": true,
+              "final_probe_size_mean": 32.0,
+              "finite_predictor_loss_updates": 240,
+              "first_finite_predictor_loss": 18.13064331561327,
+              "first_rollout_model_gain_exact_zero": true,
+              "last_finite_predictor_loss": 6.566836421118408,
+              "maximum_model_gain_clipped_fraction": 0.49537542216274716,
+              "minimum_finite_predictor_loss": 1.3956570066903766,
+              "post_first_model_gain_absolute_mean": 0.03133569970835991,
+              "update_rows": 240
+            }
+          }
+        ],
+        "summary": {
+          "all_completed_240_updates": true,
+          "checkpoint_count": 6,
+          "first_rollout_model_gain_exact_zero_all_cells": true,
+          "maximum_energy_accounting_error": 1.9341707229614258e-05,
+          "model_gain_bookkeeping_executed_all_cells": true,
+          "outcome_based_training_selection_performed": false,
+          "total_non_finite_updates": 0,
+          "total_training_transitions": 11796480
+        },
+        "training_manifest_sha256": "5ed1322168fd8951881b1e9d0196d27554844543650f686ecba3883459473feb"
+      },
       "training_plan": {
         "chronology_assertions": {
           "checkpoints_created": 0,
@@ -1204,10 +1488,10 @@
         "outcomes_opened": 0,
         "protocol_id": "FALSIFY-v1.8",
         "schema_version": 1,
-        "state": "training_complete_pending_repository_ingest",
+        "state": "training_complete_repository_ingested",
         "total_checkpoint_units": 6,
         "training_plan_sha256": "649b4d45251ed697e7556901aa231118945adab59e2ab826a5bdb3b13ed47aad",
-        "updated_at": "2026-08-15T13:27:49+09:00",
+        "updated_at": "2026-08-15T14:00:41+09:00",
         "updates_per_cell": 240
       },
       "unit_diagnostic": {
@@ -1255,6 +1539,40 @@
           "priority_selection_all_valid": true,
           "priority_selection_deterministic": true
         }
+      },
+      "window_schedule": {
+        "candidate_window_count_by_cell": {
+          "MG_M0": 359,
+          "MG_M1": 0,
+          "OFF_M0": 221,
+          "OFF_M1": 150,
+          "RAW_M0": 199,
+          "RAW_M1": 519
+        },
+        "crn_contract": {
+          "branch_role_enters_raw_rng": false,
+          "draws_per_window": 1248,
+          "horizon_steps": 13,
+          "pair_identity_binds_world_mode_actor_direction": true,
+          "repeats": 16,
+          "tape_root_sha256": "5809f007e79280a7c0014991e52668c16efc3ddb0f40f6950dd8bb09fe20e9e7"
+        },
+        "execution_counts": {
+          "counterfactual_branches": 0,
+          "counterfactual_transitions": 0,
+          "factual_payload_deserializations": 1
+        },
+        "minimum_support_all_cells": false,
+        "schedule_sha256": "f469338713647e2f000df5621d675c7f34735bc6fed5f97981df167aced16a18",
+        "selected_window_count_by_cell": {
+          "MG_M0": 128,
+          "MG_M1": 0,
+          "OFF_M0": 128,
+          "OFF_M1": 128,
+          "RAW_M0": 128,
+          "RAW_M1": 128
+        },
+        "window_count": 640
       }
     },
     "positive_control": {
@@ -1537,7 +1855,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-15T04:28:28.030675+00:00",
+  "generated_at": "2026-08-15T05:33:16.897089+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -1748,8 +2066,8 @@
     "total": 7
   },
   "project": {
-    "headline": "Phase 12 REJECT 뒤 fresh FALSIFY-v1.8 model-gain 설계를 공개 고정했다. 구현 freeze, 384개 outcome-free 진단 상태, 6-cell 계획과 4,096-case unit PASS가 모두 결속되어 Stage-1 학습만 허용됐다. 평가·outcome·Stage-2는 잠겨 있다.",
-    "phase": "Phase 13 — source-bound Stage-1 training authorized",
+    "headline": "FALSIFY-v1.8은 6개 checkpoint와 11,796,480 학습 전이, representation PASS, 768 factual episode를 완료했지만 MG_M1의 등록된 material-onset window가 0개라 최소 support gate에서 REJECT됐다. 반사실 실행과 Stage 2는 잠겨 있다.",
+    "phase": "Phase 13 — Stage-1 minimum-support REJECT",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -1948,23 +2266,23 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.385675,
-    "remaining_hours": 103.21,
+    "elapsed_fraction": 0.392105,
+    "remaining_hours": 102.13,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-15T13:01:38+09:00",
+    "checked_at": "2026-08-15T14:32:16+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 392,
-      "sha256": "d2fba3774dabc73170f52ae070c4fb1bf7c6097b0d20ee1bc69daa81d3101c2b"
+      "file_count": 408,
+      "sha256": "0f5f431b29e2f521236aa12a432926cb06e793f8390016f79561e0a9705f2eb5"
     },
-    "note": "통합 전체 테스트 스위트: 567/567 통과",
-    "passed": 567,
+    "note": "통합 전체 테스트 스위트: 577/577 통과",
+    "passed": 577,
     "status": "passed",
-    "total": 567
+    "total": 577
   },
   "workstreams": {
     "completed_criteria": 28,
