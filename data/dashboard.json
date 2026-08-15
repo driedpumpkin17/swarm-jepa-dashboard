@@ -9,7 +9,7 @@
         "canonical schedule record가 window를 선택·실행했거나 causal gate를 열었다.",
         "Phase 12 learning progress가 학습·행동·상대 보존에 효과가 있다.",
         "Phase 13 model gain이 상대 보존·협력·안전·창발을 만든다.",
-        "Phase 14 predictive-information reward가 학습되거나 상대 보존·협력·안전·창발을 만든다."
+        "Phase 14 predictive-information reward가 상대 보존·협력·안전·창발을 만든다."
       ],
       "supported": [
         "재시작 가능한 실험 스택과 에너지 회계 검사가 작동한다.",
@@ -26,7 +26,9 @@
         "Phase 13 구현 freeze, 384개 진단 상태, 6-cell training plan은 source commit 3953b9e에 결속됐고 evaluation-world bytes와 outcomes는 0이다.",
         "Phase 13은 6개 checkpoint와 11,796,480 학습 전이를 완료했고 MG_M0/MG_M1 representation gate가 모두 통과했다.",
         "Phase 13 factual 평가는 768 episode와 98,304 전이를 완료했지만 MG_M1 material-onset candidate가 0개라 minimum-support gate에서 REJECT됐다.",
-        "Phase 14 FALSIFY-v1.9 combined HTTPS anchor, PIM unit PASS, source-bound freeze, 384개 진단 상태와 update-20 전용 plan이 outcome 0 조건으로 고정됐고 prefix 학습만 허용됐다."
+        "Phase 14 FALSIFY-v1.9 combined HTTPS anchor, PIM unit PASS, source-bound freeze, 384개 진단 상태와 update-20 전용 plan이 outcome 0 조건으로 고정됐고 prefix 학습만 허용됐다.",
+        "Phase 14 Stage-1은 6개 checkpoint와 11,796,480 training transitions를 비유한 update 0으로 완료했다.",
+        "Phase 14 PIM_M0/PIM_M1 representation과 6-cell controlled-support sentinel은 environment step·evaluation world·outcome 0 조건에서 PASS했다."
       ]
     },
     "curated_report_sections": {
@@ -1579,7 +1581,7 @@
       }
     },
     "phase14": {
-      "claim_boundary": "update-20 reward-channel feasibility prefix only; no evaluation world, outcome, social effect, safety, cooperation, altruism, or emergence claim",
+      "claim_boundary": "Stage-1 training and preheldout representation/support feasibility PASS only; no evaluation outcome, causal social effect, safety, cooperation, altruism, or emergence claim",
       "diagnostic_world_manifest": {
         "diagnostic_manifest_sha256": "43886ba5fe60e8380ef6f1edfbd9e93513224dd45a8b4dda0243e5a900ed476d",
         "execution_counts": {
@@ -1715,14 +1717,20 @@
         }
       },
       "permissions": {
-        "diagnostic_world_states_bound": true,
-        "evaluation_world_construction_authorized": false,
-        "full_training_authorized": false,
-        "maximum_authorized_update_inclusive": 20,
-        "next_gate": "all_six_exact_update20_reward_channel_gate",
+        "checkpoint_read_authorized": true,
+        "controlled_support_gate_pass": true,
+        "diagnostic_world_read_authorized": true,
+        "evaluation_authorized": false,
+        "evaluation_world_construction_authorized": true,
+        "next_gate": "source_bound_evaluation_world_manifest",
         "outcome_read_authorized": false,
-        "prefix_training_authorized": true,
-        "scientific_claim_authorized": false
+        "predictive_information_unit_gate_pass": true,
+        "preheldout_conjunction_pass": true,
+        "representation_and_support_gate_authorized": true,
+        "representation_gate_pass": true,
+        "scientific_claim_authorized": false,
+        "stage_2_authorized": false,
+        "verdict": "PASS"
       },
       "planned_stage1_training_transitions": 11796480,
       "predictive_information": {
@@ -1813,6 +1821,112 @@
           "public_repository_commit": "7c9616c3314060900e05cead86ca96feff5443ba",
           "verified_at": "2026-08-15T17:49:57+09:00"
         }
+      },
+      "representation_support_gate": {
+        "PIM_cell_representation_gates": [
+          {
+            "active_dimension_fraction": 1.0,
+            "cell_gate_pass": true,
+            "cell_id": "PIM_M0",
+            "clauses": {
+              "active_dimension_fraction_pass": true,
+              "effective_rank_pass": true,
+              "median_dimension_std_pass": true
+            },
+            "effective_rank": 13.883729363169008,
+            "median_dimension_std": 0.659405910511405
+          },
+          {
+            "active_dimension_fraction": 1.0,
+            "cell_gate_pass": true,
+            "cell_id": "PIM_M1",
+            "clauses": {
+              "active_dimension_fraction_pass": true,
+              "effective_rank_pass": true,
+              "median_dimension_std_pass": true
+            },
+            "effective_rank": 10.578692302435867,
+            "median_dimension_std": 1.110264215072191
+          }
+        ],
+        "controlled_support_cell_gates": [
+          {
+            "cell_gate_pass": true,
+            "cell_id": "OFF_M0",
+            "probability_minimum": 0.05,
+            "state_count": 24,
+            "states_passing": 24,
+            "states_passing_minimum": 20
+          },
+          {
+            "cell_gate_pass": true,
+            "cell_id": "OFF_M1",
+            "probability_minimum": 0.05,
+            "state_count": 24,
+            "states_passing": 24,
+            "states_passing_minimum": 20
+          },
+          {
+            "cell_gate_pass": true,
+            "cell_id": "RAW_M0",
+            "probability_minimum": 0.05,
+            "state_count": 24,
+            "states_passing": 24,
+            "states_passing_minimum": 20
+          },
+          {
+            "cell_gate_pass": true,
+            "cell_id": "RAW_M1",
+            "probability_minimum": 0.05,
+            "state_count": 24,
+            "states_passing": 24,
+            "states_passing_minimum": 20
+          },
+          {
+            "cell_gate_pass": true,
+            "cell_id": "PIM_M0",
+            "probability_minimum": 0.05,
+            "state_count": 24,
+            "states_passing": 24,
+            "states_passing_minimum": 20
+          },
+          {
+            "cell_gate_pass": true,
+            "cell_id": "PIM_M1",
+            "probability_minimum": 0.05,
+            "state_count": 24,
+            "states_passing": 24,
+            "states_passing_minimum": 20
+          }
+        ],
+        "decision": {
+          "checkpoint_read_authorized": true,
+          "controlled_support_gate_pass": true,
+          "diagnostic_world_read_authorized": true,
+          "evaluation_authorized": false,
+          "evaluation_world_construction_authorized": true,
+          "next_gate": "source_bound_evaluation_world_manifest",
+          "outcome_read_authorized": false,
+          "predictive_information_unit_gate_pass": true,
+          "preheldout_conjunction_pass": true,
+          "representation_and_support_gate_authorized": true,
+          "representation_gate_pass": true,
+          "scientific_claim_authorized": false,
+          "stage_2_authorized": false,
+          "verdict": "PASS"
+        },
+        "execution_counts": {
+          "checkpoint_reads": 6,
+          "diagnostic_bank_items": 768,
+          "environment_steps": 0,
+          "evaluation_world_states_created": 0,
+          "outcomes_opened": 0,
+          "policy_distribution_forward_batches": 6,
+          "representation_encoder_forward_batches": 6,
+          "sampled_policy_actions": 0,
+          "support_state_probabilities": 144
+        },
+        "gate_result_sha256": "bd1cd13aa3a41e25e15be88aea677b95d56c9c9faeff17dc1df63fb9809de146"
       },
       "reward_channel_amendment": {
         "amendment_sha256": "9f6869dd99bef3e4b5cd03788e2417d2fa135c3106b11c607ac9cc14039d125e",
@@ -1928,7 +2042,29 @@
           "transfer_onset_counterfactual_does_not_exhaust_blocking_harm": true
         }
       },
-      "state": "training_complete_pending_repository_ingest",
+      "state": "training_complete_repository_ingested",
+      "training": {
+        "permissions": {
+          "evaluation_authorized": false,
+          "evaluation_world_construction_authorized": false,
+          "next_gate": "preheldout_representation_and_support_gate",
+          "outcome_read_authorized": false,
+          "representation_gate_authorized": true,
+          "scientific_claim_authorized": false,
+          "stage_2_authorized": false,
+          "training_complete": true
+        },
+        "summary": {
+          "PIM_bookkeeping_executed_all_cells": true,
+          "all_completed_exact_update_240": true,
+          "checkpoint_count": 6,
+          "exact_update20_resume_used": true,
+          "outcome_based_training_selection_performed": false,
+          "total_non_finite_updates": 0,
+          "total_training_transitions": 11796480
+        },
+        "training_manifest_sha256": "c265b981f65021670e2af6e60ec0e8a66ed17c6ca04df90752610d7fda826e99"
+      },
       "training_plan": {
         "chronology_assertions": {
           "checkpoints_created": 0,
@@ -1965,7 +2101,7 @@
           "verdict": "PASS"
         },
         "schema_version": 1,
-        "state": "training_complete_pending_repository_ingest",
+        "state": "training_complete_repository_ingested",
         "superseded_attempts": [
           {
             "attempt": 1,
@@ -1992,7 +2128,7 @@
         ],
         "total_units": 6,
         "training_plan_sha256": "3ea6c3047e348348f7c134dfc08aceaa66872b2243feb71980495954a0a5e6aa",
-        "updated_at": "2026-08-15T20:05:25+09:00"
+        "updated_at": "2026-08-15T20:14:08+09:00"
       },
       "unit_diagnostic": {
         "decision": {
@@ -2321,7 +2457,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-15T11:06:10.350086+00:00",
+  "generated_at": "2026-08-15T11:29:50.297270+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -2532,8 +2668,8 @@
     "total": 7
   },
   "project": {
-    "headline": "Phase 14 base+reward-channel amendment의 exact HTTPS anchor, PIM 단위 진단, source-bound 구현 freeze, 384개 진단 상태와 update-20 전용 계획이 고정됐다. 현재 공개 진행률은 실측 checkpoint에서 산출되며 evaluation world와 outcome은 계속 잠겨 있다.",
-    "phase": "Phase 14 — FALSIFY-v1.9 update-20 prefix authorized",
+    "headline": "Phase 14 Stage-1은 6개 checkpoint와 11,796,480 transitions를 완료했다. PIM representation과 6-cell controlled-support gate가 outcome 0 조건에서 PASS했으며, 다음 허가는 source-bound evaluation-world manifest 구성뿐이다.",
+    "phase": "Phase 14 — FALSIFY-v1.9 Stage-1 training and preheldout gate PASS",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -2732,23 +2868,23 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.42513,
-    "remaining_hours": 96.58,
+    "elapsed_fraction": 0.427477,
+    "remaining_hours": 96.18,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-15T19:26:23+09:00",
+    "checked_at": "2026-08-15T20:28:43+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 434,
-      "sha256": "81af110f0ae90ac7c9879cd7485fab5dedf8e442b6b55fcb0878f944bbf26b13"
+      "file_count": 438,
+      "sha256": "924ecdc9e7cb6edb8b6b3db3f052016a266869d91133837c1e11068bc5473e53"
     },
-    "note": "통합 전체 테스트 스위트: 618/618 통과",
-    "passed": 618,
+    "note": "통합 전체 테스트 스위트: 621/621 통과",
+    "passed": 621,
     "status": "passed",
-    "total": 618
+    "total": 621
   },
   "workstreams": {
     "completed_criteria": 28,
