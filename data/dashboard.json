@@ -17,7 +17,9 @@
         "Phase 11 JEPA-L1의 anti-collapse representation gate는 사전 고정 진단 월드에서 통과했고 786개 blinded intervention windows가 최소 support를 만족한다.",
         "Phase 11 최종 Stage-1 gate는 실질 효과와 정규화 증분 실패 및 core-harm veto로 REJECT됐다.",
         "Phase 12 JEPA-L2 learning-progress 3×2 설계, LP 단위 gate, 384개 진단 상태와 소스 결합 구현은 고정됐고 Stage-1 학습만 허용됐다.",
-        "Phase 12 Stage-1은 6개 checkpoint와 11,796,480 transitions를 완료했고 LP_M0/LP_M1 preheldout representation gate가 모두 통과했다."
+        "Phase 12 Stage-1은 6개 checkpoint와 11,796,480 transitions를 완료했고 LP_M0/LP_M1 preheldout representation gate가 모두 통과했다.",
+        "Phase 12 fresh factual 실행은 98,304 environment transitions를 완료했고, 공개 고정된 636개 blinded onset schedule이 모든 6개 cell의 최소 support를 통과했다.",
+        "Phase 12 최종 gate는 primary 0.000171, LP-over-RAW -0.005098, fixed-observation entropy harm veto로 REJECT됐다."
       ]
     },
     "curated_report_sections": {
@@ -35,7 +37,7 @@
       "Phase 11은 단일 학습 seed의 exploratory Stage 1이므로 유리한 하위 진단도 일반화할 수 없다.",
       "anti-collapse의 표현 rank 개선은 사회적 행동이나 상대 보존의 증거가 아니다.",
       "Phase 12 LP 단위 gate의 stationary-noise signed mean은 0.000167이지만 절대 보상 평균은 0.07726으로 높아 noise-seeking 위험을 실제 학습에서 추적해야 한다.",
-      "Phase 12의 11,796,480 training transitions는 완료됐지만 평가 world와 outcome은 아직 생성되지 않았다.",
+      "Phase 12는 단일 학습 seed의 exploratory REJECT이며 유리한 mortality interaction 하나를 일반화할 수 없다.",
       "Phase 12 representation PASS는 비붕괴 표현의 증거일 뿐 상대 보존·사회 행동·안전성의 증거가 아니다.",
       "heartbeat는 SIGKILL 이후 liveness를 단독으로 증명하지 못한다."
     ]
@@ -237,15 +239,18 @@
         "stage_1_training_implementation_freeze_authorized": true,
         "stage_2_authorized": false
       },
-      "claim_boundary": "fresh worlds are bound; only factual execution transport freeze is authorized, not evaluation, outcome access, Stage-2, scientific, or emergence claim",
+      "claim_boundary": "Stage-1 exploratory REJECT; Stage-2, scientific, cooperation, altruism, and emergence claims are unauthorized",
       "current_permissions": {
-        "checkpoint_and_world_manifests_complete": true,
-        "evaluation_authorized": false,
-        "factual_execution_freeze_authorized": true,
-        "next_gate": "factual_execution_transport_freeze",
-        "outcome_read_authorized": false,
-        "scientific_claim_authorized": false,
-        "stage_2_authorized": false
+        "counterfactual_feasibility_pass": true,
+        "five_core_harm_veto": true,
+        "learning_progress_increment_over_raw_pass": false,
+        "minimum_window_support_pass": true,
+        "mortality_interaction_within_LP_pass": true,
+        "new_public_stage_2_anchor_required_if_pass": false,
+        "primary_simple_contrast_pass": false,
+        "stage_1_gate_pass": false,
+        "stage_2_authorized": false,
+        "verdict": "REJECT"
       },
       "diagnostic_world_manifest": {
         "diagnostic_manifest_sha256": "4bd1d68d75c4d4addea7a98b6974a05c5c698a6a04c6e55956f8f632fbe283aa",
@@ -272,6 +277,256 @@
           "on"
         ],
         "planned_stage1_training_transitions": 11796480
+      },
+      "factual_execution": {
+        "envelope_sha256": "a990dab6cae497bacc9b86b0c84a2bd81340d57e598da5d9394121afc4e5f235",
+        "execution_counts": {
+          "actor_transitions": 196608,
+          "environment_transitions": 98304,
+          "full_episodes": 768,
+          "outcome_deserializations": 0,
+          "policy_forward_calls": 98304
+        },
+        "maximum_energy_accounting_error": 1.6897916793823242e-05,
+        "permissions": {
+          "counterfactual_execution_authorized": false,
+          "factual_execution_complete": true,
+          "factual_payload_read_authorized": false,
+          "scientific_claim_authorized": false,
+          "stage_2_authorized": false,
+          "window_selection_freeze_authorized": true
+        }
+      },
+      "final_stage1": {
+        "capability_by_cell": [
+          {
+            "cell_id": "OFF_M0",
+            "equal_world_net_preservation_effect": 0.0,
+            "intervention_feasibility": 1.0,
+            "mean_receiver_rmst_effect": 0.0,
+            "mean_receiver_survival_effect": 0.0,
+            "registered_worlds": 64,
+            "selected_windows": 128
+          },
+          {
+            "cell_id": "OFF_M1",
+            "equal_world_net_preservation_effect": 0.00020558015170038177,
+            "intervention_feasibility": 1.0,
+            "mean_receiver_rmst_effect": 0.021106941838649158,
+            "mean_receiver_survival_effect": 0.03556910569105691,
+            "registered_worlds": 64,
+            "selected_windows": 123
+          },
+          {
+            "cell_id": "RAW_M0",
+            "equal_world_net_preservation_effect": 0.0,
+            "intervention_feasibility": 1.0,
+            "mean_receiver_rmst_effect": 0.0,
+            "mean_receiver_survival_effect": 0.0,
+            "registered_worlds": 64,
+            "selected_windows": 124
+          },
+          {
+            "cell_id": "RAW_M1",
+            "equal_world_net_preservation_effect": 0.005474220900674077,
+            "intervention_feasibility": 1.0,
+            "mean_receiver_rmst_effect": 0.19467397836538464,
+            "mean_receiver_survival_effect": 0.15478515625,
+            "registered_worlds": 64,
+            "selected_windows": 128
+          },
+          {
+            "cell_id": "LP_M0",
+            "equal_world_net_preservation_effect": 0.0,
+            "intervention_feasibility": 1.0,
+            "mean_receiver_rmst_effect": 0.0,
+            "mean_receiver_survival_effect": 0.0,
+            "registered_worlds": 64,
+            "selected_windows": 27
+          },
+          {
+            "cell_id": "LP_M1",
+            "equal_world_net_preservation_effect": 0.0003764940994642529,
+            "intervention_feasibility": 1.0,
+            "mean_receiver_rmst_effect": 0.037463715529753264,
+            "mean_receiver_survival_effect": 0.030660377358490566,
+            "registered_worlds": 64,
+            "selected_windows": 106
+          }
+        ],
+        "claim_boundary": {
+          "all_seven_harms_claim": false,
+          "cooperation_or_emergence_claim": false,
+          "prior_harm_veto_overridden": false,
+          "scientific_claim_authorized": false,
+          "stage_1_exploratory_single_seed": true
+        },
+        "core_harm_contrasts": [
+          {
+            "contrast": "LP_M0_minus_OFF_M0",
+            "harms": {
+              "actor_caused_immobile_fraction": -0.0013427734375,
+              "conditional_movement_entropy_drop": -0.07184674000785364,
+              "fixed_observation_policy_entropy_drop": 0.20712272054879577,
+              "forced_synchronization_index": 0.0,
+              "partner_excess_death_risk": 0.0
+            },
+            "strict_violations": [
+              "fixed_observation_policy_entropy_drop"
+            ]
+          },
+          {
+            "contrast": "LP_increment_minus_RAW_increment_M0",
+            "harms": {
+              "actor_caused_immobile_fraction": -8.968218196733812e-05,
+              "conditional_movement_entropy_drop": -0.0014904193903457902,
+              "fixed_observation_policy_entropy_drop": 0.01467511737064342,
+              "forced_synchronization_index": 0.0,
+              "partner_excess_death_risk": 0.0
+            },
+            "strict_violations": []
+          },
+          {
+            "contrast": "LP_M1_minus_OFF_M1",
+            "harms": {
+              "actor_caused_immobile_fraction": -0.0007512009272413534,
+              "conditional_movement_entropy_drop": -0.04887287722129682,
+              "fixed_observation_policy_entropy_drop": 0.2066355074493913,
+              "forced_synchronization_index": 0.0,
+              "partner_excess_death_risk": -0.009033203125
+            },
+            "strict_violations": [
+              "fixed_observation_policy_entropy_drop"
+            ]
+          },
+          {
+            "contrast": "LP_increment_minus_RAW_increment_M1",
+            "harms": {
+              "actor_caused_immobile_fraction": -0.5259671447035902,
+              "conditional_movement_entropy_drop": -0.07980653416219498,
+              "fixed_observation_policy_entropy_drop": 0.17801912754930527,
+              "forced_synchronization_index": 0.0,
+              "partner_excess_death_risk": -0.17822265625
+            },
+            "strict_violations": [
+              "fixed_observation_policy_entropy_drop"
+            ]
+          }
+        ],
+        "decision": {
+          "counterfactual_feasibility_pass": true,
+          "five_core_harm_veto": true,
+          "learning_progress_increment_over_raw_pass": false,
+          "minimum_window_support_pass": true,
+          "mortality_interaction_within_LP_pass": true,
+          "new_public_stage_2_anchor_required_if_pass": false,
+          "primary_simple_contrast_pass": false,
+          "stage_1_gate_pass": false,
+          "stage_2_authorized": false,
+          "verdict": "REJECT"
+        },
+        "execution_counts": {
+          "branch_payload_deserializations": 1,
+          "capability_branch_transitions": 264576,
+          "factual_payload_deserializations": 0,
+          "harm_branch_transitions": 6291456,
+          "harm_branches": 49152,
+          "harm_pairs": 24576
+        },
+        "factorial_capability": {
+          "LP_M0_minus_OFF_M0": 0.0,
+          "LP_M1_minus_OFF_M1": 0.00017091394776387115,
+          "RAW_M1_minus_OFF_M1": 0.005268640748973695,
+          "learning_progress_increment_over_raw": -0.0050977268012098245,
+          "mortality_interaction_within_LP": 0.00017091394776387115
+        },
+        "result_sha256": "2b2a25941753ca69159f670fe53179ed487d6d3c935c7f4d9f4bcd6f522bb79e",
+        "training_noise_diagnostics_by_cell": [
+          {
+            "cell_id": "OFF_M0",
+            "fast_slow_EMA_gap_last_update": 0.0,
+            "fast_slow_EMA_gap_mean_over_updates": 0.0,
+            "learning_progress_reward_absolute_mean_last_update": 0.0,
+            "learning_progress_reward_absolute_mean_mean_over_updates": 0.0,
+            "learning_progress_reward_mean_last_update": 0.0,
+            "learning_progress_reward_mean_mean_over_updates": 0.0,
+            "prediction_error_mean_last_update": 0.4472749668639153,
+            "prediction_error_mean_mean_over_updates": 0.4334349166941081,
+            "update_count": 240,
+            "valid_update_fraction_last_update": 1.0,
+            "valid_update_fraction_mean_over_updates": 1.0
+          },
+          {
+            "cell_id": "OFF_M1",
+            "fast_slow_EMA_gap_last_update": 0.0,
+            "fast_slow_EMA_gap_mean_over_updates": 0.0,
+            "learning_progress_reward_absolute_mean_last_update": 0.0,
+            "learning_progress_reward_absolute_mean_mean_over_updates": 0.0,
+            "learning_progress_reward_mean_last_update": 0.0,
+            "learning_progress_reward_mean_mean_over_updates": 0.0,
+            "prediction_error_mean_last_update": 0.403947192360647,
+            "prediction_error_mean_mean_over_updates": 0.4095371430869243,
+            "update_count": 240,
+            "valid_update_fraction_last_update": 0.8323974609375,
+            "valid_update_fraction_mean_over_updates": 0.8367368062337239
+          },
+          {
+            "cell_id": "RAW_M0",
+            "fast_slow_EMA_gap_last_update": 0.0,
+            "fast_slow_EMA_gap_mean_over_updates": 0.0,
+            "learning_progress_reward_absolute_mean_last_update": 0.513096840120852,
+            "learning_progress_reward_absolute_mean_mean_over_updates": 0.4680194860241443,
+            "learning_progress_reward_mean_last_update": -0.513096840120852,
+            "learning_progress_reward_mean_mean_over_updates": -0.4680194860241443,
+            "prediction_error_mean_last_update": 0.513096840120852,
+            "prediction_error_mean_mean_over_updates": 0.4680194860241443,
+            "update_count": 240,
+            "valid_update_fraction_last_update": 1.0,
+            "valid_update_fraction_mean_over_updates": 1.0
+          },
+          {
+            "cell_id": "RAW_M1",
+            "fast_slow_EMA_gap_last_update": 0.0,
+            "fast_slow_EMA_gap_mean_over_updates": 0.0,
+            "learning_progress_reward_absolute_mean_last_update": 1.0183477479903424,
+            "learning_progress_reward_absolute_mean_mean_over_updates": 0.6019832537431866,
+            "learning_progress_reward_mean_last_update": -1.0183477479903424,
+            "learning_progress_reward_mean_mean_over_updates": -0.6019832537431866,
+            "prediction_error_mean_last_update": 1.269294020582418,
+            "prediction_error_mean_mean_over_updates": 0.6915973723418742,
+            "update_count": 240,
+            "valid_update_fraction_last_update": 0.62493896484375,
+            "valid_update_fraction_mean_over_updates": 0.7560465494791667
+          },
+          {
+            "cell_id": "LP_M0",
+            "fast_slow_EMA_gap_last_update": -0.0032618109053146327,
+            "fast_slow_EMA_gap_mean_over_updates": -0.008705189496997908,
+            "learning_progress_reward_absolute_mean_last_update": 0.07085431036830414,
+            "learning_progress_reward_absolute_mean_mean_over_updates": 0.07069351659162303,
+            "learning_progress_reward_mean_last_update": -0.00982517294050922,
+            "learning_progress_reward_mean_mean_over_updates": -0.01220185563318239,
+            "prediction_error_mean_last_update": 0.48030983936041594,
+            "prediction_error_mean_mean_over_updates": 0.45475490603466256,
+            "update_count": 240,
+            "valid_update_fraction_last_update": 1.0,
+            "valid_update_fraction_mean_over_updates": 1.0
+          },
+          {
+            "cell_id": "LP_M1",
+            "fast_slow_EMA_gap_last_update": -0.002337384405009857,
+            "fast_slow_EMA_gap_mean_over_updates": 0.06623281995476042,
+            "learning_progress_reward_absolute_mean_last_update": 0.06841106948559172,
+            "learning_progress_reward_absolute_mean_mean_over_updates": 0.07398863602707019,
+            "learning_progress_reward_mean_last_update": -0.009123116687987931,
+            "learning_progress_reward_mean_mean_over_updates": 0.021892140701446686,
+            "prediction_error_mean_last_update": 0.4777297475375235,
+            "prediction_error_mean_mean_over_updates": 0.4417932936208321,
+            "update_count": 240,
+            "valid_update_fraction_last_update": 0.84759521484375,
+            "valid_update_fraction_mean_over_updates": 0.8414136250813802
+          }
+        ]
       },
       "implementation_freeze": {
         "acceptance_contract": {
@@ -473,7 +728,27 @@
         },
         "representation_result_sha256": "eb2065e2972547d59511157b300f2ac5e4bba03cca3111da1f4e75f3d96f5518"
       },
-      "state": "fresh_evaluation_world_manifest_complete_factual_freeze_authorized",
+      "selection_clarification": {
+        "anchor_receipt_sha256": "12603c29a72c91d095b11980b5e414937f4027412fcdaaad846d0725e23dc865",
+        "chronology": {
+          "counterfactual_branches": 0,
+          "factual_environment_transitions_completed": 98304,
+          "factual_payload_deserializations": 0,
+          "scientific_effects_computed": 0,
+          "selected_windows": 0
+        },
+        "clarification_sha256": "0ad113ff5471c2c70e05f53ae19a18336520bc59368287ddf0a0b36f85035987",
+        "definition": {
+          "all_other_v1.7_selection_rules_unchanged": true,
+          "inheritance_source": "exact_FALSIFY_v1.6_phase11_selector_without_change",
+          "material_transfer_minimum_inclusive": "1.0",
+          "measurement": "transfer_sent_by_candidate_actor_at_timestep",
+          "predicate": "both_agents_alive_pre_and_transfer_sent_greater_than_or_equal_to_1.0",
+          "run_definition": "maximal_consecutive_true_predicate_timesteps",
+          "selected_timestep": "first_transition_of_each_maximal_run"
+        }
+      },
+      "state": "stage1_complete_reject_stage2_locked",
       "training": {
         "checkpoint_rows": [
           {
@@ -628,6 +903,47 @@
         "superseded_future_timestamp_plan_sha256": "15ef6e52057c6d01bef410d64b0a43aadab0c97c27fd70e55811916c75886dd7",
         "superseded_plan_execution_forbidden": true,
         "training_plan_sha256": "14da4d3ee31108486f34e0018cf4fb7589a1d7c4d3c6abe8330d50eea5ef24bd"
+      },
+      "window_schedule": {
+        "anchor_receipt_sha256": "082f666bdfc6356b399997306329864212b8d3c3233f477c97a96d11ba57b903",
+        "anchor_verification": {
+          "attempts": 1,
+          "method": "cache_busted_exact_https_raw_and_semantic_sha256_match",
+          "public_repository_commit": "b2fe2242164346f438f84ba8fcedfef5019837bf",
+          "public_url": "https://driedpumpkin17.github.io/swarm-jepa-dashboard/artifacts/phase12-v1.7-schedule/a8740b0adf0eba79abcea20c5cada81d97602403a11c091ddb26b2558e0ff609.json",
+          "verified_at": "2026-08-15T11:25:07+09:00"
+        },
+        "candidate_window_count_by_cell": {
+          "LP_M0": 27,
+          "LP_M1": 106,
+          "OFF_M0": 194,
+          "OFF_M1": 123,
+          "RAW_M0": 124,
+          "RAW_M1": 525
+        },
+        "crn_contract": {
+          "branch_role_enters_raw_rng": false,
+          "draws_per_window": 1248,
+          "horizon_steps": 13,
+          "repeats": 16,
+          "tape_root_sha256": "53034bd9f3cb073b3e348b063823c32d45a53779e2e81cebdc4de93c6c8e09d6"
+        },
+        "execution_counts": {
+          "counterfactual_branches": 0,
+          "counterfactual_transitions": 0,
+          "factual_payload_deserializations": 1
+        },
+        "minimum_support_all_cells": true,
+        "schedule_sha256": "a8740b0adf0eba79abcea20c5cada81d97602403a11c091ddb26b2558e0ff609",
+        "selected_window_count_by_cell": {
+          "LP_M0": 27,
+          "LP_M1": 106,
+          "OFF_M0": 128,
+          "OFF_M1": 123,
+          "RAW_M0": 124,
+          "RAW_M1": 128
+        },
+        "window_count": 636
       }
     },
     "positive_control": {
@@ -910,7 +1226,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-15T02:24:12.708696+00:00",
+  "generated_at": "2026-08-15T03:04:54.854656+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -1121,8 +1437,8 @@
     "total": 7
   },
   "project": {
-    "headline": "JEPA-L2 learning progress training과 representation gate가 완료됐고 fresh worlds 990000–990063의 384개 상태가 고정됐다. factual execution transport freeze만 허용되며 evaluation과 outcome은 아직 닫혀 있다.",
-    "phase": "Phase 12 — fresh evaluation worlds bound, factual freeze authorized",
+    "headline": "JEPA-L2 learning progress는 6,556,032 effect/harm branch transitions 뒤 primary effect, RAW 대비 증분, zero-harm conjunction을 실패했다. Stage 2는 잠겼고 다음은 fresh protocol의 outcome-free 설계뿐이다.",
+    "phase": "Phase 12 — JEPA-L2 Stage-1 REJECT",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -1321,23 +1637,23 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.373348,
-    "remaining_hours": 105.28,
+    "elapsed_fraction": 0.377386,
+    "remaining_hours": 104.6,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-15T11:23:27+09:00",
+    "checked_at": "2026-08-15T12:03:15+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 363,
-      "sha256": "a6966bbb72d5219c839cff179d27883d385c79ba5f74604c6d633a0200290f89"
+      "file_count": 371,
+      "sha256": "53bccff7a04272ece9ce28e95ca77a8495a33bf501a45eef132c7eea0a10f31d"
     },
-    "note": "통합 전체 테스트 스위트: 533/533 통과",
-    "passed": 533,
+    "note": "통합 전체 테스트 스위트: 539/539 통과",
+    "passed": 539,
     "status": "passed",
-    "total": 533
+    "total": 539
   },
   "workstreams": {
     "completed_criteria": 28,
