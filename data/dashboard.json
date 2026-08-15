@@ -7,7 +7,8 @@
         "관찰된 공유가 상대 생존에 인과적으로 이로웠다.",
         "현재 결과가 커밋된 소스만으로 완전히 재현 가능하다.",
         "canonical schedule record가 window를 선택·실행했거나 causal gate를 열었다.",
-        "Phase 12 learning progress가 학습·행동·상대 보존에 효과가 있다."
+        "Phase 12 learning progress가 학습·행동·상대 보존에 효과가 있다.",
+        "Phase 13 model gain이 상대 보존·협력·안전·창발을 만든다."
       ],
       "supported": [
         "재시작 가능한 실험 스택과 에너지 회계 검사가 작동한다.",
@@ -19,7 +20,8 @@
         "Phase 12 JEPA-L2 learning-progress 3×2 설계, LP 단위 gate, 384개 진단 상태와 소스 결합 구현은 고정됐고 Stage-1 학습만 허용됐다.",
         "Phase 12 Stage-1은 6개 checkpoint와 11,796,480 transitions를 완료했고 LP_M0/LP_M1 preheldout representation gate가 모두 통과했다.",
         "Phase 12 fresh factual 실행은 98,304 environment transitions를 완료했고, 공개 고정된 636개 blinded onset schedule이 모든 6개 cell의 최소 support를 통과했다.",
-        "Phase 12 최종 gate는 primary 0.000171, LP-over-RAW -0.005098, fixed-observation entropy harm veto로 REJECT됐다."
+        "Phase 12 최종 gate는 primary 0.000171, LP-over-RAW -0.005098, fixed-observation entropy harm veto로 REJECT됐다.",
+        "Phase 13 disjoint-probe model-gain preregistration은 exact HTTPS에 고정됐고 4,096-case analytic unit gate가 environment/outcome 0회로 통과했다."
       ]
     },
     "curated_report_sections": {
@@ -39,6 +41,7 @@
       "Phase 12 LP 단위 gate의 stationary-noise signed mean은 0.000167이지만 절대 보상 평균은 0.07726으로 높아 noise-seeking 위험을 실제 학습에서 추적해야 한다.",
       "Phase 12는 단일 학습 seed의 exploratory REJECT이며 유리한 mortality interaction 하나를 일반화할 수 없다.",
       "Phase 12 representation PASS는 비붕괴 표현의 증거일 뿐 상대 보존·사회 행동·안전성의 증거가 아니다.",
+      "Phase 13 unit PASS는 affine-head 수학과 noise-bank 경계만 검증하며 training 효과나 noisy-TV 면역을 검증하지 않는다.",
       "heartbeat는 SIGKILL 이후 liveness를 단독으로 증명하지 못한다."
     ]
   },
@@ -946,6 +949,225 @@
         "window_count": 636
       }
     },
+    "phase13": {
+      "claim_boundary": "analytic unit PASS only; training, evaluation, outcome access, Stage-2, social, safety, and emergence claims remain unauthorized",
+      "current_permissions": {
+        "diagnostic_world_manifest_construction_authorized": true,
+        "evaluation_authorized": false,
+        "evaluation_world_construction_authorized": false,
+        "next_gate": "source_bound_diagnostic_world_and_stage1_training_implementation_freeze",
+        "outcome_read_authorized": false,
+        "scientific_claim_authorized": false,
+        "stage_1_training_authorized": false,
+        "stage_2_authorized": false,
+        "training_implementation_freeze_authorized": true
+      },
+      "factorial": {
+        "actor_objective": [
+          "OFF",
+          "RAW",
+          "MG"
+        ],
+        "cells": [
+          {
+            "actor_objective": "OFF",
+            "anti_collapse_regularization": "on",
+            "cell_id": "OFF_M0",
+            "mortality": "off",
+            "objective_id": "ACTOR-OFF-L1",
+            "predictor_trained": true
+          },
+          {
+            "actor_objective": "OFF",
+            "anti_collapse_regularization": "on",
+            "cell_id": "OFF_M1",
+            "mortality": "on",
+            "objective_id": "ACTOR-OFF-L1",
+            "predictor_trained": true
+          },
+          {
+            "actor_objective": "RAW",
+            "anti_collapse_regularization": "on",
+            "cell_id": "RAW_M0",
+            "mortality": "off",
+            "objective_id": "JEPA-L1",
+            "predictor_trained": true
+          },
+          {
+            "actor_objective": "RAW",
+            "anti_collapse_regularization": "on",
+            "cell_id": "RAW_M1",
+            "mortality": "on",
+            "objective_id": "JEPA-L1",
+            "predictor_trained": true
+          },
+          {
+            "actor_objective": "MG",
+            "anti_collapse_regularization": "on",
+            "cell_id": "MG_M0",
+            "mortality": "off",
+            "objective_id": "JEPA-L2-MG",
+            "predictor_trained": true
+          },
+          {
+            "actor_objective": "MG",
+            "anti_collapse_regularization": "on",
+            "cell_id": "MG_M1",
+            "mortality": "on",
+            "objective_id": "JEPA-L2-MG",
+            "predictor_trained": true
+          }
+        ],
+        "model_gain_increment_over_raw": "(MG_M1-OFF_M1)-(RAW_M1-OFF_M1)",
+        "mortality": [
+          "off",
+          "on"
+        ],
+        "mortality_interaction_within_MG": "(MG_M1-OFF_M1)-(MG_M0-OFF_M0)",
+        "primary_simple_contrast": "MG_M1_minus_OFF_M1"
+      },
+      "fresh_stage1_seed": [
+        31001
+      ],
+      "fresh_world_ranges": {
+        "diagnostic": [
+          "world-1000000",
+          "world-1000063"
+        ],
+        "evaluation": [
+          "world-1010000",
+          "world-1010063"
+        ]
+      },
+      "model_gain": {
+        "actual_predictor_optimizer": "unchanged_matched_JEPA_L1_update_after_actor_reward_is_frozen",
+        "anti_leakage": [
+          "no_energy_death_distress_transfer_rescue_partner_identity_or_evaluation_outcome_label_enters_reward",
+          "no_current_transition_enters_the_probe_used_to_score_it",
+          "no_future_rollout_or_heldout_evaluation_world_enters_training_reward",
+          "invalid_and_dead_rows_emit_zero_and_neither_score_nor_populate_probes",
+          "virtual_update_and_reward_are_detached_and_cannot_update_predictor_or_target_encoder"
+        ],
+        "calculation": "exact_rank_one_affine_update_from_detached_probe_sufficient_statistics",
+        "clip_absolute": "0.10",
+        "current_sample": "per_environment_per_agent_current_valid_transition",
+        "current_transition_can_enter_current_probe": false,
+        "equation": "r_mg_t=clip((L_probe(W)-L_probe(W-alpha_v*grad_W_l_current))/alpha_v,-0.10,0.10)",
+        "equivalence_claims_forbidden": [
+          "Bayesian_information_gain_equivalence",
+          "VIME_equivalence",
+          "pseudo_count_equivalence",
+          "ICM_equivalence",
+          "ensemble_disagreement_equivalence",
+          "noisy_TV_immunity"
+        ],
+        "first_rollout_reward": "exact_zero_no_probe",
+        "insufficient_probe_rule": "use_all_available_valid_rows_and_emit_zero_if_none",
+        "loss": "mean_squared_error_over_32_dimensional_partner_target_latent",
+        "method_sources": [
+          {
+            "citation": "Oudeyer_Kaplan_2007",
+            "doi": "10.3389/neuro.12.006.2007",
+            "method": "context_conditioned_learning_progress_warning"
+          },
+          {
+            "citation": "Bellemare_et_al_2016",
+            "method": "update_induced_prediction_gain_inspiration",
+            "url": "https://papers.nips.cc/paper_files/paper/2016/hash/afda332245e2af431fb7b672a68b659d-Abstract.html"
+          },
+          {
+            "citation": "Houthooft_et_al_2016",
+            "method": "dynamics_parameter_information_gain_inspiration",
+            "url": "https://papers.nips.cc/paper_files/paper/2016/hash/abd815286ba1007abfbb8415b83ae2cf-Abstract.html"
+          },
+          {
+            "citation": "Mavor_Parker_et_al_2022",
+            "method": "stochastic_curiosity_failure_boundary",
+            "url": "https://proceedings.mlr.press/v162/mavor-parker22a.html"
+          }
+        ],
+        "model_component": "JEPA_predictor_final_affine_layer_only",
+        "normalization": "divide_exact_probe_loss_reduction_by_alpha_v_before_clipping",
+        "probe_capacity": 32,
+        "probe_is_fixed_before_current_rollout": true,
+        "probe_selection": "lowest_sha256_priority_over_protocol_seed_cell_update_env_agent_step_from_valid_previous_rollout_rows",
+        "probe_source": "immediately_previous_rollout_same_environment_and_agent",
+        "update_order": [
+          "finalize_previous_rollout_probe_before_any_current_rollout_action",
+          "snapshot_and_detach_current_predictor_affine_weights_embeddings_targets_and_probe_statistics",
+          "compute_exact_virtual_current_sample_affine_gradient_and_disjoint_probe_loss_change",
+          "clip_normalize_and_detach_per_transition_actor_reward",
+          "perform_actual_matched_predictor_update_only_after_actor_reward_is_frozen",
+          "build_next_probe_from_current_rollout_only_after_current_rollout_closes"
+        ],
+        "validity": "current_and_probe_rows_require_both_agents_alive_and_prediction_target_valid",
+        "virtual_step_size_alpha_v": "0.01",
+        "virtual_update_mutates_predictor": false
+      },
+      "planned_stage1_training_transitions": 11796480,
+      "preregistration_sha256": "db986238931f6e2de94fcd44a15c3139084c75c3b3d4792229d0ca458b22af07",
+      "protocol_id": "FALSIFY-v1.8",
+      "public_anchor": {
+        "receipt_sha256": "017e0c7da8e6d3964fe0e8204f2aaa7d7e78d432a459b8c56177216b389387e2",
+        "verification": {
+          "attempts": 11,
+          "exact_https_byte_and_semantic_match": true,
+          "method": "cache_busted_exact_https_byte_and_semantic_sha256_match",
+          "public_repository_commit": "d3bbf31a91cdf4ede784fdf07f82696879466f34",
+          "public_url": "https://driedpumpkin17.github.io/swarm-jepa-dashboard/artifacts/phase13-v1.8/db986238931f6e2de94fcd44a15c3139084c75c3b3d4792229d0ca458b22af07.json",
+          "remote_raw_sha256": "4ee23b7c8ccfb547b671068555a3ab2bb3582630fedd79fc89482bc62a06b486",
+          "remote_semantic_sha256": "01dcc66b934b88f9f69c3c5e9c3697af4d94a349a8779a1e34de93c0b8600fb5",
+          "verified_at": "2026-08-15T12:15:42+09:00"
+        }
+      },
+      "state": "publicly_anchored_model_gain_unit_gate_pass_training_locked",
+      "unit_diagnostic": {
+        "decision": {
+          "clauses": {
+            "aligned_gain_positive": true,
+            "analytic_matches_explicit": true,
+            "conflicting_gain_nonpositive": true,
+            "converged_gain_zero": true,
+            "finite_and_clipped": true,
+            "invalid_state_unchanged": true,
+            "no_probe_exact_zero": true,
+            "permutation_noise_mean_small": true,
+            "priority_selection_exact": true
+          },
+          "model_gain_unit_gate_pass": true,
+          "verdict": "PASS"
+        },
+        "diagnostic_sha256": "4aca2b6dedefec85ffa940d8b78746a40ed5a545fa680793aed4457b5d8db7d4",
+        "execution_counts": {
+          "environment_resets": 0,
+          "environment_steps": 0,
+          "outcomes_opened": 0,
+          "policy_forward_calls": 0,
+          "predictor_parameter_mutations": 0,
+          "predictor_updates": 0,
+          "synthetic_noise_cases": 4096
+        },
+        "metrics": {
+          "aligned_clipped_reward": 0.1,
+          "aligned_normalized_raw_gain": 1.980000000000004,
+          "all_rewards_finite": true,
+          "all_rewards_within_clip": true,
+          "analytic_explicit_maximum_absolute_error": 4.336808689942018e-17,
+          "conflicting_clipped_reward": -0.1,
+          "conflicting_normalized_raw_gain": -2.0199999999999996,
+          "converged_maximum_absolute_gain": 0.0,
+          "invalid_state_unchanged": true,
+          "no_probe_raw_gain": 0.0,
+          "no_probe_reward": 0.0,
+          "permutation_noise_reward_absolute_mean": 0.0008948742621820822,
+          "permutation_noise_reward_maximum_absolute": 0.004228014795777191,
+          "permutation_noise_reward_mean": 4.675673656821839e-05,
+          "priority_selected_count": 32,
+          "priority_selection_all_valid": true,
+          "priority_selection_deterministic": true
+        }
+      }
+    },
     "positive_control": {
       "available": true,
       "causal_estimands_available": false,
@@ -1226,7 +1448,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-15T03:04:54.854656+00:00",
+  "generated_at": "2026-08-15T03:27:33.092336+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -1437,8 +1659,8 @@
     "total": 7
   },
   "project": {
-    "headline": "JEPA-L2 learning progress는 6,556,032 effect/harm branch transitions 뒤 primary effect, RAW 대비 증분, zero-harm conjunction을 실패했다. Stage 2는 잠겼고 다음은 fresh protocol의 outcome-free 설계뿐이다.",
-    "phase": "Phase 12 — JEPA-L2 Stage-1 REJECT",
+    "headline": "Phase 12 REJECT 뒤 fresh FALSIFY-v1.8을 공개 고정했다. 4,096-case analytic model-gain unit gate가 환경/outcome 0회로 통과했으며, 다음은 source-bound Stage-1 training implementation freeze다. Training은 아직 잠겨 있다.",
+    "phase": "Phase 13 — disjoint-probe model-gain unit gate PASS",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -1637,23 +1859,23 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.377386,
-    "remaining_hours": 104.6,
+    "elapsed_fraction": 0.379631,
+    "remaining_hours": 104.22,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-15T12:03:15+09:00",
+    "checked_at": "2026-08-15T12:26:43+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 371,
-      "sha256": "53bccff7a04272ece9ce28e95ca77a8495a33bf501a45eef132c7eea0a10f31d"
+      "file_count": 382,
+      "sha256": "eb491128cd01cf44f7bb6437e9b432e534345370d25db9a4c93dc27ea193b7a0"
     },
-    "note": "통합 전체 테스트 스위트: 539/539 통과",
-    "passed": 539,
+    "note": "통합 전체 테스트 스위트: 553/553 통과",
+    "passed": 553,
     "status": "passed",
-    "total": 539
+    "total": 553
   },
   "workstreams": {
     "completed_criteria": 28,
