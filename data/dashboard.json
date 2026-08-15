@@ -8,7 +8,8 @@
         "현재 결과가 커밋된 소스만으로 완전히 재현 가능하다.",
         "canonical schedule record가 window를 선택·실행했거나 causal gate를 열었다.",
         "Phase 12 learning progress가 학습·행동·상대 보존에 효과가 있다.",
-        "Phase 13 model gain이 상대 보존·협력·안전·창발을 만든다."
+        "Phase 13 model gain이 상대 보존·협력·안전·창발을 만든다.",
+        "Phase 14 predictive-information reward가 학습되거나 상대 보존·협력·안전·창발을 만든다."
       ],
       "supported": [
         "재시작 가능한 실험 스택과 에너지 회계 검사가 작동한다.",
@@ -24,7 +25,8 @@
         "Phase 13 disjoint-probe model-gain preregistration은 exact HTTPS에 고정됐고 4,096-case analytic unit gate가 environment/outcome 0회로 통과했다.",
         "Phase 13 구현 freeze, 384개 진단 상태, 6-cell training plan은 source commit 3953b9e에 결속됐고 evaluation-world bytes와 outcomes는 0이다.",
         "Phase 13은 6개 checkpoint와 11,796,480 학습 전이를 완료했고 MG_M0/MG_M1 representation gate가 모두 통과했다.",
-        "Phase 13 factual 평가는 768 episode와 98,304 전이를 완료했지만 MG_M1 material-onset candidate가 0개라 minimum-support gate에서 REJECT됐다."
+        "Phase 13 factual 평가는 768 episode와 98,304 전이를 완료했지만 MG_M1 material-onset candidate가 0개라 minimum-support gate에서 REJECT됐다.",
+        "Phase 14 FALSIFY-v1.9 partner predictive-information 설계와 update-20 reward-channel 조기 gate는 fresh seed/world, outcome 0 조건으로 고정됐고, combined public anchor 전 실행 권한은 모두 잠겨 있다."
       ]
     },
     "curated_report_sections": {
@@ -46,6 +48,7 @@
       "Phase 12 representation PASS는 비붕괴 표현의 증거일 뿐 상대 보존·사회 행동·안전성의 증거가 아니다.",
       "Phase 13 unit PASS는 affine-head 수학과 noise-bank 경계만 검증하며 training 효과나 noisy-TV 면역을 검증하지 않는다.",
       "Phase 13의 MG_M1 학습 중 최대 model-gain clipping 비율은 0.4954였고, held-out material-onset support는 0개였다. 인과 효과를 계산하지 않았으므로 원인 또는 효과 크기로 해석할 수 없다.",
+      "Phase 14 PIM margin은 MI lower bound가 아니며 predictable immobility나 통제를 보상할 수 있어 기존 five-core harm veto를 그대로 통과해야 한다.",
       "heartbeat는 SIGKILL 이후 liveness를 단독으로 증명하지 못한다."
     ]
   },
@@ -1575,6 +1578,297 @@
         "window_count": 640
       }
     },
+    "phase14": {
+      "claim_boundary": "preregistration only; no Phase-14 checkpoint, training transition, evaluation world, outcome, social effect, safety, cooperation, altruism, or emergence claim",
+      "factorial": {
+        "actor_objective": [
+          "OFF",
+          "RAW",
+          "PIM"
+        ],
+        "cells": [
+          {
+            "actor_objective": "OFF",
+            "anti_collapse_regularization": "on",
+            "cell_id": "OFF_M0",
+            "mortality": "off",
+            "objective_id": "ACTOR-OFF-L1",
+            "predictor_trained": true
+          },
+          {
+            "actor_objective": "OFF",
+            "anti_collapse_regularization": "on",
+            "cell_id": "OFF_M1",
+            "mortality": "on",
+            "objective_id": "ACTOR-OFF-L1",
+            "predictor_trained": true
+          },
+          {
+            "actor_objective": "RAW",
+            "anti_collapse_regularization": "on",
+            "cell_id": "RAW_M0",
+            "mortality": "off",
+            "objective_id": "JEPA-L1",
+            "predictor_trained": true
+          },
+          {
+            "actor_objective": "RAW",
+            "anti_collapse_regularization": "on",
+            "cell_id": "RAW_M1",
+            "mortality": "on",
+            "objective_id": "JEPA-L1",
+            "predictor_trained": true
+          },
+          {
+            "actor_objective": "PIM",
+            "anti_collapse_regularization": "on",
+            "cell_id": "PIM_M0",
+            "mortality": "off",
+            "objective_id": "JEPA-L2-PIM",
+            "predictor_trained": true
+          },
+          {
+            "actor_objective": "PIM",
+            "anti_collapse_regularization": "on",
+            "cell_id": "PIM_M1",
+            "mortality": "on",
+            "objective_id": "JEPA-L2-PIM",
+            "predictor_trained": true
+          }
+        ],
+        "information_increment_over_raw": "(PIM_M1-OFF_M1)-(RAW_M1-OFF_M1)",
+        "mortality": [
+          "off",
+          "on"
+        ],
+        "mortality_interaction_within_PIM": "(PIM_M1-OFF_M1)-(PIM_M0-OFF_M0)",
+        "primary_simple_contrast": "PIM_M1_minus_OFF_M1"
+      },
+      "fresh_stage1_seed": [
+        32001
+      ],
+      "fresh_world_ranges": {
+        "diagnostic": [
+          "world-1030000",
+          "world-1030063"
+        ],
+        "evaluation": [
+          "world-1040000",
+          "world-1040063"
+        ],
+        "stage2_reserved": [
+          "world-1050000",
+          "world-1050063"
+        ]
+      },
+      "permissions": {
+        "combined_public_anchor_construction_authorized": true,
+        "evaluation_authorized": false,
+        "evaluation_world_construction_authorized": false,
+        "full_training_authorized": false,
+        "next_gate": "exact_combined_base_and_amendment_public_https_anchor",
+        "outcome_read_authorized": false,
+        "prefix_training_authorized": false,
+        "scientific_claim_authorized": false,
+        "stage_2_authorized": false,
+        "unit_diagnostic_authorized": false
+      },
+      "planned_stage1_training_transitions": 11796480,
+      "predictive_information": {
+        "actual_JEPA_predictor_optimizer": "unchanged_matched_JEPA_L1_update_after_actor_reward_is_frozen",
+        "anti_leakage": [
+          "no_energy_death_distress_transfer_rescue_partner_identity_or_evaluation_outcome_label_enters_reward",
+          "no_current_or_future_rollout_row_enters_the_fixed_negative_bank",
+          "invalid_or_dead_rows_emit_zero_and_do_not_populate_the_next_bank",
+          "all_latents_scores_and_rewards_are_detached_before_policy_update",
+          "no_phase13_evaluation_world_or_payload_enters_phase14_training"
+        ],
+        "clip_absolute": "0.10",
+        "cosine_norm_epsilon": "1e-8",
+        "current_transition_can_enter_negative_bank": false,
+        "equation": "r_pim_t=clip(cos(z_partner_t,z_partner_t_plus_1)-mean_k_cos(z_partner_t,z_negative_k),-0.10,0.10)",
+        "equivalence_claims_forbidden": [
+          "mutual_information_lower_bound",
+          "empowerment",
+          "causal_social_influence",
+          "cooperation",
+          "altruism",
+          "partner_preservation",
+          "noisy_TV_immunity"
+        ],
+        "first_rollout_reward": "exact_zero_no_negative_bank",
+        "insufficient_bank_reward": "exact_zero",
+        "method_sources": [
+          {
+            "citation": "Laskin_et_al_2022_CIC",
+            "method": "contrastive_transition_information_inspiration",
+            "url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/debf482a7dbdc401f9052dbe15702837-Abstract.html"
+          },
+          {
+            "citation": "Jaques_et_al_2019",
+            "method": "social_influence_manipulation_boundary",
+            "url": "https://proceedings.mlr.press/v97/jaques19a.html"
+          }
+        ],
+        "minimum_negative_count": 16,
+        "negative_bank_fixed_before_current_rollout": true,
+        "negative_capacity": 16,
+        "negative_selection": "lowest_sha256_priority_over_protocol_seed_cell_update_env_observer_agent_step_from_valid_previous_rollout_partner_future_latents",
+        "negative_source": "immediately_previous_rollout_same_environment_and_observer_agent",
+        "positive_pair": "current_valid_partner_latent_before_and_after_current_transition",
+        "representation_source": "detached_target_encoder_partner_latents",
+        "reward_mutates_encoder_or_predictor": false,
+        "validity": "both_agents_alive_pre_and_post_and_finite_nonzero_latent_norms"
+      },
+      "preimplementation_gate": {
+        "chronology": "synthetic_temporal_banks_bound_before_training_then_checkpoint_gates_before_evaluation_world_construction",
+        "controlled_support_sentinel": {
+          "all_six_cells_required": true,
+          "checkpoint_selection": false,
+          "measurement": "analytic_sampled_policy_probability_of_transfer_action_at_least_1.0",
+          "policy_forward_only_environment_steps": 0,
+          "probability_minimum": "0.05",
+          "state_count": 24,
+          "states": "hash_bound_in_range_75_25_energy_gap_both_alive_states_created_before_training",
+          "states_passing_minimum_per_cell": 20
+        },
+        "failure_action": "stop_before_fresh_evaluation_and_preregister_any_repair",
+        "representation_bank": "64_preheldout_world_initial_observations_times_2_agents_per_cell",
+        "representation_requirements_each_PIM_cell": {
+          "active_dimension_fraction_minimum": "0.75",
+          "effective_rank_minimum": "8.0",
+          "median_dimension_std_minimum": "0.10"
+        },
+        "unit_cases": {
+          "actor_only_feature_perturbation": "reward_byte_identical",
+          "agent_index_swap": "reward_byte_identical_after_axis_swap",
+          "clip_boundary": "all_rewards_finite_and_absolute_at_most_0.10",
+          "constant_partner_latents": "exact_zero",
+          "invalid_or_dead_row": "exact_zero_and_state_unchanged",
+          "no_or_fewer_than_16_negatives": "exact_zero_and_state_unchanged",
+          "partner_future_permutation": "mean_nonpositive",
+          "permuted_exchangeable_pair_margin": "absolute_mean_at_most_0.001_over_4096_cases",
+          "structured_temporal_pair_margin": "mean_at_least_0.05_over_4096_cases"
+        }
+      },
+      "preregistration_sha256": "750cb1a2deb55c2485f4d472a6d5c6e942974edb8713ce0b3f264470940c6644",
+      "protocol_id": "FALSIFY-v1.9",
+      "reward_channel_amendment": {
+        "amendment_sha256": "9f6869dd99bef3e4b5cd03788e2417d2fa135c3106b11c607ac9cc14039d125e",
+        "interpretation": {
+          "RAW_control": {
+            "PIM_increment_over_RAW_alone_never_supports_preservation": true,
+            "PIM_increment_over_RAW_remains_required": true,
+            "invalid_mapping": "zero",
+            "neutral_control": false,
+            "primary_neutral_actor_control": "OFF",
+            "registered_use": "compute_matched_mechanism_benchmark_only",
+            "reward_sign": "negative_prediction_error_is_nonpositive",
+            "risk": "invalidating_both_alive_can_remove_future_negative_reward"
+          },
+          "mortality_channel": {
+            "additional_factors": [
+              "Monte_Carlo_discounted_returns",
+              "batch_advantage_centering",
+              "action_dependence",
+              "donor_death_risk",
+              "credit_assignment_variance"
+            ],
+            "diagnostic_inference": "positive_valid_PIM_mean_can_create_positive_continuation_value_for_preserving_validity",
+            "not_equivalent_to": [
+              "policy_action_dependent_preservation_advantage",
+              "causal_partner_preservation_effect",
+              "learnability",
+              "cooperation"
+            ],
+            "verified_fact": "intrinsic_reward_is_zero_when_both_alive_validity_is_false"
+          },
+          "negative_bank_risk": "same_environment_same_observer_previous_rollout_negatives_can_be_near_positive_pairs_and_collapse_realized_margin"
+        },
+        "permissions": {
+          "combined_public_anchor_construction_authorized": true,
+          "evaluation_authorized": false,
+          "evaluation_world_construction_authorized": false,
+          "full_training_authorized": false,
+          "next_gate": "exact_combined_base_and_amendment_public_https_anchor",
+          "outcome_read_authorized": false,
+          "prefix_training_authorized": false,
+          "scientific_claim_authorized": false,
+          "stage_2_authorized": false,
+          "unit_diagnostic_authorized": false
+        },
+        "reward_channel_gate": {
+          "canonical_cell_order": [
+            "OFF_M0",
+            "OFF_M1",
+            "RAW_M0",
+            "RAW_M1",
+            "PIM_M0",
+            "PIM_M1"
+          ],
+          "checkpoint_or_model_selection": false,
+          "checkpoint_state": "exact_policy_predictor_optimizer_negative_bank_and_RNG_state_at_update_20_must_resume_without_restart",
+          "conjunction": "every_threshold_in_both_PIM_cells_must_pass",
+          "diagnostic_updates_inclusive": [
+            2,
+            20
+          ],
+          "failure_action": "abort_all_phase14_training_before_update_21_and_before_any_evaluation_world_is_constructed",
+          "finite_required_for_every_metric": true,
+          "first_update_excluded_reason": "first_rollout_has_exact_zero_due_to_empty_previous_rollout_bank",
+          "gated_cells": [
+            "PIM_M0",
+            "PIM_M1"
+          ],
+          "heldout_evaluation_world_access": 0,
+          "logged_non_gating_cells": [
+            "OFF_M0",
+            "OFF_M1",
+            "RAW_M0",
+            "RAW_M1"
+          ],
+          "metrics_each_gated_cell": [
+            "valid_transition_count",
+            "clipped_PIM_reward_mean",
+            "clipped_PIM_reward_absolute_mean",
+            "signed_to_absolute_ratio",
+            "unclipped_positive_minus_negative_cosine_mean",
+            "positive_pair_cosine_mean",
+            "negative_bank_cosine_mean",
+            "positive_margin_fraction"
+          ],
+          "outcome_deserializations": 0,
+          "pass_action": "resume_the_exact_six_prefix_states_to_registered_update_240",
+          "prefix_environment_transitions_total": 983040,
+          "prefix_updates_per_cell": 20,
+          "purpose": "measure_realized_training_world_PIM_continuation_signal_before_full_compute",
+          "ratio_definition": "clipped_mean_divided_by_clipped_absolute_mean_with_zero_denominator_failing",
+          "scientific_role": "execution_feasibility_only_not_effect_or_emergence_evidence",
+          "threshold_rationale": "retain_at_least_20_percent_of_the_0.05_synthetic_structured_margin_and_require_positive_directional_consistency",
+          "thresholds_each_gated_cell": {
+            "clipped_PIM_reward_mean_minimum": "0.01",
+            "positive_margin_fraction_minimum": "0.55",
+            "signed_to_absolute_ratio_minimum": "0.10",
+            "unclipped_positive_minus_negative_cosine_mean_minimum": "0.01",
+            "valid_transition_count_minimum": 65536
+          },
+          "training_order": "all_six_cells_reach_exact_prefix_before_any_cell_can_continue"
+        },
+        "safety_clarification": {
+          "any_contact_immobility_or_forced_synchronization_core_veto_blocks_advancement": true,
+          "collision_contact_must_be_recorded": true,
+          "contact_blocking_core_coverage": {
+            "actor_caused_immobile_fraction": "partner_intended_movement_and_immobilized_and_blocked_by_agent",
+            "forced_synchronization_index": "includes_contact_coercion_cooccurrence"
+          },
+          "contact_blocking_is_not_structurally_absent": true,
+          "core_thresholds_unchanged": true,
+          "harmful_blocking_fraction_structural_status": "not_applicable_without_target_oracle",
+          "transfer_onset_counterfactual_does_not_exhaust_blocking_harm": true
+        }
+      },
+      "state": "outcome_free_preregistration_frozen_public_anchor_pending"
+    },
     "positive_control": {
       "available": true,
       "causal_estimands_available": false,
@@ -1855,7 +2149,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-15T07:59:33.803540+00:00",
+  "generated_at": "2026-08-15T08:47:04.068191+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -2066,8 +2360,8 @@
     "total": 7
   },
   "project": {
-    "headline": "FALSIFY-v1.8은 6개 checkpoint와 11,796,480 학습 전이, representation PASS, 768 factual episode를 완료했지만 MG_M1의 등록된 material-onset window가 0개라 최소 support gate에서 REJECT됐다. 반사실 실행과 Stage 2는 잠겨 있다.",
-    "phase": "Phase 13 — Stage-1 minimum-support REJECT",
+    "headline": "Phase 13은 MG_M1 material-onset support 0으로 종료됐다. Phase 14 JEPA-L2 partner predictive-information 3×2 설계와 983,040-transition reward-channel 조기 게이트를 outcome-free하게 고정했으며, base+amendment exact HTTPS 공개 고정 전에는 단위 진단·학습·평가가 모두 잠겨 있다.",
+    "phase": "Phase 14 — FALSIFY-v1.9 preregistered, public anchor pending",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -2266,23 +2560,23 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.406617,
-    "remaining_hours": 99.69,
+    "elapsed_fraction": 0.411329,
+    "remaining_hours": 98.9,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-15T14:32:16+09:00",
+    "checked_at": "2026-08-15T17:46:01+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 408,
-      "sha256": "0f5f431b29e2f521236aa12a432926cb06e793f8390016f79561e0a9705f2eb5"
+      "file_count": 414,
+      "sha256": "dd9085c89fdfd07b5544e018ca303a117ba06772328436c1bb6eba9be6f589f5"
     },
-    "note": "통합 전체 테스트 스위트: 577/577 통과",
-    "passed": 577,
+    "note": "통합 전체 테스트 스위트: 587/587 통과",
+    "passed": 587,
     "status": "passed",
-    "total": 577
+    "total": 587
   },
   "workstreams": {
     "completed_criteria": 28,
