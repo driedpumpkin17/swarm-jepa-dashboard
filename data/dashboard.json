@@ -1194,27 +1194,20 @@
         "training_plan_sha256": "649b4d45251ed697e7556901aa231118945adab59e2ab826a5bdb3b13ed47aad"
       },
       "training_progress": {
-        "completed_checkpoint_units": 2,
-        "current_cell": "RAW_M0",
-        "current_completed_updates": 160,
-        "environment_transitions_completed": 5242880,
+        "completed_checkpoint_units": 3,
+        "current_cell": null,
+        "current_completed_updates": 0,
+        "environment_transitions_completed": 5898240,
         "environment_transitions_total": 11796480,
         "evaluation_world_states_created": 0,
-        "latest_training_metrics": {
-          "model_gain_clipped_fraction": 0.0035400390625,
-          "model_gain_positive_fraction": 0.533203125,
-          "model_gain_probe_size_mean": 32.0,
-          "model_gain_reward_absolute_mean": 0.013002142652112525,
-          "model_gain_reward_mean": 0.001079491637483443,
-          "predictor_loss": 1.0988869373686612
-        },
+        "latest_training_metrics": null,
         "outcomes_opened": 0,
         "protocol_id": "FALSIFY-v1.8",
         "schema_version": 1,
         "state": "stage1_training_running",
         "total_checkpoint_units": 6,
         "training_plan_sha256": "649b4d45251ed697e7556901aa231118945adab59e2ab826a5bdb3b13ed47aad",
-        "updated_at": "2026-08-15T13:14:09+09:00",
+        "updated_at": "2026-08-15T13:15:37+09:00",
         "updates_per_cell": 240
       },
       "unit_diagnostic": {
@@ -1544,7 +1537,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-15T04:14:48.141188+00:00",
+  "generated_at": "2026-08-15T04:16:16.020666+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -1955,8 +1948,8 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.384319,
-    "remaining_hours": 103.43,
+    "elapsed_fraction": 0.384464,
+    "remaining_hours": 103.41,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
