@@ -1196,17 +1196,17 @@
       "training_progress": {
         "completed_checkpoint_units": 5,
         "current_cell": "MG_M1",
-        "current_completed_updates": 80,
-        "environment_transitions_completed": 10485760,
+        "current_completed_updates": 160,
+        "environment_transitions_completed": 11141120,
         "environment_transitions_total": 11796480,
         "evaluation_world_states_created": 0,
         "latest_training_metrics": {
-          "model_gain_clipped_fraction": 0.11953605718624133,
-          "model_gain_positive_fraction": 0.59912840076364,
+          "model_gain_clipped_fraction": 0.07775481233430892,
+          "model_gain_positive_fraction": 0.682129427944262,
           "model_gain_probe_size_mean": 32.0,
-          "model_gain_reward_absolute_mean": 0.03693054851072912,
-          "model_gain_reward_mean": 0.010623330744028162,
-          "predictor_loss": 4.167124727597604
+          "model_gain_reward_absolute_mean": 0.029285070639986966,
+          "model_gain_reward_mean": 0.013342499694866176,
+          "predictor_loss": 1.612871610012251
         },
         "outcomes_opened": 0,
         "protocol_id": "FALSIFY-v1.8",
@@ -1214,7 +1214,7 @@
         "state": "stage1_training_running",
         "total_checkpoint_units": 6,
         "training_plan_sha256": "649b4d45251ed697e7556901aa231118945adab59e2ab826a5bdb3b13ed47aad",
-        "updated_at": "2026-08-15T13:24:57+09:00",
+        "updated_at": "2026-08-15T13:26:23+09:00",
         "updates_per_cell": 240
       },
       "unit_diagnostic": {
@@ -1544,7 +1544,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-15T04:25:35.982228+00:00",
+  "generated_at": "2026-08-15T04:27:02.109550+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -1955,8 +1955,8 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.38539,
-    "remaining_hours": 103.25,
+    "elapsed_fraction": 0.385533,
+    "remaining_hours": 103.23,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
