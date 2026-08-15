@@ -1194,27 +1194,20 @@
         "training_plan_sha256": "649b4d45251ed697e7556901aa231118945adab59e2ab826a5bdb3b13ed47aad"
       },
       "training_progress": {
-        "completed_checkpoint_units": 3,
-        "current_cell": "RAW_M1",
-        "current_completed_updates": 160,
-        "environment_transitions_completed": 7208960,
+        "completed_checkpoint_units": 4,
+        "current_cell": null,
+        "current_completed_updates": 0,
+        "environment_transitions_completed": 7864320,
         "environment_transitions_total": 11796480,
         "evaluation_world_states_created": 0,
-        "latest_training_metrics": {
-          "model_gain_clipped_fraction": 0.0196160079431138,
-          "model_gain_positive_fraction": 0.5330728708067909,
-          "model_gain_probe_size_mean": 32.0,
-          "model_gain_reward_absolute_mean": 0.015549390047453926,
-          "model_gain_reward_mean": 0.0023269403350809625,
-          "predictor_loss": 4.875922319944948
-        },
+        "latest_training_metrics": null,
         "outcomes_opened": 0,
         "protocol_id": "FALSIFY-v1.8",
         "schema_version": 1,
         "state": "stage1_training_running",
         "total_checkpoint_units": 6,
         "training_plan_sha256": "649b4d45251ed697e7556901aa231118945adab59e2ab826a5bdb3b13ed47aad",
-        "updated_at": "2026-08-15T13:18:35+09:00",
+        "updated_at": "2026-08-15T13:20:07+09:00",
         "updates_per_cell": 240
       },
       "unit_diagnostic": {
@@ -1544,7 +1537,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-15T04:19:14.138162+00:00",
+  "generated_at": "2026-08-15T04:20:45.776860+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -1955,8 +1948,8 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.384759,
-    "remaining_hours": 103.36,
+    "elapsed_fraction": 0.38491,
+    "remaining_hours": 103.34,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
