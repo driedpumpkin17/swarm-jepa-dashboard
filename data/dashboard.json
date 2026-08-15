@@ -1928,7 +1928,7 @@
           "transfer_onset_counterfactual_does_not_exhaust_blocking_harm": true
         }
       },
-      "state": "prefix_complete_gate_pass",
+      "state": "full_training_running",
       "training_plan": {
         "chronology_assertions": {
           "checkpoints_created": 0,
@@ -1947,15 +1947,24 @@
       "training_progress": {
         "completed_full_units": 0,
         "completed_prefix_units": 6,
-        "current_cell": null,
-        "current_completed_updates": 0,
-        "environment_transitions_completed": 983040,
+        "current_cell": "OFF_M0",
+        "current_completed_updates": 60,
+        "environment_transitions_completed": 1310720,
         "environment_transitions_total": 11796480,
         "evaluation_world_states_created": 0,
         "execution_attempt": 2,
         "frozen_updates_per_cell": 240,
         "implementation_freeze_sha256": "57c2d7b7ff68f0b59c6c2488c9660abfec630208f15e90dac2b8a75b61983906",
-        "latest_training_metrics": null,
+        "latest_training_metrics": {
+          "pim_negative_bank_size_mean": 16.0,
+          "pim_positive_margin_fraction": 0.90728759765625,
+          "pim_raw_margin_mean": 0.36366866482421756,
+          "pim_reward_absolute_mean": 0.0919687922578305,
+          "pim_reward_mean": 0.0802314366446808,
+          "pim_signed_to_absolute_ratio": 0.8723767560169265,
+          "pim_valid_count": 16384,
+          "predictor_loss": 1.0522783217020333
+        },
         "outcomes_opened": 0,
         "prefix_stop_update": 20,
         "protocol_id": "FALSIFY-v1.9",
@@ -1965,7 +1974,7 @@
           "verdict": "PASS"
         },
         "schema_version": 1,
-        "state": "prefix_complete_gate_pass",
+        "state": "full_training_running",
         "superseded_attempts": [
           {
             "attempt": 1,
@@ -1980,7 +1989,7 @@
         ],
         "total_units": 6,
         "training_plan_sha256": "dd6e93345a3103c55cd0930e4c0f24eccbbc848855d482ba228201f798ed9e1c",
-        "updated_at": "2026-08-15T19:09:32+09:00"
+        "updated_at": "2026-08-15T19:11:05+09:00"
       },
       "unit_diagnostic": {
         "decision": {
@@ -2309,7 +2318,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-15T10:10:19.254290+00:00",
+  "generated_at": "2026-08-15T10:11:51.414369+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -2720,8 +2729,8 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.419589,
-    "remaining_hours": 97.51,
+    "elapsed_fraction": 0.419741,
+    "remaining_hours": 97.48,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
