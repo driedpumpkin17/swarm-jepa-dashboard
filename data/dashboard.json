@@ -21,7 +21,8 @@
         "Phase 12 Stage-1은 6개 checkpoint와 11,796,480 transitions를 완료했고 LP_M0/LP_M1 preheldout representation gate가 모두 통과했다.",
         "Phase 12 fresh factual 실행은 98,304 environment transitions를 완료했고, 공개 고정된 636개 blinded onset schedule이 모든 6개 cell의 최소 support를 통과했다.",
         "Phase 12 최종 gate는 primary 0.000171, LP-over-RAW -0.005098, fixed-observation entropy harm veto로 REJECT됐다.",
-        "Phase 13 disjoint-probe model-gain preregistration은 exact HTTPS에 고정됐고 4,096-case analytic unit gate가 environment/outcome 0회로 통과했다."
+        "Phase 13 disjoint-probe model-gain preregistration은 exact HTTPS에 고정됐고 4,096-case analytic unit gate가 environment/outcome 0회로 통과했다.",
+        "Phase 13 구현 freeze, 384개 진단 상태, 6-cell training plan은 source commit 3953b9e에 결속됐고 evaluation-world bytes와 outcomes는 0이다."
       ]
     },
     "curated_report_sections": {
@@ -950,17 +951,31 @@
       }
     },
     "phase13": {
-      "claim_boundary": "analytic unit PASS only; training, evaluation, outcome access, Stage-2, social, safety, and emergence claims remain unauthorized",
+      "claim_boundary": "source-bound exploratory Stage-1 training only; evaluation, outcome access, Stage-2, social, safety, and emergence claims remain unauthorized",
       "current_permissions": {
-        "diagnostic_world_manifest_construction_authorized": true,
+        "diagnostic_world_states_bound": true,
         "evaluation_authorized": false,
         "evaluation_world_construction_authorized": false,
-        "next_gate": "source_bound_diagnostic_world_and_stage1_training_implementation_freeze",
+        "model_gain_unit_gate_passed": true,
+        "next_gate": "preheldout_representation_gate",
         "outcome_read_authorized": false,
+        "representation_gate_authorized_after_training": true,
         "scientific_claim_authorized": false,
-        "stage_1_training_authorized": false,
-        "stage_2_authorized": false,
-        "training_implementation_freeze_authorized": true
+        "stage_1_training_authorized": true,
+        "stage_2_authorized": false
+      },
+      "diagnostic_world_manifest": {
+        "diagnostic_manifest_sha256": "757a13d279d8402930565ba707709ea48f2bbdac08d28ed7c881658bdb7b2e21",
+        "execution_counts": {
+          "checkpoints_created": 0,
+          "deterministic_resets": 384,
+          "environment_steps": 0,
+          "evaluation_world_states_created": 0,
+          "outcomes_opened": 0,
+          "policy_forward_calls": 0,
+          "unique_world_ids": 64
+        },
+        "world_state_bundle_sha256": "a3f396f4da3b7fc82873f357bba78644f4b1d8077d38b939643c4dfef4379014"
       },
       "factorial": {
         "actor_objective": [
@@ -1038,6 +1053,47 @@
           "world-1010000",
           "world-1010063"
         ]
+      },
+      "implementation_freeze": {
+        "acceptance_contract": {
+          "checkpoint_resume_probe_state_exact": true,
+          "checkpoint_units": 6,
+          "diagnostic_bank_items_per_cell": 128,
+          "diagnostic_cell_world_state_count": 384,
+          "diagnostic_world_count": 64,
+          "diagnostic_worlds_must_precede_training": true,
+          "evaluation_world_state_bytes_before_training": 0,
+          "factorial_cells": [
+            "OFF_M0",
+            "OFF_M1",
+            "RAW_M0",
+            "RAW_M1",
+            "MG_M0",
+            "MG_M1"
+          ],
+          "first_rollout_model_gain_exact_zero": true,
+          "matched_off_raw_model_gain_bookkeeping_required": true,
+          "maximum_energy_accounting_error_exclusive": 0.0001,
+          "model_gain_clip_absolute": 0.1,
+          "model_gain_unit_diagnostic_sha256": "4aca2b6dedefec85ffa940d8b78746a40ed5a545fa680793aed4457b5d8db7d4",
+          "model_gain_unit_gate_pass_required": true,
+          "nonfinite_update_rejects": true,
+          "num_envs": 64,
+          "probe_capacity_per_environment_agent": 32,
+          "probe_source": "immediately_previous_rollout_hash_selected_disjoint_and_fixed",
+          "rollout_steps": 128,
+          "total_training_transitions": 11796480,
+          "training_seed": 31001,
+          "updates": 240,
+          "virtual_affine_step_size": 0.01
+        },
+        "freeze_sha256": "0e7bea258589b311f2b38788f69d54c0e63532a82f1da774bc8b5b8c7f0f1067",
+        "raw_input_bundle_sha256": "7113bcdcd3ad2644da5d0e1361f8e20049c3460b18ab9133a49d9b1b230a9d33",
+        "source": {
+          "git_revision": "3953b9e3f7e93fa858636b48bc9147bebde90926",
+          "tree_oid": "fbe6d6ce6aff1832201735e31182faf7d2124f56",
+          "worktree_clean": true
+        }
       },
       "model_gain": {
         "actual_predictor_optimizer": "unchanged_matched_JEPA_L1_update_after_actor_reward_is_frozen",
@@ -1120,7 +1176,40 @@
           "verified_at": "2026-08-15T12:15:42+09:00"
         }
       },
-      "state": "publicly_anchored_model_gain_unit_gate_pass_training_locked",
+      "state": "training_authorized_not_started",
+      "training_plan": {
+        "chronology_assertions": {
+          "checkpoints_created": 0,
+          "diagnostic_world_states_created": 384,
+          "evaluation_world_state_bytes": 0,
+          "evaluation_world_states_created": 0,
+          "outcomes_opened": 0,
+          "prior_protocol_outcomes_eligible": false,
+          "stage2_world_states_created": 0,
+          "training_transitions": 0
+        },
+        "planned_checkpoint_count": 6,
+        "reserved_evaluation_world_count": 64,
+        "reserved_stage2_world_count": 64,
+        "training_plan_sha256": "649b4d45251ed697e7556901aa231118945adab59e2ab826a5bdb3b13ed47aad"
+      },
+      "training_progress": {
+        "completed_checkpoint_units": 0,
+        "current_cell": null,
+        "current_completed_updates": 0,
+        "environment_transitions_completed": 0,
+        "environment_transitions_total": 11796480,
+        "evaluation_world_states_created": 0,
+        "latest_training_metrics": null,
+        "outcomes_opened": 0,
+        "protocol_id": "FALSIFY-v1.8",
+        "schema_version": 1,
+        "state": "training_authorized_not_started",
+        "total_checkpoint_units": 6,
+        "training_plan_sha256": "649b4d45251ed697e7556901aa231118945adab59e2ab826a5bdb3b13ed47aad",
+        "updated_at": "2026-08-15T12:46:56+09:00",
+        "updates_per_cell": 240
+      },
       "unit_diagnostic": {
         "decision": {
           "clauses": {
@@ -1448,7 +1537,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-15T03:27:33.092336+00:00",
+  "generated_at": "2026-08-15T04:02:23.666939+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -1659,8 +1748,8 @@
     "total": 7
   },
   "project": {
-    "headline": "Phase 12 REJECT 뒤 fresh FALSIFY-v1.8을 공개 고정했다. 4,096-case analytic model-gain unit gate가 환경/outcome 0회로 통과했으며, 다음은 source-bound Stage-1 training implementation freeze다. Training은 아직 잠겨 있다.",
-    "phase": "Phase 13 — disjoint-probe model-gain unit gate PASS",
+    "headline": "Phase 12 REJECT 뒤 fresh FALSIFY-v1.8 model-gain 설계를 공개 고정했다. 구현 freeze, 384개 outcome-free 진단 상태, 6-cell 계획과 4,096-case unit PASS가 모두 결속되어 Stage-1 학습만 허용됐다. 평가·outcome·Stage-2는 잠겨 있다.",
+    "phase": "Phase 13 — source-bound Stage-1 training authorized",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -1859,23 +1948,23 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.379631,
-    "remaining_hours": 104.22,
+    "elapsed_fraction": 0.383088,
+    "remaining_hours": 103.64,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-15T12:26:43+09:00",
+    "checked_at": "2026-08-15T13:01:38+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 382,
-      "sha256": "eb491128cd01cf44f7bb6437e9b432e534345370d25db9a4c93dc27ea193b7a0"
+      "file_count": 392,
+      "sha256": "d2fba3774dabc73170f52ae070c4fb1bf7c6097b0d20ee1bc69daa81d3101c2b"
     },
-    "note": "통합 전체 테스트 스위트: 553/553 통과",
-    "passed": 553,
+    "note": "통합 전체 테스트 스위트: 567/567 통과",
+    "passed": 567,
     "status": "passed",
-    "total": 553
+    "total": 567
   },
   "workstreams": {
     "completed_criteria": 28,
