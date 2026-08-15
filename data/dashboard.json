@@ -1948,8 +1948,8 @@
         "completed_full_units": 2,
         "completed_prefix_units": 6,
         "current_cell": "RAW_M0",
-        "current_completed_updates": 140,
-        "environment_transitions_completed": 5570560,
+        "current_completed_updates": 200,
+        "environment_transitions_completed": 6062080,
         "environment_transitions_total": 11796480,
         "evaluation_world_states_created": 0,
         "execution_attempt": 3,
@@ -1957,13 +1957,13 @@
         "implementation_freeze_sha256": "21e20b188e2f451b60633fa6e163db8071f59a977672ff42b7c2fcdd2fed70ac",
         "latest_training_metrics": {
           "pim_negative_bank_size_mean": 16.0,
-          "pim_positive_margin_fraction": 0.83184814453125,
-          "pim_raw_margin_mean": 0.26150575757492334,
-          "pim_reward_absolute_mean": 0.08820459200069308,
-          "pim_reward_mean": 0.06496136417263187,
-          "pim_signed_to_absolute_ratio": 0.7364850593279931,
+          "pim_positive_margin_fraction": 0.8369140625,
+          "pim_raw_margin_mean": 0.26652313338126987,
+          "pim_reward_absolute_mean": 0.08767005591653287,
+          "pim_reward_mean": 0.06574002612615004,
+          "pim_signed_to_absolute_ratio": 0.7498572396114184,
           "pim_valid_count": 16384,
-          "predictor_loss": 0.9663715260103345
+          "predictor_loss": 0.9785332474857569
         },
         "outcomes_opened": 0,
         "prefix_stop_update": 20,
@@ -2001,7 +2001,7 @@
         ],
         "total_units": 6,
         "training_plan_sha256": "3ea6c3047e348348f7c134dfc08aceaa66872b2243feb71980495954a0a5e6aa",
-        "updated_at": "2026-08-15T19:46:49+09:00"
+        "updated_at": "2026-08-15T19:48:34+09:00"
       },
       "unit_diagnostic": {
         "decision": {
@@ -2330,7 +2330,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-15T10:47:36.895270+00:00",
+  "generated_at": "2026-08-15T10:49:21.542091+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -2741,8 +2741,8 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.423289,
-    "remaining_hours": 96.89,
+    "elapsed_fraction": 0.423462,
+    "remaining_hours": 96.86,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
