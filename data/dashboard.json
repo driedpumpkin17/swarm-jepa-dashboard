@@ -26,7 +26,7 @@
         "Phase 13 구현 freeze, 384개 진단 상태, 6-cell training plan은 source commit 3953b9e에 결속됐고 evaluation-world bytes와 outcomes는 0이다.",
         "Phase 13은 6개 checkpoint와 11,796,480 학습 전이를 완료했고 MG_M0/MG_M1 representation gate가 모두 통과했다.",
         "Phase 13 factual 평가는 768 episode와 98,304 전이를 완료했지만 MG_M1 material-onset candidate가 0개라 minimum-support gate에서 REJECT됐다.",
-        "Phase 14 FALSIFY-v1.9 partner predictive-information 설계와 update-20 reward-channel 조기 gate는 fresh seed/world, outcome 0 조건으로 고정됐고, combined public anchor 전 실행 권한은 모두 잠겨 있다."
+        "Phase 14 FALSIFY-v1.9 combined HTTPS anchor, PIM unit PASS, source-bound freeze, 384개 진단 상태와 update-20 전용 plan이 outcome 0 조건으로 고정됐고 prefix 학습만 허용됐다."
       ]
     },
     "curated_report_sections": {
@@ -1579,7 +1579,21 @@
       }
     },
     "phase14": {
-      "claim_boundary": "preregistration only; no Phase-14 checkpoint, training transition, evaluation world, outcome, social effect, safety, cooperation, altruism, or emergence claim",
+      "claim_boundary": "update-20 reward-channel feasibility prefix only; no evaluation world, outcome, social effect, safety, cooperation, altruism, or emergence claim",
+      "diagnostic_world_manifest": {
+        "diagnostic_manifest_sha256": "47599c19aadce4f7c09fea94b74ee53382a6a127105c8bc60d72b19319109fb2",
+        "execution_counts": {
+          "checkpoints_created": 0,
+          "deterministic_resets": 384,
+          "environment_steps": 0,
+          "evaluation_world_states_created": 0,
+          "outcomes_opened": 0,
+          "policy_forward_calls": 0,
+          "stage2_world_states_created": 0,
+          "unique_world_ids": 64
+        },
+        "world_state_bundle_sha256": "897e5ec33dec5a7fe79c9c037924a0e30cc0916b555a423dc882ee63aae196d6"
+      },
       "factorial": {
         "actor_objective": [
           "OFF",
@@ -1661,17 +1675,54 @@
           "world-1050063"
         ]
       },
+      "implementation_freeze": {
+        "acceptance_contract": {
+          "all_six_cells_stop_before_any_update21": true,
+          "checkpoint_resume_bank_and_RNG_exact": true,
+          "checkpoint_units": 6,
+          "diagnostic_cell_world_state_count": 384,
+          "diagnostic_world_count": 64,
+          "evaluation_world_state_bytes_before_training": 0,
+          "factorial_cells": [
+            "OFF_M0",
+            "OFF_M1",
+            "RAW_M0",
+            "RAW_M1",
+            "PIM_M0",
+            "PIM_M1"
+          ],
+          "first_rollout_PIM_exact_zero": true,
+          "frozen_total_updates": 240,
+          "matched_OFF_RAW_PIM_bookkeeping_required": true,
+          "maximum_energy_accounting_error_exclusive": 0.0001,
+          "negative_capacity_per_environment_observer": 16,
+          "negative_source": "immediately_previous_rollout_same_environment_observer",
+          "nonfinite_update_rejects": true,
+          "num_envs": 64,
+          "outcomes_opened": 0,
+          "prefix_stop_update": 20,
+          "prefix_training_transitions": 983040,
+          "reward_channel_gate_before_full_training": true,
+          "rollout_steps": 128,
+          "training_seed": 32001
+        },
+        "freeze_sha256": "a4500ee3c60a853e10758b0724eb2066a3701602dc984cc523d5c7099f9735ab",
+        "raw_input_bundle_sha256": "033ced515d785cb2bb2e9522605b7dd514039c4d21efa7db765fd42b3a7f75b7",
+        "source": {
+          "git_revision": "c288a3d26933d4fa7abd351cb443dfbc9fb25d8a",
+          "tree_oid": "e3f53c5c9fbd4cdc4549fec9a1f7fb9e9526844f",
+          "worktree_clean": true
+        }
+      },
       "permissions": {
-        "combined_public_anchor_construction_authorized": true,
-        "evaluation_authorized": false,
+        "diagnostic_world_states_bound": true,
         "evaluation_world_construction_authorized": false,
         "full_training_authorized": false,
-        "next_gate": "exact_combined_base_and_amendment_public_https_anchor",
+        "maximum_authorized_update_inclusive": 20,
+        "next_gate": "all_six_exact_update20_reward_channel_gate",
         "outcome_read_authorized": false,
-        "prefix_training_authorized": false,
-        "scientific_claim_authorized": false,
-        "stage_2_authorized": false,
-        "unit_diagnostic_authorized": false
+        "prefix_training_authorized": true,
+        "scientific_claim_authorized": false
       },
       "planned_stage1_training_transitions": 11796480,
       "predictive_information": {
@@ -1753,6 +1804,16 @@
       },
       "preregistration_sha256": "750cb1a2deb55c2485f4d472a6d5c6e942974edb8713ce0b3f264470940c6644",
       "protocol_id": "FALSIFY-v1.9",
+      "public_anchor": {
+        "receipt_sha256": "e88e508c52530e8ac1c82484a60ed424808eb4484a5f2f41139085130f898d49",
+        "verification": {
+          "attempts": 1,
+          "both_exact_https_byte_and_semantic_match": true,
+          "method": "separate_cache_busted_exact_https_byte_and_semantic_sha256_matches",
+          "public_repository_commit": "7c9616c3314060900e05cead86ca96feff5443ba",
+          "verified_at": "2026-08-15T17:49:57+09:00"
+        }
+      },
       "reward_channel_amendment": {
         "amendment_sha256": "9f6869dd99bef3e4b5cd03788e2417d2fa135c3106b11c607ac9cc14039d125e",
         "interpretation": {
@@ -1867,7 +1928,89 @@
           "transfer_onset_counterfactual_does_not_exhaust_blocking_harm": true
         }
       },
-      "state": "outcome_free_preregistration_frozen_public_anchor_pending"
+      "state": "prefix_authorized_not_started",
+      "training_plan": {
+        "chronology_assertions": {
+          "checkpoints_created": 0,
+          "diagnostic_world_states_created": 384,
+          "evaluation_world_state_bytes": 0,
+          "evaluation_world_states_created": 0,
+          "outcomes_opened": 0,
+          "prior_protocol_outcomes_eligible": false,
+          "stage2_world_states_created": 0,
+          "training_transitions": 0
+        },
+        "maximum_authorized_update_inclusive": 20,
+        "planned_checkpoint_count": 6,
+        "training_plan_sha256": "6ae6b1bd68a85f4a28e9b4e24e8258fc7e094ce05dd7205f5e7d08840c132e35"
+      },
+      "training_progress": {
+        "completed_full_units": 0,
+        "completed_prefix_units": 0,
+        "current_cell": null,
+        "current_completed_updates": 0,
+        "environment_transitions_completed": 0,
+        "environment_transitions_total": 11796480,
+        "evaluation_world_states_created": 0,
+        "frozen_updates_per_cell": 240,
+        "implementation_freeze_sha256": "a4500ee3c60a853e10758b0724eb2066a3701602dc984cc523d5c7099f9735ab",
+        "latest_training_metrics": null,
+        "outcomes_opened": 0,
+        "prefix_stop_update": 20,
+        "protocol_id": "FALSIFY-v1.9",
+        "reward_channel_gate": null,
+        "schema_version": 1,
+        "state": "prefix_authorized_not_started",
+        "total_units": 6,
+        "training_plan_sha256": "6ae6b1bd68a85f4a28e9b4e24e8258fc7e094ce05dd7205f5e7d08840c132e35",
+        "updated_at": "2026-08-15T18:25:00+09:00"
+      },
+      "unit_diagnostic": {
+        "decision": {
+          "PIM_unit_gate_pass": true,
+          "clauses": {
+            "actor_only_perturbation_byte_identical": true,
+            "agent_swap_byte_identical": true,
+            "constant_partner_exact_zero": true,
+            "exchangeable_margin_absolute_at_most_0_001": true,
+            "finite_and_clipped": true,
+            "insufficient_bank_exact_zero": true,
+            "invalid_row_exact_zero": true,
+            "partner_future_permutation_nonpositive": true,
+            "priority_selection_exact": true,
+            "structured_margin_at_least_0_05": true
+          },
+          "verdict": "PASS"
+        },
+        "diagnostic_sha256": "cabe48234886dcd6ef6a61c0c8bfc4d89709fd189cb83777eae306821bee2bf4",
+        "execution_counts": {
+          "environment_resets": 0,
+          "environment_steps": 0,
+          "evaluation_world_states_created": 0,
+          "outcomes_opened": 0,
+          "phase14_training_transitions": 0,
+          "policy_forward_calls": 0,
+          "predictor_updates": 0,
+          "synthetic_cases": 4096
+        },
+        "metrics": {
+          "actor_only_feature_perturbation_byte_identical": true,
+          "agent_index_swap_byte_identical": true,
+          "all_reported_numbers_finite": true,
+          "clip_boundary_raw_margin_maximum": 2.0,
+          "clip_boundary_reward_maximum_absolute": 0.1,
+          "constant_partner_reward_maximum_absolute": 0.0,
+          "insufficient_negative_reward_maximum_absolute": 0.0,
+          "invalid_row_reward_maximum_absolute": 0.0,
+          "partner_future_permutation_margin_mean": 0.0,
+          "permuted_exchangeable_pair_margin_mean": -8.673617379884035e-19,
+          "priority_selected_count": 16,
+          "priority_selection_all_valid": true,
+          "priority_selection_deterministic": true,
+          "structured_temporal_pair_margin_mean": 1.0,
+          "structured_temporal_pair_reward_mean": 0.10000000000000003
+        }
+      }
     },
     "positive_control": {
       "available": true,
@@ -2149,7 +2292,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-15T08:47:04.068191+00:00",
+  "generated_at": "2026-08-15T09:46:44.823909+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -2360,8 +2503,8 @@
     "total": 7
   },
   "project": {
-    "headline": "Phase 13은 MG_M1 material-onset support 0으로 종료됐다. Phase 14 JEPA-L2 partner predictive-information 3×2 설계와 983,040-transition reward-channel 조기 게이트를 outcome-free하게 고정했으며, base+amendment exact HTTPS 공개 고정 전에는 단위 진단·학습·평가가 모두 잠겨 있다.",
-    "phase": "Phase 14 — FALSIFY-v1.9 preregistered, public anchor pending",
+    "headline": "Phase 14 base+reward-channel amendment의 exact HTTPS anchor, PIM 단위 진단, source-bound 구현 freeze, 384개 진단 상태와 update-20 전용 계획이 고정됐다. 현재 공개 진행률은 실측 checkpoint에서 산출되며 evaluation world와 outcome은 계속 잠겨 있다.",
+    "phase": "Phase 14 — FALSIFY-v1.9 update-20 prefix authorized",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -2560,23 +2703,23 @@
     "day": 3,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.411329,
-    "remaining_hours": 98.9,
+    "elapsed_fraction": 0.41725,
+    "remaining_hours": 97.9,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-15T17:46:01+09:00",
+    "checked_at": "2026-08-15T18:45:49+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 414,
-      "sha256": "dd9085c89fdfd07b5544e018ca303a117ba06772328436c1bb6eba9be6f589f5"
+      "file_count": 432,
+      "sha256": "0fac056cba9b253bcd8dc11b44ba48842f8d0579b107a9ab689d8cf9e5a2e8da"
     },
-    "note": "통합 전체 테스트 스위트: 587/587 통과",
-    "passed": 587,
+    "note": "통합 전체 테스트 스위트: 615/615 통과",
+    "passed": 615,
     "status": "passed",
-    "total": 587
+    "total": 615
   },
   "workstreams": {
     "completed_criteria": 28,
