@@ -12,7 +12,8 @@
         "Phase 14 predictive-information reward가 상대 보존·협력·안전·창발을 만든다.",
         "Phase 15의 deterministic channel PASS가 sampled reliability·인과 효과·안전·협력·창발을 입증한다.",
         "Phase 16의 stronger Level-4 prior가 spontaneous JEPA+mortality emergence 또는 confirmatory evidence다.",
-        "Phase 16의 11/12 support PASS 또는 PIM-M1의 한 건 차이가 causal effect, 안전, 협력, 이타성, 창발을 입증한다."
+        "Phase 16의 11/12 support PASS 또는 PIM-M1의 한 건 차이가 causal effect, 안전, 협력, 이타성, 창발을 입증한다.",
+        "Phase 17의 표본수 확대 또는 family-wise 계산 자체가 causal effect, 안전, 협력, 이타성, 창발을 입증한다."
       ],
       "supported": [
         "재시작 가능한 실험 스택과 에너지 회계 검사가 작동한다.",
@@ -41,7 +42,8 @@
         "Phase 15 PIM bookkeeping mean은 0.0684--0.0745로 양수였지만 비선택적 진단이며, sampled transfer reliability 실패를 causal effect 또는 emergence null로 해석할 수 없다.",
         "Phase 16 FALSIFY-v2.1은 Phase 15 sampled-support 실패를 사용한 outcome-informed 별도 프로토콜이며, matched bias 0.25와 zero transfer-output weights의 초기 analytic material 확률 0.9648을 고정했다.",
         "Phase 16 initial gate는 environment step·sampled action·outcome 0회로 384/384 identity를 통과했고, 이후 source-frozen fresh diagnostic states 384개와 fixed prefix plan을 결속했다.",
-        "Phase 16은 983,040 training transitions와 768 support steps를 완료했다. 11/12 strata가 통과했지만 PIM-M1 sampled 57/64가 고정 하한 58에 한 건 미달해 평가 전 REJECT됐다."
+        "Phase 16은 983,040 training transitions와 768 support steps를 완료했다. 11/12 strata가 통과했지만 PIM-M1 sampled 57/64가 고정 하한 58에 한 건 미달해 평가 전 REJECT됐다.",
+        "Phase 17 FALSIFY-v2.2 사전등록은 fresh seed/world, 256회 support 표본, checkpoint probability gate를 고정했고 보수적 12-stratum 동시 통과확률 하한을 0.99로 설계했다. 현재 실행은 0회다."
       ]
     },
     "curated_report_sections": {
@@ -70,6 +72,7 @@
       "Phase 15의 matched Level-4 mean prior는 deterministic channel만 보장했고, raw 표준편차 약 0.607 아래 sampled 성공확률은 0.736--0.781에 그쳤다.",
       "Phase 16은 Phase 15 결과를 보고 설계한 exploratory repair라 성공해도 engineered standardized-affordance 결과로만 해석할 수 있다.",
       "Phase 16의 per-action analytic probability 0.9648은 12개 finite-sample strata의 동시 통과확률을 직접 보장하지 않았고, 고정 tape는 사후 재추출할 수 없다.",
+      "Phase 17은 Phase 16 결과를 보고 설계한 outcome-informed exploratory repair이며, family-wise support 통과가 있더라도 confirmatory 결과로 승격할 수 없다.",
       "heartbeat는 SIGKILL 이후 liveness를 단독으로 증명하지 못한다."
     ]
   },
@@ -3931,6 +3934,377 @@
         "variance_target": "1.0"
       }
     },
+    "phase17": {
+      "byte_length": 16629,
+      "chronology": {
+        "phase16_evaluation_outcomes_opened": 0,
+        "phase16_evaluation_world_states_created": 0,
+        "phase16_prefix_result_opened_for_design": true,
+        "phase17_checkpoints_created": 0,
+        "phase17_diagnostic_world_states_created": 0,
+        "phase17_evaluation_world_states_created": 0,
+        "phase17_outcomes_opened": 0,
+        "phase17_support_actions_sampled": 0,
+        "phase17_training_transitions": 0
+      },
+      "claim_boundary": "outcome-informed exploratory engineering calibration; no training, evaluation, causal effect, safety, cooperation, altruism, spontaneous emergence, or scientific claim yet",
+      "design": {
+        "confirmatory_status": "outcome_informed_exploratory_engineering_calibration_with_familywise_support_control",
+        "direct_social_reward": false,
+        "factorial": {
+          "actor_objective": [
+            "OFF",
+            "RAW",
+            "PIM"
+          ],
+          "cells": [
+            {
+              "actor_objective": "OFF",
+              "anti_collapse_regularization": "on",
+              "cell_id": "OFF_M0",
+              "mortality": "off",
+              "objective_id": "ACTOR-OFF-L1",
+              "predictor_trained": true
+            },
+            {
+              "actor_objective": "OFF",
+              "anti_collapse_regularization": "on",
+              "cell_id": "OFF_M1",
+              "mortality": "on",
+              "objective_id": "ACTOR-OFF-L1",
+              "predictor_trained": true
+            },
+            {
+              "actor_objective": "RAW",
+              "anti_collapse_regularization": "on",
+              "cell_id": "RAW_M0",
+              "mortality": "off",
+              "objective_id": "JEPA-L1",
+              "predictor_trained": true
+            },
+            {
+              "actor_objective": "RAW",
+              "anti_collapse_regularization": "on",
+              "cell_id": "RAW_M1",
+              "mortality": "on",
+              "objective_id": "JEPA-L1",
+              "predictor_trained": true
+            },
+            {
+              "actor_objective": "PIM",
+              "anti_collapse_regularization": "on",
+              "cell_id": "PIM_M0",
+              "mortality": "off",
+              "objective_id": "JEPA-L2-PIM",
+              "predictor_trained": true
+            },
+            {
+              "actor_objective": "PIM",
+              "anti_collapse_regularization": "on",
+              "cell_id": "PIM_M1",
+              "mortality": "on",
+              "objective_id": "JEPA-L2-PIM",
+              "predictor_trained": true
+            }
+          ],
+          "information_increment_over_raw": "(PIM_M1-OFF_M1)-(RAW_M1-OFF_M1)",
+          "mortality": [
+            "off",
+            "on"
+          ],
+          "mortality_interaction_within_PIM": "(PIM_M1-OFF_M1)-(PIM_M0-OFF_M0)",
+          "primary_simple_contrast": "PIM_M1_minus_OFF_M1"
+        },
+        "fresh_evaluation_world_count": 64,
+        "fresh_evaluation_world_ids": [
+          "world-1140000",
+          "world-1140063"
+        ],
+        "intervention_ladder_level": 4,
+        "level_4_component": "matched_probability_calibrated_positive_transfer_channel_initialization_in_all_cells",
+        "matched_compute_controls": [
+          "all_cells_train_identical_JEPA_L1_predictor_and_anti_collapse_terms",
+          "OFF_sets_actor_intrinsic_coefficient_to_zero",
+          "RAW_uses_negative_detached_current_prediction_error",
+          "PIM_uses_detached_partner_temporal_contrastive_margin",
+          "all_cells_use_identical_positive_transfer_channel_initialization",
+          "all_cells_match_policy_architecture_updates_horizon_and_environment"
+        ],
+        "phase14_payload_reanalysis_authorized": false,
+        "phase15_prefix_result_used_for_design": true,
+        "phase16_prefix_result_used_for_design": true,
+        "prior_seed_or_world_reuse": false,
+        "pure_JEPA_plus_mortality_claim_authorized": false,
+        "research_question": "after_prospectively_controlling_familywise_finite_sample_support_reliability_does_PIM_preserve_a_standardized_contact_donor_channel_more_than_OFF_and_RAW",
+        "stage_1_checkpoint_count": 6,
+        "stage_1_training_seeds": [
+          35001
+        ],
+        "stage_1_training_transitions": 11796480,
+        "stage_2_fresh_training_seeds_if_stage_1_gate_passes": [
+          35002,
+          35003
+        ],
+        "stage_2_reserved_world_ids": [
+          "world-1150000",
+          "world-1150063"
+        ],
+        "support_diagnostic_world_count": 256,
+        "support_diagnostic_world_ids": [
+          "world-1130000",
+          "world-1130255"
+        ]
+      },
+      "familywise_calculation": {
+        "all_strata_pass_probability_lower_bound": 0.990000000000001,
+        "conservative_stratum_exponent": 12,
+        "per_action_probability_floor": 0.9512917514791949,
+        "single_stratum_pass_probability_lower_bound": 0.9991628226408795,
+        "support_denominator": 256,
+        "support_minimum": 232
+      },
+      "intervention_family": {
+        "branch_difference": "only_donor_transformed_transfer_coordinate_at_t0_policy_value_versus_exact_zero",
+        "distinct_from_phase14_endogenous_material_onset": true,
+        "endogenous_factual_event_selection": false,
+        "family_id": "STANDARDIZED-CONTACT-DONOR-CHANNEL-v3-FAMILYWISE",
+        "hash_assignment": {
+          "digest": "SHA256(UTF8('FALSIFY-v2.2\\0'+world_id))",
+          "donor_index": "digest_byte_0_bit_0",
+          "orientation_radians": "2*pi*uint64_big_endian(digest_bytes_1_through_8)/2^64",
+          "positions": "world_center_plus_or_minus_0.375_times_unit_orientation_with_plus_assigned_to_donor"
+        },
+        "interpretation": "conditional_policy_channel_effect_not_natural_contact_or_transfer_frequency",
+        "paired_branches": [
+          "factual_policy_channel",
+          "donor_transfer_zero"
+        ],
+        "post_t0_execution": "both_agents_unmodified_policy_for_remaining_12_steps",
+        "shared_t0_standardization": {
+          "both_agents_movement_coordinates": "exact_zero",
+          "donor_action_source": "deterministic_or_registered_sample_from_policy_on_pre_step_observation",
+          "receiver_transfer_coordinate": "exact_zero"
+        },
+        "target_population": "hash_bound_standardized_contact_opportunities_only",
+        "world_state": {
+          "agent_radius": "0.25",
+          "both_alive": true,
+          "both_velocities": [
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ]
+          ],
+          "donor_energy": "75.0",
+          "num_resources": 0,
+          "pair_distance": "0.75",
+          "receiver_energy": "25.0",
+          "transfer_radius": "1.25",
+          "world_center": [
+            "3.0",
+            "3.0"
+          ]
+        }
+      },
+      "permissions": {
+        "actual_support_sampling_authorized": false,
+        "checkpoint_probability_gate_authorized": false,
+        "counterfactual_evaluation_authorized": false,
+        "diagnostic_world_construction_authorized": false,
+        "evaluation_world_construction_authorized": false,
+        "implementation_freeze_authorized": false,
+        "initial_distribution_unit_diagnostic_authorized": false,
+        "next_gate": "exact_public_https_anchor",
+        "outcome_read_authorized": false,
+        "public_anchor_construction_authorized": true,
+        "scientific_claim_authorized": false,
+        "stage_2_authorized": false,
+        "training_authorized": false
+      },
+      "preimplementation_gate": {
+        "boundary_unit_cases": {
+          "distance_exactly_0_50": "nonoverlap_true",
+          "distance_exactly_1_25": "transfer_in_range_true",
+          "distance_nextafter_1_25_toward_positive_infinity": "transfer_in_range_false",
+          "donor_transfer_zero_branch": "environment_transfer_sent_exact_zero",
+          "fixed_zero_movement_transfer_coordinate_0_40": "environment_transfer_sent_at_least_1_0"
+        },
+        "checkpoint_support_gate": {
+          "all_twelve_cell_mode_strata_required": true,
+          "checkpoints": [
+            20,
+            240
+          ],
+          "diagnostic_worlds_per_cell_mode": 256,
+          "environment_steps_per_checkpoint": 3072,
+          "minimum_success_count_per_cell_mode": 232,
+          "minimum_success_fraction_exact": "0.90625",
+          "modes": [
+            "deterministic",
+            "sampled"
+          ],
+          "success_measurement": "actual_environment_info_transfer_sent_for_registered_donor_at_t0_at_least_1_0",
+          "threshold_seed_world_or_mode_change_after_failure_forbidden": true
+        },
+        "chronology": "public_anchor_then_initial_distribution_unit_gate_then_source_freeze_then_1536_fresh_diagnostic_states_then_update20_prefix_then_checkpoint_probability_gate_then_3072_actual_support_steps",
+        "failure_action": "stop_without_update21_or_evaluation_and_preregister_any_further_repair",
+        "finite_sample_familywise_design": {
+          "binomial_denominator": 256,
+          "binomial_minimum_successes": 232,
+          "checkpoint_probability_failure_stops_before_actual_support_sampling": true,
+          "checkpoint_raw_distribution_evaluated_before_any_support_action_sample": true,
+          "computed_conservative_value": "0.990000000000001",
+          "conservative_all_twelve_strata_pass_probability_lower_bound": "0.99",
+          "conservative_exponent": 12,
+          "deterministic_strata_are_probability_one_if_their_means_pass": true,
+          "minimum_material_action_probability_over_all_1536_registered_donors": "0.9512917514791949",
+          "raw_sample_keys_unique_by_protocol_cell_world_and_mode": true,
+          "single_stratum_pass_probability_lower_bound": "0.9991628226408795",
+          "using_exponent_twelve_despite_only_six_sampled_strata_is_conservative": true
+        },
+        "initial_distribution_unit_gate": {
+          "all_1536_cell_world_donor_means_must_equal_bias_before_training": true,
+          "all_1536_probabilities_must_be_at_least_0_95": true,
+          "analytic_success_probability": "0.9647852416551231",
+          "environment_steps": 0,
+          "equivalent_raw_action_minimum": "-0.8472978603872036",
+          "equivalent_transformed_coordinate_minimum": "0.30",
+          "material_transfer_sent_threshold": "1.0",
+          "minimum_probability_inclusive": "0.95",
+          "raw_mean_exact": "0.25",
+          "raw_standard_deviation_exact": "0.6065306597126334",
+          "sampled_actions": 0
+        },
+        "semantic_coverage": {
+          "each_leaf_has_named_implementation_assertion": true,
+          "missing_duplicate_or_unexecuted_assertion_rejects": true,
+          "required_assertion_count": 15,
+          "required_assertion_ids": [
+            "both_alive_exact_bool",
+            "donor_energy_exact",
+            "receiver_energy_exact",
+            "pre_step_pair_distance_exact",
+            "transfer_radius_exact",
+            "minimum_nonoverlap_distance_exact",
+            "pre_step_in_range",
+            "pre_step_nonoverlap",
+            "zero_velocities_exact",
+            "zero_resources_exact",
+            "boundary_at_transfer_radius_inclusive",
+            "boundary_above_transfer_radius_exclusive",
+            "boundary_at_nonoverlap_inclusive",
+            "fixed_positive_action_realized_transfer",
+            "zero_branch_realized_transfer"
+          ],
+          "single_opaque_compound_predicate_forbidden": true
+        },
+        "typed_state_assertions": {
+          "both_alive_exact_bool": true,
+          "donor_energy_exact": "75.0",
+          "minimum_nonoverlap_distance_exact": "0.50",
+          "pre_step_in_range": true,
+          "pre_step_nonoverlap": true,
+          "pre_step_pair_distance_exact": "0.75",
+          "receiver_energy_exact": "25.0",
+          "transfer_radius_exact": "1.25",
+          "zero_resources_exact": true,
+          "zero_velocities_exact": true
+        }
+      },
+      "preregistration_sha256": "c4e2a9816d4d668643851c64a1520153de17f11a63a181569eb73fe6968034c1",
+      "protocol_id": "FALSIFY-v2.2",
+      "raw_file_sha256": "6e9e43b05e9713a13684a3485028a28efa3dc1fce5cc6172b3c8fd7eb7608c24",
+      "repair_rationale": {
+        "confirmatory_claim_forbidden": true,
+        "direct_social_reward": false,
+        "outcome_informed": true,
+        "phase16_PIM_M1_inferred_action_probability": "0.963650717452398",
+        "phase16_independent_binomial_probability_at_most_57": "0.008506789478",
+        "phase16_per_action_gate_did_not_control_joint_finite_sample_pass": true,
+        "phase16_registered_minimum_per_stratum": 58,
+        "phase16_sampled_support_counts": [
+          63,
+          61,
+          64,
+          64,
+          64,
+          57
+        ],
+        "repair_changes_support_sample_size_and_adds_checkpoint_probability_gate": true,
+        "support_minimum_fraction_preserved_exactly": "0.90625",
+        "support_world_count_multiplier": 4,
+        "threshold_seed_or_phase16_identity_reuse": false,
+        "transfer_prior_architecture_bias_std_and_training_hyperparameters_unchanged": true
+      },
+      "semantic_sha256": "2b8054e5f1cec50076536273ec1f1d5bc7bcaf085842d521aed4d84de415c806",
+      "state": "immutable_preregistration_frozen_public_anchor_pending",
+      "training": {
+        "actor_intrinsic_coefficient_OFF": "0.0",
+        "actor_intrinsic_coefficient_PIM": "1.0",
+        "actor_intrinsic_coefficient_RAW": "1.0",
+        "base_reward_coefficient": "0.0",
+        "checkpoint_rule": "prefix_exact_update_20_then_final_exact_update_240_if_prefix_gate_passes",
+        "covariance_regularization_weight": "1.0",
+        "ema_decay": "0.99",
+        "entropy_coefficient": "0.01",
+        "environment": {
+          "acceleration": "0.55",
+          "agent_radius": "0.25",
+          "auto_reset": false,
+          "block_agents": true,
+          "death_threshold": "0.0",
+          "drag": "0.0",
+          "dt": "1.0",
+          "initial_energy": "50.0",
+          "initial_energy_jitter": "0.0",
+          "initial_energy_pair_gap": "25.0",
+          "max_energy": "100.0",
+          "max_speed": "0.55",
+          "max_transfer": "8.0",
+          "metabolism": "0.25",
+          "movement_cost": "0.10",
+          "need_energy_gap_fraction": "0.10",
+          "num_resources": 0,
+          "observation_radius": "3.0",
+          "partial_observation": false,
+          "rescue_energy_threshold": "5.0",
+          "termination_mode": "never",
+          "transfer_activation_threshold": "0.20",
+          "transfer_cost_fraction": "0.10",
+          "transfer_loss_fraction": "0.10",
+          "transfer_radius": "1.25",
+          "world_size": "6.0"
+        },
+        "episode_steps": 128,
+        "gradient_clip_norm": "1.0",
+        "hidden_dim": 128,
+        "include_partner_action": false,
+        "initial_transfer_raw_standard_deviation": "0.6065306597126334",
+        "initial_transformed_transfer_coordinate": "0.5621765008857981",
+        "latent_dim": 32,
+        "level_4_prior_interpretation": "stronger_outcome_informed_matched_channel_prior_not_social_reward_and_never_spontaneous_emergence",
+        "maximum_energy_accounting_error_exclusive": "0.0001",
+        "nonfinite_update_rejects": true,
+        "num_envs": 64,
+        "policy_learning_rate": "0.0003",
+        "positive_rescue_coefficient": "0.0",
+        "positive_share_coefficient": "0.0",
+        "prediction_valid_mode": "both_alive",
+        "predictor_learning_rate": "0.001",
+        "prefix_gate_update": 20,
+        "rollout_steps": 128,
+        "shared_policy": false,
+        "transfer_initial_final_affine_weight_row": "exact_zero",
+        "transfer_initial_raw_bias_all_cells": "0.25",
+        "updates": 240,
+        "variance_regularization_weight": "25.0",
+        "variance_target": "1.0"
+      }
+    },
     "positive_control": {
       "available": true,
       "causal_estimands_available": false,
@@ -4211,7 +4585,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-16T06:13:37.408081+00:00",
+  "generated_at": "2026-08-16T06:28:59.794811+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -4422,8 +4796,8 @@
     "total": 7
   },
   "project": {
-    "headline": "FALSIFY-v2.1은 초기 analytic gate를 통과하고 983,040 training transitions를 완료했지만 PIM-M1 sampled support가 57/64로 고정 하한 58에 한 건 미달했다. Phase 16은 평가 없이 종료됐고, 다음 설계는 12-stratum family-wise finite-sample reliability를 사전 고정해야 한다.",
-    "phase": "Phase 16 — update-20 support REJECT / Phase 17 design audit next",
+    "headline": "FALSIFY-v2.2는 Phase 16의 57/64 support reject를 재해석하지 않고, fresh seed/world에서 256회 표본과 checkpoint probability gate로 12-stratum 동시 통과확률 하한 0.99를 사전 고정했다. 현재 실행 권한은 0이며 exact HTTPS 공개 앵커만 허용된다.",
+    "phase": "Phase 17 — FALSIFY-v2.2 preregistration frozen / public anchor next",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -4622,23 +4996,23 @@
     "day": 4,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.538964,
-    "remaining_hours": 77.45,
+    "elapsed_fraction": 0.540489,
+    "remaining_hours": 77.2,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-16T15:12:21+09:00",
-    "command": "/usr/bin/time -v env PYTHONPATH=src python3 -m unittest discover -v -s tests -p test_*.py",
+    "checked_at": "2026-08-16T15:27:32+09:00",
+    "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 507,
-      "sha256": "350dcda9a7d9902ca0ad2bdf318a9d761aa8404bf46cde4f4a0cd2ddd6c2408c"
+      "file_count": 510,
+      "sha256": "31b8e925129ab56e6848084b2888066cdcb34ebe70b62dc72be13365018b8f42"
     },
-    "note": "통합 전체 테스트 스위트: 679/679 통과; wall 322.29초, user CPU 320.23초, system CPU 25.38초, max RSS 1164916 KiB, swap 0",
-    "passed": 679,
+    "note": "통합 전체 테스트 스위트: 682/682 통과",
+    "passed": 682,
     "status": "passed",
-    "total": 679
+    "total": 682
   },
   "workstreams": {
     "completed_criteria": 28,
