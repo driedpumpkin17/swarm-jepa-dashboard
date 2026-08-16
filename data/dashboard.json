@@ -43,7 +43,7 @@
         "Phase 16 FALSIFY-v2.1은 Phase 15 sampled-support 실패를 사용한 outcome-informed 별도 프로토콜이며, matched bias 0.25와 zero transfer-output weights의 초기 analytic material 확률 0.9648을 고정했다.",
         "Phase 16 initial gate는 environment step·sampled action·outcome 0회로 384/384 identity를 통과했고, 이후 source-frozen fresh diagnostic states 384개와 fixed prefix plan을 결속했다.",
         "Phase 16은 983,040 training transitions와 768 support steps를 완료했다. 11/12 strata가 통과했지만 PIM-M1 sampled 57/64가 고정 하한 58에 한 건 미달해 평가 전 REJECT됐다.",
-        "Phase 17 FALSIFY-v2.2는 983,040 training transitions를 완료했고, action-free checkpoint probability 1,536/1,536과 actual support 12/12 strata를 모두 통과해 update 21--240만 열었다."
+        "Phase 17은 update-20 probability/support를 통과하고 누적 11,796,480 training transitions를 완료했지만, update-240 action-free probability gate에서 RAW-M0·RAW-M1·PIM-M0가 실패해 final support와 평가 전에 종료됐다."
       ]
     },
     "curated_report_sections": {
@@ -4395,16 +4395,15 @@
         }
       },
       "chronology": {
-        "actual_support_environment_steps": 3072,
-        "additional_training_transitions": 0,
-        "all_twelve_support_strata_pass": true,
-        "evaluation_world_states_created": 0,
+        "all_1536_registered_donors_pass": false,
+        "checkpoint_count": 6,
+        "environment_steps": 0,
+        "global_minimum_material_action_probability": 0.5659694187854262,
         "outcomes_opened": 0,
-        "support_denominator_per_stratum": 256,
-        "support_minimum_success_count_per_stratum": 232,
-        "support_strata": 12
+        "registered_donor_identity_count": 1536,
+        "sampled_actions": 0
       },
-      "claim_boundary": "outcome-informed exploratory engineering feasibility PASS; full Stage-1 training only; no evaluation, causal effect, safety, cooperation, altruism, spontaneous emergence, or scientific claim",
+      "claim_boundary": "outcome-informed exploratory update-240 channel-feasibility REJECT; no final support, evaluation, causal effect, safety, cooperation, altruism, spontaneous emergence, or scientific claim",
       "design": {
         "confirmatory_status": "outcome_informed_exploratory_engineering_calibration_with_familywise_support_control",
         "direct_social_reward": false,
@@ -4571,6 +4570,375 @@
         "support_denominator": 256,
         "support_minimum": 232
       },
+      "final_probability_freeze": {
+        "acceptance": {
+          "canonical_cell_order": [
+            "OFF_M0",
+            "OFF_M1",
+            "RAW_M0",
+            "RAW_M1",
+            "PIM_M0",
+            "PIM_M1"
+          ],
+          "completed_update": 240,
+          "environment_steps": 0,
+          "minimum_material_action_probability": "0.9512917514791949",
+          "outcomes_opened": 0,
+          "registered_donor_identity_count": 1536,
+          "sampled_actions": 0,
+          "training_seed": 35001
+        },
+        "freeze_sha256": "0f77aada6c14ec1efed5924abc7c196a5217c84574192dbf0714e411dcc047a3",
+        "source": {
+          "git_revision": "6d4869093c1c2c783c3f7f7d8b6fc7378fb563fd",
+          "tree_oid": "b508a588cd2eabb199e3774f8ddc7000558c5703",
+          "worktree_clean": true
+        }
+      },
+      "final_probability_gate": {
+        "probability_result_sha256": "fa2550156ea66bac9971e4c2da77edf14f251d4f49e47aa673aa2df48a63a0f1",
+        "rows": [
+          {
+            "cell_id": "OFF_M0",
+            "checkpoint_probability_gate": {
+              "all_registered_donors_pass": true,
+              "environment_instances_constructed": 256,
+              "environment_steps": 0,
+              "identity_count": 256,
+              "maximum_material_action_probability": 0.9538572606637439,
+              "maximum_raw_mean": 0.25,
+              "maximum_raw_standard_deviation": 0.6518098711967468,
+              "mean_material_action_probability": 0.9538572606637439,
+              "minimum_material_action_probability": 0.9538572606637439,
+              "minimum_raw_mean": 0.25,
+              "minimum_raw_standard_deviation": 0.6518098711967468,
+              "minimum_required_probability": 0.9512917514791949,
+              "policy_forward_batch_calls": 1,
+              "raw_material_threshold": -0.8472978603872036,
+              "sampled_actions": 0
+            },
+            "checkpoint_raw_sha256": "efddc698e9c614693b7946c71386e21460a5e7370a21ac2a6d540679913bab30",
+            "planned_unit_id": "6db884a62ce07de66632139e9f40737dca2b4a1c8cd50ba6d0c6cc89d3924e14",
+            "trained_seed": 35001
+          },
+          {
+            "cell_id": "OFF_M1",
+            "checkpoint_probability_gate": {
+              "all_registered_donors_pass": true,
+              "environment_instances_constructed": 256,
+              "environment_steps": 0,
+              "identity_count": 256,
+              "maximum_material_action_probability": 0.9538707794575453,
+              "maximum_raw_mean": 0.25,
+              "maximum_raw_standard_deviation": 0.6518290042877197,
+              "mean_material_action_probability": 0.9538609155630929,
+              "minimum_material_action_probability": 0.9538524812185613,
+              "minimum_raw_mean": 0.25,
+              "minimum_raw_standard_deviation": 0.6517557501792908,
+              "minimum_required_probability": 0.9512917514791949,
+              "policy_forward_batch_calls": 1,
+              "raw_material_threshold": -0.8472978603872036,
+              "sampled_actions": 0
+            },
+            "checkpoint_raw_sha256": "50ea8f7c4323deb161913eca1bfe00b0cc4d7c818d2dbdac8ef5e2cb709c5ea9",
+            "planned_unit_id": "5342edfae72ba23ada4ac752fa7ad51a087d355070ea5c9677f11055ff360c52",
+            "trained_seed": 35001
+          },
+          {
+            "cell_id": "RAW_M0",
+            "checkpoint_probability_gate": {
+              "all_registered_donors_pass": false,
+              "environment_instances_constructed": 256,
+              "environment_steps": 0,
+              "identity_count": 256,
+              "maximum_material_action_probability": 0.9525331950115238,
+              "maximum_raw_mean": 0.17361411452293396,
+              "maximum_raw_standard_deviation": 0.6113508939743042,
+              "mean_material_action_probability": 0.9495960087229931,
+              "minimum_material_action_probability": 0.9465263517778248,
+              "minimum_raw_mean": 0.13227806985378265,
+              "minimum_raw_standard_deviation": 0.6076520085334778,
+              "minimum_required_probability": 0.9512917514791949,
+              "policy_forward_batch_calls": 1,
+              "raw_material_threshold": -0.8472978603872036,
+              "sampled_actions": 0
+            },
+            "checkpoint_raw_sha256": "12ddd4a11b5d263e540c8d6f05e997aba6fd6060f674610584fe360340fe9081",
+            "planned_unit_id": "f94ee08866a49d7158de0770e3a55b4fee7bd4a23a6661f760bce35fc43ee7a2",
+            "trained_seed": 35001
+          },
+          {
+            "cell_id": "RAW_M1",
+            "checkpoint_probability_gate": {
+              "all_registered_donors_pass": false,
+              "environment_instances_constructed": 256,
+              "environment_steps": 0,
+              "identity_count": 256,
+              "maximum_material_action_probability": 0.7777933619462503,
+              "maximum_raw_mean": -0.37931516766548157,
+              "maximum_raw_standard_deviation": 0.6156944036483765,
+              "mean_material_action_probability": 0.6697176555719826,
+              "minimum_material_action_probability": 0.5659694187854262,
+              "minimum_raw_mean": -0.7450176477432251,
+              "minimum_raw_standard_deviation": 0.6119324564933777,
+              "minimum_required_probability": 0.9512917514791949,
+              "policy_forward_batch_calls": 1,
+              "raw_material_threshold": -0.8472978603872036,
+              "sampled_actions": 0
+            },
+            "checkpoint_raw_sha256": "0b17ac0bf6dfa22fd9cb0f5007a4652692e93598fc8f1bb28160d69e50b5c4ef",
+            "planned_unit_id": "d4ecfb92e4de6c3050454464f7dfce9665f714e40aa786a8326089f5df99daeb",
+            "trained_seed": 35001
+          },
+          {
+            "cell_id": "PIM_M0",
+            "checkpoint_probability_gate": {
+              "all_registered_donors_pass": false,
+              "environment_instances_constructed": 256,
+              "environment_steps": 0,
+              "identity_count": 256,
+              "maximum_material_action_probability": 0.9624148707862442,
+              "maximum_raw_mean": 0.25918814539909363,
+              "maximum_raw_standard_deviation": 0.6218225359916687,
+              "mean_material_action_probability": 0.9485230603632292,
+              "minimum_material_action_probability": 0.9352450856701443,
+              "minimum_raw_mean": 0.0909745991230011,
+              "minimum_raw_standard_deviation": 0.6188978552818298,
+              "minimum_required_probability": 0.9512917514791949,
+              "policy_forward_batch_calls": 1,
+              "raw_material_threshold": -0.8472978603872036,
+              "sampled_actions": 0
+            },
+            "checkpoint_raw_sha256": "6ceac059c25eb6c86ebe8166402f08a80896e14ce3406c6074080ea2614dba0c",
+            "planned_unit_id": "f963d6dea8e782dbb9bbe7aeea50bea194af41fe0987d191d92ced8598cd2290",
+            "trained_seed": 35001
+          },
+          {
+            "cell_id": "PIM_M1",
+            "checkpoint_probability_gate": {
+              "all_registered_donors_pass": true,
+              "environment_instances_constructed": 256,
+              "environment_steps": 0,
+              "identity_count": 256,
+              "maximum_material_action_probability": 0.9563314207421244,
+              "maximum_raw_mean": 0.21472783386707306,
+              "maximum_raw_standard_deviation": 0.6212076544761658,
+              "mean_material_action_probability": 0.9538327431905715,
+              "minimum_material_action_probability": 0.9516877054810403,
+              "minimum_raw_mean": 0.17889587581157684,
+              "minimum_raw_standard_deviation": 0.6176522374153137,
+              "minimum_required_probability": 0.9512917514791949,
+              "policy_forward_batch_calls": 1,
+              "raw_material_threshold": -0.8472978603872036,
+              "sampled_actions": 0
+            },
+            "checkpoint_raw_sha256": "0b302c0c1e48b30ba49df72b41d808aad884f691d212df3068997fa84002f599",
+            "planned_unit_id": "6b3df4fe548b1d76aa5e2d626dbea08c2bcb3260cc5735045d85b40d8b778c4d",
+            "trained_seed": 35001
+          }
+        ],
+        "summary": {
+          "all_1536_registered_donors_pass": false,
+          "checkpoint_count": 6,
+          "environment_steps": 0,
+          "global_minimum_material_action_probability": 0.5659694187854262,
+          "outcomes_opened": 0,
+          "registered_donor_identity_count": 1536,
+          "sampled_actions": 0
+        }
+      },
+      "full_training": {
+        "checkpoint_rows": [
+          {
+            "actor_objective": "OFF",
+            "cell_id": "OFF_M0",
+            "checkpoint_byte_length": 28870695,
+            "checkpoint_raw_sha256": "efddc698e9c614693b7946c71386e21460a5e7370a21ac2a6d540679913bab30",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.8909573554992676e-05,
+            "mortality": false,
+            "non_finite_updates": 0,
+            "objective_id": "ACTOR-OFF-L1",
+            "planned_unit_id": "6db884a62ce07de66632139e9f40737dca2b4a1c8cd50ba6d0c6cc89d3924e14",
+            "trained_seed": 35001,
+            "training_diagnostic": {
+              "clipped_PIM_reward_absolute_mean": 0.09456951601711229,
+              "clipped_PIM_reward_mean": 0.08534229881320657,
+              "diagnostic_is_nonselecting": true,
+              "diagnostic_updates_inclusive": [
+                21,
+                240
+              ],
+              "no_reward_threshold_applied": true,
+              "signed_to_absolute_ratio": 0.9024292648147204,
+              "valid_update_count": 220
+            }
+          },
+          {
+            "actor_objective": "OFF",
+            "cell_id": "OFF_M1",
+            "checkpoint_byte_length": 19910567,
+            "checkpoint_raw_sha256": "50ea8f7c4323deb161913eca1bfe00b0cc4d7c818d2dbdac8ef5e2cb709c5ea9",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.7881393432617188e-05,
+            "mortality": true,
+            "non_finite_updates": 0,
+            "objective_id": "ACTOR-OFF-L1",
+            "planned_unit_id": "5342edfae72ba23ada4ac752fa7ad51a087d355070ea5c9677f11055ff360c52",
+            "trained_seed": 35001,
+            "training_diagnostic": {
+              "clipped_PIM_reward_absolute_mean": 0.09366241455233741,
+              "clipped_PIM_reward_mean": 0.08169518362779767,
+              "diagnostic_is_nonselecting": true,
+              "diagnostic_updates_inclusive": [
+                21,
+                240
+              ],
+              "no_reward_threshold_applied": true,
+              "signed_to_absolute_ratio": 0.8722301685074262,
+              "valid_update_count": 220
+            }
+          },
+          {
+            "actor_objective": "RAW",
+            "cell_id": "RAW_M0",
+            "checkpoint_byte_length": 15384039,
+            "checkpoint_raw_sha256": "12ddd4a11b5d263e540c8d6f05e997aba6fd6060f674610584fe360340fe9081",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.8402934074401855e-05,
+            "mortality": false,
+            "non_finite_updates": 0,
+            "objective_id": "JEPA-L1",
+            "planned_unit_id": "f94ee08866a49d7158de0770e3a55b4fee7bd4a23a6661f760bce35fc43ee7a2",
+            "trained_seed": 35001,
+            "training_diagnostic": {
+              "clipped_PIM_reward_absolute_mean": 0.09633293091531166,
+              "clipped_PIM_reward_mean": 0.09068676435655851,
+              "diagnostic_is_nonselecting": true,
+              "diagnostic_updates_inclusive": [
+                21,
+                240
+              ],
+              "no_reward_threshold_applied": true,
+              "signed_to_absolute_ratio": 0.9413890296380911,
+              "valid_update_count": 220
+            }
+          },
+          {
+            "actor_objective": "RAW",
+            "cell_id": "RAW_M1",
+            "checkpoint_byte_length": 12139047,
+            "checkpoint_raw_sha256": "0b17ac0bf6dfa22fd9cb0f5007a4652692e93598fc8f1bb28160d69e50b5c4ef",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.8537044525146484e-05,
+            "mortality": true,
+            "non_finite_updates": 0,
+            "objective_id": "JEPA-L1",
+            "planned_unit_id": "d4ecfb92e4de6c3050454464f7dfce9665f714e40aa786a8326089f5df99daeb",
+            "trained_seed": 35001,
+            "training_diagnostic": {
+              "clipped_PIM_reward_absolute_mean": 0.09539052769349785,
+              "clipped_PIM_reward_mean": 0.08800760843046113,
+              "diagnostic_is_nonselecting": true,
+              "diagnostic_updates_inclusive": [
+                21,
+                240
+              ],
+              "no_reward_threshold_applied": true,
+              "signed_to_absolute_ratio": 0.9226032244337824,
+              "valid_update_count": 220
+            }
+          },
+          {
+            "actor_objective": "PIM",
+            "cell_id": "PIM_M0",
+            "checkpoint_byte_length": 12110183,
+            "checkpoint_raw_sha256": "6ceac059c25eb6c86ebe8166402f08a80896e14ce3406c6074080ea2614dba0c",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.771003007888794e-05,
+            "mortality": false,
+            "non_finite_updates": 0,
+            "objective_id": "JEPA-L2-PIM",
+            "planned_unit_id": "f963d6dea8e782dbb9bbe7aeea50bea194af41fe0987d191d92ced8598cd2290",
+            "trained_seed": 35001,
+            "training_diagnostic": {
+              "clipped_PIM_reward_absolute_mean": 0.09702765535542064,
+              "clipped_PIM_reward_mean": 0.0916543662766344,
+              "diagnostic_is_nonselecting": true,
+              "diagnostic_updates_inclusive": [
+                21,
+                240
+              ],
+              "no_reward_threshold_applied": true,
+              "signed_to_absolute_ratio": 0.944621056140093,
+              "valid_update_count": 220
+            }
+          },
+          {
+            "actor_objective": "PIM",
+            "cell_id": "PIM_M1",
+            "checkpoint_byte_length": 15451623,
+            "checkpoint_raw_sha256": "0b302c0c1e48b30ba49df72b41d808aad884f691d212df3068997fa84002f599",
+            "completed_updates": 240,
+            "max_energy_accounting_error": 1.7181038856506348e-05,
+            "mortality": true,
+            "non_finite_updates": 0,
+            "objective_id": "JEPA-L2-PIM",
+            "planned_unit_id": "6b3df4fe548b1d76aa5e2d626dbea08c2bcb3260cc5735045d85b40d8b778c4d",
+            "trained_seed": 35001,
+            "training_diagnostic": {
+              "clipped_PIM_reward_absolute_mean": 0.09458190992710344,
+              "clipped_PIM_reward_mean": 0.07980926307694922,
+              "diagnostic_is_nonselecting": true,
+              "diagnostic_updates_inclusive": [
+                21,
+                240
+              ],
+              "no_reward_threshold_applied": true,
+              "signed_to_absolute_ratio": 0.8438110748499384,
+              "valid_update_count": 220
+            }
+          }
+        ],
+        "summary": {
+          "additional_training_transitions": 10813440,
+          "completed_checkpoints": 6,
+          "completed_update_per_checkpoint": 240,
+          "cumulative_training_transitions": 11796480,
+          "evaluation_world_states_created": 0,
+          "maximum_energy_accounting_error": 1.8909573554992676e-05,
+          "non_finite_updates": 0,
+          "outcomes_opened": 0
+        },
+        "training_manifest_sha256": "9dcde1cf217eb826464abdceeed3193b1a60da8c471df54e3f5953bed3b9af9a"
+      },
+      "full_training_freeze": {
+        "acceptance": {
+          "additional_training_transitions": 10813440,
+          "canonical_cell_order": [
+            "OFF_M0",
+            "OFF_M1",
+            "RAW_M0",
+            "RAW_M1",
+            "PIM_M0",
+            "PIM_M1"
+          ],
+          "checkpoint_every_updates": 20,
+          "complete_at_exact_update": 240,
+          "cumulative_training_transitions": 11796480,
+          "evaluation_world_states_created": 0,
+          "outcomes_opened": 0,
+          "prefix_checkpoint_source_must_be_copied_before_mutation": true,
+          "resume_from_exact_update": 20,
+          "training_seed": 35001
+        },
+        "freeze_sha256": "d2d4495ca865d1ca23b4a4aeb148af085d4e1e43251c1016b42c72b73630d299",
+        "source": {
+          "git_revision": "c6cb6eac9a2d4975d3c85c8b590f8188e8412fc2",
+          "tree_oid": "1fe76c4a9ffa5c0e76b4edf286b50601df3f6cd0",
+          "worktree_clean": true
+        }
+      },
       "initial_distribution_gate": {
         "execution": {
           "action_dimension": 3,
@@ -4679,6 +5047,12 @@
         }
       },
       "measured_resources": {
+        "final_probability_maximum_rss_kib": 742600,
+        "final_probability_wall_seconds": 3.53,
+        "full_training_maximum_rss_kib": 2357100,
+        "full_training_system_cpu_seconds": 9.0,
+        "full_training_user_cpu_seconds": 1835.85,
+        "full_training_wall_seconds": 1879.98,
         "prefix_maximum_rss_kib": 2200028,
         "prefix_wall_seconds": 188.37,
         "support_maximum_rss_kib": 649580,
@@ -4686,14 +5060,14 @@
         "swap_count": 0
       },
       "permissions": {
-        "actual_support_sampling_complete": true,
+        "actual_support_sampling_authorized": false,
+        "actual_support_sampling_freeze_authorized": false,
+        "checkpoint_probability_gate_complete": true,
         "evaluation_world_construction_authorized": false,
-        "full_training_authorized": true,
-        "next_gate": "exact_update20_resume_to_update240",
+        "next_gate": "phase17_stopped_before_final_support",
         "outcome_read_authorized": false,
-        "phase17_stopped": false,
-        "scientific_claim_authorized": false,
-        "update21_authorized": true
+        "phase17_stopped": true,
+        "scientific_claim_authorized": false
       },
       "prefix_execution_freeze": {
         "acceptance": {
@@ -4847,7 +5221,7 @@
         "transfer_prior_architecture_bias_std_and_training_hyperparameters_unchanged": true
       },
       "semantic_sha256": "2b8054e5f1cec50076536273ec1f1d5bc7bcaf085842d521aed4d84de415c806",
-      "state": "familywise_support_pass_full_training_authorized",
+      "state": "update240_probability_reject_phase17_stopped",
       "support_sampling_freeze": {
         "acceptance": {
           "actual_support_environment_steps": 3072,
@@ -5252,7 +5626,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-16T07:23:18.726586+00:00",
+  "generated_at": "2026-08-16T08:14:27.013408+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -5463,8 +5837,8 @@
     "total": 7
   },
   "project": {
-    "headline": "FALSIFY-v2.2는 exact update-20까지 983,040 training transitions를 완료했다. Action-free probability 1,536/1,536과 actual support 12/12 strata가 모두 통과해 update 21--240만 열렸다. 평가 world, outcome, Stage 2와 과학 주장은 여전히 잠겨 있다.",
-    "phase": "Phase 17 — FALSIFY-v2.2 family-wise support PASS / full training authorized",
+    "headline": "FALSIFY-v2.2는 여섯 exact update-240 checkpoint와 누적 11,796,480 transitions를 완료했지만, final action-free probability gate에서 RAW-M0·RAW-M1·PIM-M0가 고정 하한을 실패했다. Final support, 평가, outcome, Stage 2는 실행 전 잠겼다.",
+    "phase": "Phase 17 — FALSIFY-v2.2 update-240 probability REJECT",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -5663,23 +6037,23 @@
     "day": 4,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.545878,
-    "remaining_hours": 76.29,
+    "elapsed_fraction": 0.550951,
+    "remaining_hours": 75.44,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-16T16:22:09+09:00",
+    "checked_at": "2026-08-16T17:13:20+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 537,
-      "sha256": "33a5c06ab3dc959a363e2fda54c5eba730a399523ae95985107422ba56ecf5b3"
+      "file_count": 549,
+      "sha256": "ae7b87c1a2dda2fa84762ac9681588ccf6c129829ee96d2f4bc9455ff35ee725"
     },
-    "note": "통합 전체 테스트 스위트: 698/698 통과",
-    "passed": 698,
+    "note": "통합 전체 테스트 스위트: 706/706 통과",
+    "passed": 706,
     "status": "passed",
-    "total": 698
+    "total": 706
   },
   "workstreams": {
     "completed_criteria": 28,
