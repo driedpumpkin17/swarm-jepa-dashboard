@@ -10,7 +10,8 @@
         "Phase 12 learning progress가 학습·행동·상대 보존에 효과가 있다.",
         "Phase 13 model gain이 상대 보존·협력·안전·창발을 만든다.",
         "Phase 14 predictive-information reward가 상대 보존·협력·안전·창발을 만든다.",
-        "Phase 15의 deterministic channel PASS가 sampled reliability·인과 효과·안전·협력·창발을 입증한다."
+        "Phase 15의 deterministic channel PASS가 sampled reliability·인과 효과·안전·협력·창발을 입증한다.",
+        "Phase 16의 stronger Level-4 prior가 spontaneous JEPA+mortality emergence 또는 confirmatory evidence다."
       ],
       "supported": [
         "재시작 가능한 실험 스택과 에너지 회계 검사가 작동한다.",
@@ -36,7 +37,8 @@
         "Phase 15 actual-environment typed contact diagnostic은 5 synthetic steps에서 15/15 PASS했고 source-bound implementation freeze가 replacement diagnostic manifest만 열었다.",
         "Phase 15 layered freeze와 manifest는 fresh replacement 64 worlds의 384 cell-world states를 distance tolerance 내에서 결속했고 environment step·policy·training·outcome은 0이다.",
         "Phase 15는 exact update-20에서 983,040 training transitions와 768 support steps를 완료했다. Deterministic support는 전 셀 64/64였지만 sampled support는 39--52/64로 전 셀이 고정 58/64 하한을 실패했다.",
-        "Phase 15 PIM bookkeeping mean은 0.0684--0.0745로 양수였지만 비선택적 진단이며, sampled transfer reliability 실패를 causal effect 또는 emergence null로 해석할 수 없다."
+        "Phase 15 PIM bookkeeping mean은 0.0684--0.0745로 양수였지만 비선택적 진단이며, sampled transfer reliability 실패를 causal effect 또는 emergence null로 해석할 수 없다.",
+        "Phase 16 FALSIFY-v2.1은 Phase 15 sampled-support 실패를 사용한 outcome-informed 별도 프로토콜이며, matched bias 0.25와 zero transfer-output weights의 초기 analytic material 확률 0.9648을 고정했다."
       ]
     },
     "curated_report_sections": {
@@ -63,6 +65,7 @@
       "Phase 15는 모든 셀에 같은 양의 전달 채널 초기화를 쓰는 Level-4 약한 행동 사전분포이므로, 성공해도 순수 JEPA+mortality의 자발 창발로 해석할 수 없다.",
       "Phase 15는 단일 학습 seed의 update-20 feasibility REJECT이며 evaluation effect와 safety outcome은 측정하지 않았다.",
       "Phase 15의 matched Level-4 mean prior는 deterministic channel만 보장했고, raw 표준편차 약 0.607 아래 sampled 성공확률은 0.736--0.781에 그쳤다.",
+      "Phase 16은 Phase 15 결과를 보고 설계한 exploratory repair라 성공해도 engineered standardized-affordance 결과로만 해석할 수 있다.",
       "heartbeat는 SIGKILL 이후 liveness를 단독으로 증명하지 못한다."
     ]
   },
@@ -3176,6 +3179,251 @@
         }
       }
     },
+    "phase16": {
+      "chronology": {
+        "phase15_evaluation_outcomes_opened": 0,
+        "phase15_evaluation_world_states_created": 0,
+        "phase15_prefix_outcome_opened_for_design": true,
+        "phase16_checkpoints_created": 0,
+        "phase16_diagnostic_world_states_created": 0,
+        "phase16_evaluation_world_states_created": 0,
+        "phase16_outcomes_opened": 0,
+        "phase16_training_transitions": 0
+      },
+      "claim_boundary": "outcome-informed exploratory engineering calibration; public anchor only, no environment, policy, training, evaluation, causal, safety, cooperation, altruism, or emergence claim",
+      "design": {
+        "confirmatory_status": "outcome_informed_exploratory_engineering_calibration",
+        "direct_social_reward": false,
+        "factorial": {
+          "actor_objective": [
+            "OFF",
+            "RAW",
+            "PIM"
+          ],
+          "cells": [
+            {
+              "actor_objective": "OFF",
+              "anti_collapse_regularization": "on",
+              "cell_id": "OFF_M0",
+              "mortality": "off",
+              "objective_id": "ACTOR-OFF-L1",
+              "predictor_trained": true
+            },
+            {
+              "actor_objective": "OFF",
+              "anti_collapse_regularization": "on",
+              "cell_id": "OFF_M1",
+              "mortality": "on",
+              "objective_id": "ACTOR-OFF-L1",
+              "predictor_trained": true
+            },
+            {
+              "actor_objective": "RAW",
+              "anti_collapse_regularization": "on",
+              "cell_id": "RAW_M0",
+              "mortality": "off",
+              "objective_id": "JEPA-L1",
+              "predictor_trained": true
+            },
+            {
+              "actor_objective": "RAW",
+              "anti_collapse_regularization": "on",
+              "cell_id": "RAW_M1",
+              "mortality": "on",
+              "objective_id": "JEPA-L1",
+              "predictor_trained": true
+            },
+            {
+              "actor_objective": "PIM",
+              "anti_collapse_regularization": "on",
+              "cell_id": "PIM_M0",
+              "mortality": "off",
+              "objective_id": "JEPA-L2-PIM",
+              "predictor_trained": true
+            },
+            {
+              "actor_objective": "PIM",
+              "anti_collapse_regularization": "on",
+              "cell_id": "PIM_M1",
+              "mortality": "on",
+              "objective_id": "JEPA-L2-PIM",
+              "predictor_trained": true
+            }
+          ],
+          "information_increment_over_raw": "(PIM_M1-OFF_M1)-(RAW_M1-OFF_M1)",
+          "mortality": [
+            "off",
+            "on"
+          ],
+          "mortality_interaction_within_PIM": "(PIM_M1-OFF_M1)-(PIM_M0-OFF_M0)",
+          "primary_simple_contrast": "PIM_M1_minus_OFF_M1"
+        },
+        "fresh_evaluation_world_count": 64,
+        "fresh_evaluation_world_ids": [
+          "world-1110000",
+          "world-1110063"
+        ],
+        "intervention_ladder_level": 4,
+        "level_4_component": "matched_probability_calibrated_positive_transfer_channel_initialization_in_all_cells",
+        "matched_compute_controls": [
+          "all_cells_train_identical_JEPA_L1_predictor_and_anti_collapse_terms",
+          "OFF_sets_actor_intrinsic_coefficient_to_zero",
+          "RAW_uses_negative_detached_current_prediction_error",
+          "PIM_uses_detached_partner_temporal_contrastive_margin",
+          "all_cells_use_identical_positive_transfer_channel_initialization",
+          "all_cells_match_policy_architecture_updates_horizon_and_environment"
+        ],
+        "phase14_payload_reanalysis_authorized": false,
+        "phase15_prefix_result_used_for_design": true,
+        "prior_seed_or_world_reuse": false,
+        "pure_JEPA_plus_mortality_claim_authorized": false,
+        "research_question": "after_a_prospectively_probability_calibrated_matched_level4_prior_does_PIM_preserve_a_stochastic_standardized_contact_donor_channel_more_than_OFF_and_RAW",
+        "stage_1_checkpoint_count": 6,
+        "stage_1_training_seeds": [
+          34001
+        ],
+        "stage_1_training_transitions": 11796480,
+        "stage_2_fresh_training_seeds_if_stage_1_gate_passes": [
+          34002,
+          34003
+        ],
+        "stage_2_reserved_world_ids": [
+          "world-1120000",
+          "world-1120063"
+        ],
+        "support_diagnostic_world_count": 64,
+        "support_diagnostic_world_ids": [
+          "world-1100000",
+          "world-1100063"
+        ]
+      },
+      "initial_distribution_unit_gate": {
+        "all_384_cell_world_donor_means_must_equal_bias_before_training": true,
+        "all_384_probabilities_must_be_at_least_0_95": true,
+        "analytic_success_probability": "0.9647852416551231",
+        "environment_steps": 0,
+        "equivalent_raw_action_minimum": "-0.8472978603872036",
+        "equivalent_transformed_coordinate_minimum": "0.30",
+        "material_transfer_sent_threshold": "1.0",
+        "minimum_probability_inclusive": "0.95",
+        "raw_mean_exact": "0.25",
+        "raw_standard_deviation_exact": "0.6065306597126334",
+        "sampled_actions": 0
+      },
+      "permissions": {
+        "counterfactual_evaluation_authorized": false,
+        "diagnostic_world_construction_authorized": false,
+        "evaluation_world_construction_authorized": false,
+        "implementation_freeze_authorized": false,
+        "initial_distribution_unit_diagnostic_authorized": false,
+        "next_gate": "exact_public_https_anchor",
+        "outcome_read_authorized": false,
+        "public_anchor_construction_authorized": true,
+        "scientific_claim_authorized": false,
+        "stage_2_authorized": false,
+        "training_authorized": false
+      },
+      "preregistration_sha256": "0ac9a8eca946c4fc0bd4ef128e0c262e65f8eb46cc0e00751c4252e64526b1c7",
+      "protocol_id": "FALSIFY-v2.1",
+      "raw_file_sha256": "96042b131525b5bb6ec31d8c408774d042046ef13ff50562d1eb506c1f31199f",
+      "repair_rationale": {
+        "confirmatory_claim_forbidden": true,
+        "diagnosis": "positive_predictive_signal_but_insufficient_stochastic_transfer_reliability",
+        "direct_social_reward": false,
+        "outcome_informed": true,
+        "phase15_deterministic_support_counts": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "phase15_model_implied_sampled_probability_range": [
+          "0.7357631903141737",
+          "0.7807116229087114"
+        ],
+        "phase15_nonselecting_PIM_reward_mean_range": [
+          "0.06841398137967906",
+          "0.07447300843992516"
+        ],
+        "phase15_sampled_support_counts": [
+          47,
+          51,
+          52,
+          44,
+          49,
+          39
+        ],
+        "policy_entropy_coefficient_unchanged": "0.01",
+        "registered_minimum_per_stratum": 58,
+        "repair_changes_only_matched_initial_transfer_mean_and_zeroes_its_final_affine_input_weights": true,
+        "threshold_seed_or_phase15_identity_reuse": false
+      },
+      "state": "outcome_informed_preregistration_public_anchor_next",
+      "training": {
+        "actor_intrinsic_coefficient_OFF": "0.0",
+        "actor_intrinsic_coefficient_PIM": "1.0",
+        "actor_intrinsic_coefficient_RAW": "1.0",
+        "base_reward_coefficient": "0.0",
+        "checkpoint_rule": "prefix_exact_update_20_then_final_exact_update_240_if_prefix_gate_passes",
+        "covariance_regularization_weight": "1.0",
+        "ema_decay": "0.99",
+        "entropy_coefficient": "0.01",
+        "environment": {
+          "acceleration": "0.55",
+          "agent_radius": "0.25",
+          "auto_reset": false,
+          "block_agents": true,
+          "death_threshold": "0.0",
+          "drag": "0.0",
+          "dt": "1.0",
+          "initial_energy": "50.0",
+          "initial_energy_jitter": "0.0",
+          "initial_energy_pair_gap": "25.0",
+          "max_energy": "100.0",
+          "max_speed": "0.55",
+          "max_transfer": "8.0",
+          "metabolism": "0.25",
+          "movement_cost": "0.10",
+          "need_energy_gap_fraction": "0.10",
+          "num_resources": 0,
+          "observation_radius": "3.0",
+          "partial_observation": false,
+          "rescue_energy_threshold": "5.0",
+          "termination_mode": "never",
+          "transfer_activation_threshold": "0.20",
+          "transfer_cost_fraction": "0.10",
+          "transfer_loss_fraction": "0.10",
+          "transfer_radius": "1.25",
+          "world_size": "6.0"
+        },
+        "episode_steps": 128,
+        "gradient_clip_norm": "1.0",
+        "hidden_dim": 128,
+        "include_partner_action": false,
+        "initial_transfer_raw_standard_deviation": "0.6065306597126334",
+        "initial_transformed_transfer_coordinate": "0.5621765008857981",
+        "latent_dim": 32,
+        "level_4_prior_interpretation": "stronger_outcome_informed_matched_channel_prior_not_social_reward_and_never_spontaneous_emergence",
+        "maximum_energy_accounting_error_exclusive": "0.0001",
+        "nonfinite_update_rejects": true,
+        "num_envs": 64,
+        "policy_learning_rate": "0.0003",
+        "positive_rescue_coefficient": "0.0",
+        "positive_share_coefficient": "0.0",
+        "prediction_valid_mode": "both_alive",
+        "predictor_learning_rate": "0.001",
+        "prefix_gate_update": 20,
+        "rollout_steps": 128,
+        "shared_policy": false,
+        "transfer_initial_final_affine_weight_row": "exact_zero",
+        "transfer_initial_raw_bias_all_cells": "0.25",
+        "updates": 240,
+        "variance_regularization_weight": "25.0",
+        "variance_target": "1.0"
+      }
+    },
     "positive_control": {
       "available": true,
       "causal_estimands_available": false,
@@ -3456,7 +3704,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-16T05:18:31.338665+00:00",
+  "generated_at": "2026-08-16T05:30:45.037639+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -3667,8 +3915,8 @@
     "total": 7
   },
   "project": {
-    "headline": "Phase 15 여섯 셀은 983,040 training transitions를 완료했다. Deterministic support는 모두 64/64였지만 sampled support 39--52/64가 고정 하한 58에 미달해 update 21·평가·Stage 2가 잠겼다. 평가 world와 outcome은 0이다.",
-    "phase": "Phase 15 — update-20 sampled-support REJECT / Phase 16 planning next",
+    "headline": "Phase 15 sampled-support REJECT 뒤 별도 FALSIFY-v2.1을 사전등록했다. 새 matched Level-4 prior는 초기 sampled material 확률 0.9648을 목표로 하지만 outcome-informed engineering calibration이며, public anchor 전에는 environment·policy·training 권한이 없다.",
+    "phase": "Phase 16 — stochastic-channel repair preregistered / public anchor next",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -3867,23 +4115,23 @@
     "day": 4,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.533498,
-    "remaining_hours": 78.37,
+    "elapsed_fraction": 0.534711,
+    "remaining_hours": 78.17,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-16T14:17:08+09:00",
+    "checked_at": "2026-08-16T14:29:34+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 483,
-      "sha256": "e2ea315f4d34e53f1ee15b45f3097f58e30450a8fc915fe969595964922c652b"
+      "file_count": 486,
+      "sha256": "ac6a3f9297325330331080d2cf851a2bfd20b1cdc5dbf872ea5a5aacf01de4b4"
     },
-    "note": "통합 전체 테스트 스위트: 663/663 통과; wall 327.08초, user CPU 323.03초, system CPU 25.13초, max RSS 1178196 KiB, swap 0",
-    "passed": 663,
+    "note": "통합 전체 테스트 스위트: 665/665 통과; wall 330.99초, user CPU 327.67초, system CPU 25.06초, max RSS 1165056 KiB, swap 0",
+    "passed": 665,
     "status": "passed",
-    "total": 663
+    "total": 665
   },
   "workstreams": {
     "completed_criteria": 28,
