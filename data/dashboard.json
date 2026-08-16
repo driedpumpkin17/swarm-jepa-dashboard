@@ -33,7 +33,8 @@
         "Phase 14 fresh factual 실행은 768 episode와 98,304 environment transitions를 완료했지만 PIM_M1 material-onset candidate가 0개라 minimum-support gate에서 REJECT됐다.",
         "Phase 15 FALSIFY-v2.0은 fresh seed/world를 쓰는 표준화 접촉 donor-channel 개입군으로 outcome 0 상태에서 content-addressed 사전등록됐다.",
         "Phase 15 base artifact는 exact HTTPS byte 검증됐고, 실행 전 float32 거리 불일치를 발견해 원 diagnostic IDs를 폐기한 outcome-free 수리 amendment가 고정됐다.",
-        "Phase 15 actual-environment typed contact diagnostic은 5 synthetic steps에서 15/15 PASS했고 source-bound implementation freeze가 replacement diagnostic manifest만 열었다."
+        "Phase 15 actual-environment typed contact diagnostic은 5 synthetic steps에서 15/15 PASS했고 source-bound implementation freeze가 replacement diagnostic manifest만 열었다.",
+        "Phase 15 layered freeze와 manifest는 fresh replacement 64 worlds의 384 cell-world states를 distance tolerance 내에서 결속했고 environment step·policy·training·outcome은 0이다."
       ]
     },
     "curated_report_sections": {
@@ -2566,15 +2567,12 @@
         }
       },
       "permissions": {
-        "counterfactual_evaluation_authorized": false,
         "evaluation_world_construction_authorized": false,
-        "full_training_authorized": false,
-        "implementation_ready": true,
-        "next_gate": "replacement_pretraining_diagnostic_world_manifest",
+        "next_gate": "fixed_update20_prefix_training_plan",
         "outcome_read_authorized": false,
         "prefix_training_authorized": false,
-        "prefix_training_plan_authorized": false,
-        "replacement_diagnostic_world_manifest_authorized": true,
+        "prefix_training_plan_authorized": true,
+        "replacement_diagnostic_states_bound": true,
         "scientific_claim_authorized": false
       },
       "planned_counterfactual_branch_transitions": 319488,
@@ -2643,9 +2641,61 @@
         }
       },
       "preregistration_sha256": "e7dfdac85dd9d63dd681c0d3bc4fee02e9a7a343996310d639f7948b6ca63a81",
+      "pretraining_freeze": {
+        "acceptance": {
+          "cells": [
+            "OFF_M0",
+            "OFF_M1",
+            "RAW_M0",
+            "RAW_M1",
+            "PIM_M0",
+            "PIM_M1"
+          ],
+          "evaluation_world_states": 0,
+          "outcomes_opened": 0,
+          "policy_forward_calls": 0,
+          "retired_world_ids_reused": false,
+          "state_count": 384,
+          "training_transitions": 0,
+          "world_count": 64,
+          "world_ids": [
+            "world-1090000",
+            "world-1090063"
+          ]
+        },
+        "freeze_sha256": "896423b6b3699d7aab04b94d36e5fc3559edb02434bf0c24f0ca286baa380d2d",
+        "raw_input_bundle_sha256": "a4c278b21348e86611066fb3be069f5cbde8196374298afae77ab761ac8bda85",
+        "source": {
+          "git_revision": "eaeaf7ff58b655bb839515ea6bd09309503531cb",
+          "tree_oid": "424eeb9b98273a157dc3c18bf9f0a9c698b2da80",
+          "worktree_clean": true
+        }
+      },
       "protocol_id": "FALSIFY-v2.0",
       "raw_file_sha256": "b32a1359fe8062f8316c7e9728d92b8f97e6a44feb195ca0d04ccfcb4d332aa4",
-      "state": "typed_contact_gate_pass_implementation_frozen",
+      "replacement_diagnostic_manifest": {
+        "execution_counts": {
+          "environment_resets": 384,
+          "environment_steps": 0,
+          "evaluation_world_states": 0,
+          "outcomes_opened": 0,
+          "policy_forward_calls": 0,
+          "training_transitions": 0
+        },
+        "manifest_sha256": "6a2b626cf0759e5599f503e941bb1518a8019db69a013980a78928df254cdcd7",
+        "measurements": {
+          "maximum_absolute_target_error": "2.980232238769531e-07",
+          "maximum_pair_distance": "0.7500002980232239",
+          "minimum_pair_distance": "0.7499997019767761",
+          "state_count": 384
+        },
+        "world_range": [
+          "world-1090000",
+          "world-1090063"
+        ],
+        "world_state_bundle_sha256": "65fa59a9d86f5e4770ceec8a62510fe9c14f9b074c2164899da23fa836d6c611"
+      },
+      "state": "replacement_diagnostic_states_bound_prefix_plan_next",
       "typed_contact_diagnostic": {
         "coverage": {
           "duplicate": [],
@@ -3012,7 +3062,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-16T04:33:41.255938+00:00",
+  "generated_at": "2026-08-16T04:46:42.114435+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -3223,8 +3273,8 @@
     "total": 7
   },
   "project": {
-    "headline": "Phase 15 float32 수리는 HTTPS 고정됐고 실제 환경의 15개 typed contact assertion이 모두 통과했다. Source-bound freeze는 replacement diagnostic manifest만 허가하며, training/evaluation/outcome/과학 주장은 계속 잠겨 있다.",
-    "phase": "Phase 15 — typed contact gate PASS / implementation frozen",
+    "headline": "Phase 15 typed contact gate와 layered source freeze 뒤 fresh replacement worlds 1090000..1090063의 384 cell-world states가 결속됐다. Environment step·policy·training·evaluation outcome은 0이며 fixed update-20 plan 작성만 허가된다.",
+    "phase": "Phase 15 — 384 replacement diagnostic states bound / prefix plan next",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -3423,23 +3473,23 @@
     "day": 4,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.52905,
-    "remaining_hours": 79.12,
+    "elapsed_fraction": 0.530341,
+    "remaining_hours": 78.9,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-16T13:32:29+09:00",
+    "checked_at": "2026-08-16T13:44:17+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 470,
-      "sha256": "aea30ede5f1937921d265cd15c4ec5e1e7d5005680d63c40992033230ac3990b"
+      "file_count": 474,
+      "sha256": "ebfb0e246a5b4ddc0d2e027e3736a4a58a3aef959554f90143102dc780cc7d5d"
     },
-    "note": "통합 전체 테스트 스위트: 655/655 통과; wall 339.04초, user CPU 330.98초, system CPU 24.52초, max RSS 1175164 KiB, swap 0",
-    "passed": 655,
+    "note": "통합 전체 테스트 스위트: 657/657 통과",
+    "passed": 657,
     "status": "passed",
-    "total": 655
+    "total": 657
   },
   "workstreams": {
     "completed_criteria": 28,
