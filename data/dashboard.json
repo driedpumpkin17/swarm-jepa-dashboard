@@ -43,7 +43,7 @@
         "Phase 16 FALSIFY-v2.1은 Phase 15 sampled-support 실패를 사용한 outcome-informed 별도 프로토콜이며, matched bias 0.25와 zero transfer-output weights의 초기 analytic material 확률 0.9648을 고정했다.",
         "Phase 16 initial gate는 environment step·sampled action·outcome 0회로 384/384 identity를 통과했고, 이후 source-frozen fresh diagnostic states 384개와 fixed prefix plan을 결속했다.",
         "Phase 16은 983,040 training transitions와 768 support steps를 완료했다. 11/12 strata가 통과했지만 PIM-M1 sampled 57/64가 고정 하한 58에 한 건 미달해 평가 전 REJECT됐다.",
-        "Phase 17 FALSIFY-v2.2 사전등록은 fresh seed/world, 256회 support 표본, checkpoint probability gate를 고정했고 보수적 12-stratum 동시 통과확률 하한을 0.99로 설계했다. 현재 실행은 0회다."
+        "Phase 17 FALSIFY-v2.2는 983,040 training transitions를 완료했고, action-free checkpoint probability 1,536/1,536과 actual support 12/12 strata를 모두 통과해 update 21--240만 열었다."
       ]
     },
     "curated_report_sections": {
@@ -3935,19 +3935,476 @@
       }
     },
     "phase17": {
-      "byte_length": 16629,
-      "chronology": {
-        "phase16_evaluation_outcomes_opened": 0,
-        "phase16_evaluation_world_states_created": 0,
-        "phase16_prefix_result_opened_for_design": true,
-        "phase17_checkpoints_created": 0,
-        "phase17_diagnostic_world_states_created": 0,
-        "phase17_evaluation_world_states_created": 0,
-        "phase17_outcomes_opened": 0,
-        "phase17_support_actions_sampled": 0,
-        "phase17_training_transitions": 0
+      "actual_support": {
+        "rows": [
+          {
+            "actual_transfer_support": {
+              "deterministic": {
+                "denominator": 256,
+                "maximum_transfer_sent": 3.621765375137329,
+                "mean_transfer_sent": 3.621765375137329,
+                "minimum_success_count": 232,
+                "minimum_transfer_sent": 3.621765375137329,
+                "pass": true,
+                "sample_identity": "policy_mean",
+                "success_count": 256
+              },
+              "sampled": {
+                "denominator": 256,
+                "maximum_transfer_sent": 6.715569972991943,
+                "mean_transfer_sent": 3.5920981416711584,
+                "minimum_success_count": 232,
+                "minimum_transfer_sent": 0.0,
+                "pass": true,
+                "sample_identity": "hash_derived_per_protocol_cell_world_torch_seed",
+                "success_count": 251
+              }
+            },
+            "cell_id": "OFF_M0",
+            "checkpoint_raw_sha256": "d7a9b0714d019947d5b946c5b030d574a4582b56fb190733cdefd1e1ca24efe4",
+            "planned_unit_id": "6db884a62ce07de66632139e9f40737dca2b4a1c8cd50ba6d0c6cc89d3924e14",
+            "trained_seed": 35001
+          },
+          {
+            "actual_transfer_support": {
+              "deterministic": {
+                "denominator": 256,
+                "maximum_transfer_sent": 3.621765375137329,
+                "mean_transfer_sent": 3.621765375137329,
+                "minimum_success_count": 232,
+                "minimum_transfer_sent": 3.621765375137329,
+                "pass": true,
+                "sample_identity": "policy_mean",
+                "success_count": 256
+              },
+              "sampled": {
+                "denominator": 256,
+                "maximum_transfer_sent": 6.417718887329102,
+                "mean_transfer_sent": 3.566238140454516,
+                "minimum_success_count": 232,
+                "minimum_transfer_sent": 0.1183028519153595,
+                "pass": true,
+                "sample_identity": "hash_derived_per_protocol_cell_world_torch_seed",
+                "success_count": 249
+              }
+            },
+            "cell_id": "OFF_M1",
+            "checkpoint_raw_sha256": "2ef7b027d4520d807eb30e1dbc727a9c54f6c1c06bde8b97e2364064107f2597",
+            "planned_unit_id": "5342edfae72ba23ada4ac752fa7ad51a087d355070ea5c9677f11055ff360c52",
+            "trained_seed": 35001
+          },
+          {
+            "actual_transfer_support": {
+              "deterministic": {
+                "denominator": 256,
+                "maximum_transfer_sent": 3.6215643882751465,
+                "mean_transfer_sent": 3.6054089311510324,
+                "minimum_success_count": 232,
+                "minimum_transfer_sent": 3.5918467044830322,
+                "pass": true,
+                "sample_identity": "policy_mean",
+                "success_count": 256
+              },
+              "sampled": {
+                "denominator": 256,
+                "maximum_transfer_sent": 6.749196529388428,
+                "mean_transfer_sent": 3.3848751763580367,
+                "minimum_success_count": 232,
+                "minimum_transfer_sent": 0.058330148458480835,
+                "pass": true,
+                "sample_identity": "hash_derived_per_protocol_cell_world_torch_seed",
+                "success_count": 247
+              }
+            },
+            "cell_id": "RAW_M0",
+            "checkpoint_raw_sha256": "b864c91bec98a7c2fdc4f24fa236243de46344a5f90868dc21836ff7887e8e48",
+            "planned_unit_id": "f94ee08866a49d7158de0770e3a55b4fee7bd4a23a6661f760bce35fc43ee7a2",
+            "trained_seed": 35001
+          },
+          {
+            "actual_transfer_support": {
+              "deterministic": {
+                "denominator": 256,
+                "maximum_transfer_sent": 3.6193668842315674,
+                "mean_transfer_sent": 3.612298467196524,
+                "minimum_success_count": 232,
+                "minimum_transfer_sent": 3.6055545806884766,
+                "pass": true,
+                "sample_identity": "policy_mean",
+                "success_count": 256
+              },
+              "sampled": {
+                "denominator": 256,
+                "maximum_transfer_sent": 6.879847526550293,
+                "mean_transfer_sent": 3.621091488515958,
+                "minimum_success_count": 232,
+                "minimum_transfer_sent": 0.17286479473114014,
+                "pass": true,
+                "sample_identity": "hash_derived_per_protocol_cell_world_torch_seed",
+                "success_count": 246
+              }
+            },
+            "cell_id": "RAW_M1",
+            "checkpoint_raw_sha256": "f274bbb28561713175931ce652deaeaef645303f48a8cbed8634fe4d11f32c2d",
+            "planned_unit_id": "d4ecfb92e4de6c3050454464f7dfce9665f714e40aa786a8326089f5df99daeb",
+            "trained_seed": 35001
+          },
+          {
+            "actual_transfer_support": {
+              "deterministic": {
+                "denominator": 256,
+                "maximum_transfer_sent": 3.647825002670288,
+                "mean_transfer_sent": 3.6318060494959354,
+                "minimum_success_count": 232,
+                "minimum_transfer_sent": 3.6133997440338135,
+                "pass": true,
+                "sample_identity": "policy_mean",
+                "success_count": 256
+              },
+              "sampled": {
+                "denominator": 256,
+                "maximum_transfer_sent": 6.534553050994873,
+                "mean_transfer_sent": 3.442085297894664,
+                "minimum_success_count": 232,
+                "minimum_transfer_sent": 0.11527195572853088,
+                "pass": true,
+                "sample_identity": "hash_derived_per_protocol_cell_world_torch_seed",
+                "success_count": 249
+              }
+            },
+            "cell_id": "PIM_M0",
+            "checkpoint_raw_sha256": "ac7de14b00b2351a97d75380c5a3de633e9b48c02c41aa982d164e05e6a62581",
+            "planned_unit_id": "f963d6dea8e782dbb9bbe7aeea50bea194af41fe0987d191d92ced8598cd2290",
+            "trained_seed": 35001
+          },
+          {
+            "actual_transfer_support": {
+              "deterministic": {
+                "denominator": 256,
+                "maximum_transfer_sent": 3.6282007694244385,
+                "mean_transfer_sent": 3.6264186641201377,
+                "minimum_success_count": 232,
+                "minimum_transfer_sent": 3.6245386600494385,
+                "pass": true,
+                "sample_identity": "policy_mean",
+                "success_count": 256
+              },
+              "sampled": {
+                "denominator": 256,
+                "maximum_transfer_sent": 7.132355690002441,
+                "mean_transfer_sent": 3.4776541381143034,
+                "minimum_success_count": 232,
+                "minimum_transfer_sent": 0.0,
+                "pass": true,
+                "sample_identity": "hash_derived_per_protocol_cell_world_torch_seed",
+                "success_count": 241
+              }
+            },
+            "cell_id": "PIM_M1",
+            "checkpoint_raw_sha256": "e408cd902f8694b9566453fe311cabaa2ca315eadee14315b6e5aff13bdcda77",
+            "planned_unit_id": "6b3df4fe548b1d76aa5e2d626dbea08c2bcb3260cc5735045d85b40d8b778c4d",
+            "trained_seed": 35001
+          }
+        ],
+        "summary": {
+          "actual_support_environment_steps": 3072,
+          "additional_training_transitions": 0,
+          "all_twelve_support_strata_pass": true,
+          "evaluation_world_states_created": 0,
+          "outcomes_opened": 0,
+          "support_denominator_per_stratum": 256,
+          "support_minimum_success_count_per_stratum": 232,
+          "support_strata": 12
+        },
+        "support_manifest_sha256": "8cc2ca1929fc2a6363ca4c497a914a42d7efbc9c79d03374ca0e1770522a1a22"
       },
-      "claim_boundary": "outcome-informed exploratory engineering calibration; no training, evaluation, causal effect, safety, cooperation, altruism, spontaneous emergence, or scientific claim yet",
+      "byte_length": 16629,
+      "checkpoint_probability_gate": {
+        "checkpoint_rows": [
+          {
+            "actor_objective": "OFF",
+            "cell_id": "OFF_M0",
+            "checkpoint_byte_length": 3728155,
+            "checkpoint_probability_gate": {
+              "all_registered_donors_pass": true,
+              "environment_instances_constructed": 256,
+              "environment_steps": 0,
+              "identity_count": 256,
+              "maximum_material_action_probability": 0.9639365515601802,
+              "maximum_raw_mean": 0.25,
+              "maximum_raw_standard_deviation": 0.610180675983429,
+              "mean_material_action_probability": 0.9639365515601802,
+              "minimum_material_action_probability": 0.9639365515601802,
+              "minimum_raw_mean": 0.25,
+              "minimum_raw_standard_deviation": 0.610180675983429,
+              "minimum_required_probability": 0.9512917514791949,
+              "policy_forward_batch_calls": 1,
+              "raw_material_threshold": -0.8472978603872036,
+              "sampled_actions": 0
+            },
+            "checkpoint_raw_sha256": "d7a9b0714d019947d5b946c5b030d574a4582b56fb190733cdefd1e1ca24efe4",
+            "completed_updates": 20,
+            "max_energy_accounting_error": 1.744180917739868e-05,
+            "mortality": false,
+            "non_finite_updates": 0,
+            "objective_id": "ACTOR-OFF-L1",
+            "planned_unit_id": "6db884a62ce07de66632139e9f40737dca2b4a1c8cd50ba6d0c6cc89d3924e14",
+            "reward_channel_diagnostic": {
+              "clipped_PIM_reward_absolute_mean": 0.09114686834111221,
+              "clipped_PIM_reward_mean": 0.08070283384662807,
+              "diagnostic_is_nonselecting": true,
+              "diagnostic_updates_inclusive": [
+                2,
+                20
+              ],
+              "no_reward_threshold_applied": true,
+              "signed_to_absolute_ratio": 0.8854153227141287,
+              "unclipped_positive_minus_negative_cosine_mean": 0.23878179356994989,
+              "valid_transition_count": 311296
+            },
+            "trained_seed": 35001
+          },
+          {
+            "actor_objective": "OFF",
+            "cell_id": "OFF_M1",
+            "checkpoint_byte_length": 2989787,
+            "checkpoint_probability_gate": {
+              "all_registered_donors_pass": true,
+              "environment_instances_constructed": 256,
+              "environment_steps": 0,
+              "identity_count": 256,
+              "maximum_material_action_probability": 0.9639373723024229,
+              "maximum_raw_mean": 0.25,
+              "maximum_raw_standard_deviation": 0.6101827621459961,
+              "mean_material_action_probability": 0.963936769568567,
+              "minimum_material_action_probability": 0.9639360646764304,
+              "minimum_raw_mean": 0.25,
+              "minimum_raw_standard_deviation": 0.6101771593093872,
+              "minimum_required_probability": 0.9512917514791949,
+              "policy_forward_batch_calls": 1,
+              "raw_material_threshold": -0.8472978603872036,
+              "sampled_actions": 0
+            },
+            "checkpoint_raw_sha256": "2ef7b027d4520d807eb30e1dbc727a9c54f6c1c06bde8b97e2364064107f2597",
+            "completed_updates": 20,
+            "max_energy_accounting_error": 1.52587890625e-05,
+            "mortality": true,
+            "non_finite_updates": 0,
+            "objective_id": "ACTOR-OFF-L1",
+            "planned_unit_id": "5342edfae72ba23ada4ac752fa7ad51a087d355070ea5c9677f11055ff360c52",
+            "reward_channel_diagnostic": {
+              "clipped_PIM_reward_absolute_mean": 0.09274758940960308,
+              "clipped_PIM_reward_mean": 0.08134369926907861,
+              "diagnostic_is_nonselecting": true,
+              "diagnostic_updates_inclusive": [
+                2,
+                20
+              ],
+              "no_reward_threshold_applied": true,
+              "signed_to_absolute_ratio": 0.877043810916085,
+              "unclipped_positive_minus_negative_cosine_mean": 0.29929334880778313,
+              "valid_transition_count": 199602
+            },
+            "trained_seed": 35001
+          },
+          {
+            "actor_objective": "RAW",
+            "cell_id": "RAW_M0",
+            "checkpoint_byte_length": 3726043,
+            "checkpoint_probability_gate": {
+              "all_registered_donors_pass": true,
+              "environment_instances_constructed": 256,
+              "environment_steps": 0,
+              "identity_count": 256,
+              "maximum_material_action_probability": 0.964789097816742,
+              "maximum_raw_mean": 0.24991852045059204,
+              "maximum_raw_standard_deviation": 0.6083999276161194,
+              "mean_material_action_probability": 0.9636870525765437,
+              "minimum_material_action_probability": 0.9627569346970349,
+              "minimum_raw_mean": 0.23785381019115448,
+              "minimum_raw_standard_deviation": 0.6064689755439758,
+              "minimum_required_probability": 0.9512917514791949,
+              "policy_forward_batch_calls": 1,
+              "raw_material_threshold": -0.8472978603872036,
+              "sampled_actions": 0
+            },
+            "checkpoint_raw_sha256": "b864c91bec98a7c2fdc4f24fa236243de46344a5f90868dc21836ff7887e8e48",
+            "completed_updates": 20,
+            "max_energy_accounting_error": 1.6070902347564697e-05,
+            "mortality": false,
+            "non_finite_updates": 0,
+            "objective_id": "JEPA-L1",
+            "planned_unit_id": "f94ee08866a49d7158de0770e3a55b4fee7bd4a23a6661f760bce35fc43ee7a2",
+            "reward_channel_diagnostic": {
+              "clipped_PIM_reward_absolute_mean": 0.0914675533728625,
+              "clipped_PIM_reward_mean": 0.0807399992359263,
+              "diagnostic_is_nonselecting": true,
+              "diagnostic_updates_inclusive": [
+                2,
+                20
+              ],
+              "no_reward_threshold_applied": true,
+              "signed_to_absolute_ratio": 0.8827173818325945,
+              "unclipped_positive_minus_negative_cosine_mean": 0.24559190873007633,
+              "valid_transition_count": 311296
+            },
+            "trained_seed": 35001
+          },
+          {
+            "actor_objective": "RAW",
+            "cell_id": "RAW_M1",
+            "checkpoint_byte_length": 2976411,
+            "checkpoint_probability_gate": {
+              "all_registered_donors_pass": true,
+              "environment_instances_constructed": 256,
+              "environment_steps": 0,
+              "identity_count": 256,
+              "maximum_material_action_probability": 0.9648047703785358,
+              "maximum_raw_mean": 0.2490258812904358,
+              "maximum_raw_standard_deviation": 0.6082174777984619,
+              "mean_material_action_probability": 0.9641419466487305,
+              "minimum_material_action_probability": 0.9635372581390745,
+              "minimum_raw_mean": 0.24341657757759094,
+              "minimum_raw_standard_deviation": 0.6059079766273499,
+              "minimum_required_probability": 0.9512917514791949,
+              "policy_forward_batch_calls": 1,
+              "raw_material_threshold": -0.8472978603872036,
+              "sampled_actions": 0
+            },
+            "checkpoint_raw_sha256": "f274bbb28561713175931ce652deaeaef645303f48a8cbed8634fe4d11f32c2d",
+            "completed_updates": 20,
+            "max_energy_accounting_error": 1.6555190086364746e-05,
+            "mortality": true,
+            "non_finite_updates": 0,
+            "objective_id": "JEPA-L1",
+            "planned_unit_id": "d4ecfb92e4de6c3050454464f7dfce9665f714e40aa786a8326089f5df99daeb",
+            "reward_channel_diagnostic": {
+              "clipped_PIM_reward_absolute_mean": 0.09198505292279191,
+              "clipped_PIM_reward_mean": 0.07957484705414487,
+              "diagnostic_is_nonselecting": true,
+              "diagnostic_updates_inclusive": [
+                2,
+                20
+              ],
+              "no_reward_threshold_applied": true,
+              "signed_to_absolute_ratio": 0.8650845384731843,
+              "unclipped_positive_minus_negative_cosine_mean": 0.2767612920687715,
+              "valid_transition_count": 198840
+            },
+            "trained_seed": 35001
+          },
+          {
+            "actor_objective": "PIM",
+            "cell_id": "PIM_M0",
+            "checkpoint_byte_length": 3713627,
+            "checkpoint_probability_gate": {
+              "all_registered_donors_pass": true,
+              "environment_instances_constructed": 256,
+              "environment_steps": 0,
+              "identity_count": 256,
+              "maximum_material_action_probability": 0.965968006659497,
+              "maximum_raw_mean": 0.2605947256088257,
+              "maximum_raw_standard_deviation": 0.608290433883667,
+              "mean_material_action_probability": 0.965025168914778,
+              "minimum_material_action_probability": 0.9639367300693068,
+              "minimum_raw_mean": 0.2466021180152893,
+              "minimum_raw_standard_deviation": 0.6072031855583191,
+              "minimum_required_probability": 0.9512917514791949,
+              "policy_forward_batch_calls": 1,
+              "raw_material_threshold": -0.8472978603872036,
+              "sampled_actions": 0
+            },
+            "checkpoint_raw_sha256": "ac7de14b00b2351a97d75380c5a3de633e9b48c02c41aa982d164e05e6a62581",
+            "completed_updates": 20,
+            "max_energy_accounting_error": 1.652538776397705e-05,
+            "mortality": false,
+            "non_finite_updates": 0,
+            "objective_id": "JEPA-L2-PIM",
+            "planned_unit_id": "f963d6dea8e782dbb9bbe7aeea50bea194af41fe0987d191d92ced8598cd2290",
+            "reward_channel_diagnostic": {
+              "clipped_PIM_reward_absolute_mean": 0.09016747749104213,
+              "clipped_PIM_reward_mean": 0.08065190948362119,
+              "diagnostic_is_nonselecting": true,
+              "diagnostic_updates_inclusive": [
+                2,
+                20
+              ],
+              "no_reward_threshold_applied": true,
+              "signed_to_absolute_ratio": 0.8944678472527272,
+              "unclipped_positive_minus_negative_cosine_mean": 0.2252372437015813,
+              "valid_transition_count": 311296
+            },
+            "trained_seed": 35001
+          },
+          {
+            "actor_objective": "PIM",
+            "cell_id": "PIM_M1",
+            "checkpoint_byte_length": 2988379,
+            "checkpoint_probability_gate": {
+              "all_registered_donors_pass": true,
+              "environment_instances_constructed": 256,
+              "environment_steps": 0,
+              "identity_count": 256,
+              "maximum_material_action_probability": 0.9650092913248637,
+              "maximum_raw_mean": 0.2526150643825531,
+              "maximum_raw_standard_deviation": 0.608651876449585,
+              "mean_material_action_probability": 0.9647558529286676,
+              "minimum_material_action_probability": 0.9645062315773105,
+              "minimum_raw_mean": 0.2511270046234131,
+              "minimum_raw_standard_deviation": 0.6068904399871826,
+              "minimum_required_probability": 0.9512917514791949,
+              "policy_forward_batch_calls": 1,
+              "raw_material_threshold": -0.8472978603872036,
+              "sampled_actions": 0
+            },
+            "checkpoint_raw_sha256": "e408cd902f8694b9566453fe311cabaa2ca315eadee14315b6e5aff13bdcda77",
+            "completed_updates": 20,
+            "max_energy_accounting_error": 1.6324222087860107e-05,
+            "mortality": true,
+            "non_finite_updates": 0,
+            "objective_id": "JEPA-L2-PIM",
+            "planned_unit_id": "6b3df4fe548b1d76aa5e2d626dbea08c2bcb3260cc5735045d85b40d8b778c4d",
+            "reward_channel_diagnostic": {
+              "clipped_PIM_reward_absolute_mean": 0.09191349401417842,
+              "clipped_PIM_reward_mean": 0.08103049083279878,
+              "diagnostic_is_nonselecting": true,
+              "diagnostic_updates_inclusive": [
+                2,
+                20
+              ],
+              "no_reward_threshold_applied": true,
+              "signed_to_absolute_ratio": 0.8815951531588948,
+              "unclipped_positive_minus_negative_cosine_mean": 0.27498544247411266,
+              "valid_transition_count": 200646
+            },
+            "trained_seed": 35001
+          }
+        ],
+        "prefix_manifest_sha256": "26ba7f28425d7c930759aef565b3277cd3ac426418c16b82d4f92fe52d8d340d",
+        "summary": {
+          "actual_support_environment_steps": 0,
+          "all_1536_checkpoint_probabilities_pass": true,
+          "all_completed_exact_update20": true,
+          "checkpoint_count": 6,
+          "checkpoint_probability_identity_count": 1536,
+          "evaluation_world_states_created": 0,
+          "outcomes_opened": 0,
+          "probability_gate_environment_steps": 0,
+          "probability_gate_sampled_actions": 0,
+          "training_transitions": 983040
+        }
+      },
+      "chronology": {
+        "actual_support_environment_steps": 3072,
+        "additional_training_transitions": 0,
+        "all_twelve_support_strata_pass": true,
+        "evaluation_world_states_created": 0,
+        "outcomes_opened": 0,
+        "support_denominator_per_stratum": 256,
+        "support_minimum_success_count_per_stratum": 232,
+        "support_strata": 12
+      },
+      "claim_boundary": "outcome-informed exploratory engineering feasibility PASS; full Stage-1 training only; no evaluation, causal effect, safety, cooperation, altruism, spontaneous emergence, or scientific claim",
       "design": {
         "confirmatory_status": "outcome_informed_exploratory_engineering_calibration_with_familywise_support_control",
         "direct_social_reward": false,
@@ -4055,6 +4512,57 @@
           "world-1130255"
         ]
       },
+      "diagnostic_source_freeze": {
+        "acceptance": {
+          "cells": [
+            "OFF_M0",
+            "OFF_M1",
+            "RAW_M0",
+            "RAW_M1",
+            "PIM_M0",
+            "PIM_M1"
+          ],
+          "evaluation_world_states": 0,
+          "outcomes_opened": 0,
+          "phase16_world_ids_reused": false,
+          "policy_forward_calls": 0,
+          "state_count": 1536,
+          "training_transitions": 0,
+          "world_count": 256,
+          "world_ids": [
+            "world-1130000",
+            "world-1130255"
+          ]
+        },
+        "freeze_sha256": "c588373d2b49f5b72c8e49b27b03e0a04351e5d3bbd700fecea8a780add5826d",
+        "source": {
+          "git_revision": "7206d3f8d1244f51deefe7c6ff43de9853cde824",
+          "tree_oid": "ef156ba6a8995bd45d40846b2e1b6eceb8c86b00",
+          "worktree_clean": true
+        }
+      },
+      "diagnostic_states": {
+        "execution_counts": {
+          "environment_instances_constructed": 1536,
+          "environment_steps": 0,
+          "evaluation_world_states": 0,
+          "outcomes_opened": 0,
+          "policy_forward_calls": 0,
+          "sampled_actions": 0,
+          "training_transitions": 0
+        },
+        "manifest_sha256": "d161b7b1a17e48755ad5013312e17c91621b97615788ddd8f3a857b0ba690df0",
+        "measurements": {
+          "maximum_absolute_target_error": "2.980232238769531e-07",
+          "maximum_pair_distance": "0.7500002980232239",
+          "minimum_pair_distance": "0.7499997615814209",
+          "state_count": 1536
+        },
+        "world_range": [
+          "world-1130000",
+          "world-1130255"
+        ]
+      },
       "familywise_calculation": {
         "all_strata_pass_probability_lower_bound": 0.990000000000001,
         "conservative_stratum_exponent": 12,
@@ -4062,6 +4570,66 @@
         "single_stratum_pass_probability_lower_bound": 0.9991628226408795,
         "support_denominator": 256,
         "support_minimum": 232
+      },
+      "initial_distribution_gate": {
+        "execution": {
+          "action_dimension": 3,
+          "environment_instances_constructed": 0,
+          "environment_steps": 0,
+          "hidden_dimension": 128,
+          "observation_dimension": 13,
+          "outcome_payloads_opened": 0,
+          "policy_class": "IndependentGaussianPolicy",
+          "sampled_actions": 0,
+          "torch_seed": 35001
+        },
+        "gate": {
+          "all_1536_cell_world_donor_means_equal_exact_bias": true,
+          "all_1536_probabilities_at_least_0_95": true,
+          "all_raw_standard_deviations_equal_exp_minus_half": true,
+          "all_transfer_output_weight_rows_exact_zero": true,
+          "pass": true
+        },
+        "gate_sha256": "445c7bc06bec380264fc45572e76778c200a444753674f71d8548af8efe16eb8",
+        "measurements": {
+          "analytic_success_probability": "0.9647852416551231",
+          "final_transfer_biases": [
+            "0.25",
+            "0.25"
+          ],
+          "final_transfer_weight_row_nonzero_counts": [
+            0,
+            0
+          ],
+          "initial_transformed_coordinate": "0.5621765008857981",
+          "minimum_probability_inclusive": "0.95",
+          "raw_log_standard_deviations": [
+            "-0.5",
+            "-0.5"
+          ],
+          "raw_standard_deviations": [
+            "0.6065306597126334",
+            "0.6065306597126334"
+          ],
+          "raw_threshold": "-0.8472978603872036"
+        },
+        "registered_identity_coverage": {
+          "cell_world_identity_count": 1536,
+          "cells": [
+            "OFF_M0",
+            "OFF_M1",
+            "RAW_M0",
+            "RAW_M1",
+            "PIM_M0",
+            "PIM_M1"
+          ],
+          "donor_slots_per_identity": 2,
+          "identity_bundle_sha256": "3a65de3551313ef048224ba0fd59bd34f792cc6a4f258d54fa0c878ea62e359b",
+          "world_id_range": [
+            "world-1130000",
+            "world-1130255"
+          ]
+        }
       },
       "intervention_family": {
         "branch_difference": "only_donor_transformed_transfer_coordinate_at_t0_policy_value_versus_exact_zero",
@@ -4110,20 +4678,48 @@
           ]
         }
       },
+      "measured_resources": {
+        "prefix_maximum_rss_kib": 2200028,
+        "prefix_wall_seconds": 188.37,
+        "support_maximum_rss_kib": 649580,
+        "support_wall_seconds": 32.63,
+        "swap_count": 0
+      },
       "permissions": {
-        "actual_support_sampling_authorized": false,
-        "checkpoint_probability_gate_authorized": false,
-        "counterfactual_evaluation_authorized": false,
-        "diagnostic_world_construction_authorized": false,
+        "actual_support_sampling_complete": true,
         "evaluation_world_construction_authorized": false,
-        "implementation_freeze_authorized": false,
-        "initial_distribution_unit_diagnostic_authorized": false,
-        "next_gate": "exact_public_https_anchor",
+        "full_training_authorized": true,
+        "next_gate": "exact_update20_resume_to_update240",
         "outcome_read_authorized": false,
-        "public_anchor_construction_authorized": true,
+        "phase17_stopped": false,
         "scientific_claim_authorized": false,
-        "stage_2_authorized": false,
-        "training_authorized": false
+        "update21_authorized": true
+      },
+      "prefix_execution_freeze": {
+        "acceptance": {
+          "actual_support_environment_steps": 0,
+          "cells": [
+            "OFF_M0",
+            "OFF_M1",
+            "RAW_M0",
+            "RAW_M1",
+            "PIM_M0",
+            "PIM_M1"
+          ],
+          "checkpoint_probability_floor": "0.9512917514791949",
+          "checkpoint_probability_identity_count": 1536,
+          "maximum_update": 20,
+          "probability_gate_environment_steps": 0,
+          "probability_gate_sampled_actions": 0,
+          "training_seed": 35001,
+          "training_transitions": 983040
+        },
+        "freeze_sha256": "9e14befd3c58d521c4524f8576dde350ce0c6cef40c28d4ce9c97e30c850e8aa",
+        "source": {
+          "git_revision": "7bee0a56012afbee488b35c0bbcf3d1ede9aeaa6",
+          "tree_oid": "514325c0e778074ce6edfbbcf4bb8ee5b30f8a33",
+          "worktree_clean": true
+        }
       },
       "preimplementation_gate": {
         "boundary_unit_cases": {
@@ -4217,6 +4813,16 @@
       },
       "preregistration_sha256": "c4e2a9816d4d668643851c64a1520153de17f11a63a181569eb73fe6968034c1",
       "protocol_id": "FALSIFY-v2.2",
+      "public_anchor": {
+        "receipt_sha256": "780120737781e47a8562262fbecbf3bd66c5ee87b316c3bdcbcb8c09259d96ef",
+        "verification": {
+          "attempts": 1,
+          "exact_https_byte_and_semantic_match": true,
+          "method": "cache_busted_exact_https_byte_and_semantic_sha256_match",
+          "public_repository_commit": "56f423306c60166114db648d4a4666b60d9874c4",
+          "verified_at": "2026-08-16T15:29:59+09:00"
+        }
+      },
       "raw_file_sha256": "6e9e43b05e9713a13684a3485028a28efa3dc1fce5cc6172b3c8fd7eb7608c24",
       "repair_rationale": {
         "confirmatory_claim_forbidden": true,
@@ -4241,7 +4847,37 @@
         "transfer_prior_architecture_bias_std_and_training_hyperparameters_unchanged": true
       },
       "semantic_sha256": "2b8054e5f1cec50076536273ec1f1d5bc7bcaf085842d521aed4d84de415c806",
-      "state": "immutable_preregistration_frozen_public_anchor_pending",
+      "state": "familywise_support_pass_full_training_authorized",
+      "support_sampling_freeze": {
+        "acceptance": {
+          "actual_support_environment_steps": 3072,
+          "canonical_cell_order": [
+            "OFF_M0",
+            "OFF_M1",
+            "RAW_M0",
+            "RAW_M1",
+            "PIM_M0",
+            "PIM_M1"
+          ],
+          "checkpoint_probability_gate_passed_before_sampling": true,
+          "completed_update": 20,
+          "material_transfer_sent_threshold": 1.0,
+          "support_denominator_per_stratum": 256,
+          "support_minimum_success_count_per_stratum": 232,
+          "support_modes": [
+            "deterministic",
+            "sampled"
+          ],
+          "support_strata": 12,
+          "training_seed": 35001
+        },
+        "freeze_sha256": "40fe08000d27753fa4ff7eee8d6fb604555f5ffbbc4063fc46adbf93356572bf",
+        "source": {
+          "git_revision": "046fb70f9203f8c5db61f399dcd26f0fa5d95a90",
+          "tree_oid": "aa5e6637eb092b686e39700febe726592f95d6af",
+          "worktree_clean": true
+        }
+      },
       "training": {
         "actor_intrinsic_coefficient_OFF": "0.0",
         "actor_intrinsic_coefficient_PIM": "1.0",
@@ -4303,6 +4939,37 @@
         "updates": 240,
         "variance_regularization_weight": "25.0",
         "variance_target": "1.0"
+      },
+      "training_plan": {
+        "permissions": {
+          "actual_support_sampling_authorized": false,
+          "counterfactual_evaluation_authorized": false,
+          "evaluation_world_construction_authorized": false,
+          "full_training_authorized": false,
+          "maximum_authorized_update_inclusive": 20,
+          "next_gate": "update20_checkpoint_probability_all_1536_donors",
+          "outcome_read_authorized": false,
+          "prefix_training_authorized": true,
+          "scientific_claim_authorized": false,
+          "stage2_authorized": false,
+          "update20_checkpoint_probability_gate_authorized": true,
+          "update21_authorized": false
+        },
+        "prefix_budget": {
+          "actual_support_environment_steps_authorized_now": 0,
+          "checkpoint_probability_evaluations": 1536,
+          "conditional_support_environment_steps_after_probability_pass": 3072,
+          "minimum_checkpoint_material_action_probability": "0.9512917514791949",
+          "support_denominator_per_stratum": 256,
+          "support_minimum_success_count_per_stratum": 232,
+          "support_modes": [
+            "deterministic",
+            "sampled"
+          ],
+          "support_strata": 12,
+          "training_transitions": 983040
+        },
+        "training_plan_sha256": "8396fddfbc75f7ddb3e1ac06295c264d35e53b294709d7b49d15698b31303553"
       }
     },
     "positive_control": {
@@ -4585,7 +5252,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-16T06:28:59.794811+00:00",
+  "generated_at": "2026-08-16T07:23:18.726586+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -4796,8 +5463,8 @@
     "total": 7
   },
   "project": {
-    "headline": "FALSIFY-v2.2는 Phase 16의 57/64 support reject를 재해석하지 않고, fresh seed/world에서 256회 표본과 checkpoint probability gate로 12-stratum 동시 통과확률 하한 0.99를 사전 고정했다. 현재 실행 권한은 0이며 exact HTTPS 공개 앵커만 허용된다.",
-    "phase": "Phase 17 — FALSIFY-v2.2 preregistration frozen / public anchor next",
+    "headline": "FALSIFY-v2.2는 exact update-20까지 983,040 training transitions를 완료했다. Action-free probability 1,536/1,536과 actual support 12/12 strata가 모두 통과해 update 21--240만 열렸다. 평가 world, outcome, Stage 2와 과학 주장은 여전히 잠겨 있다.",
+    "phase": "Phase 17 — FALSIFY-v2.2 family-wise support PASS / full training authorized",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -4996,23 +5663,23 @@
     "day": 4,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.540489,
-    "remaining_hours": 77.2,
+    "elapsed_fraction": 0.545878,
+    "remaining_hours": 76.29,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-16T15:27:32+09:00",
+    "checked_at": "2026-08-16T16:22:09+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 510,
-      "sha256": "31b8e925129ab56e6848084b2888066cdcb34ebe70b62dc72be13365018b8f42"
+      "file_count": 537,
+      "sha256": "33a5c06ab3dc959a363e2fda54c5eba730a399523ae95985107422ba56ecf5b3"
     },
-    "note": "통합 전체 테스트 스위트: 682/682 통과",
-    "passed": 682,
+    "note": "통합 전체 테스트 스위트: 698/698 통과",
+    "passed": 698,
     "status": "passed",
-    "total": 682
+    "total": 698
   },
   "workstreams": {
     "completed_criteria": 28,
