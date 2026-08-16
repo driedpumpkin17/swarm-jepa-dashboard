@@ -31,7 +31,8 @@
         "Phase 14 Stage-1은 6개 checkpoint와 11,796,480 training transitions를 nonfinite update 0으로 완료했다.",
         "Phase 14 PIM_M0/PIM_M1 representation 수치는 기준을 넘었지만, controlled-support artifact의 PASS는 preregistered in-range predicate를 구현이 검사하지 않아 사후 감사에서 INVALID다.",
         "Phase 14 fresh factual 실행은 768 episode와 98,304 environment transitions를 완료했지만 PIM_M1 material-onset candidate가 0개라 minimum-support gate에서 REJECT됐다.",
-        "Phase 15 FALSIFY-v2.0은 fresh seed/world를 쓰는 표준화 접촉 donor-channel 개입군으로 outcome 0 상태에서 content-addressed 사전등록됐다."
+        "Phase 15 FALSIFY-v2.0은 fresh seed/world를 쓰는 표준화 접촉 donor-channel 개입군으로 outcome 0 상태에서 content-addressed 사전등록됐다.",
+        "Phase 15 base artifact는 exact HTTPS byte 검증됐고, 실행 전 float32 거리 불일치를 발견해 원 diagnostic IDs를 폐기한 outcome-free 수리 amendment가 고정됐다."
       ]
     },
     "curated_report_sections": {
@@ -56,6 +57,7 @@
       "Phase 14 PIM margin은 MI lower bound가 아니며 predictable immobility나 통제를 보상할 수 있어 기존 five-core harm veto를 그대로 통과해야 한다.",
       "Phase 14 controlled-support 구현은 preregistration이 요구한 in-range를 누락해 protocol violation이며, 75/25 energy·both-alive 상태의 분석적 행동확률만으로 PIM_M1 material transfer onset을 보장하지 못했다.",
       "Phase 15는 모든 셀에 같은 양의 전달 채널 초기화를 쓰는 Level-4 약한 행동 사전분포이므로, 성공해도 순수 JEPA+mortality의 자발 창발로 해석할 수 없다.",
+      "Phase 15 numeric repair amendment가 아직 HTTPS anchor되지 않아 implementation freeze·diagnostic world·training은 계속 금지된다.",
       "heartbeat는 SIGKILL 이후 liveness를 단독으로 증명하지 못한다."
     ]
   },
@@ -2287,6 +2289,16 @@
       }
     },
     "phase15": {
+      "base_public_anchor": {
+        "receipt_sha256": "20f06b9ceaaee3f5cbbd8a11443dc0d50ea6090d120adc978ee91631926bf190",
+        "verification": {
+          "attempts": 1,
+          "exact_https_byte_and_semantic_match": true,
+          "method": "cache_busted_exact_https_byte_and_semantic_sha256_match",
+          "public_repository_commit": "8a666437fab37d2fe864c9d094037211b074b0f1",
+          "verified_at": "2026-08-16T13:05:20+09:00"
+        }
+      },
       "chronology": {
         "phase14_artifacts_read_only_to_apply_registered_failure_action": true,
         "phase15_checkpoints_created": 0,
@@ -2426,16 +2438,85 @@
       },
       "intervention_ladder_level": 4,
       "level_4_component": "matched_positive_transfer_channel_initialization_in_all_cells",
+      "numeric_representation_audit": {
+        "amendment_sha256": "e807731f04f156199ca09ac069392ab07f5585d61f17cbaa297988eca161540c",
+        "audit_finding": {
+          "environment_position_storage_dtype": "float32",
+          "environment_state_objects_created": 0,
+          "environment_steps": 0,
+          "evaluation_outcomes_opened": 0,
+          "measured_exact_0_75_count": 8,
+          "measured_float32_distance_maximum": "0.7500002384185791",
+          "measured_float32_distance_minimum": "0.7499997019767761",
+          "policy_forward_calls": 0,
+          "prospective_original_diagnostic_ids_checked": 64,
+          "registered_mathematical_pair_distance": "0.75",
+          "status": "PRE_EXECUTION_NUMERIC_CONTRACT_MISMATCH",
+          "training_transitions": 0
+        },
+        "identity_repair": {
+          "evaluation_world_ids_unchanged": [
+            "world-1070000",
+            "world-1070063"
+          ],
+          "no_evaluation_or_stage2_identity_was_computed": true,
+          "replacement_fresh_diagnostic_world_count": 64,
+          "replacement_fresh_diagnostic_world_ids": [
+            "world-1090000",
+            "world-1090063"
+          ],
+          "retired_diagnostic_world_count": 64,
+          "retired_diagnostic_world_ids": [
+            "world-1060000",
+            "world-1060063"
+          ],
+          "retired_ids_reuse_forbidden": true,
+          "retirement_reason": "prospective_hash_positions_were_computed_during_numeric_contract_audit",
+          "stage_2_reserved_world_ids_unchanged": [
+            "world-1080000",
+            "world-1080063"
+          ]
+        },
+        "normative_repair": {
+          "absolute_distance_error_maximum_inclusive": "0.000000476837158203125",
+          "actual_environment_transfer_in_range_must_be_true": true,
+          "boundary_cases_use_axis_aligned_float32_synthetic_states": true,
+          "boundary_distance_1_25_is_inclusive": true,
+          "boundary_nextafter_1_25_toward_positive_infinity_is_exclusive": true,
+          "coordinate_generation_dtype": "float64",
+          "mathematical_target_distance": "0.75",
+          "measured_distance_dtype": "float32_norm_of_float32_position_difference",
+          "measured_distance_must_be_at_least_minimum_nonoverlap_0_50": true,
+          "same_tolerance_for_every_registered_world": true,
+          "single_storage_cast_dtype": "float32",
+          "superseded_base_leaf": "preimplementation_gate.typed_state_assertions.pre_step_pair_distance_exact",
+          "threshold_or_tolerance_change_after_diagnostic_forbidden": true,
+          "tolerance_basis": "four_times_IEEE754_binary32_epsilon_at_unit_scale"
+        },
+        "permissions": {
+          "amendment_public_anchor_construction_authorized": true,
+          "counterfactual_evaluation_authorized": false,
+          "diagnostic_world_construction_authorized": false,
+          "evaluation_world_construction_authorized": false,
+          "implementation_freeze_authorized": false,
+          "next_gate": "exact_public_https_anchor_for_numeric_amendment",
+          "outcome_read_authorized": false,
+          "prefix_training_authorized": false,
+          "scientific_claim_authorized": false,
+          "stage_2_authorized": false
+        }
+      },
       "permissions": {
+        "amendment_public_anchor_construction_authorized": true,
         "counterfactual_evaluation_authorized": false,
         "diagnostic_world_construction_authorized": false,
         "evaluation_world_construction_authorized": false,
-        "next_gate": "exact_public_https_anchor",
+        "implementation_freeze_authorized": false,
+        "next_gate": "exact_public_https_anchor_for_numeric_amendment",
         "outcome_read_authorized": false,
-        "public_anchor_construction_authorized": true,
+        "prefix_training_authorized": false,
         "scientific_claim_authorized": false,
-        "stage_2_authorized": false,
-        "training_authorized": false
+        "stage_2_authorized": false
       },
       "planned_counterfactual_branch_transitions": 319488,
       "planned_training_transitions": 11796480,
@@ -2505,7 +2586,7 @@
       "preregistration_sha256": "e7dfdac85dd9d63dd681c0d3bc4fee02e9a7a343996310d639f7948b6ca63a81",
       "protocol_id": "FALSIFY-v2.0",
       "raw_file_sha256": "b32a1359fe8062f8316c7e9728d92b8f97e6a44feb195ca0d04ccfcb4d332aa4",
-      "state": "outcome_free_preregistered_public_anchor_pending"
+      "state": "base_anchored_numeric_repair_preregistered_anchor_pending"
     },
     "positive_control": {
       "available": true,
@@ -2787,7 +2868,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-16T04:03:55.011742+00:00",
+  "generated_at": "2026-08-16T04:17:41.286452+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -2998,8 +3079,8 @@
     "total": 7
   },
   "project": {
-    "headline": "Phase 14는 in-range 조건 누락으로 protocol INVALID이고 독립적으로 minimum-support REJECT다. Phase 15는 fresh seed/world의 표준화 접촉 개입군을 outcome 0 상태로 사전등록했으며, 현재 exact HTTPS 공개 anchor만 허가된다.",
-    "phase": "Phase 15 — FALSIFY-v2.0 preregistered / public anchor pending",
+    "headline": "Phase 15 base preregistration은 HTTPS 고정됐지만 연속 hash orientation과 float32 exact-distance 계약의 불일치가 실행 전 발견됐다. 원 diagnostic IDs를 폐기하고 tolerance와 fresh replacement IDs를 고정한 outcome-free amendment의 공개 anchor만 현재 허가된다.",
+    "phase": "Phase 15 — FALSIFY-v2.0 numeric repair anchor pending",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -3198,23 +3279,23 @@
     "day": 4,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.526096,
-    "remaining_hours": 79.62,
+    "elapsed_fraction": 0.527462,
+    "remaining_hours": 79.39,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-16T13:02:34+09:00",
+    "checked_at": "2026-08-16T13:16:30+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 453,
-      "sha256": "b6b077b778e85bf67a2265c86dae36b0f32b400198b7298eecf9f4831e40e090"
+      "file_count": 459,
+      "sha256": "ecb078e8ad36218fe0dc0cc97d6f9d6324f9c5a8dbb8c7c250232c7f475d4075"
     },
-    "note": "통합 전체 테스트 스위트: 636/636 통과; wall 337.74초, user CPU 328.11초, system CPU 24.60초, max RSS 1164344 KiB, swap 0",
-    "passed": 636,
+    "note": "통합 전체 테스트 스위트: 645/645 통과; wall 327.45초, user CPU 319.31초, system CPU 24.08초, max RSS 1163892 KiB, swap 0",
+    "passed": 645,
     "status": "passed",
-    "total": 636
+    "total": 645
   },
   "workstreams": {
     "completed_criteria": 28,
