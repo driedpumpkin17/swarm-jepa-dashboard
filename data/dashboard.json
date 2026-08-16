@@ -9,7 +9,8 @@
         "canonical schedule record가 window를 선택·실행했거나 causal gate를 열었다.",
         "Phase 12 learning progress가 학습·행동·상대 보존에 효과가 있다.",
         "Phase 13 model gain이 상대 보존·협력·안전·창발을 만든다.",
-        "Phase 14 predictive-information reward가 상대 보존·협력·안전·창발을 만든다."
+        "Phase 14 predictive-information reward가 상대 보존·협력·안전·창발을 만든다.",
+        "Phase 15의 사전등록만으로 학습·지원성·인과 효과·안전·협력·창발이 입증됐다."
       ],
       "supported": [
         "재시작 가능한 실험 스택과 에너지 회계 검사가 작동한다.",
@@ -28,8 +29,9 @@
         "Phase 13 factual 평가는 768 episode와 98,304 전이를 완료했지만 MG_M1 material-onset candidate가 0개라 minimum-support gate에서 REJECT됐다.",
         "Phase 14 FALSIFY-v1.9 combined HTTPS anchor, PIM unit PASS, source-bound freeze, 384개 진단 상태와 update-20 전용 plan이 outcome 0 조건으로 고정됐고 prefix 학습만 허용됐다.",
         "Phase 14 Stage-1은 6개 checkpoint와 11,796,480 training transitions를 nonfinite update 0으로 완료했다.",
-        "Phase 14 PIM_M0/PIM_M1 representation과 6-cell controlled-support sentinel은 environment step·evaluation world·outcome 0 조건에서 PASS했다.",
-        "Phase 14 fresh factual 실행은 768 episode와 98,304 environment transitions를 완료했지만 PIM_M1 material-onset candidate가 0개라 minimum-support gate에서 REJECT됐다."
+        "Phase 14 PIM_M0/PIM_M1 representation 수치는 기준을 넘었지만, controlled-support artifact의 PASS는 preregistered in-range predicate를 구현이 검사하지 않아 사후 감사에서 INVALID다.",
+        "Phase 14 fresh factual 실행은 768 episode와 98,304 environment transitions를 완료했지만 PIM_M1 material-onset candidate가 0개라 minimum-support gate에서 REJECT됐다.",
+        "Phase 15 FALSIFY-v2.0은 fresh seed/world를 쓰는 표준화 접촉 donor-channel 개입군으로 outcome 0 상태에서 content-addressed 사전등록됐다."
       ]
     },
     "curated_report_sections": {
@@ -52,7 +54,8 @@
       "Phase 13 unit PASS는 affine-head 수학과 noise-bank 경계만 검증하며 training 효과나 noisy-TV 면역을 검증하지 않는다.",
       "Phase 13의 MG_M1 학습 중 최대 model-gain clipping 비율은 0.4954였고, held-out material-onset support는 0개였다. 인과 효과를 계산하지 않았으므로 원인 또는 효과 크기로 해석할 수 없다.",
       "Phase 14 PIM margin은 MI lower bound가 아니며 predictable immobility나 통제를 보상할 수 있어 기존 five-core harm veto를 그대로 통과해야 한다.",
-      "Phase 14의 사전 진단 controlled-support는 선택된 in-range 상태의 분석적 행동확률만 검증했으며, full held-out trajectory에서 PIM_M1 material transfer onset을 보장하지 못했다.",
+      "Phase 14 controlled-support 구현은 preregistration이 요구한 in-range를 누락해 protocol violation이며, 75/25 energy·both-alive 상태의 분석적 행동확률만으로 PIM_M1 material transfer onset을 보장하지 못했다.",
+      "Phase 15는 모든 셀에 같은 양의 전달 채널 초기화를 쓰는 Level-4 약한 행동 사전분포이므로, 성공해도 순수 JEPA+mortality의 자발 창발로 해석할 수 없다.",
       "heartbeat는 SIGKILL 이후 liveness를 단독으로 증명하지 못한다."
     ]
   },
@@ -1743,6 +1746,14 @@
         "stage_2_authorized": false
       },
       "planned_stage1_training_transitions": 11796480,
+      "post_execution_protocol_audit": {
+        "artifact_reported_pass_is_not_authoritative": true,
+        "downstream_minimum_support_reject_independently_blocks_advancement": true,
+        "implemented_state_predicate": "both_alive_and_exact_75_25_energy_pair",
+        "missing_required_check": "pair_distance_at_most_transfer_radius",
+        "registered_state_predicate": "hash_bound_in_range_75_25_energy_gap_both_alive_states_created_before_training",
+        "status": "INVALID"
+      },
       "predictive_information": {
         "actual_JEPA_predictor_optimizer": "unchanged_matched_JEPA_L1_update_after_actor_reward_is_frozen",
         "anti_leakage": [
@@ -2106,7 +2117,7 @@
           "transfer_onset_counterfactual_does_not_exhaust_blocking_harm": true
         }
       },
-      "state": "stage1_terminated_minimum_support_reject",
+      "state": "stage1_invalid_preheldout_gate_and_minimum_support_reject",
       "training": {
         "permissions": {
           "evaluation_authorized": false,
@@ -2274,6 +2285,227 @@
         },
         "window_count": 640
       }
+    },
+    "phase15": {
+      "chronology": {
+        "phase14_artifacts_read_only_to_apply_registered_failure_action": true,
+        "phase15_checkpoints_created": 0,
+        "phase15_diagnostic_world_states_created": 0,
+        "phase15_evaluation_world_states_created": 0,
+        "phase15_outcomes_opened": 0,
+        "phase15_training_transitions": 0
+      },
+      "claim_boundary": "outcome-free design only; no training, evaluation, causal effect, safety, cooperation, altruism, spontaneous emergence, or scientific claim",
+      "factorial": {
+        "actor_objective": [
+          "OFF",
+          "RAW",
+          "PIM"
+        ],
+        "cells": [
+          {
+            "actor_objective": "OFF",
+            "anti_collapse_regularization": "on",
+            "cell_id": "OFF_M0",
+            "mortality": "off",
+            "objective_id": "ACTOR-OFF-L1",
+            "predictor_trained": true
+          },
+          {
+            "actor_objective": "OFF",
+            "anti_collapse_regularization": "on",
+            "cell_id": "OFF_M1",
+            "mortality": "on",
+            "objective_id": "ACTOR-OFF-L1",
+            "predictor_trained": true
+          },
+          {
+            "actor_objective": "RAW",
+            "anti_collapse_regularization": "on",
+            "cell_id": "RAW_M0",
+            "mortality": "off",
+            "objective_id": "JEPA-L1",
+            "predictor_trained": true
+          },
+          {
+            "actor_objective": "RAW",
+            "anti_collapse_regularization": "on",
+            "cell_id": "RAW_M1",
+            "mortality": "on",
+            "objective_id": "JEPA-L1",
+            "predictor_trained": true
+          },
+          {
+            "actor_objective": "PIM",
+            "anti_collapse_regularization": "on",
+            "cell_id": "PIM_M0",
+            "mortality": "off",
+            "objective_id": "JEPA-L2-PIM",
+            "predictor_trained": true
+          },
+          {
+            "actor_objective": "PIM",
+            "anti_collapse_regularization": "on",
+            "cell_id": "PIM_M1",
+            "mortality": "on",
+            "objective_id": "JEPA-L2-PIM",
+            "predictor_trained": true
+          }
+        ],
+        "information_increment_over_raw": "(PIM_M1-OFF_M1)-(RAW_M1-OFF_M1)",
+        "mortality": [
+          "off",
+          "on"
+        ],
+        "mortality_interaction_within_PIM": "(PIM_M1-OFF_M1)-(PIM_M0-OFF_M0)",
+        "primary_simple_contrast": "PIM_M1_minus_OFF_M1"
+      },
+      "fresh_stage1_seed": [
+        33001
+      ],
+      "fresh_world_ranges": {
+        "diagnostic": [
+          "world-1060000",
+          "world-1060063"
+        ],
+        "evaluation": [
+          "world-1070000",
+          "world-1070063"
+        ],
+        "stage2_reserved": [
+          "world-1080000",
+          "world-1080063"
+        ]
+      },
+      "intervention_family": {
+        "branch_difference": "only_donor_transformed_transfer_coordinate_at_t0_policy_value_versus_exact_zero",
+        "distinct_from_phase14_endogenous_material_onset": true,
+        "endogenous_factual_event_selection": false,
+        "family_id": "STANDARDIZED-CONTACT-DONOR-CHANNEL-v1",
+        "hash_assignment": {
+          "digest": "SHA256(UTF8('FALSIFY-v2.0\\0'+world_id))",
+          "donor_index": "digest_byte_0_bit_0",
+          "orientation_radians": "2*pi*uint64_big_endian(digest_bytes_1_through_8)/2^64",
+          "positions": "world_center_plus_or_minus_0.375_times_unit_orientation_with_plus_assigned_to_donor"
+        },
+        "interpretation": "conditional_policy_channel_effect_not_natural_contact_or_transfer_frequency",
+        "paired_branches": [
+          "factual_policy_channel",
+          "donor_transfer_zero"
+        ],
+        "post_t0_execution": "both_agents_unmodified_policy_for_remaining_12_steps",
+        "shared_t0_standardization": {
+          "both_agents_movement_coordinates": "exact_zero",
+          "donor_action_source": "deterministic_or_registered_sample_from_policy_on_pre_step_observation",
+          "receiver_transfer_coordinate": "exact_zero"
+        },
+        "target_population": "hash_bound_standardized_contact_opportunities_only",
+        "world_state": {
+          "agent_radius": "0.25",
+          "both_alive": true,
+          "both_velocities": [
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ]
+          ],
+          "donor_energy": "75.0",
+          "num_resources": 0,
+          "pair_distance": "0.75",
+          "receiver_energy": "25.0",
+          "transfer_radius": "1.25",
+          "world_center": [
+            "3.0",
+            "3.0"
+          ]
+        }
+      },
+      "intervention_ladder_level": 4,
+      "level_4_component": "matched_positive_transfer_channel_initialization_in_all_cells",
+      "permissions": {
+        "counterfactual_evaluation_authorized": false,
+        "diagnostic_world_construction_authorized": false,
+        "evaluation_world_construction_authorized": false,
+        "next_gate": "exact_public_https_anchor",
+        "outcome_read_authorized": false,
+        "public_anchor_construction_authorized": true,
+        "scientific_claim_authorized": false,
+        "stage_2_authorized": false,
+        "training_authorized": false
+      },
+      "planned_counterfactual_branch_transitions": 319488,
+      "planned_training_transitions": 11796480,
+      "preimplementation_gate": {
+        "boundary_unit_cases": {
+          "distance_exactly_0_50": "nonoverlap_true",
+          "distance_exactly_1_25": "transfer_in_range_true",
+          "distance_nextafter_1_25_toward_positive_infinity": "transfer_in_range_false",
+          "donor_transfer_zero_branch": "environment_transfer_sent_exact_zero",
+          "fixed_zero_movement_transfer_coordinate_0_40": "environment_transfer_sent_at_least_1_0"
+        },
+        "checkpoint_support_gate": {
+          "all_twelve_cell_mode_strata_required": true,
+          "checkpoints": [
+            20,
+            240
+          ],
+          "diagnostic_worlds_per_cell_mode": 64,
+          "environment_steps_per_checkpoint": 768,
+          "minimum_success_count_per_cell_mode": 58,
+          "minimum_success_fraction": "0.90",
+          "modes": [
+            "deterministic",
+            "sampled"
+          ],
+          "success_measurement": "actual_environment_info_transfer_sent_for_registered_donor_at_t0_at_least_1_0",
+          "threshold_seed_world_or_mode_change_after_failure_forbidden": true
+        },
+        "chronology": "unit_and_boundary_tests_then_public_source_freeze_then_hash_bound_diagnostic_states_before_any_training",
+        "failure_action": "stop_without_evaluation_world_construction_and_preregister_any_further_repair",
+        "semantic_coverage": {
+          "each_leaf_has_named_implementation_assertion": true,
+          "missing_duplicate_or_unexecuted_assertion_rejects": true,
+          "required_assertion_count": 15,
+          "required_assertion_ids": [
+            "both_alive_exact_bool",
+            "donor_energy_exact",
+            "receiver_energy_exact",
+            "pre_step_pair_distance_exact",
+            "transfer_radius_exact",
+            "minimum_nonoverlap_distance_exact",
+            "pre_step_in_range",
+            "pre_step_nonoverlap",
+            "zero_velocities_exact",
+            "zero_resources_exact",
+            "boundary_at_transfer_radius_inclusive",
+            "boundary_above_transfer_radius_exclusive",
+            "boundary_at_nonoverlap_inclusive",
+            "fixed_positive_action_realized_transfer",
+            "zero_branch_realized_transfer"
+          ],
+          "single_opaque_compound_predicate_forbidden": true
+        },
+        "typed_state_assertions": {
+          "both_alive_exact_bool": true,
+          "donor_energy_exact": "75.0",
+          "minimum_nonoverlap_distance_exact": "0.50",
+          "pre_step_in_range": true,
+          "pre_step_nonoverlap": true,
+          "pre_step_pair_distance_exact": "0.75",
+          "receiver_energy_exact": "25.0",
+          "transfer_radius_exact": "1.25",
+          "zero_resources_exact": true,
+          "zero_velocities_exact": true
+        }
+      },
+      "preregistration_sha256": "e7dfdac85dd9d63dd681c0d3bc4fee02e9a7a343996310d639f7948b6ca63a81",
+      "protocol_id": "FALSIFY-v2.0",
+      "raw_file_sha256": "b32a1359fe8062f8316c7e9728d92b8f97e6a44feb195ca0d04ccfcb4d332aa4",
+      "state": "outcome_free_preregistered_public_anchor_pending"
     },
     "positive_control": {
       "available": true,
@@ -2555,7 +2787,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-16T03:39:55.461507+00:00",
+  "generated_at": "2026-08-16T04:03:55.011742+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -2766,8 +2998,8 @@
     "total": 7
   },
   "project": {
-    "headline": "Phase 14는 6개 checkpoint 학습과 preheldout gate를 통과하고 fresh factual 98,304 transitions를 완료했지만, PIM_M1 material-onset candidate가 0개여서 사전등록 minimum-support gate에서 중단됐다. Counterfactual, Stage 2, 과학 주장은 허가되지 않는다.",
-    "phase": "Phase 14 — FALSIFY-v1.9 Stage-1 minimum-support REJECT",
+    "headline": "Phase 14는 in-range 조건 누락으로 protocol INVALID이고 독립적으로 minimum-support REJECT다. Phase 15는 fresh seed/world의 표준화 접촉 개입군을 outcome 0 상태로 사전등록했으며, 현재 exact HTTPS 공개 anchor만 허가된다.",
+    "phase": "Phase 15 — FALSIFY-v2.0 preregistered / public anchor pending",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -2966,23 +3198,23 @@
     "day": 4,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.523716,
-    "remaining_hours": 80.02,
+    "elapsed_fraction": 0.526096,
+    "remaining_hours": 79.62,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-16T12:38:37+09:00",
-    "command": "PYTHONPATH=src python -m unittest discover -v -s tests",
+    "checked_at": "2026-08-16T13:02:34+09:00",
+    "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 450,
-      "sha256": "e2c0d4bbc569c37bd6dd686152a6a01824cea1c8b73286a4cef15d2b210e1b0a"
+      "file_count": 453,
+      "sha256": "b6b077b778e85bf67a2265c86dae36b0f32b400198b7298eecf9f4831e40e090"
     },
-    "note": "통합 전체 테스트 스위트: 629/629 통과; wall 331.50초, max RSS 1163420 KiB, swap 0",
-    "passed": 629,
+    "note": "통합 전체 테스트 스위트: 636/636 통과; wall 337.74초, user CPU 328.11초, system CPU 24.60초, max RSS 1164344 KiB, swap 0",
+    "passed": 636,
     "status": "passed",
-    "total": 629
+    "total": 636
   },
   "workstreams": {
     "completed_criteria": 28,
