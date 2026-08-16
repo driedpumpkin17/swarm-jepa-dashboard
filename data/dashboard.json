@@ -45,15 +45,29 @@
         "Phase 16 initial gate는 environment step·sampled action·outcome 0회로 384/384 identity를 통과했고, 이후 source-frozen fresh diagnostic states 384개와 fixed prefix plan을 결속했다.",
         "Phase 16은 983,040 training transitions와 768 support steps를 완료했다. 11/12 strata가 통과했지만 PIM-M1 sampled 57/64가 고정 하한 58에 한 건 미달해 평가 전 REJECT됐다.",
         "Phase 17은 update-20 probability/support를 통과하고 누적 11,796,480 training transitions를 완료했지만, update-240 action-free probability gate에서 RAW-M0·RAW-M1·PIM-M0가 실패해 final support와 평가 전에 종료됐다.",
-        "Phase 18 FALSIFY-v2.3은 Phase 17 실패를 공개적으로 결속하고 전달 출력 좌표를 모든 목적함수에서 동일하게 고정한 post-donation response-isolation 설계로 content-addressed 사전등록됐다."
+        "Phase 18 FALSIFY-v2.3은 Phase 17 실패를 공개적으로 결속하고 전달 출력 좌표를 모든 목적함수에서 동일하게 고정한 post-donation response-isolation 설계로 content-addressed 사전등록됐다.",
+        "Phase 18의 exact HTTPS 앵커, fixed-channel 단위 gate, diagnostic/training source freeze, 1,536-state manifest, update-20 plan이 완료됐으며 training·support·evaluation·outcome은 모두 0이다."
       ]
     },
     "curated_report_sections": {
       "Best result": "The v3 material need-share rate advantage replicated in seeds 404, 505, and 606. Across 64 fixed held-out worlds per seed, median POSITIVE-SHARE minus CTRL-NONE gain was `+0.9971` deterministic and `+0.7798` sampled. Median beneficial energy units per eligible need timestep gained `+2.0445` and `+2.1946`, respectively. Maximum energy-accounting error across v3 learned runs remained below `1.81e-05`.",
       "Executive summary": "Day 1 has produced eight immutable exploratory experiment blocks, one fresh CEF-10 checkpoint-training block, and a tested, restartable two-agent stack. A direct-reward v3 control learned material energy transfer on 64 held-out worlds in each of three training seeds, but this remains engineered behavior rather than emergence: the policies manufactured 5--8 times more need opportunities, cycled energy bidirectionally, and shortened sampled episodes in every seed. No JEPA condition has run and every emergence score remains unscored. The last source-bound suite before phase-3/4 integration passed `326/326`; a new full receipt is pending. Partial resume is provenance-locked, interrupts and unsupported jobs fail closed, and semantic progress publication is nonblocking and retryable. The old schedule record remains nonexecuting and cannot open `FALSIFY-v1.1`; execution authority instead flows through the separately validated CEF parent DAG and typed adapter. CEF-01..09 are complete (`9/9`) at replacement CEF-09 freeze `49424c7b31a01f04e0ecf89dbee5d9849bd4845305d629556bb6d4ecd910170b`. The accepted firewall reconstructs internal parent edges and exact content contracts, then derives three typed views only after one committed opaque read. CEF-10 has executed factual enumeration and screen-domain-only neutral screening, then selected 485 windows without reading estimation outcomes. The schedule remains unanchored; estimation, do-minus-i, final gate evaluation, and JEPA remain locked. This is evaluator engineering progress, not causal or emergence evidence. The JEPA matrix remains pending and unclaimed.",
-      "Human-readable conclusion": "We can reliably train agents to transfer energy when directly rewarded, but we still cannot say that the transfers preserve a partner: sampled episodes end sooner and much of the flow cancels in the opposite direction. The research system now prevents several ways this ambiguity could be hidden—mixed-source resume, unsupported-job claiming, fuzzy public evidence, invented zeroes, and a manifest that overstates readiness. There is still no JEPA or social-emergence result. The scientifically useful next move is the fresh CEF-10 calibration under the now-frozen evaluator.",
+      "Human-readable conclusion": "The project has not found robust social emergence. It has instead established that raw JEPA, anti-collapse JEPA, learning progress, model gain, and the tested PIM pipelines do not clear the registered effect/support/harm chain in this environment. Phase 18 can still determine whether a matched forced donation exposes a downstream PIM response, but that is an engineered decomposition. The most defensible final contribution is the audited negative-result boundary plus the mechanism and environment limitations that explain where the search failed. # Latest update — Phase 18 anchor + fixed-channel unit gate PASS 2026-08-16 17:36 KST 현재 FALSIFY-v2.3 content-addressed preregistration과 exact public HTTPS anchor가 완료됐고, 고정 전달 채널의 gradient/Adam/projection unit gate가 PASS했다. 학습·diagnostic states·평가·outcome은 아직 0이다. 상세: [`20260816_phase18_anchor_and_unit_gate.md`](20260816_phase18_anchor_and_unit_gate.md).",
+      "Instructions / hypothesis alignment audit": "About 72.5 hours remain. The project has strong preregistration, provenance, and honest REJECT boundaries, but Phases 15--18 increasingly measure engineered transfer-channel feasibility rather than learned social emergence. Phase 18 is now bounded as a secondary fixed-affordance post-donation response assay; it cannot support learned-sharing or spontaneous-emergence claims. Persistent state, objective history, ICRA text, registry, daily reports, full-test status, and the public dashboard require catch-up. Full audit: [`20260816_instructions_hypothesis_alignment_audit.md`](20260816_instructions_hypothesis_alignment_audit.md).",
+      "Phase 18 exact pretraining checkpoint": "Preregistration `6753a2c8...ec60b`, anchor `849045cd...beec8`, unit gate `c2db0a26...c7c6eb`, source freeze `1536927a...0da75`, fresh 1,536-state manifest `f53df4b8...6046d`, and update-20 plan `75e760a2...13d8e` are complete. Phase-18 training transitions, support actions, evaluation worlds, and outcomes remain zero. Only the execution source freeze is next.",
       "Strongest alternative explanation": "The rewarded controller learns to approach, remain close, and cycle energy to harvest gross-transfer reward. The material-rate signal is real but need not be partner preservation. For future JEPA cells, the strongest alternative remains predictability management by immobilization, simplification, synchronization, or death.",
       "Suspicious results": "The deterministic mean action can delay first death in one seed while the sampled policy shortens life in every seed. Because every episode ends at the first death, mean alive fraction hides this difference. Fixed-horizon counterfactual survival, net receiver gain, opportunity creation, collision/contact, and role-conditioned mortality must be reported together."
+    },
+    "hypothesis_alignment": {
+      "H1": "등록된 JEPA-L0/L1 설계 안에서 REJECT; 보편적 JEPA 불가능성 주장은 아님",
+      "H2": "LP effect/increment/harm 실패, MG support 실패, PIM invalid/support 실패로 현재 지지 없음",
+      "H3": "제거되지 않음; 반복된 policy-entropy harm veto가 경고이며 living-vs-ghost dissociation은 미실행",
+      "H4": "robust Tier-1 mechanism 부재로 미검증",
+      "H5": "Tier-1 replication 부재로 미검증",
+      "audited_at": "2026-08-16T20:08:30+09:00",
+      "next_decision": "execution source를 먼저 동결한 뒤 update-20 prefix만 실행하고 invariant 또는 support 실패 시 종료; Phase 19 channel repair 금지",
+      "overall": "강한 provenance와 정직한 REJECT 경계는 유지됐지만 Phase 15--18은 원래 emergence 질문에서 treatment-channel feasibility 공학으로 이동했다.",
+      "phase18_boundary": "고정 transfer head가 social action을 직접 지정하므로 downstream response decomposition만 가능"
     },
     "limitations": [
       "v3은 행동을 직접 지정하는 공유 보상을 쓴 양성대조군이다.",
@@ -5352,18 +5366,23 @@
     "phase18": {
       "byte_length": 18421,
       "chronology": {
-        "phase17_evaluation_world_states_created": 0,
-        "phase17_final_actual_support_actions_sampled": 0,
-        "phase17_final_probability_result_opened_for_design": true,
-        "phase17_outcomes_opened": 0,
-        "phase18_checkpoints_created": 0,
-        "phase18_diagnostic_world_states_created": 0,
-        "phase18_evaluation_world_states_created": 0,
-        "phase18_outcomes_opened": 0,
-        "phase18_support_actions_sampled": 0,
-        "phase18_training_transitions": 0
+        "checkpoint_invariant_evaluations": 0,
+        "diagnostic_states_created": 1536,
+        "evaluation_world_state_bytes": 0,
+        "evaluation_world_states_created": 0,
+        "outcomes_opened": 0,
+        "stage2_world_states_created": 0,
+        "support_environment_steps": 0,
+        "training_checkpoints_created": 0,
+        "training_transitions": 0
       },
       "claim_boundary": "outcome-informed exploratory fixed-affordance response-isolation protocol only; learned sharing, cooperation, altruism, safety, spontaneous emergence, and confirmatory claims are forbidden",
+      "current_execution_counts": {
+        "evaluation_worlds": 0,
+        "outcomes": 0,
+        "support_actions": 0,
+        "training_transitions": 0
+      },
       "design": {
         "confirmatory_status": "outcome_informed_exploratory_fixed_affordance_response_isolation",
         "direct_social_reward": false,
@@ -5473,6 +5492,167 @@
           "world-1160255"
         ]
       },
+      "diagnostic_manifest": {
+        "execution_counts": {
+          "environment_instances_constructed": 1536,
+          "environment_steps": 0,
+          "evaluation_world_states": 0,
+          "outcomes_opened": 0,
+          "policy_forward_calls": 0,
+          "sampled_actions": 0,
+          "training_transitions": 0
+        },
+        "manifest_sha256": "f53df4b8c65560c4eb5e6ee912cde332387d06d36bed0d644016a5756c36046d",
+        "measurements": {
+          "maximum_absolute_target_error": "2.980232238769531e-07",
+          "maximum_pair_distance": "0.7500002980232239",
+          "minimum_pair_distance": "0.7499997019767761",
+          "state_count": 1536
+        },
+        "world_range": [
+          "world-1160000",
+          "world-1160255"
+        ],
+        "world_state_bundle_sha256": "3e8503b1a03d24a982c6a45ce80a8cd0d400dc71f31128c9489ce8696468ccd0"
+      },
+      "diagnostic_source_freeze": {
+        "acceptance": {
+          "cells": [
+            "OFF_M0",
+            "OFF_M1",
+            "RAW_M0",
+            "RAW_M1",
+            "PIM_M0",
+            "PIM_M1"
+          ],
+          "evaluation_world_states": 0,
+          "fixed_channel_training_runtime_bound": true,
+          "outcomes_opened": 0,
+          "phase16_world_ids_reused": false,
+          "phase17_world_ids_reused": false,
+          "policy_forward_calls": 0,
+          "state_count": 1536,
+          "training_transitions": 0,
+          "world_count": 256,
+          "world_ids": [
+            "world-1160000",
+            "world-1160255"
+          ]
+        },
+        "freeze_sha256": "1536927afbed147dac424ddc82de4adc93117c9cf4ce18f31ced3edb80b0da75",
+        "source": {
+          "git_revision": "052824e2bd4f7ca182c9b9c1d81845e773971e3e",
+          "tree_oid": "77df49183ca127f51ee91e52834d5880acb773ce",
+          "worktree_clean": true
+        }
+      },
+      "fixed_channel_unit_gate": {
+        "execution": {
+          "environment_instances_constructed": 0,
+          "environment_steps": 0,
+          "outcome_payloads_opened": 0,
+          "policy_class": "IndependentGaussianPolicy",
+          "sampled_actions": 0,
+          "synthetic_observation_batches": 1,
+          "synthetic_optimizer_steps": 1,
+          "torch_seed": 36001
+        },
+        "gate": {
+          "adversarial_projection_restores_exact_contract": true,
+          "all_1536_probabilities_at_least_registered_floor": true,
+          "all_frozen_adam_moments_exact_zero": true,
+          "all_frozen_gradients_exact_zero": true,
+          "all_post_step_frozen_parameters_exact": true,
+          "movement_and_hidden_gradients_nonzero": true,
+          "pass": true
+        },
+        "gate_sha256": "c2db0a2655c3d5250c7dbfdf78340c8f3b04ba2939958180abc965a352a7c6eb",
+        "measurements": {
+          "after_optimizer_step_parameters": {
+            "transfer_biases": [
+              "0.25",
+              "0.25"
+            ],
+            "transfer_raw_log_standard_deviations": [
+              "-0.5",
+              "-0.5"
+            ],
+            "transfer_weight_row_nonzero_counts": [
+              0,
+              0
+            ]
+          },
+          "after_projection_parameters": {
+            "transfer_biases": [
+              "0.25",
+              "0.25"
+            ],
+            "transfer_raw_log_standard_deviations": [
+              "-0.5",
+              "-0.5"
+            ],
+            "transfer_weight_row_nonzero_counts": [
+              0,
+              0
+            ]
+          },
+          "analytic_success_probability": "0.9647852416551231",
+          "frozen_coordinate_adam_exp_avg_nonzero_counts": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "frozen_coordinate_adam_exp_avg_sq_nonzero_counts": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "frozen_coordinate_gradient_nonzero_counts": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "initial_parameters": {
+            "transfer_biases": [
+              "0.25",
+              "0.25"
+            ],
+            "transfer_raw_log_standard_deviations": [
+              "-0.5",
+              "-0.5"
+            ],
+            "transfer_weight_row_nonzero_counts": [
+              0,
+              0
+            ]
+          },
+          "injected_corruption_parameters": {
+            "transfer_biases": [
+              "0.25",
+              "1.0"
+            ],
+            "transfer_raw_log_standard_deviations": [
+              "1.0",
+              "-0.5"
+            ],
+            "transfer_weight_row_nonzero_counts": [
+              1,
+              0
+            ]
+          },
+          "minimum_probability_inclusive": "0.9512917514791949",
+          "movement_output_gradient_nonzero_count": 32,
+          "optimizer_weight_decay": "0.0",
+          "shared_hidden_gradient_nonzero_count": 208,
+          "synthetic_loss": "0.6532089710235596"
+        }
+      },
       "intervention_family": {
         "branch_difference": "only_donor_frozen_exogenous_transfer_coordinate_at_t0_versus_exact_zero",
         "distinct_from_phase14_endogenous_material_onset": true,
@@ -5522,18 +5702,17 @@
       },
       "permissions": {
         "actual_support_sampling_authorized": false,
-        "checkpoint_invariant_gate_authorized": false,
         "counterfactual_evaluation_authorized": false,
-        "diagnostic_world_construction_authorized": false,
         "evaluation_world_construction_authorized": false,
-        "fixed_channel_unit_diagnostic_authorized": false,
-        "implementation_freeze_authorized": false,
-        "next_gate": "exact_public_https_anchor",
+        "full_training_authorized": false,
+        "maximum_authorized_update_inclusive": 20,
+        "next_gate": "source_freeze_then_update20_prefix_and_fixed_channel_invariant_gate",
         "outcome_read_authorized": false,
-        "public_anchor_construction_authorized": true,
+        "prefix_training_authorized": true,
         "scientific_claim_authorized": false,
-        "stage_2_authorized": false,
-        "training_authorized": false
+        "stage2_authorized": false,
+        "update20_fixed_channel_invariant_gate_authorized": true,
+        "update21_authorized": false
       },
       "preimplementation_gate": {
         "boundary_unit_cases": {
@@ -5642,6 +5821,16 @@
       },
       "preregistration_sha256": "6753a2c842eca321bf31408252e4b1ff319b0ca090b87c64307a2e82477ec60b",
       "protocol_id": "FALSIFY-v2.3",
+      "public_anchor": {
+        "receipt_sha256": "849045cd82d9750bb67ab99f57f7b3f8272447f413f9f5cbaf3c99be9a5beec8",
+        "verification": {
+          "attempts": 1,
+          "exact_https_byte_and_semantic_match": true,
+          "method": "cache_busted_exact_https_byte_and_semantic_sha256_match",
+          "public_repository_commit": "b75beef4ed3029d0ced93e407bbc5febde6ca09e",
+          "verified_at": "2026-08-16T17:31:10+09:00"
+        }
+      },
       "raw_file_sha256": "d339fb6f1ceba25d157e8e378bd7c2a1313caf800d9e4d246e4745405952151c",
       "repair_rationale": {
         "confirmatory_claim_forbidden": true,
@@ -5667,7 +5856,7 @@
         "repair_does_not_raise_bias_reduce_variance_relax_threshold_or_reroll_tape": true,
         "transfer_channel_is_no_longer_a_learned_behavioral_output": true
       },
-      "state": "preregistration_frozen_public_anchor_pending",
+      "state": "pretraining_chain_complete_execution_source_freeze_pending",
       "training": {
         "actor_intrinsic_coefficient_OFF": "0.0",
         "actor_intrinsic_coefficient_PIM": "1.0",
@@ -5744,6 +5933,36 @@
         "updates": 240,
         "variance_regularization_weight": "25.0",
         "variance_target": "1.0"
+      },
+      "training_plan": {
+        "chronology_assertions": {
+          "checkpoint_invariant_evaluations": 0,
+          "diagnostic_states_created": 1536,
+          "evaluation_world_state_bytes": 0,
+          "evaluation_world_states_created": 0,
+          "outcomes_opened": 0,
+          "stage2_world_states_created": 0,
+          "support_environment_steps": 0,
+          "training_checkpoints_created": 0,
+          "training_transitions": 0
+        },
+        "prefix_budget": {
+          "actual_support_environment_steps_authorized_now": 0,
+          "checkpoint_invariant_evaluations": 1536,
+          "conditional_support_environment_steps_after_invariant_pass": 3072,
+          "fixed_raw_log_standard_deviation": "-0.5",
+          "fixed_raw_mean": "0.25",
+          "minimum_checkpoint_material_action_probability": "0.9512917514791949",
+          "support_denominator_per_stratum": 256,
+          "support_minimum_success_count_per_stratum": 232,
+          "support_modes": [
+            "deterministic",
+            "sampled"
+          ],
+          "support_strata": 12,
+          "training_transitions": 983040
+        },
+        "training_plan_sha256": "75e760a23fd9b38cdc2da0e1b473597d77a1796aa4e16e56515c21b981313d8e"
       }
     },
     "positive_control": {
@@ -6026,7 +6245,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-16T08:28:24.899174+00:00",
+  "generated_at": "2026-08-16T11:26:13.840805+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -6237,8 +6456,8 @@
     "total": 7
   },
   "project": {
-    "headline": "Phase 17은 update-240 probability gate에서 종료됐다. Phase 18은 전달 채널을 모든 셀에서 동일하게 고정하고 post-donation response만 묻는 별도 outcome-informed 탐색 설계이며, content-addressed 사전등록을 동결했다. 현재 공개 HTTPS 앵커 외 모든 실행 권한은 잠겨 있다.",
-    "phase": "Phase 18 — FALSIFY-v2.3 preregistration frozen",
+    "headline": "Phase 17은 update-240 probability gate에서 종료됐다. Phase 18의 공개 앵커, fixed-channel 단위 gate, source freeze, 1,536-state 진단 manifest, update-20 plan은 완료됐고 학습·support·평가·outcome은 모두 0이다. 이 실험은 engineered post-donation response assay일 뿐 learned sharing이나 원 H1의 증거가 될 수 없다.",
+    "phase": "Phase 18 — execution source freeze pending",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -6437,23 +6656,23 @@
     "day": 4,
     "deadline": "2026-08-19T20:40:52+09:00",
     "deadline_passed": false,
-    "elapsed_fraction": 0.552336,
-    "remaining_hours": 75.21,
+    "elapsed_fraction": 0.569977,
+    "remaining_hours": 72.24,
     "start": "2026-08-12T20:40:52+09:00",
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-16T17:27:20+09:00",
+    "checked_at": "2026-08-16T20:25:03+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 552,
-      "sha256": "30527c66a1b06b1061a92a95a95a83b42f17bba6ee454d0f0c3051daba2892f8"
+      "file_count": 569,
+      "sha256": "5915d5307230ef0a988c2673adca72298e65f6097fe13f81d926e5c4226ea94f"
     },
-    "note": "통합 전체 테스트 스위트: 709/709 통과",
-    "passed": 709,
+    "note": "통합 전체 테스트 스위트: 723/723 통과",
+    "passed": 723,
     "status": "passed",
-    "total": 709
+    "total": 723
   },
   "workstreams": {
     "completed_criteria": 28,
