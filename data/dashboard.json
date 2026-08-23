@@ -6422,7 +6422,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-23T19:10:03.675958+00:00",
+  "generated_at": "2026-08-23T19:41:53.809527+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -6854,17 +6854,17 @@
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-24T04:09:00+09:00",
+    "checked_at": "2026-08-24T04:39:47+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
       "file_count": 629,
-      "sha256": "6be2a083018029814bd3241835301dd28f7da6fb1dcaf6e57a25aaf1176b7be2"
+      "sha256": "117b147412c541827765ce3a360219a0aa5c73f21d875e708b82f8ce5ed004a0"
     },
-    "note": "통합 전체 테스트 스위트: 805/805 통과",
-    "passed": 805,
+    "note": "통합 전체 테스트 스위트: 806/806 통과",
+    "passed": 806,
     "status": "passed",
-    "total": 805
+    "total": 806
   },
   "workstreams": {
     "completed_criteria": 38,
@@ -7157,7 +7157,7 @@
       },
       {
         "blockers": [
-          "고정밀 실측값 7개가 식별 가능한 공개 dashboard와 exact match하여 외부 anonymous URL은 직접 연결된다. Conference-managed anonymous upload만 허용한다."
+          "고정밀 실측값 7개가 식별 가능한 공개 dashboard와 exact match하여 외부 anonymous URL은 직접 연결된다. ICRA 2027은 별도 supplementary artifact를 받지 않으므로 review 중 package는 비공개로 유지하고 de-anonymization 뒤 GitHub에 공개한다."
         ],
         "checklist": [
           {
@@ -7207,7 +7207,7 @@
           },
           {
             "complete": false,
-            "criterion": "기존 공개 실측값과의 재식별 위험을 해결한 뒤 익명 review URL을 발행한다.",
+            "criterion": "double-anonymous review 종료 후 GitHub reproduction package와 공개 URL을 발행한다.",
             "id": "anonymous_external_release"
           },
           {
@@ -7218,8 +7218,8 @@
         ],
         "completed_count": 10,
         "id": "icra2027_submission",
-        "last_verified_at": "2026-08-24T03:52:00+09:00",
-        "next_criterion": "기존 공개 실측값과의 재식별 위험을 해결한 뒤 익명 review URL을 발행한다.",
+        "last_verified_at": "2026-08-24T05:10:00+09:00",
+        "next_criterion": "double-anonymous review 종료 후 GitHub reproduction package와 공개 URL을 발행한다.",
         "objective": "종료된 negative result를 과장 없이 8페이지 이하 익명 논문과 재현 가능한 review artifact로 고정한다.",
         "progress_fraction": 0.909091,
         "state": "active",
