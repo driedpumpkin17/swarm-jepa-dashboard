@@ -14,7 +14,8 @@
         "Phase 16의 stronger Level-4 prior가 spontaneous JEPA+mortality emergence 또는 confirmatory evidence다.",
         "Phase 16의 11/12 support PASS 또는 PIM-M1의 한 건 차이가 causal effect, 안전, 협력, 이타성, 창발을 입증한다.",
         "Phase 17의 표본수 확대 또는 family-wise 계산 자체가 causal effect, 안전, 협력, 이타성, 창발을 입증한다.",
-        "Phase 18의 고정 외생 전달 affordance 아래 반응 차이가 learned sharing, 협력, 이타성 또는 자발 창발을 입증한다."
+        "Phase 18의 고정 외생 전달 affordance 아래 반응 차이가 learned sharing, 협력, 이타성 또는 자발 창발을 입증한다.",
+        "MECH-01 pre-branch HARM REJECT가 forced-donation reward--survival causal effect가 0임을 입증한다."
       ],
       "supported": [
         "재시작 가능한 실험 스택과 에너지 회계 검사가 작동한다.",
@@ -48,7 +49,7 @@
         "Phase 18 FALSIFY-v2.3은 Phase 17 실패를 공개적으로 결속하고 전달 출력 좌표를 모든 목적함수에서 동일하게 고정한 post-donation response-isolation 설계로 content-addressed 사전등록됐다.",
         "Phase 18의 exact HTTPS 앵커, fixed-channel 단위 gate, diagnostic/training source freeze, 1,536-state manifest, update-20 plan이 완료됐으며 training·support·evaluation·outcome은 모두 0이다.",
         "Phase 18은 실행 전에 supersede됐고, 54-row 정적 감사에서 단순 zero-coupling 설명은 기각됐지만 positive reward mean만으로 행동 표현이나 상대 보존을 보장하지 않음이 확인됐다.",
-        "MECH-01 강제기부 paired diagnostic은 6 checkpoint, 64 fresh worlds, 6,528 paired rollouts를 계획했다. 기본 protocol HTTPS anchor와 완전 branch-engine 합성 unit gate는 완료됐고, 5개 core-harm 산식·aggregation·outcome firewall을 고정한 outcome-free amendment의 공개 HTTPS anchor가 다음 gate다. checkpoint read·환경 instance·branch·outcome은 모두 0이다."
+        "MECH-01은 6 checkpoint와 64 fresh world의 outcome-free evidence를 만들었지만 branch 전에 종료됐다. 196,608 fixed-bank action vector에서 LP-minus-OFF entropy drop 0.192598과 PIM-minus-OFF 1.611781이 등록 veto 0.10을 초과했다. 환경 step·experimental branch·outcome은 모두 0이다."
       ]
     },
     "curated_report_sections": {
@@ -94,6 +95,7 @@
       "Phase 18은 Phase 17 결과를 보고 estimand를 post-donation response로 바꾼 outcome-informed exploratory 설계다. 전달 채널 자체는 학습 결과가 아니므로 어떤 성공도 learned sharing이나 자발 창발로 해석할 수 없다.",
       "MECH-01은 Phase 12/14 결과를 보고 설계한 single-seed exploratory localization이며 forced donation의 downstream 반응만 측정한다. 결과가 양수여도 learned sharing, 협력, 이타성, 자발 창발 또는 원 가설의 confirmatory evidence가 아니다.",
       "MECH-01 환경에는 자원과 safe-cell/egress target oracle이 없어 harmful blocking과 starvation monopoly는 사전 영수증을 동반한 구조적 N/A다. 따라서 all-seven-harm 또는 safety claim은 금지된다.",
+      "MECH-01은 fixed-observation entropy harm gate에서 branch 전에 종료됐으므로 reward--survival causal estimand은 unavailable이며 0으로 대입할 수 없다.",
       "heartbeat는 SIGKILL 이후 liveness를 단독으로 증명하지 못한다."
     ]
   },
@@ -126,14 +128,21 @@
     },
     "mechanism_program": {
       "actual_execution": {
+        "checkpoint_bytes_read_recovery_inclusive": 249403080,
+        "checkpoint_file_reads_recovery_inclusive": 14,
+        "crn_post_t0_key_slots": 4974336,
+        "environment_instances": 64,
+        "experimental_branch_transitions": 0,
+        "experimental_branches": 0,
+        "fixed_bank_action_vectors": 196608,
         "new_environment_steps": 0,
         "new_outcomes_opened": 0,
-        "new_policy_forward_calls": 0
+        "new_policy_forward_calls": 384
       },
       "available": true,
-      "claim_boundary": "single-seed exploratory reward-survival coupling localization under a forced action; no learned sharing, cooperation, altruism, spontaneous emergence, safety, H1, or H2 claim",
-      "completed_gates": 6,
-      "count_basis": "completed immutable gates / 11; not time, compute, or scientific confidence",
+      "claim_boundary": "pre-branch fixed-observation entropy HARM REJECT; causal reward-survival effects are unavailable, not zero; no learned sharing, cooperation, altruism, spontaneous emergence, safety, H1, or H2 claim",
+      "completed_gates": 12,
+      "count_basis": "completed immutable gates on the realized preregistered stopping path / 12; not time, compute, or scientific confidence",
       "gates": [
         {
           "done": true,
@@ -160,33 +169,45 @@
           "id": "M6-HARM-TRANSPORT-AMENDMENT"
         },
         {
-          "done": false,
+          "done": true,
           "id": "M7-AMENDMENT-PUBLIC-HTTPS-ANCHOR"
         },
         {
-          "done": false,
-          "id": "M8-IMPLEMENTATION-FREEZE"
+          "done": true,
+          "id": "M8-CHECKPOINT-COMPATIBLE-IMPLEMENTATION-FREEZE"
         },
         {
-          "done": false,
-          "id": "M9-FRESH-PREOUTCOME-MANIFEST"
+          "done": true,
+          "id": "M9-SIX-CHECKPOINT-MANIFEST"
         },
         {
-          "done": false,
-          "id": "M10-PAIRED-EXECUTION"
+          "done": true,
+          "id": "M10-ANALYTIC-PREOUTCOME-PLAN"
         },
         {
-          "done": false,
-          "id": "M11-FIREWALLED-ANALYSIS"
+          "done": true,
+          "id": "M11-PREOUTCOME-EVIDENCE-SOURCE-FREEZE"
+        },
+        {
+          "done": true,
+          "id": "M12-PREBRANCH-HARM-GATE-TERMINAL-REJECT"
         }
       ],
       "hashes": {
+        "analytic_preoutcome_plan_sha256": "76c1fe7a4ac499f169bd1fb315411eda37e3c4d63778d0a4c5600bca8016fb85",
+        "applicability_receipt_bundle_sha256": "d527df47246953ce35a206bf21d2e449d219e47a335e36171d7a999d59582a9f",
         "base_public_anchor_receipt_sha256": "02bb11debc1ea3df11fd35aac7b9adc87684f2e61aa8d92ca5156005d23a2c40",
-        "complete_source_unit_gate_raw_sha256": "5e26d985a07235d5a9c57761b920a66047b8f8ed52631387fc4da75eacda195f",
-        "complete_source_unit_gate_sha256": "a8607774300bca8a8e3ce7464bf8e569be09a9ea0c9ed127a0a4dfb3cd79ee87",
+        "checkpoint_manifest_sha256": "a2c3d62db54e770831a6a9eaf6688b19f868930b638adea783c0569a5a24439f",
+        "complete_source_unit_gate_raw_sha256": "4457583d2c144f5ef39713f3f481ec54073b813c11c5c1e1d9969abed88044e4",
+        "complete_source_unit_gate_sha256": "4aef53e6fb52fc4b391566f532c617625c7a28561a832056d360df5f1000ec35",
+        "crn_tape_root_sha256": "d3922fb2bcf03bb99d60c345ed6ef79affe2041ca30f40f60f1488748b958108",
+        "environment_execution_manifest_sha256": "0e3ca647fb3379d06ce342da5e218bfac890d1145c205d09891eef9026ba13b4",
+        "harm_transport_amendment_anchor_receipt_sha256": "969a19e62bd8a484ff58e911a69ff050c8acf2e4a02fc8b48452382bc677903b",
         "harm_transport_amendment_canonical_sha256": "31608959057cf0ee5d68e19af6c270c9042352c344b9b0c82564fa1dd9bfa8c9",
         "harm_transport_amendment_raw_sha256": "aa3e7eb495a683fa4ebf2e79da6dbe7288b1234ceeb3e437dea26a16b5d1cb76",
         "harm_transport_amendment_sha256": "aecbddd1f34329c9b90f9eb5217d36c6c18fbde0c9f9af7ffbac57378826df35",
+        "implementation_freeze_sha256": "267058516058b998e29af7e02ec926e793ca3f65213e35f70c5ce0af3e26fa6c",
+        "preoutcome_implementation_freeze_sha256": "b9a12387be0fe49e4ef35b6b9d4378a0c6116ffc9e5163c7ae1baaedb444b18a",
         "protocol_raw_sha256": "0f4f766d2c48b4adf50d874d9862c3b9afd58c8f5a936623a7ddb8f4cbdd7d02",
         "protocol_semantic_sha256": "2901a6e0c40430c2d834d9a91ec26fe9003100535f027b0b13b91ab5bda7857e",
         "protocol_source_freeze_raw_sha256": "ba7fa37c23a31acb12cefbc46b60412244ce4b612a30430a9b5b9ac5a9a2c398",
@@ -205,6 +226,38 @@
         "unique_pair_identity_count": 6528,
         "unit_gate_pass": true
       },
+      "measured_prebranch_harm_gate": {
+        "all_seven_harms_covered": false,
+        "contrasts": [
+          {
+            "contrast_id": "phase12-RAW-minus-OFF",
+            "entropy_drop": -0.01152068051545152,
+            "veto_triggered": false
+          },
+          {
+            "contrast_id": "phase12-LP-minus-OFF",
+            "entropy_drop": 0.19259793275067588,
+            "veto_triggered": true
+          },
+          {
+            "contrast_id": "phase14-RAW-minus-OFF",
+            "entropy_drop": 0.033871932547353156,
+            "veto_triggered": false
+          },
+          {
+            "contrast_id": "phase14-PIM-minus-OFF",
+            "entropy_drop": 1.611781053017362,
+            "veto_triggered": true
+          }
+        ],
+        "fixed_entropy_veto_triggered": true,
+        "maximum_entropy_drop": 1.611781053017362,
+        "structural_not_applicable_harms": [
+          "harmful_blocking_fraction",
+          "starvation_monopoly_excess"
+        ],
+        "threshold_strictly_greater_than": 0.1
+      },
       "measured_static_audit": {
         "phase12_lp_m1_signed_mean": 0.021892140701446686,
         "phase14_pim_m1_candidate_onsets": 0,
@@ -214,19 +267,20 @@
         "positive_signed_signal_row_count": 31,
         "row_count": 54
       },
-      "next_gate": "content_addressed_harm_transport_amendment_public_https_anchor",
+      "next_gate": "terminal_reject_complete_continue_paper_and_reproduction_synthesis",
       "planned_execution": {
         "actor_branch_transitions": 3342336,
         "branches": 13056,
         "checkpoint_units": 6,
         "environment_branch_transitions": 1671168,
+        "execution_cancelled_by_registered_prebranch_harm_veto": true,
         "fresh_worlds": 64,
         "paired_rollouts": 6528
       },
-      "progress_fraction": 0.5454545454545454,
+      "progress_fraction": 1.0,
       "protocol_id": "MECH-01-v0",
-      "state": "harm_transport_amendment_public_anchor_pending",
-      "total_gates": 11
+      "state": "prebranch_fixed_entropy_harm_reject",
+      "total_gates": 12
     },
     "phase11": {
       "claim_boundary": "Stage-1 exploratory REJECT; no Stage-2, scientific, cooperation, altruism, or emergence claim",
@@ -6214,7 +6268,7 @@
     }
   },
   "experiments": {
-    "completed_count": 9,
+    "completed_count": 10,
     "rows": [
       {
         "completed_at": "2026-08-12T12:20:06.851322+00:00",
@@ -6350,10 +6404,25 @@
         "stage": 2,
         "status": "completed",
         "track": "B"
+      },
+      {
+        "completed_at": "2026-08-24T02:08:49+09:00",
+        "condition": "phase12-OFF-RAW-LP-M1;phase14-OFF-RAW-PIM-M1",
+        "decision": "PREBRANCH_HARM_REJECT",
+        "experiment_id": "20260824_0208_mech01-prebranch-harm-gate",
+        "notes": "Fixed-observation entropy veto: LP-OFF 0.192598 and PIM-OFF 1.611781 exceed 0.10; environment steps branches and outcomes remain zero.",
+        "objective_id": "MECH-01",
+        "seeds": [
+          30001,
+          32001
+        ],
+        "stage": "prebranch",
+        "status": "completed",
+        "track": "M"
       }
     ]
   },
-  "generated_at": "2026-08-23T16:45:11.050248+00:00",
+  "generated_at": "2026-08-23T17:31:26.365470+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -6564,8 +6633,8 @@
     "total": 7
   },
   "project": {
-    "headline": "MECH-01 기본 프로토콜 공개 앵커와 완전 branch-engine 합성 gate를 마쳤다. 실행 전 감사에서 5개 core-harm 산식의 모호성을 발견해 outcome-free 보완 amendment를 고정했으며, checkpoint read·환경 instance·branch·outcome은 모두 0이다.",
-    "phase": "MECH-01 — harm/transport amendment anchor pending",
+    "headline": "MECH-01은 branch 실행 전 fixed-observation entropy gate에서 LP-minus-OFF 0.192598 및 PIM-minus-OFF 1.611781로 등록 veto 0.10을 초과했다. 따라서 planned 1,671,168 transition과 outcome은 실행하지 않았고, negative-result ICRA synthesis로 전환했다.",
+    "phase": "MECH-01 — pre-branch fixed-entropy HARM REJECT",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -6578,10 +6647,10 @@
     "active_jobs": [],
     "availability_counts": {
       "blocked_unsupported": 1,
-      "completed": 9
+      "completed": 10
     },
-    "completed": 9,
-    "completion_fraction": 0.9,
+    "completed": 10,
+    "completion_fraction": 0.909091,
     "jobs": [
       {
         "availability": "completed",
@@ -6750,14 +6819,29 @@
         "stage": 2,
         "status": "completed",
         "track": "B"
+      },
+      {
+        "availability": "completed",
+        "depends_on": [],
+        "experiment_id": "20260824_0208_mech01-prebranch-harm-gate",
+        "id": "mech01_prebranch_harm_gate",
+        "kind": "mechanism_gate",
+        "objective_id": "MECH-01",
+        "seeds": [
+          30001,
+          32001
+        ],
+        "stage": "prebranch",
+        "status": "completed",
+        "track": "M"
       }
     ],
     "status_counts": {
-      "completed": 9,
+      "completed": 10,
       "pending": 1
     },
-    "total": 10,
-    "updated_at": "2026-08-13T14:56:04.561172+00:00"
+    "total": 11,
+    "updated_at": "2026-08-24T02:08:49+09:00"
   },
   "schema_version": 1,
   "sprint": {
@@ -6770,17 +6854,17 @@
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-24T01:43:58+09:00",
-    "command": "scoped external Git excludesFile for one declared user path; python3 scripts/record_test_status.py",
+    "checked_at": "2026-08-24T02:28:03+09:00",
+    "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 593,
-      "sha256": "5564a0d5f52c5a204974237c71d5d5363ac122006df34cdb4e2a60ac39a0b124"
+      "file_count": 615,
+      "sha256": "37df903b9cb156a0ff56e96862f07c026b7ae4a781593dde77e554b1b2c5a4ca"
     },
-    "note": "통합 전체 테스트 스위트: 765/765 통과; 사용자 소유 미추적 research/literature/swarm_control_trends.md는 저장소나 파일을 변경하지 않는 테스트 전용 외부 excludesFile로만 Git clean-status 검사에서 제외; wall 309.81s, user 311.56s, system 28.38s, max RSS 1171260 KiB, swap 0",
-    "passed": 765,
+    "note": "통합 전체 테스트 스위트: 784/784 통과",
+    "passed": 784,
     "status": "passed",
-    "total": 765
+    "total": 784
   },
   "workstreams": {
     "completed_criteria": 28,

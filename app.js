@@ -285,7 +285,7 @@ function renderAutomationRoadmap(milestones) {
 function renderMechanismProgram(program) {
   if (!program || !program.available) {
     setText("#mechanism-state", program ? program.state : "not available");
-    setText("#mechanism-total", "0 / 11");
+    setText("#mechanism-total", "0 / 12");
     return;
   }
   setText("#mechanism-total", program.completed_gates + " / " + program.total_gates);
@@ -302,10 +302,16 @@ function renderMechanismProgram(program) {
   setText("#mechanism-plan", planned.paired_rollouts.toLocaleString() + " · " + planned.branches.toLocaleString() + " · " + planned.fresh_worlds);
   const audit = program.measured_static_audit;
   setText("#mechanism-audit", audit.positive_signed_signal_row_count + " / " + audit.row_count + " positive signed rows");
+  const harm = program.measured_prebranch_harm_gate;
+  const vetoes = harm.contrasts.filter(row => row.veto_triggered);
+  setText("#mechanism-harm", vetoes.map(row => row.contrast_id + " " + row.entropy_drop.toFixed(6)).join(" · ") + " · REJECT");
+  setText("#mechanism-checkpoint-access", actual.checkpoint_file_reads_recovery_inclusive + " reads · " + actual.checkpoint_bytes_read_recovery_inclusive.toLocaleString() + " bytes");
   setText("#mechanism-protocol-sha", program.hashes.protocol_semantic_sha256);
   setText("#mechanism-freeze-sha", program.hashes.protocol_source_freeze_sha256);
   setText("#mechanism-unit-gate-sha", program.hashes.complete_source_unit_gate_sha256);
   setText("#mechanism-amendment-sha", program.hashes.harm_transport_amendment_sha256);
+  setText("#mechanism-environment-sha", program.hashes.environment_execution_manifest_sha256);
+  setText("#mechanism-applicability-sha", program.hashes.applicability_receipt_bundle_sha256);
   setText("#mechanism-claim-boundary", program.claim_boundary);
 }
 
