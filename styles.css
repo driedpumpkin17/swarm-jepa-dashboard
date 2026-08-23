@@ -213,7 +213,7 @@ h2 { margin: .45rem 0 0; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.05;
 .mechanism-grid > div { padding: 1rem; background: rgba(18,34,29,.75); border: 1px solid var(--line); border-radius: 10px; }
 .mechanism-grid strong { display: block; margin-top: .45rem; color: var(--ink); font: 600 .92rem ui-monospace, monospace; }
 .mechanism-grid p { margin: .45rem 0 0; color: var(--faint); font-size: .7rem; }
-.mechanism-measurements { display: grid; grid-template-columns: 1fr 2fr 2fr; gap: .8rem; margin-top: .8rem; }
+.mechanism-measurements { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .8rem; margin-top: .8rem; }
 .mechanism-measurements p { min-width: 0; margin: 0; padding: .85rem; background: rgba(7,17,15,.6); border-top: 1px solid var(--line); }
 .mechanism-measurements span { display: block; color: var(--faint); font: 600 .62rem ui-monospace, monospace; }
 .mechanism-measurements strong, .mechanism-measurements code { display: block; margin-top: .4rem; overflow-wrap: anywhere; color: var(--mint); font-size: .7rem; }

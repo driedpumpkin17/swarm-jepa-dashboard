@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "mech01_v0_outcome_free_aggregation_harm_transport_amendment",
+  "amendment_id": "MECH-01-v0.1-harm-transport",
+  "protocol_id": "MECH-01-v0",
+  "status": "outcome_free_required_addendum_before_implementation_freeze",
+  "parents": {
+    "protocol_source_freeze_sha256": "cb7e42f5bcced41143234d4536d406c32850c32ad7e34f9e64c70c5444436ed0",
+    "public_anchor_receipt_sha256": "02bb11debc1ea3df11fd35aac7b9adc87684f2e61aa8d92ca5156005d23a2c40",
+    "complete_source_unit_gate_sha256": "00706565eb9488af687966ad8a8cf485b0c06d03aefb761fe10832463afc06e0"
+  },
+  "chronology": {
+    "checkpoint_file_reads_after_parent_anchor": 0,
+    "experimental_environment_instances": 0,
+    "experimental_environment_steps": 0,
+    "experimental_policy_forward_calls": 0,
+    "experimental_branches": 0,
+    "outcome_payloads_constructed": 0,
+    "outcomes_opened": 0,
+    "formula_selected_after_outcome": false
+  },
+  "primary_aggregation": {
+    "pair_first": "forced_donation_minus_zero_donation_within_exact_checkpoint_world_mode_repeat",
+    "deterministic": "one_pair_per_world_then_equal_weight_mean_over_64_worlds",
+    "sampled": "mean_over_16_repeats_within_world_then_equal_weight_mean_over_64_worlds",
+    "checkpoint_pooling": "forbidden_report_all_six_checkpoint_units_separately",
+    "mode_pooling": "forbidden_report_deterministic_and_sampled_separately",
+    "phase_pooling": "forbidden",
+    "primary_endpoint": "discounted_donor_intrinsic_return_gamma_0.99_steps_0_through_127",
+    "uncertainty": "world_cluster_nonparametric_bootstrap_10000_replicates_hash_derived_indices_report_percentile_95_interval_descriptive_only",
+    "bootstrap_rng": "sha256_box_muller_not_used_indices_from_sha256_uint64_modulo_64_domain_MECH-01-v0.1-bootstrap-checkpoint-mode-replicate-draw",
+    "zero_threshold": "classification_uses_strict_mathematical_sign_with_exact_unrounded_aggregate_and_also_reports_1e-8_sensitivity_band",
+    "multiplicity_or_significance_gate": false
+  },
+  "matched_checkpoint_controls": [
+    {
+      "contrast_id": "phase12-RAW-minus-OFF",
+      "positive_unit_id": "phase12-RAW-M1",
+      "control_unit_id": "phase12-OFF-M1"
+    },
+    {
+      "contrast_id": "phase12-LP-minus-OFF",
+      "positive_unit_id": "phase12-LP-M1",
+      "control_unit_id": "phase12-OFF-M1"
+    },
+    {
+      "contrast_id": "phase14-RAW-minus-OFF",
+      "positive_unit_id": "phase14-RAW-M1",
+      "control_unit_id": "phase14-OFF-M1"
+    },
+    {
+      "contrast_id": "phase14-PIM-minus-OFF",
+      "positive_unit_id": "phase14-PIM-M1",
+      "control_unit_id": "phase14-OFF-M1"
+    }
+  ],
+  "movement_category_contract": {
+    "source": "realized_displacement_after_step",
+    "stationary_category": 0,
+    "stationary_norm_strictly_less_than": 0.00001,
+    "moving_categories": [1, 2, 3, 4, 5, 6, 7, 8],
+    "angle_formula": "1_plus_floor((atan2(dy,dx)+pi)/(pi/4))_mod_8",
+    "entropy": "plugin_Shannon_entropy_divided_by_ln_9",
+    "category_computed_only_for_finite_displacement": true
+  },
+  "harm_estimators": {
+    "partner_excess_death_risk": {
+      "scope": "within_checkpoint_and_mode_over_all_registered_pairs",
+      "formula": "mean(I(receiver_dead_after_128_forced)-I(receiver_dead_after_128_zero))",
+      "ordinary_veto_strictly_greater_than": 0.05,
+      "denominator": "all_64_worlds_times_registered_repeats"
+    },
+    "actor_caused_immobile_fraction": {
+      "scope": "forced_branch_receiver_transitions_only_within_checkpoint_and_mode",
+      "eligible": "receiver_pre_alive_and_receiver_intended_movement_strictly_greater_than_1e-4",
+      "numerator": "eligible_and_receiver_realized_displacement_norm_strictly_less_than_1e-5_and_blocked_by_agent_true",
+      "ordinary_veto_strictly_greater_than": 0.05,
+      "zero_eligible_denominator": "reject_checkpoint_mode"
+    },
+    "conditional_movement_entropy_drop": {
+      "scope": "within_checkpoint_mode_world_stratum_then_equal_world_mean",
+      "paired_support": "receiver_pre_alive_in_both_branches_at_same_repeat_and_step",
+      "formula": "normalized_entropy(zero_receiver_realized_categories)-normalized_entropy(forced_receiver_realized_categories)",
+      "ordinary_veto_strictly_greater_than": 0.10,
+      "zero_support": "reject_checkpoint_mode_world"
+    },
+    "fixed_observation_policy_entropy_drop": {
+      "scope": "four_registered_positive_checkpoint_minus_matched_OFF_checkpoint_contrasts",
+      "bank": "64_MECH_initial_observations_times_2_agents_times_256_hash_derived_raw_Gaussian_samples",
+      "sample_rng_key": "MECH-01-v0.1-fixed-bank-checkpoint_raw_sha256-world_id-agent_index-sample_index-action_component",
+      "sample_value": "sha256_Box_Muller_standard_normal_then_checkpoint_mean_plus_std_times_normal",
+      "per_sample_value": "negative_bounded_action_log_probability_including_tanh_and_sigmoid_Jacobian",
+      "formula": "mean_control_negative_log_density-minus_mean_positive_negative_log_density",
+      "ordinary_veto_strictly_greater_than": 0.10,
+      "fixed_bank_created_before_branch_execution": true
+    },
+    "forced_synchronization_index": {
+      "scope": "within_checkpoint_and_mode_forced_branch_with_zero_branch_leader_follower_control",
+      "agreement_excess": "forced_same_step_donor_receiver_category_agreement-minus_max(forced_receiver_circular_time_shift_17,forced_receiver_world_ordinal_shift_7)_agreement",
+      "entropy_drop_component": "max(0,conditional_movement_entropy_drop)",
+      "leader_follower_excess": "forced_P(receiver_category_t_plus_1_equals_donor_category_t)-zero_P(receiver_category_t_plus_1_equals_donor_category_t)_on_common_alive_support",
+      "coercion_cooccurrence": "forced_fraction_of_immobility_eligible_transitions_with_receiver_immobilized_and_blocked_by_agent_and_donor_realized_category_equals_receiver_commanded_category_and_category_nonzero",
+      "formula": "minimum_of_four_components_each_clamped_to_0_1",
+      "ordinary_veto_strictly_greater_than": 0.10,
+      "time_shift_steps": 17,
+      "world_shift_ordinals": 7,
+      "zero_denominator": "reject_checkpoint_mode"
+    }
+  },
+  "structural_harm_applicability": {
+    "classification_time": "checkpoint_and_environment_execution_manifest_after_parent_validation_before_any_branch_or_outcome",
+    "required": [
+      "partner_excess_death_risk",
+      "actor_caused_immobile_fraction",
+      "conditional_movement_entropy_drop",
+      "fixed_observation_policy_entropy_drop",
+      "forced_synchronization_index"
+    ],
+    "not_applicable": [
+      "harmful_blocking_fraction",
+      "starvation_monopoly_excess"
+    ],
+    "harmful_blocking_reason": "no_preregistered_safe_cell_egress_or_target_oracle_in_MECH_environment",
+    "starvation_monopoly_reason": "num_resources_exact_zero_and_no_acquisition_ownership_consumption_or_destruction_ledger",
+    "not_applicable_receipt_fields": [
+      "harm_field",
+      "status",
+      "rule_id",
+      "environment_execution_manifest_sha256",
+      "structural_prerequisite",
+      "manifest_evidence_sha256"
+    ],
+    "numeric_zero_or_null_substitution_for_not_applicable": false,
+    "all_seven_harms_covered": false,
+    "any_not_applicable_forbids_all_harm_or_safety_claim": true,
+    "post_outcome_applicability_change": "forbidden_requires_new_protocol_fresh_unopened_worlds"
+  },
+  "required_branch_trace": {
+    "main_field_shape": "checkpoint_unit_times_world_times_mode_times_repeat_times_branch_times_128_times_2_agents",
+    "policy_raw_entropy_post_t0_shape": "checkpoint_unit_times_world_times_mode_times_repeat_times_branch_times_127_times_2_agents",
+    "fields": [
+      "alive_pre",
+      "alive_post",
+      "commanded_movement",
+      "intended_movement",
+      "realized_displacement",
+      "blocked_by_agent",
+      "energy_pre",
+      "energy_post",
+      "transfer_sent",
+      "intrinsic_reward",
+      "policy_raw_entropy_post_t0"
+    ],
+    "finite_required_for_numeric_fields": true,
+    "trace_hash_bound_before_analysis": true,
+    "missing_trace_rejects": true
+  },
+  "outcome_transport": {
+    "parent_envelope_file": "gate_parent_envelope.json",
+    "parent_envelope_contains_outcome_fields": false,
+    "parent_envelope_exact_content": "typed_parent_hashes_parent_DAG_hash_protocol_adapter_execution_freeze_outcome_blob_sha256_outcome_blob_byte_length",
+    "outcome_file": "outcome_payload.bin",
+    "validation_order": [
+      "strict_parse_parent_envelope_only",
+      "resolve_and_hash_parent_bytes_in_topological_order",
+      "validate_parent_schemas_edges_and_parent_DAG_sha256",
+      "validate_adapter_and_execution_freeze",
+      "read_outcome_bytes_exactly_once",
+      "validate_outcome_byte_length_and_sha256",
+      "strict_deserialize_outcome_payload",
+      "derive_estimands_harms_and_classification"
+    ],
+    "caller_supplied_decoded_outcome": "forbidden",
+    "prevalidation_outcome_read_or_parse": "forbidden",
+    "exception_log_or_dashboard_contains_outcome_bytes": false,
+    "duplicate_key_or_nonfinite_outcome": "reject"
+  },
+  "classification": {
+    "NO_REWARD_COUPLING": "delta_valid_steps_strictly_positive_and_delta_discounted_intrinsic_return_less_than_or_equal_to_zero",
+    "REWARD_COUPLING_WITHOUT_EXPRESSION": "delta_valid_steps_strictly_positive_and_delta_discounted_intrinsic_return_strictly_positive_and_historical_material_expression_failed",
+    "ENGINEERED_DOWNSTREAM_RESPONSE": "forced_action_changes_downstream_metric_but_no_learned_action_or_emergence_claim",
+    "PREDICTABILITY_MANAGEMENT_WARNING": "delta_discounted_intrinsic_return_strictly_positive_and_any_registered_core_harm_strictly_exceeds_its_veto_threshold",
+    "classification_is_descriptive_not_a_pass_gate": true
+  },
+  "claim_boundary": {
+    "learned_sharing": false,
+    "cooperation": false,
+    "altruism": false,
+    "spontaneous_emergence": false,
+    "safety": false,
+    "all_harm_coverage": false,
+    "H1_or_H2_confirmatory_evidence": false,
+    "maximum_interpretation": "single_seed_exploratory_reward_survival_coupling_localization_within_forced_action_and_limited_harm_calibration"
+  },
+  "permissions": {
+    "amendment_publication_authorized": true,
+    "implementation_freeze_issuance_authorized": false,
+    "checkpoint_manifest_construction_authorized": false,
+    "world_construction_authorized": false,
+    "policy_forward_authorized": false,
+    "branch_execution_authorized": false,
+    "outcome_payload_construction_authorized": false,
+    "outcome_read_authorized": false,
+    "scientific_claim_authorized": false,
+    "next_gate": "strict_amendment_validator_tests_and_public_https_anchor"
+  },
+  "amendment_sha256": "aecbddd1f34329c9b90f9eb5217d36c6c18fbde0c9f9af7ffbac57378826df35"
+}

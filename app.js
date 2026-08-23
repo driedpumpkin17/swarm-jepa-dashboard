@@ -285,7 +285,7 @@ function renderAutomationRoadmap(milestones) {
 function renderMechanismProgram(program) {
   if (!program || !program.available) {
     setText("#mechanism-state", program ? program.state : "not available");
-    setText("#mechanism-total", "0 / 8");
+    setText("#mechanism-total", "0 / 11");
     return;
   }
   setText("#mechanism-total", program.completed_gates + " / " + program.total_gates);
@@ -304,6 +304,8 @@ function renderMechanismProgram(program) {
   setText("#mechanism-audit", audit.positive_signed_signal_row_count + " / " + audit.row_count + " positive signed rows");
   setText("#mechanism-protocol-sha", program.hashes.protocol_semantic_sha256);
   setText("#mechanism-freeze-sha", program.hashes.protocol_source_freeze_sha256);
+  setText("#mechanism-unit-gate-sha", program.hashes.complete_source_unit_gate_sha256);
+  setText("#mechanism-amendment-sha", program.hashes.harm_transport_amendment_sha256);
   setText("#mechanism-claim-boundary", program.claim_boundary);
 }
 

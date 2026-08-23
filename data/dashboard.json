@@ -48,7 +48,7 @@
         "Phase 18 FALSIFY-v2.3은 Phase 17 실패를 공개적으로 결속하고 전달 출력 좌표를 모든 목적함수에서 동일하게 고정한 post-donation response-isolation 설계로 content-addressed 사전등록됐다.",
         "Phase 18의 exact HTTPS 앵커, fixed-channel 단위 gate, diagnostic/training source freeze, 1,536-state manifest, update-20 plan이 완료됐으며 training·support·evaluation·outcome은 모두 0이다.",
         "Phase 18은 실행 전에 supersede됐고, 54-row 정적 감사에서 단순 zero-coupling 설명은 기각됐지만 positive reward mean만으로 행동 표현이나 상대 보존을 보장하지 않음이 확인됐다.",
-        "MECH-01 강제기부 paired diagnostic은 6 checkpoint, 64 fresh worlds, 6,528 paired rollouts를 계획했으며 protocol source freeze까지 완료됐다. 현재 새 환경 step·policy forward·outcome read는 모두 0이고 public HTTPS anchor가 다음 gate다."
+        "MECH-01 강제기부 paired diagnostic은 6 checkpoint, 64 fresh worlds, 6,528 paired rollouts를 계획했다. 기본 protocol HTTPS anchor와 완전 branch-engine 합성 unit gate는 완료됐고, 5개 core-harm 산식·aggregation·outcome firewall을 고정한 outcome-free amendment의 공개 HTTPS anchor가 다음 gate다. checkpoint read·환경 instance·branch·outcome은 모두 0이다."
       ]
     },
     "curated_report_sections": {
@@ -93,6 +93,7 @@
       "Phase 17은 Phase 16 결과를 보고 설계한 outcome-informed exploratory repair이며, family-wise support 통과가 있더라도 confirmatory 결과로 승격할 수 없다.",
       "Phase 18은 Phase 17 결과를 보고 estimand를 post-donation response로 바꾼 outcome-informed exploratory 설계다. 전달 채널 자체는 학습 결과가 아니므로 어떤 성공도 learned sharing이나 자발 창발로 해석할 수 없다.",
       "MECH-01은 Phase 12/14 결과를 보고 설계한 single-seed exploratory localization이며 forced donation의 downstream 반응만 측정한다. 결과가 양수여도 learned sharing, 협력, 이타성, 자발 창발 또는 원 가설의 confirmatory evidence가 아니다.",
+      "MECH-01 환경에는 자원과 safe-cell/egress target oracle이 없어 harmful blocking과 starvation monopoly는 사전 영수증을 동반한 구조적 N/A다. 따라서 all-seven-harm 또는 safety claim은 금지된다.",
       "heartbeat는 SIGKILL 이후 liveness를 단독으로 증명하지 못한다."
     ]
   },
@@ -131,8 +132,8 @@
       },
       "available": true,
       "claim_boundary": "single-seed exploratory reward-survival coupling localization under a forced action; no learned sharing, cooperation, altruism, spontaneous emergence, safety, H1, or H2 claim",
-      "completed_gates": 3,
-      "count_basis": "completed immutable gates / 8; not time, compute, or scientific confidence",
+      "completed_gates": 6,
+      "count_basis": "completed immutable gates / 11; not time, compute, or scientific confidence",
       "gates": [
         {
           "done": true,
@@ -147,33 +148,62 @@
           "id": "M3-PROTOCOL-SOURCE-FREEZE"
         },
         {
-          "done": false,
-          "id": "M4-PUBLIC-HTTPS-ANCHOR"
+          "done": true,
+          "id": "M4-BASE-PUBLIC-HTTPS-ANCHOR"
+        },
+        {
+          "done": true,
+          "id": "M5-COMPLETE-BRANCH-ENGINE-UNIT-GATE"
+        },
+        {
+          "done": true,
+          "id": "M6-HARM-TRANSPORT-AMENDMENT"
         },
         {
           "done": false,
-          "id": "M5-IMPLEMENTATION-FREEZE"
+          "id": "M7-AMENDMENT-PUBLIC-HTTPS-ANCHOR"
         },
         {
           "done": false,
-          "id": "M6-FRESH-PREOUTCOME-MANIFEST"
+          "id": "M8-IMPLEMENTATION-FREEZE"
         },
         {
           "done": false,
-          "id": "M7-PAIRED-EXECUTION"
+          "id": "M9-FRESH-PREOUTCOME-MANIFEST"
         },
         {
           "done": false,
-          "id": "M8-FIREWALLED-ANALYSIS"
+          "id": "M10-PAIRED-EXECUTION"
+        },
+        {
+          "done": false,
+          "id": "M11-FIREWALLED-ANALYSIS"
         }
       ],
       "hashes": {
+        "base_public_anchor_receipt_sha256": "02bb11debc1ea3df11fd35aac7b9adc87684f2e61aa8d92ca5156005d23a2c40",
+        "complete_source_unit_gate_raw_sha256": "5e26d985a07235d5a9c57761b920a66047b8f8ed52631387fc4da75eacda195f",
+        "complete_source_unit_gate_sha256": "a8607774300bca8a8e3ce7464bf8e569be09a9ea0c9ed127a0a4dfb3cd79ee87",
+        "harm_transport_amendment_canonical_sha256": "31608959057cf0ee5d68e19af6c270c9042352c344b9b0c82564fa1dd9bfa8c9",
+        "harm_transport_amendment_raw_sha256": "aa3e7eb495a683fa4ebf2e79da6dbe7288b1234ceeb3e437dea26a16b5d1cb76",
+        "harm_transport_amendment_sha256": "aecbddd1f34329c9b90f9eb5217d36c6c18fbde0c9f9af7ffbac57378826df35",
         "protocol_raw_sha256": "0f4f766d2c48b4adf50d874d9862c3b9afd58c8f5a936623a7ddb8f4cbdd7d02",
         "protocol_semantic_sha256": "2901a6e0c40430c2d834d9a91ec26fe9003100535f027b0b13b91ab5bda7857e",
         "protocol_source_freeze_raw_sha256": "ba7fa37c23a31acb12cefbc46b60412244ce4b612a30430a9b5b9ac5a9a2c398",
         "protocol_source_freeze_sha256": "cb7e42f5bcced41143234d4536d406c32850c32ad7e34f9e64c70c5444436ed0",
         "static_audit_logical_sha256": "e598f8edf91d461fe508abe52042f670fa5c7317779516d369717e7c1e367571",
         "static_audit_raw_sha256": "b5becfeaae3d5876de70bc2f538b7d12c152bbb28b35aa185808e660397e2254"
+      },
+      "measured_outcome_free_unit_gate": {
+        "checkpoint_file_reads": 0,
+        "environment_instances": 0,
+        "experimental_branches": 0,
+        "maximum_forced_minus_zero_joint_energy_absolute_error": 1.1920923248531778e-08,
+        "maximum_forced_requested_absolute_error": 5.9604644331301415e-08,
+        "maximum_pair_distance_absolute_error": 2.980232238769531e-07,
+        "pair_identity_count": 6528,
+        "unique_pair_identity_count": 6528,
+        "unit_gate_pass": true
       },
       "measured_static_audit": {
         "phase12_lp_m1_signed_mean": 0.021892140701446686,
@@ -184,7 +214,7 @@
         "positive_signed_signal_row_count": 31,
         "row_count": 54
       },
-      "next_gate": "content_addressed_public_https_anchor",
+      "next_gate": "content_addressed_harm_transport_amendment_public_https_anchor",
       "planned_execution": {
         "actor_branch_transitions": 3342336,
         "branches": 13056,
@@ -193,10 +223,10 @@
         "fresh_worlds": 64,
         "paired_rollouts": 6528
       },
-      "progress_fraction": 0.375,
+      "progress_fraction": 0.5454545454545454,
       "protocol_id": "MECH-01-v0",
-      "state": "protocol_frozen_public_anchor_pending",
-      "total_gates": 8
+      "state": "harm_transport_amendment_public_anchor_pending",
+      "total_gates": 11
     },
     "phase11": {
       "claim_boundary": "Stage-1 exploratory REJECT; no Stage-2, scientific, cooperation, altruism, or emergence claim",
@@ -6323,7 +6353,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-23T16:05:49.022876+00:00",
+  "generated_at": "2026-08-23T16:45:11.050248+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -6534,8 +6564,8 @@
     "total": 7
   },
   "project": {
-    "headline": "Phase 18은 실행 전에 중단하고 실패 메커니즘 국소화로 전환했다. 54-row 정적 결합 감사와 MECH-01 강제기부 진단 프로토콜·소스 동결은 완료됐으며, 새 환경 step·policy forward·outcome read는 모두 0이다.",
-    "phase": "MECH-01 — protocol frozen, public anchor pending",
+    "headline": "MECH-01 기본 프로토콜 공개 앵커와 완전 branch-engine 합성 gate를 마쳤다. 실행 전 감사에서 5개 core-harm 산식의 모호성을 발견해 outcome-free 보완 amendment를 고정했으며, checkpoint read·환경 instance·branch·outcome은 모두 0이다.",
+    "phase": "MECH-01 — harm/transport amendment anchor pending",
     "status": "ACTIVE",
     "title": "Swarm / JEPA 사회적 창발 연구 스프린트"
   },
@@ -6740,17 +6770,17 @@
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-24T01:04:07+09:00",
+    "checked_at": "2026-08-24T01:43:58+09:00",
     "command": "scoped external Git excludesFile for one declared user path; python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 580,
-      "sha256": "bb2ddab56a2f51dda2f543cce707afd21163ec06bb9677be1be30570a1371862"
+      "file_count": 593,
+      "sha256": "5564a0d5f52c5a204974237c71d5d5363ac122006df34cdb4e2a60ac39a0b124"
     },
-    "note": "통합 전체 테스트 스위트: 740/740 통과; 사용자 소유 미추적 research/literature/swarm_control_trends.md는 저장소나 파일을 변경하지 않는 테스트 전용 외부 excludesFile로만 Git clean-status 검사에서 제외; wall 310.26s, user 310.75s, system 27.80s, max RSS 1218988 KiB, swap 0",
-    "passed": 740,
+    "note": "통합 전체 테스트 스위트: 765/765 통과; 사용자 소유 미추적 research/literature/swarm_control_trends.md는 저장소나 파일을 변경하지 않는 테스트 전용 외부 excludesFile로만 Git clean-status 검사에서 제외; wall 309.81s, user 311.56s, system 28.38s, max RSS 1171260 KiB, swap 0",
+    "passed": 765,
     "status": "passed",
-    "total": 740
+    "total": 765
   },
   "workstreams": {
     "completed_criteria": 28,
