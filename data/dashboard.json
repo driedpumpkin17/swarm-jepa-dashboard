@@ -6422,7 +6422,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-23T19:41:53.809527+00:00",
+  "generated_at": "2026-08-23T20:08:23.043464+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -6854,17 +6854,17 @@
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-24T04:39:47+09:00",
+    "checked_at": "2026-08-24T05:07:04+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
       "file_count": 629,
-      "sha256": "117b147412c541827765ce3a360219a0aa5c73f21d875e708b82f8ce5ed004a0"
+      "sha256": "e76cb1437f2d932f9650fa635145b8becd34741ac56503efa049e8d4e84a1f40"
     },
-    "note": "통합 전체 테스트 스위트: 806/806 통과",
-    "passed": 806,
+    "note": "통합 전체 테스트 스위트: 807/807 통과",
+    "passed": 807,
     "status": "passed",
-    "total": 806
+    "total": 807
   },
   "workstreams": {
     "completed_criteria": 38,
