@@ -6422,7 +6422,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-23T17:31:26.365470+00:00",
+  "generated_at": "2026-08-23T18:48:31.401221+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -6854,20 +6854,20 @@
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-24T02:28:03+09:00",
+    "checked_at": "2026-08-24T03:46:33+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 615,
-      "sha256": "37df903b9cb156a0ff56e96862f07c026b7ae4a781593dde77e554b1b2c5a4ca"
+      "file_count": 627,
+      "sha256": "3fa9a890275397e266bda3da227f73ddcc8df6a35950b19ad21ce72272d242d0"
     },
-    "note": "통합 전체 테스트 스위트: 784/784 통과",
-    "passed": 784,
+    "note": "통합 전체 테스트 스위트: 803/803 통과",
+    "passed": 803,
     "status": "passed",
-    "total": 784
+    "total": 803
   },
   "workstreams": {
-    "completed_criteria": 28,
+    "completed_criteria": 37,
     "items": [
       {
         "blockers": [],
@@ -7154,17 +7154,88 @@
         "state": "pending",
         "title": "표현 특이성 및 unseen-partner transfer",
         "total_count": 6
+      },
+      {
+        "blockers": [
+          "고정밀 실측값 7개가 식별 가능한 공개 dashboard와 exact match하여 외부 anonymous URL은 직접 연결된다. Conference-managed anonymous upload만 허용한다."
+        ],
+        "checklist": [
+          {
+            "complete": true,
+            "criterion": "ICRA 페이지·익명성·Supplement·AI 공개 규칙을 공식 근거로 동결한다.",
+            "id": "rules_frozen"
+          },
+          {
+            "complete": true,
+            "criterion": "마지막 mechanism 결과와 unavailable-not-zero claim boundary를 고정한다.",
+            "id": "mechanism_result_frozen"
+          },
+          {
+            "complete": true,
+            "criterion": "공식 PaperCept class의 익명 submission PDF를 실제 컴파일한다.",
+            "id": "submission_compiled"
+          },
+          {
+            "complete": true,
+            "criterion": "모든 실험과 CEF를 포함한 archival appendix를 실제 컴파일한다.",
+            "id": "archive_compiled"
+          },
+          {
+            "complete": true,
+            "criterion": "원 artifact에서 검증·재생성 가능한 embedded-font vector figure를 만든다.",
+            "id": "artifact_figure"
+          },
+          {
+            "complete": true,
+            "criterion": "페이지·US Letter·익명 metadata·식별 문자열·font embedding 검사를 자동화한다.",
+            "id": "pdf_compliance"
+          },
+          {
+            "complete": true,
+            "criterion": "원본 public hash와 checkpoint를 제외한 익명 snapshot candidate를 clean-room 검증한다.",
+            "id": "anonymous_candidate"
+          },
+          {
+            "complete": true,
+            "criterion": "본문을 중복 없이 6쪽 안팎의 decision-relevant 분석으로 보강한다.",
+            "id": "submission_depth"
+          },
+          {
+            "complete": true,
+            "criterion": "본문과 appendix의 모든 수치를 immutable input으로 역추적한다.",
+            "id": "number_trace_audit"
+          },
+          {
+            "complete": false,
+            "criterion": "기존 공개 실측값과의 재식별 위험을 해결한 뒤 익명 review URL을 발행한다.",
+            "id": "anonymous_external_release"
+          },
+          {
+            "complete": false,
+            "criterion": "논문·재현 패키지·공개 상태를 같은 source boundary에서 최종 동결한다.",
+            "id": "release_candidate"
+          }
+        ],
+        "completed_count": 9,
+        "id": "icra2027_submission",
+        "last_verified_at": "2026-08-24T03:30:00+09:00",
+        "next_criterion": "기존 공개 실측값과의 재식별 위험을 해결한 뒤 익명 review URL을 발행한다.",
+        "objective": "종료된 negative result를 과장 없이 8페이지 이하 익명 논문과 재현 가능한 review artifact로 고정한다.",
+        "progress_fraction": 0.818182,
+        "state": "active",
+        "title": "ICRA 2027 논문 및 익명 재현 패키지",
+        "total_count": 11
       }
     ],
-    "progress_fraction": 0.717949,
+    "progress_fraction": 0.74,
     "state_counts": {
-      "active": 1,
+      "active": 2,
       "blocked": 1,
       "completed": 3,
       "pending": 1
     },
-    "total": 6,
-    "total_criteria": 39,
-    "updated_at": "2026-08-14T17:53:00+09:00"
+    "total": 7,
+    "total_criteria": 50,
+    "updated_at": "2026-08-24T03:20:49+09:00"
   }
 }
