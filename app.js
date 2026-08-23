@@ -282,6 +282,31 @@ function renderAutomationRoadmap(milestones) {
   runState.className = "status " + scientificRun.state;
 }
 
+function renderMechanismProgram(program) {
+  if (!program || !program.available) {
+    setText("#mechanism-state", program ? program.state : "not available");
+    setText("#mechanism-total", "0 / 8");
+    return;
+  }
+  setText("#mechanism-total", program.completed_gates + " / " + program.total_gates);
+  const progress = $(".mechanism-progress");
+  progress.setAttribute("aria-valuemax", String(program.total_gates));
+  progress.setAttribute("aria-valuenow", String(program.completed_gates));
+  $("#mechanism-progress-fill").style.width = (program.progress_fraction * 100) + "%";
+  setText("#mechanism-count-basis", program.count_basis);
+  setText("#mechanism-state", program.state.replaceAll("_", " "));
+  setText("#mechanism-next", "NEXT · " + program.next_gate.replaceAll("_", " "));
+  const actual = program.actual_execution;
+  setText("#mechanism-actual", actual.new_environment_steps + " · " + actual.new_policy_forward_calls + " · " + actual.new_outcomes_opened);
+  const planned = program.planned_execution;
+  setText("#mechanism-plan", planned.paired_rollouts.toLocaleString() + " · " + planned.branches.toLocaleString() + " · " + planned.fresh_worlds);
+  const audit = program.measured_static_audit;
+  setText("#mechanism-audit", audit.positive_signed_signal_row_count + " / " + audit.row_count + " positive signed rows");
+  setText("#mechanism-protocol-sha", program.hashes.protocol_semantic_sha256);
+  setText("#mechanism-freeze-sha", program.hashes.protocol_source_freeze_sha256);
+  setText("#mechanism-claim-boundary", program.claim_boundary);
+}
+
 function renderProgress(data) {
   const executionBlocked = Object.entries(data.queue.availability_counts || {})
     .filter(([state]) => state.startsWith("blocked") || state === "failed")
@@ -301,6 +326,7 @@ function renderProgress(data) {
   setText("#queue-summary", `${data.queue.completed}/${data.queue.total} COMPLETE`);
   renderWorkstreams(data.workstreams);
   renderAutomationRoadmap(data.milestones);
+  renderMechanismProgram(data.evidence.mechanism_program);
   renderActiveWork(data.queue);
   data.queue.jobs.forEach((job, index) => {
     const row = node("div", "job");
