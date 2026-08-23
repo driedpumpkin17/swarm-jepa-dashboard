@@ -6422,7 +6422,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-23T18:48:31.401221+00:00",
+  "generated_at": "2026-08-23T19:10:03.675958+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -6854,20 +6854,20 @@
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-24T03:46:33+09:00",
+    "checked_at": "2026-08-24T04:09:00+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
-      "file_count": 627,
-      "sha256": "3fa9a890275397e266bda3da227f73ddcc8df6a35950b19ad21ce72272d242d0"
+      "file_count": 629,
+      "sha256": "6be2a083018029814bd3241835301dd28f7da6fb1dcaf6e57a25aaf1176b7be2"
     },
-    "note": "통합 전체 테스트 스위트: 803/803 통과",
-    "passed": 803,
+    "note": "통합 전체 테스트 스위트: 805/805 통과",
+    "passed": 805,
     "status": "passed",
-    "total": 803
+    "total": 805
   },
   "workstreams": {
-    "completed_criteria": 37,
+    "completed_criteria": 38,
     "items": [
       {
         "blockers": [],
@@ -7211,23 +7211,23 @@
             "id": "anonymous_external_release"
           },
           {
-            "complete": false,
+            "complete": true,
             "criterion": "논문·재현 패키지·공개 상태를 같은 source boundary에서 최종 동결한다.",
             "id": "release_candidate"
           }
         ],
-        "completed_count": 9,
+        "completed_count": 10,
         "id": "icra2027_submission",
-        "last_verified_at": "2026-08-24T03:30:00+09:00",
+        "last_verified_at": "2026-08-24T03:52:00+09:00",
         "next_criterion": "기존 공개 실측값과의 재식별 위험을 해결한 뒤 익명 review URL을 발행한다.",
         "objective": "종료된 negative result를 과장 없이 8페이지 이하 익명 논문과 재현 가능한 review artifact로 고정한다.",
-        "progress_fraction": 0.818182,
+        "progress_fraction": 0.909091,
         "state": "active",
         "title": "ICRA 2027 논문 및 익명 재현 패키지",
         "total_count": 11
       }
     ],
-    "progress_fraction": 0.74,
+    "progress_fraction": 0.76,
     "state_counts": {
       "active": 2,
       "blocked": 1,
