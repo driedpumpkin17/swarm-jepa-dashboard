@@ -53,24 +53,59 @@
       ]
     },
     "curated_report_sections": {
-      "Best result": "The v3 material need-share rate advantage replicated in seeds 404, 505, and 606. Across 64 fixed held-out worlds per seed, median POSITIVE-SHARE minus CTRL-NONE gain was `+0.9971` deterministic and `+0.7798` sampled. Median beneficial energy units per eligible need timestep gained `+2.0445` and `+2.1946`, respectively. Maximum energy-accounting error across v3 learned runs remained below `1.81e-05`.",
-      "Executive summary": "Day 1 has produced eight immutable exploratory experiment blocks, one fresh CEF-10 checkpoint-training block, and a tested, restartable two-agent stack. A direct-reward v3 control learned material energy transfer on 64 held-out worlds in each of three training seeds, but this remains engineered behavior rather than emergence: the policies manufactured 5--8 times more need opportunities, cycled energy bidirectionally, and shortened sampled episodes in every seed. No JEPA condition has run and every emergence score remains unscored. The last source-bound suite before phase-3/4 integration passed `326/326`; a new full receipt is pending. Partial resume is provenance-locked, interrupts and unsupported jobs fail closed, and semantic progress publication is nonblocking and retryable. The old schedule record remains nonexecuting and cannot open `FALSIFY-v1.1`; execution authority instead flows through the separately validated CEF parent DAG and typed adapter. CEF-01..09 are complete (`9/9`) at replacement CEF-09 freeze `49424c7b31a01f04e0ecf89dbee5d9849bd4845305d629556bb6d4ecd910170b`. The accepted firewall reconstructs internal parent edges and exact content contracts, then derives three typed views only after one committed opaque read. CEF-10 has executed factual enumeration and screen-domain-only neutral screening, then selected 485 windows without reading estimation outcomes. The schedule remains unanchored; estimation, do-minus-i, final gate evaluation, and JEPA remain locked. This is evaluator engineering progress, not causal or emergence evidence. The JEPA matrix remains pending and unclaimed.",
-      "Human-readable conclusion": "The project has not found robust social emergence. It has instead established that raw JEPA, anti-collapse JEPA, learning progress, model gain, and the tested PIM pipelines do not clear the registered effect/support/harm chain in this environment. MECH-01 may determine whether a one-step matched forced donation exposes downstream reward--survival coupling, but only as an engineered diagnostic. The most defensible final contribution is the audited negative-result boundary plus localization of the reward, action-expression, and environment-affordance bottlenecks. # Latest update — Phase 18 anchor + fixed-channel unit gate PASS 2026-08-16 17:36 KST 현재 FALSIFY-v2.3 content-addressed preregistration과 exact public HTTPS anchor가 완료됐고, 고정 전달 채널의 gradient/Adam/projection unit gate가 PASS했다. 학습·diagnostic states·평가·outcome은 아직 0이다. 상세: [`20260816_phase18_anchor_and_unit_gate.md`](20260816_phase18_anchor_and_unit_gate.md).",
+      "ICRA optional anonymous video candidate": "An actual caption-only MP4 was built from frozen figures and audited claims: 100.0 s, 878,066 bytes, 1280x720, 24 fps, H.264 progressive, no audio, identity violations 0. Two builds are byte-identical at SHA `b6231b2f...45750e`; eight representative frames were visually inspected. No new experiment was opened. Full report: [`20260824_icra_optional_video_candidate.md`](20260824_icra_optional_video_candidate.md).",
+      "ICRA v4 AI-disclosure release candidate": "The six-page paper now explicitly identifies OpenAI Codex and its use across all sections, satisfying the official AI-disclosure boundary without changing science. Anonymous v4 passes clean-room reproduction; stable regression is 807/807 PASS; dashboard remote `5c71da6` is exact-HTTPS verified. ICRA remains 10/11 until post-review GitHub release. Full report: [`20260824_icra_v4_disclosure_release.md`](20260824_icra_v4_disclosure_release.md).",
       "Instructions / hypothesis alignment audit": "About 72.5 hours remain. The project has strong preregistration, provenance, and honest REJECT boundaries, but Phases 15--18 increasingly measure engineered transfer-channel feasibility rather than learned social emergence. Phase 18 is now bounded as a secondary fixed-affordance post-donation response assay; it cannot support learned-sharing or spontaneous-emergence claims. Persistent state, objective history, ICRA text, registry, daily reports, full-test status, and the public dashboard require catch-up. Full audit: [`20260816_instructions_hypothesis_alignment_audit.md`](20260816_instructions_hypothesis_alignment_audit.md).",
-      "Phase 18 exact pretraining checkpoint": "Preregistration `6753a2c8...ec60b`, anchor `849045cd...beec8`, unit gate `c2db0a26...c7c6eb`, source freeze `1536927a...0da75`, fresh 1,536-state manifest `f53df4b8...6046d`, and update-20 plan `75e760a2...13d8e` are complete. Phase-18 training transitions, support actions, evaluation worlds, and outcomes remain zero. The execution source freeze was formerly next but is now prohibited by D026; these artifacts are preserved as a completed design boundary.",
-      "Strongest alternative explanation": "The rewarded controller learns to approach, remain close, and cycle energy to harvest gross-transfer reward. The material-rate signal is real but need not be partner preservation. For future JEPA cells, the strongest alternative remains predictability management by immobilization, simplification, synchronization, or death.",
-      "Suspicious results": "The deterministic mean action can delay first death in one seed while the sampled policy shortens life in every seed. Because every episode ends at the first death, mean alive fraction hides this difference. Fixed-horizon counterfactual survival, net receiver gain, opportunity creation, collision/contact, and role-conditioned mortality must be reported together."
+      "Literature-informed pivot: Phase 18 paused before execution": "The literature review's broad mechanism warning is useful, but its simplest `coupling strength = 0` explanation conflicts with measured positive LP/PIM valid-row means. The unresolved link is between reward opportunity, discounted return, policy-gradient/action expression, and a strictly joint-energy-negative transfer affordance. Phase 18 is therefore preserved but superseded at exactly zero training transitions. Next is an at-most-eight-hour static/synthetic coupling audit, followed only if all gates pass by the no-training `MECH-01` paired forced-donation diagnostic. Full replan: [`20260816_literature_informed_replan.md`](20260816_literature_informed_replan.md).",
+      "MECH-01 pre-branch fixed-entropy HARM REJECT": "196,608 fixed-bank action vectors에서 Phase-12 LP-minus-OFF entropy drop은 `0.192598`, Phase-14 PIM-minus-OFF는 `1.611781`로 등록 veto `>0.10`을 넘었다. 따라서 environment core `0e3ca647...a13b4`와 receipt `d527df47...82a9f`가 branch source/execution/outcome을 잠갔다. 누적 checkpoint reads는 14회지만 environment steps, branches, outcomes는 전부 0이다. Full report: [`20260824_mech01_prebranch_harm_reject.md`](20260824_mech01_prebranch_harm_reject.md)."
     },
     "hypothesis_alignment": {
       "H1": "등록된 JEPA-L0/L1 설계 안에서 REJECT; 보편적 JEPA 불가능성 주장은 아님",
       "H2": "LP effect/increment/harm 실패, MG support 실패, PIM invalid/support 실패로 현재 지지 없음",
-      "H3": "제거되지 않음; 반복된 policy-entropy harm veto가 경고이며 living-vs-ghost dissociation은 미실행",
+      "H3": "반복된 fixed-observation policy-entropy veto가 predictability-management 위험을 지지하지만 living-vs-ghost causal dissociation은 미실행이라 완전한 기전 결론은 아님",
       "H4": "robust Tier-1 mechanism 부재로 미검증",
       "H5": "Tier-1 replication 부재로 미검증",
-      "audited_at": "2026-08-16T20:08:30+09:00",
-      "next_decision": "execution source를 먼저 동결한 뒤 update-20 prefix만 실행하고 invariant 또는 support 실패 시 종료; Phase 19 channel repair 금지",
-      "overall": "강한 provenance와 정직한 REJECT 경계는 유지됐지만 Phase 15--18은 원래 emergence 질문에서 treatment-channel feasibility 공학으로 이동했다.",
-      "phase18_boundary": "고정 transfer head가 social action을 직접 지정하므로 downstream response decomposition만 가능"
+      "audited_at": "2026-08-24T05:30:00+09:00",
+      "next_decision": "새 실험이나 Phase 19가 아니라 v4 ICRA review candidate, optional video, PaperPlaza preflight, post-review GitHub release를 완료한다.",
+      "overall": "원래 social-emergence 가설은 지지되지 않았다. 직접보상 capability는 검출됐지만 reward-free JEPA 계열은 effect, support, validity, 또는 harm conjunction에서 종료됐고 MECH-01은 branch 전 harm veto로 terminal reject됐다.",
+      "phase18_boundary": "실행 전 supersede; 고정 transfer head 설계 artifact만 보존하며 training, support, evaluation, outcome은 모두 0"
+    },
+    "icra_submission": {
+      "ai_disclosure": "OpenAI Codex system, affected sections, and assistance modes disclosed in the review PDF",
+      "anonymous_package_state": "private_during_review_post_deanonymization_github_candidate",
+      "archival_appendix_state": "five_page_repository_artifact_not_an_icra_attachment",
+      "next_automated_action": "preserve hashes, rerun preflight after any source change, and keep public status synchronized",
+      "next_human_action": "enter truthful author/conflict/presenter metadata and upload the audited PDF in PaperPlaza",
+      "optional_video": {
+        "execution_counts": {
+          "new_environment_steps": 0,
+          "new_experimental_branches": 0,
+          "new_outcomes": 0,
+          "new_training_transitions": 0
+        },
+        "measured_compliance": {
+          "audio_streams": 0,
+          "bytes": 878066,
+          "codec": "h264 (High) (avc1 / 0x31637661)",
+          "container": "mp4",
+          "duration_seconds": 100.0,
+          "fps": 24.0,
+          "height": 720,
+          "identity_scan_violations": 0,
+          "progressive": true,
+          "slide_count": 8,
+          "width": 1280
+        },
+        "post_return_upload_window": "2026-09-17--2026-09-22",
+        "publication_boundary": "human full-watch and PaperPlaza authorization required; no automatic upload",
+        "scientific_boundary": "frozen_figures_and_audited_claims_only_no_new_experiment",
+        "state": "private_review_candidate_complete"
+      },
+      "paper_state": "six_page_v4_private_review_release_candidate",
+      "workstream_progress": {
+        "completed": 10,
+        "total": 11
+      }
     },
     "limitations": [
       "v3은 행동을 직접 지정하는 공유 보상을 쓴 양성대조군이다.",
@@ -6018,7 +6053,7 @@
         "repair_does_not_raise_bias_reduce_variance_relax_threshold_or_reroll_tape": true,
         "transfer_channel_is_no_longer_a_learned_behavioral_output": true
       },
-      "state": "pretraining_chain_complete_execution_source_freeze_pending",
+      "state": "superseded_before_execution_by_mech01_terminal_prebranch_harm_reject",
       "training": {
         "actor_intrinsic_coefficient_OFF": "0.0",
         "actor_intrinsic_coefficient_PIM": "1.0",
@@ -6422,7 +6457,7 @@
       }
     ]
   },
-  "generated_at": "2026-08-23T20:08:23.043464+00:00",
+  "generated_at": "2026-08-23T20:36:45.762878+00:00",
   "methodology": {
     "data_sources": [
       "automation/queue.json",
@@ -6854,12 +6889,12 @@
     "total_days": 7
   },
   "tests": {
-    "checked_at": "2026-08-24T05:07:04+09:00",
+    "checked_at": "2026-08-24T05:35:32+09:00",
     "command": "python3 scripts/record_test_status.py",
     "input_digest": {
       "algorithm": "sha256-length-framed-path-and-content-v1",
       "file_count": 629,
-      "sha256": "e76cb1437f2d932f9650fa635145b8becd34741ac56503efa049e8d4e84a1f40"
+      "sha256": "baa929a983f0f58fd199e97e47aec1b4a0fa2bfb730e46ace8e11c2a180026ad"
     },
     "note": "통합 전체 테스트 스위트: 807/807 통과",
     "passed": 807,
